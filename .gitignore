@@ -140,4 +140,7 @@ report.json
 upi-debug-report.json
 upi-inspect-report.json
 index-triage-report.json
+upi.db
+quarantine/
+screenshots/
 *.tmp

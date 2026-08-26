@@ -1,0 +1,18 @@
+{
+  "source": "UPI<QUANTUM_MECHANICS,1,QUANTA,PLANCK_EINSTEIN_RELATION>",
+  "target": "UPI<RELATIVITY,1,T_ENERGY,N_MASS_ENERGY>",
+  "relation": "CANDIDATE_BRIDGE",
+  "status": "DER",
+  "equations": ["E = h f", "E = m c^2", "m_eq = h f / c^2"],
+  "assumptions": [
+    "Compatible inertial frame",
+    "f is Compton / rest-energy frequency, not an arbitrary oscillation"
+  ],
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Algebraic composition of EST relations under declared assumptions"
+    }
+  ],
+  "confusion_guard": "m_eq is energy-equivalent mass. It is not automatically the rest mass of an oscillating object."
+}

@@ -55,6 +55,22 @@
       "type": "string",
       "description": "Where and why the theory breaks down or has limits"
     },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "source"],
+        "properties": {
+          "type": {"type": "string"},
+          "source": {"type": "string"},
+          "confidence": {"type": "number"}
+        }
+      }
+    },
+    "primary_sources": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
     "related_theories": {
       "type": "array",
       "items": {

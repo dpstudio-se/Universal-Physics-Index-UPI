@@ -2,6 +2,17 @@
 
 All notable changes are documented here.
 
+## 1.0.0
+
+Software contract freeze for the gathering and validation layers.
+
+- Canonical graph load from `data/`, typed bridges, hypothesis registry
+- Canonical merge-check pack (`upi merge-check`) with human approval required
+- Uncertainty helper, dimension check, visible evidence weights, quarantine store
+- Live search, rate limit, supersede, maintainer promote token
+- OpenAPI for the live API, migration policy, triage recovery drill
+- Provenance on 8 Hz and Newtonian records; source manifests skipped by debug-index
+
 ## Unreleased
 
 ### Changed
@@ -19,6 +30,8 @@ All notable changes are documented here.
 - Governed-workflow contracts: six invariants, ledger, typed handoff, skill, routine.
 - First reversible workflow: index triage, with manager / scanner / independent verifier.
 - Three identical index-triage baselines, known-finding catalog, weekly routine, and schema-validator specialist.
+- Public contribution UI with live SQLite/PostgreSQL store and `dna_minne_7.834` seed.
+- Remote LLM system prompt plus check/insert for `upi-batch.json` files.
 - Typed status, frequency, quantity, uncertainty, provenance and audit models.
 - Machine-readable validation issues `UPI-E001` through `UPI-E010`.
 - Falsification, symbolic-boundary and configurable-normalization safeguards.

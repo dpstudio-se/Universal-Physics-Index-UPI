@@ -228,6 +228,78 @@ def triage_cmd(args):
         sys.exit(1)
 
 
+def serve_cmd(args):
+    """Start the contribution UI."""
+    from .contribute.server import serve
+
+    serve(host=args.host, port=args.port, database=args.database, data_root=Path(args.data_root))
+
+
+def ingest_cmd(args):
+    """Check or insert a contribution batch file."""
+    import os
+
+    from .contribute.service import ContributionService
+    from .contribute.store import ContributionStore
+
+    if args.check == args.insert:
+        print("Error: pass exactly one of --check or --insert", file=sys.stderr)
+        sys.exit(1)
+    path = Path(args.file)
+    if not path.is_file():
+        print(f"Error: File not found: {path}", file=sys.stderr)
+        sys.exit(1)
+    batch = json.loads(path.read_text(encoding="utf-8"))
+    database = args.database or os.environ.get("UPI_DATABASE_URL") or "sqlite:///upi.db"
+    store = ContributionStore(database)
+    service = ContributionService(store)
+    service.seed()
+    try:
+        report = service.check_batch(batch) if args.check else service.insert_batch(batch)
+    finally:
+        store.close()
+    print_json(report)
+    if not report["ok"]:
+        sys.exit(1)
+
+
+def graph_cmd(args):
+    """Print canonical graph stats."""
+    from .index import export_graph, load_graph
+
+    graph = load_graph(Path(args.path))
+    print_json(export_graph(graph))
+
+
+def registry_cmd(args):
+    """Print the hypothesis registry."""
+    from .index import hypothesis_registry
+
+    print_json({"hypotheses": hypothesis_registry(Path(args.path)), "verification_type": "software_test"})
+
+
+def merge_check_cmd(args):
+    """Check live contributions against the canonical tree."""
+    import os
+
+    from .contribute.service import ContributionService
+    from .contribute.store import ContributionStore
+    from .merge import merge_from_live
+
+    database = args.database or os.environ.get("UPI_DATABASE_URL") or "sqlite:///upi.db"
+    store = ContributionStore(database)
+    service = ContributionService(store)
+    try:
+        pack = merge_from_live(service, Path(args.data_root))
+    finally:
+        store.close()
+    rendered = json.dumps(pack, indent=2)
+    if args.output:
+        Path(args.output).write_text(rendered + "\n", encoding="utf-8")
+    else:
+        print(rendered)
+
+
 def main():
     """Main CLI entry point."""
     import argparse
@@ -319,6 +391,48 @@ def main():
         help="Enable the read-only consistency inspector",
     )
     triage.set_defaults(func=triage_cmd)
+
+    serve_parser = subparsers.add_parser(
+        "serve",
+        help="Run the public contribution UI and live index API",
+    )
+    serve_parser.add_argument("--host", default="127.0.0.1")
+    serve_parser.add_argument("--port", type=int, default=8080)
+    serve_parser.add_argument(
+        "--database",
+        default=None,
+        help="sqlite:///upi.db or postgresql://user:pass@host:5432/upi (also UPI_DATABASE_URL)",
+    )
+    serve_parser.add_argument("--data-root", default="data")
+    serve_parser.set_defaults(func=serve_cmd)
+
+    ingest_parser = subparsers.add_parser(
+        "ingest",
+        help="Check or insert a remote LLM upi-batch.json file",
+    )
+    ingest_parser.add_argument("file", help="Path to upi-contribution-batch JSON")
+    ingest_parser.add_argument("--check", action="store_true", help="Validate only")
+    ingest_parser.add_argument("--insert", action="store_true", help="Insert records that pass")
+    ingest_parser.add_argument(
+        "--database",
+        default=None,
+        help="sqlite:///upi.db or postgresql://... (also UPI_DATABASE_URL)",
+    )
+    ingest_parser.set_defaults(func=ingest_cmd)
+
+    graph_parser = subparsers.add_parser("graph", help="Load canonical graph from data/")
+    graph_parser.add_argument("path", nargs="?", default="data")
+    graph_parser.set_defaults(func=graph_cmd)
+
+    registry_parser = subparsers.add_parser("hypotheses", help="List HYP records")
+    registry_parser.add_argument("path", nargs="?", default="data")
+    registry_parser.set_defaults(func=registry_cmd)
+
+    merge_parser = subparsers.add_parser("merge-check", help="Build a canonical merge pack from live DB")
+    merge_parser.add_argument("--database", default=None)
+    merge_parser.add_argument("--data-root", default="data")
+    merge_parser.add_argument("--output", help="Write merge pack JSON")
+    merge_parser.set_defaults(func=merge_check_cmd)
 
     args = parser.parse_args()
 

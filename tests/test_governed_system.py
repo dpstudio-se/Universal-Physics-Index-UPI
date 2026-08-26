@@ -17,6 +17,7 @@ def _load(relative: str) -> dict:
 
 
 def test_index_triage_contracts_validate() -> None:
+    assert validate_workflow(_load("examples/workflows/canonical-merge.workflow.json")) == []
     assert validate_workflow(_load("examples/workflows/index-triage.workflow.json")) == []
     assert validate_skill(_load("examples/skills/index-triage.skill.json")) == []
     assert validate_skill(_load("examples/skills/schema-validator.skill.json")) == []

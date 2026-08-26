@@ -1,6 +1,6 @@
 """Universal Physics Index (UPI) - machine-readable scientific knowledge graph."""
 
-__version__ = "0.1.0-alpha"
+__version__ = "1.0.0"
 __author__ = "UPI Contributors"
 __license__ = "MIT"
 

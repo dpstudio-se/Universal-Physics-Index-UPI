@@ -1,0 +1,78 @@
+openapi: 3.0.3
+info:
+  title: UPI live index API
+  version: "1.0.0"
+  description: Public contribution and review API. software_test only.
+paths:
+  /api/health:
+    get:
+      summary: Liveness
+      responses:
+        "200":
+          description: OK
+  /api/nodes:
+    get:
+      summary: List or search nodes
+      parameters:
+        - in: query
+          name: q
+          schema: {type: string}
+        - in: query
+          name: status
+          schema: {type: string}
+      responses:
+        "200":
+          description: Node list
+    post:
+      summary: Insert one public node (not EST)
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Validation failed
+  /api/ingest:
+    post:
+      summary: Check or insert a remote LLM batch
+      parameters:
+        - in: query
+          name: mode
+          schema: {type: string, enum: [check, insert]}
+      responses:
+        "200":
+          description: Report
+  /api/merge-check:
+    post:
+      summary: Build a canonical merge pack from live records
+      responses:
+        "200":
+          description: Merge pack
+  /api/graph:
+    get:
+      summary: Canonical graph export
+      responses:
+        "200":
+          description: Graph
+  /api/hypotheses:
+    get:
+      summary: Hypothesis registry
+      responses:
+        "200":
+          description: HYP list
+  /api/conflicts:
+    get:
+      summary: Inspector conflict view
+      responses:
+        "200":
+          description: Findings
+  /api/events:
+    get:
+      summary: Server-sent contribution events
+      responses:
+        "200":
+          description: SSE stream
+  /prompt:
+    get:
+      summary: Remote LLM system prompt
+      responses:
+        "200":
+          description: Markdown

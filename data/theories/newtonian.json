@@ -22,6 +22,17 @@
     "W = F·d  (Work)"
   ],
   "scope_limits": "Breaks down at relativistic speeds (v ~ c) and quantum scales (ℏ effects). Gravitation treated as instantaneous action at a distance.",
+  "evidence": [
+    {
+      "type": "observation",
+      "source": "Classical laboratory mechanics and engineering practice within the nonrelativistic macroscopic domain",
+      "confidence": 1.0
+    }
+  ],
+  "primary_sources": [
+    "Newton, Philosophiae Naturalis Principia Mathematica (1687)",
+    "Standard classical-mechanics textbooks; domain-limited EST"
+  ],
   "related_theories": [
     "UPI<physics,1,relativistic,special_relativity>",
     "UPI<physics,1,relativistic,general_relativity>",

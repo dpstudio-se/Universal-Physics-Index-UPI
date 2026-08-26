@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "universal-physics-index"
-version = "0.1.0-alpha"
+version = "1.0.0"
 description = "Machine-readable scientific knowledge graph for physics and mathematics"
 readme = "README.md"
 license = "MIT"
@@ -17,7 +17,7 @@ dependencies = [
 ]
 keywords = ["physics", "mathematics", "knowledge-graph", "science"]
 classifiers = [
-    "Development Status :: 3 - Alpha",
+    "Development Status :: 4 - Beta",
     "Intended Audience :: Science/Research",
     "Topic :: Scientific/Engineering :: Physics",
     "Programming Language :: Python :: 3",
@@ -44,16 +44,21 @@ docs = [
     "sphinx>=5.0.0",
     "sphinx-rtd-theme>=1.0.0",
 ]
+postgres = [
+    "psycopg[binary]>=3.1.0",
+]
 
 [project.scripts]
 upi = "upi.cli:main"
 
 [tool.setuptools]
-packages = ["upi"]
 package-dir = {"" = "src"}
 
+[tool.setuptools.packages.find]
+where = ["src"]
+
 [tool.setuptools.package-data]
-upi = ["py.typed", "schemas/*.json"]
+upi = ["py.typed", "schemas/*.json", "contribute/static/*"]
 
 [tool.pytest.ini_options]
 minversion = "7.0"

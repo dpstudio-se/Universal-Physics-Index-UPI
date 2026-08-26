@@ -115,5 +115,7 @@ approval and a new baseline hash.
 
 ## Current boundary
 
-UPI validates workflow, skill, routine, ledger and handoff contracts. The weekly GitHub Actions
-job is a heartbeat, not 24/7 autonomy. Durable queues, sandboxes and signed ledgers remain `STOP`.
+UPI v1.0.0 validates workflow, skill, routine, ledger, handoff and canonical-merge
+contracts. `upi merge-check` builds a review pack; it does not write `data/`.
+The weekly GitHub Actions job is a heartbeat, not 24/7 autonomy. Durable queues,
+sandboxes and signed ledgers remain `STOP`.

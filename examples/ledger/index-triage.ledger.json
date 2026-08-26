@@ -7,7 +7,7 @@
   "artifact": {
     "kind": "report",
     "ref": "examples/ledger/baselines/baseline-1.json",
-    "content_hash": "b89b24577cc6250e449d3cd0eb7ddeb02f351333cb1a87b4d2be7d8f33d28f46"
+    "content_hash": "af2fabe022813f16582d4c04b4466f30d594d98e95e312a1ee23f25859bba694"
   },
   "evidence": [
     {"kind": "hash", "ref": "examples/ledger/baselines/runs.json"},

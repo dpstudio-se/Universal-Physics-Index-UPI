@@ -1,0 +1,37 @@
+{
+  "workflow_id": "canonical-merge-v1",
+  "version": "1.0.0",
+  "status": "SYM",
+  "roles": [
+    {"role_id": "manager", "agent_class": "manager", "default_deny": true, "capabilities": ["task:assign", "ledger:write", "decision:advance-retry-escalate"]},
+    {"role_id": "merge-checker", "agent_class": "specialist", "default_deny": true, "capabilities": ["cli:merge-check", "filesystem:read:data"]},
+    {"role_id": "canonical-reviewer", "agent_class": "specialist", "default_deny": true, "capabilities": ["git:pr"]},
+    {"role_id": "verifier", "agent_class": "verifier", "default_deny": true, "capabilities": ["task:read", "finding:write"]}
+  ],
+  "states": ["QUEUED", "LEASED", "RUNNING", "SUCCEEDED", "FAILED", "TIMED_OUT", "QUARANTINED", "CANCELLED"],
+  "transitions": [
+    {"from": "QUEUED", "to": "LEASED", "condition": "manager assigns merge-checker"},
+    {"from": "LEASED", "to": "RUNNING", "condition": "merge-check starts"},
+    {"from": "RUNNING", "to": "SUCCEEDED", "condition": "maintainer approved merge-pack", "independent_review": true},
+    {"from": "RUNNING", "to": "FAILED", "condition": "merge-check failed"},
+    {"from": "FAILED", "to": "QUEUED", "condition": "attempt below max_attempts"},
+    {"from": "RUNNING", "to": "QUARANTINED", "condition": "hostile or invalid batch", "independent_review": true}
+  ],
+  "invariants": [
+    "LLM does not write data/",
+    "EST is not granted by software_test",
+    "verifier is independent of merge-checker"
+  ],
+  "governance": {
+    "owner": "manager",
+    "state_model": "QUEUED-CHECKED-APPROVED|REJECTED-MERGED",
+    "durable_artifact": "upi-merge-pack.json",
+    "evidence_required": true,
+    "retry_policy": {"max_attempts": 2, "on_exhausted": "escalate"},
+    "approval_boundary": {
+      "requires_approval_when": "any approve_candidate remains",
+      "approver": "human-maintainer"
+    }
+  },
+  "confusion_guard": "canonical-merge is a review workflow. It is not automatic promotion to EST."
+}

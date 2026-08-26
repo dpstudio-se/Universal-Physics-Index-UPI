@@ -47,7 +47,14 @@ All numeric inputs in physics functions are validated:
 Dependencies are minimal to reduce attack surface:
 - `jsonschema` — For JSON validation only
 
-No runtime dependencies on external services or APIs.
+Runtime extras:
+
+- optional PostgreSQL via `psycopg` when `UPI_DATABASE_URL` is set
+- optional HTTP contribution UI (`upi serve`)
+
+The live API rejects public EST, limits POST rate, and treats indexed text as
+untrusted data. Maintainer EST promotion requires `UPI_REVIEW_TOKEN`. This is
+access control, not scientific verification.
 
 ## Compliance
 

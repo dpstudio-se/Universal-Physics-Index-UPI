@@ -13,7 +13,16 @@
   ],
   "definitions": ["Z = z / z_ref", "z_ref = 8 Hz in this example"],
   "assumptions": ["The frequency is used only as a declared normalization coordinate"],
-  "evidence": [],
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Declared normalization coordinate in UPI examples; not a measured natural frequency",
+      "confidence": 1.0
+    }
+  ],
+  "primary_sources": [
+    "UPI example dataset: configurable 8 Hz reference, compared with 7.834 Hz and 8.200 Hz"
+  ],
   "reference_frame": "Declared numerical normalization context",
   "normalization_method": "Z = z / z_ref",
   "normalization_claim": "numerical_similarity_only",

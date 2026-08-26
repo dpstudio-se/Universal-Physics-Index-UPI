@@ -7,9 +7,9 @@ Status: `SYM`
 
 | Run | Command | Artifact hash |
 |---|---|---|
-| 1 | `upi debug-index data --inspect` | `b89b24577cc6250e449d3cd0eb7ddeb02f351333cb1a87b4d2be7d8f33d28f46` |
-| 2 | `upi debug-index data --inspect` | `b89b24577cc6250e449d3cd0eb7ddeb02f351333cb1a87b4d2be7d8f33d28f46` |
-| 3 | `upi debug-index data --inspect` | `b89b24577cc6250e449d3cd0eb7ddeb02f351333cb1a87b4d2be7d8f33d28f46` |
+| 1 | `upi debug-index data --inspect` | `af2fabe022813f16582d4c04b4466f30d594d98e95e312a1ee23f25859bba694` |
+| 2 | `upi debug-index data --inspect` | `af2fabe022813f16582d4c04b4466f30d594d98e95e312a1ee23f25859bba694` |
+| 3 | `upi debug-index data --inspect` | `af2fabe022813f16582d4c04b4466f30d594d98e95e312a1ee23f25859bba694` |
 
 Finish line: three identical redacted reports, no scanner mutation of `data/`.
 

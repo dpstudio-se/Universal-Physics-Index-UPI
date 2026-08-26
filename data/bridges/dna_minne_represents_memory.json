@@ -1,0 +1,14 @@
+{
+  "source": "UPI<symbolic,1,memory,dna_minne_7.834>",
+  "target": "UPI<BASE,0,REFERENCE,N_8HZ>",
+  "relation": "FORM_SIMILAR",
+  "status": "SYM",
+  "assumptions": ["Both are declared frequency coordinates, 7.834 Hz versus 8 Hz"],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "Shared numerical-frequency form; no shared physical mechanism claimed"
+    }
+  ],
+  "confusion_guard": "FORM_SIMILAR is not MECHANISM_SHARED. 7.834 Hz is not a universal constant."
+}

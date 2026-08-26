@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Universal Physics Index — contribute</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="banner">
+    <p class="eyebrow">Universal Physics Index</p>
+    <h1>Add to the live index</h1>
+    <p class="lede">
+      Anyone can contribute a classified record. Public writes are validated first.
+      They are never experimental verification. Status EST cannot be submitted here.
+    </p>
+  </header>
+
+  <section class="featured" id="dna-minne" aria-labelledby="dna-title">
+    <p class="kicker">SYM memory coordinate</p>
+    <h2 id="dna-title">dna_minne_7.834</h2>
+    <p>
+      Functional DNA memory slot at <strong>7.834 Hz</strong>.
+      DNA is a collaboration architecture. Minne is inspectable memory.
+      7.834 Hz is a configurable reference, not a universal constant.
+    </p>
+    <p class="address">UPI&lt;symbolic,1,memory,dna_minne_7.834&gt;</p>
+  </section>
+
+  <main class="layout">
+    <section class="panel" aria-labelledby="form-title">
+      <h2 id="form-title">New record</h2>
+      <form id="contribute-form">
+        <div class="grid">
+          <label>Domain
+            <input name="domain" value="physics" required>
+          </label>
+          <label>Generation
+            <input name="generation" type="number" min="1" value="1" required>
+          </label>
+          <label>System class
+            <input name="torus" value="classical" required>
+          </label>
+          <label>Node id
+            <input name="node" placeholder="dna_minne_7.834" required>
+          </label>
+        </div>
+        <p class="address-preview">Address: <code id="address-preview">UPI&lt;physics,1,classical,&gt;</code></p>
+        <label>Title
+          <input name="title" required>
+        </label>
+        <label>Description
+          <textarea name="description" rows="4" required></textarea>
+        </label>
+        <label>Status
+          <select name="status" required>
+            <option value="HYP">HYP — falsifiable hypothesis</option>
+            <option value="SYM" selected>SYM — symbolic only</option>
+            <option value="DER">DER — derived from stated assumptions</option>
+            <option value="STOP">STOP — missing evidence or mechanism</option>
+            <option value="ERR">ERR — contradicted or invalid</option>
+          </select>
+        </label>
+        <label>Equation (optional)
+          <input name="equation" placeholder="E = h·f">
+        </label>
+        <label>Evidence source (required for HYP and DER)
+          <input name="evidence_source" placeholder="paper, dataset, or calculation note">
+        </label>
+        <label>Falsification condition (required for HYP)
+          <input name="falsification" placeholder="A measurable mismatch that would reject the claim">
+        </label>
+        <label>STOP reason (required for STOP)
+          <input name="stop_reason">
+        </label>
+        <label>Confusion guard
+          <input name="confusion_guard" value="Software validation is not experimental verification.">
+        </label>
+        <button type="submit">Validate and add</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+
+    <section class="panel" aria-labelledby="live-title">
+      <h2 id="live-title">Live index</h2>
+      <p class="hint">New contributions appear here in real time. Search does not change scientific status.</p>
+      <label>Search
+        <input id="search-box" type="search" placeholder="address, title, status…">
+      </label>
+      <ol id="node-list"></ol>
+    </section>
+  </main>
+
+  <section class="banner panel llm-panel" aria-labelledby="llm-title">
+    <h2 id="llm-title">Remote LLM indexer</h2>
+    <p class="hint">
+      Any model can copy the system prompt, map a source into UPI records, save
+      <code>upi-batch.json</code>, then check and insert that file here.
+    </p>
+    <p>
+      <a href="/prompt" download="upi-remote-indexer.system.md">Download system prompt</a>
+      ·
+      <a href="/static/upi-remote-batch.example.json" download>Download example batch</a>
+    </p>
+    <form id="ingest-form">
+      <label>Upload upi-batch.json
+        <input id="batch-file" type="file" accept="application/json,.json" required>
+      </label>
+      <div class="actions">
+        <button type="button" id="check-batch">Check file</button>
+        <button type="button" id="insert-batch">Insert valid records</button>
+      </div>
+      <pre id="ingest-status" role="status"></pre>
+    </form>
+  </section>
+
+  <footer>
+    <p>verification_type: software_test · contributions are untrusted input until reviewed</p>
+  </footer>
+  <script src="/static/app.js"></script>
+</body>
+</html>

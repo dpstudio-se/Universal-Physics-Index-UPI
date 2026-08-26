@@ -159,6 +159,7 @@ def test_bundled_schemas_match_repository_schemas() -> None:
         "handoff.schema.json",
         "skill.schema.json",
         "routine.schema.json",
+        "contribution-batch.schema.json",
     ):
         assert (schemas_dir() / name).read_bytes() == (repository_schemas / name).read_bytes()
 

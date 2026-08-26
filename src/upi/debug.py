@@ -202,6 +202,10 @@ def generate_debug_report(
             )
             continue
 
+        operation = str(data.get("operation") or "")
+        if operation.startswith("upi_external_source"):
+            continue
+
         record_type = _record_type(data)
         if record_type is None:
             findings.append(

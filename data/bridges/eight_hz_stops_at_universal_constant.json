@@ -1,0 +1,14 @@
+{
+  "source": "UPI<BASE,0,REFERENCE,N_8HZ>",
+  "target": "UPI<HYPOTHESIS,1,T_REFERENCE,N_8HZ>",
+  "relation": "STOPS_AT",
+  "status": "DER",
+  "assumptions": ["8 Hz is a declared normalization coordinate"],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "UPI example set: reference coordinate versus unpromoted hypothesis"
+    }
+  ],
+  "confusion_guard": "The reference node does not confirm the organizing-frequency hypothesis."
+}

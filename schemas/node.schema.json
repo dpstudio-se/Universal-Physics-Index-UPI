@@ -147,6 +147,27 @@
     "version": {
       "type": "string",
       "default": "0.1.0"
+    },
+    "replaces": {
+      "type": "string",
+      "pattern": "^UPI<[^,]+,[0-9]+,[^,]+,[^,>]+>$"
+    },
+    "superseded_by": {
+      "type": "string",
+      "pattern": "^UPI<[^,]+,[0-9]+,[^,]+,[^,>]+>$"
+    },
+    "source_status": {
+      "type": "string",
+      "enum": [
+        "peer_reviewed",
+        "preprint",
+        "dataset",
+        "textbook",
+        "standard",
+        "official_document",
+        "personal_note",
+        "unknown"
+      ]
     }
   },
   "additionalProperties": false,
