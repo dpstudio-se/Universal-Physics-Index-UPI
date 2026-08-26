@@ -32,7 +32,7 @@ Use names in this priority order:
 | Legacy or symbolic label | Canonical scientific or engineering name | Allowed alias status |
 |---|---|---|
 | Torus field in a UPI address | `system_class` or `boundary_topology` | `torus` only when the topology is mathematically toroidal |
-| Odin's Eye | `read_only_consistency_inspector` | Historical CLI alias may remain temporarily |
+| Consistency inspector | `read_only_consistency_inspector` | CLI flag: `--inspect` |
 | Functional DNA | `declarative_system_configuration` | `SYM` architecture alias |
 | Vortex-DNA | `iterative_state_transition_model` | `SYM` architecture alias |
 | Swarm | `distributed_coordination_protocol` | Informal architecture alias |
@@ -100,7 +100,7 @@ traceability_metrics.py
 Avoid unexplained names such as:
 
 ```text
-odins_eye.py
+private_codename.py
 vortex_dna.json
 omega_core.py
 cosmic_lock.json

@@ -1,0 +1,41 @@
+name: Index Triage Routine
+
+on:
+  schedule:
+    - cron: "0 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  triage:
+    name: Compare index to known findings
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7
+
+      - name: Set up Python
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version: "3.12"
+
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Schema specialist
+        run: pytest tests/test_governed_system.py tests/test_schema.py tests/test_workflow.py -q
+
+      - name: Scanner and approval gate
+        run: |
+          upi triage data --inspect --known examples/ledger/baselines/known-findings.json --output index-triage-report.json
+
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: index-triage-report
+          path: index-triage-report.json

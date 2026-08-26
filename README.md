@@ -58,7 +58,7 @@ upi normalize --observed 4.5 --reference 4.0
 upi validate data/constants/planck.json
 upi debug-index data --output upi-debug-report.json
 upi debug-index data --format markdown --output upi-debug-report.md
-upi debug-index data --odins-eye --output upi-odins-eye.json
+upi debug-index data --inspect --output upi-inspect-report.json
 
 # Python API
 from upi import mass_from_frequency, UPIGraph, PhysicsNode
@@ -80,40 +80,16 @@ This repository is preconfigured for GitHub Codespaces via
 
 ## Repository Structure
 
-- `src/upi/` — Core modules (physics, models, validation, CLI)
-- `modules/vrasi-physics/` — Standalone, dependency-free VR-ASI physics kernel
-- `modules/vrasi-swarm/` — Standalone 3-6-9/Gen4 coordination kernel
-- `tests/` — UPI test suite
-- `schemas/` — JSON schemas (node, bridge, theory)
-- `data/` — Example nodes, theories, STOP problems
-- `docs/` — Specification and documentation
-
-### Standalone VR-ASI physics
-
-The simulator does not need the complete UPI graph or workflow system. Its three required
-calculations are packaged separately and can be installed without `upi`:
-
-```bash
-python -m pip install ./modules/vrasi-physics
-vrasi-physics 8
+```text
+src/upi/          Python package (models, physics, validation, CLI)
+src/upi/schemas/  Packaged JSON schemas (canonical runtime copies)
+schemas/          Public schema contract (kept in sync with the package)
+data/             Example nodes, theories, and STOP problems
+docs/             Specification and scientific documentation
+examples/         Usage examples, including the index-triage workflow
+tests/            Test suite
+.github/          CI, issue, and pull-request templates
 ```
-
-See [`modules/vrasi-physics/README.md`](modules/vrasi-physics/README.md) for the deliberately
-small API and its interpretation limits.
-
-### 3-6-9 generation 4 coordination
-
-The transport-neutral swarm module turns nine allowlisted node observations into a
-deterministic top-three quorum. It shares hashes and pseudonymous IDs, not private payloads
-or network endpoints:
-
-```bash
-python -m pip install ./modules/vrasi-swarm
-vrasi-swarm demo
-```
-
-This is an auditable coordination protocol (`SYM`), not a claim of collective biological
-consciousness or new physics.
 
 ## Important Disclaimers
 
@@ -124,10 +100,10 @@ consciousness or new physics.
 ## Testing
 
 ```bash
-pytest tests/ modules/vrasi-physics/tests/ modules/vrasi-swarm/tests/ -v
-ruff check src tests modules/vrasi-physics/src modules/vrasi-physics/tests modules/vrasi-swarm/src modules/vrasi-swarm/tests
-mypy src/upi            # Type checking
-upi validate data/constants/planck.json  # Schema validation
+pytest tests/ -v
+ruff check src tests
+mypy src/upi
+upi validate data/constants/planck.json
 ```
 
 ## Automated UPI debugging
@@ -150,7 +126,7 @@ The scanner:
 Shared equations or software functions across different time and length scales are mapped as
 relationships, not treated as proof of a shared physical mechanism.
 
-Add `--odins-eye` for a local, read-only inspection layer. It reports exact-content mirrors,
+Add `--inspect` for a local, read-only consistency inspector. It reports exact-content mirrors,
 conflicting records that reuse one UPI identity, hidden JSON paths, and possible semantic mirrors.
 Exact matches and conflicts are hash-backed; semantic overlap remains `HYP`. Reports contain stable
 path identifiers and full path hashes, never raw source paths or values. The scanner does not access
@@ -158,15 +134,20 @@ networks or mutate index records.
 
 ## Declarative agent workflows
 
-UPI includes schemas for bounded agent tasks, terminal results and workflow specifications. The
-contracts model transport, independent review and reversible quarantine under default-deny
-capabilities. See `docs/AGENT_CIRCULATION.md` and `examples/workflows/`.
+The design unit is the workflow, not the number of bots. Every workflow must declare an owner,
+explicit state, a durable artifact, observable evidence, a bounded retry policy, and an approval
+boundary. See [`docs/GOVERNED_SYSTEM.md`](docs/GOVERNED_SYSTEM.md).
+
+The first workflow is **index triage**: a reversible, read-only scan of `data/` with an independent
+verifier. Contracts live in `schemas/` and `examples/`.
+
+```bash
+upi debug-index data --inspect --output index-triage-report.json
+upi triage data --inspect --known examples/ledger/baselines/known-findings.json
+```
 
 This is a validation and audit layer, not a scheduler or autonomous agent runtime. Biological terms
 such as circulation and immunity are `SYM` architecture metaphors only.
-
-Plugin manifests are also validation-only. Executable command construction fails closed until a
-runtime can enforce every declared capability and default-deny restriction.
 
 ## License
 
@@ -179,7 +160,7 @@ MIT - See LICENSE file
   title={Universal Physics Index},
   author={UPI Contributors},
   year={2024},
-  url={https://github.com/dpstudio-se/universal-physics-index}
+  url={https://github.com/dpstudio-se/Universal-Physics-Index-UPI}
 }
 ```
 

@@ -25,5 +25,16 @@
     "quarantine has no execution or network capability",
     "agent agreement is not independent evidence"
   ],
+  "governance": {
+    "owner": "coordinator",
+    "state_model": "QUEUED-LEASED-RUNNING-terminal",
+    "durable_artifact": "examples/workflows/agent-circulation.workflow.json",
+    "evidence_required": true,
+    "retry_policy": {"max_attempts": 3, "on_exhausted": "quarantine"},
+    "approval_boundary": {
+      "requires_approval_when": "release from QUARANTINED",
+      "approver": "human-maintainer"
+    }
+  },
   "confusion_guard": "This is a declarative software workflow and symbolic biological mapping, not a running agent cluster or biological model."
 }

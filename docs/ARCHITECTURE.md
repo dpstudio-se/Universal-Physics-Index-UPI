@@ -4,4 +4,4 @@ The conceptual address `UPI<D,G,T,N>` separates domain/system (`D`), governing r
 
 The dependency-free Python core uses typed dataclasses. `models.py` defines records, `physics.py` contains narrow reference transformations, `validation.py` applies boundary rules to typed and untrusted JSON records, and `cli.py` exposes non-networked operations. JSON IDs, parent/child links, dependencies, revision history and source hashes provide stable extension points without requiring CrokPedia.
 
-Information layers (`PRIVATE`, `PUBLIC`, `ACADEMIC`) describe disclosure and formality, not evidence strength. They must never replace scientific statuses. Functional DNA and Vortex-DNA are separately documented symbolic collaboration architectures and have no hidden execution authority.
+Information layers (`PRIVATE`, `PUBLIC`, `ACADEMIC`) describe disclosure and formality, not evidence strength. They must never replace scientific statuses. Functional DNA, Vortex-DNA and the governed-workflow model are separately documented symbolic collaboration architectures and have no hidden execution authority. The workflow is the design unit; see `docs/GOVERNED_SYSTEM.md`.

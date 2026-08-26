@@ -52,7 +52,6 @@ from .physics import (
     relativistic_total_frequency,
     signal_match,
 )
-from .plugin_loader import AngelicaPluginLoader
 from .runtime import (
     RuntimeProfile,
     RuntimeProfileLoader,
@@ -62,6 +61,7 @@ from .runtime import (
     get_runtime_loader,
     register_profile,
 )
+from .triage import compare_report, finding_key
 from .validation import (
     validate_bridge_consistency,
     validate_bridge_json,
@@ -74,7 +74,11 @@ from .validation import (
 )
 from .workflow import (
     WorkflowState,
+    validate_handoff,
+    validate_ledger_entry,
     validate_result,
+    validate_routine,
+    validate_skill,
     validate_task,
     validate_task_result_pair,
     validate_transition,
@@ -102,7 +106,6 @@ __all__ = [
     "RuntimeMatchResult",
     "InformationLayer",
     "VerificationType",
-    "AngelicaPluginLoader",
     # Physics
     "energy_from_frequency",
     "mass_from_frequency",
@@ -135,6 +138,8 @@ __all__ = [
     "UPIGraph",
     "generate_debug_report",
     "render_debug_markdown",
+    "compare_report",
+    "finding_key",
     # Declarative workflows
     "WorkflowState",
     "validate_task",
@@ -142,6 +147,10 @@ __all__ = [
     "validate_workflow",
     "validate_transition",
     "validate_task_result_pair",
+    "validate_ledger_entry",
+    "validate_handoff",
+    "validate_skill",
+    "validate_routine",
     # Validation
     "validate_json_schema",
     "validate_node_status",

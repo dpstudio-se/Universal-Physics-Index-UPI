@@ -92,7 +92,61 @@ def validate_workflow(data: dict[str, Any]) -> list[str]:
         for endpoint in ("from", "to"):
             if transition.get(endpoint) not in declared_states:
                 errors.append(f"Transition {endpoint} state is not declared.")
+    governance = data.get("governance")
+    if isinstance(governance, dict):
+        owner = governance.get("owner")
+        role_ids = {
+            role.get("role_id")
+            for role in data.get("roles", [])
+            if isinstance(role, dict)
+        }
+        if owner not in role_ids:
+            errors.append("$.governance.owner must match a declared role_id.")
+        classes = {
+            role.get("agent_class")
+            for role in data.get("roles", [])
+            if isinstance(role, dict)
+        }
+        if "manager" in classes and "specialist" in classes:
+            manager_caps = next(
+                (
+                    set(role.get("capabilities", []))
+                    for role in data.get("roles", [])
+                    if isinstance(role, dict) and role.get("agent_class") == "manager"
+                ),
+                set(),
+            )
+            specialist_caps = set()
+            for role in data.get("roles", []):
+                if isinstance(role, dict) and role.get("agent_class") == "specialist":
+                    specialist_caps.update(role.get("capabilities", []))
+            overlap = manager_caps & specialist_caps
+            if overlap:
+                errors.append("Manager must not share specialist capabilities.")
     return errors
+
+
+def validate_ledger_entry(data: dict[str, Any]) -> list[str]:
+    """Validate a durable ledger row."""
+    return _validate_document(data, "ledger-entry")
+
+
+def validate_handoff(data: dict[str, Any]) -> list[str]:
+    """Validate a typed handoff contract."""
+    errors = _validate_document(data, "handoff")
+    if data.get("from_owner") == data.get("next_owner"):
+        errors.append("Handoff from_owner and next_owner must differ.")
+    return errors
+
+
+def validate_skill(data: dict[str, Any]) -> list[str]:
+    """Validate an operational skill procedure."""
+    return _validate_document(data, "skill")
+
+
+def validate_routine(data: dict[str, Any]) -> list[str]:
+    """Validate a recurring routine contract."""
+    return _validate_document(data, "routine")
 
 
 def validate_transition(current: WorkflowState, target: WorkflowState) -> list[str]:

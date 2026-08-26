@@ -1,0 +1,22 @@
+{
+  "entry_id": "ledger-index-triage-baseline-campaign",
+  "task_id": "task-index-triage-baseline-1",
+  "workflow_id": "index-triage-v1",
+  "owner": "manager",
+  "state": "SUCCEEDED",
+  "artifact": {
+    "kind": "report",
+    "ref": "examples/ledger/baselines/baseline-1.json",
+    "content_hash": "b89b24577cc6250e449d3cd0eb7ddeb02f351333cb1a87b4d2be7d8f33d28f46"
+  },
+  "evidence": [
+    {"kind": "hash", "ref": "examples/ledger/baselines/runs.json"},
+    {"kind": "test", "ref": "tests/test_triage.py"}
+  ],
+  "decision": "advance",
+  "deadline_at": "2026-08-26T23:59:59Z",
+  "next_owner": "verifier",
+  "verification_type": "software_test",
+  "status": "SYM",
+  "notes": "Three identical manual baselines completed. Routine may start. Provenance gaps remain cataloged."
+}

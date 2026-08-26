@@ -18,6 +18,7 @@ from . import (
 from .debug import generate_debug_report, render_debug_markdown
 from .models import Address
 from .schema_resources import schema_path
+from .triage import compare_report, load_json
 
 
 def print_json(data):
@@ -188,7 +189,7 @@ def debug_index_cmd(args):
         print(f"Error: Path not found: {root}", file=sys.stderr)
         sys.exit(1)
 
-    report = generate_debug_report(root, odins_eye=args.odins_eye)
+    report = generate_debug_report(root, inspect=args.inspect)
     rendered = (
         render_debug_markdown(report)
         if args.format == "markdown"
@@ -200,6 +201,30 @@ def debug_index_cmd(args):
         print(rendered)
 
     if args.strict and report["findings"]:
+        sys.exit(1)
+
+
+def triage_cmd(args):
+    """Run index triage against a known-finding catalog."""
+    root = Path(args.path)
+    known_path = Path(args.known)
+    if not root.exists():
+        print(f"Error: Path not found: {root}", file=sys.stderr)
+        sys.exit(1)
+    if not known_path.exists():
+        print(f"Error: Known-finding catalog not found: {known_path}", file=sys.stderr)
+        sys.exit(1)
+
+    report = generate_debug_report(root, inspect=args.inspect)
+    catalog = load_json(known_path)
+    result = compare_report(report, catalog)
+    result["report"] = report
+    rendered = json.dumps(result, indent=2)
+    if args.output:
+        Path(args.output).write_text(rendered + "\n", encoding="utf-8")
+    else:
+        print(rendered)
+    if result["approval_required"]:
         sys.exit(1)
 
 
@@ -266,7 +291,7 @@ def main():
     debug.add_argument("--output", help="Write the report to a file")
     debug.add_argument("--format", choices=("json", "markdown"), default="json")
     debug.add_argument(
-        "--odins-eye",
+        "--inspect",
         action="store_true",
         help="Find hidden paths, conflicting identities, and mirrored records",
     )
@@ -276,6 +301,24 @@ def main():
         help="Exit non-zero when the report contains findings",
     )
     debug.set_defaults(func=debug_index_cmd)
+
+    triage = subparsers.add_parser(
+        "triage",
+        help="Compare a debug-index report to a known-finding catalog",
+    )
+    triage.add_argument("path", nargs="?", default="data", help="Directory of UPI JSON records")
+    triage.add_argument(
+        "--known",
+        default="examples/ledger/baselines/known-findings.json",
+        help="Known-finding catalog",
+    )
+    triage.add_argument("--output", help="Write the triage result to a file")
+    triage.add_argument(
+        "--inspect",
+        action="store_true",
+        help="Enable the read-only consistency inspector",
+    )
+    triage.set_defaults(func=triage_cmd)
 
     args = parser.parse_args()
 

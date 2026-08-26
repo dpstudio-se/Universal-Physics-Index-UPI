@@ -41,9 +41,21 @@ and never exceed `max_attempts`. A transporter receives only explicitly scoped c
 7. Tests verify contract behavior only, never physical or biological claims.
 8. No schema, role or metaphor grants hidden access, self-replication or host authority.
 
+## Governed-system mapping
+
+The circulation metaphor is one `SYM` view of the same contracts. The operational model lives in
+[`GOVERNED_SYSTEM.md`](GOVERNED_SYSTEM.md):
+
+| Circulation role | Governed role |
+|---|---|
+| Heart / coordinator | Manager |
+| Red blood cell / transport | Specialist |
+| Adaptive immunity / reviewer | Independent verifier |
+| Pulse / lease | Bounded retry and heartbeat |
+
 ## Current boundary
 
-UPI now validates workflow, task and result contracts. It still does not provide a scheduler,
-durable queue, worker process, sandbox, signed audit ledger or quarantine storage. Those components
-remain `STOP` until executable integration tests prove lease expiry, retry, duplicate suppression,
-cancellation and exactly one accepted terminal result.
+UPI now validates workflow, task, result, skill, routine, ledger and handoff contracts. It still
+does not provide a scheduler, durable queue, worker process, sandbox, signed audit ledger or
+quarantine storage. Those components remain `STOP` until executable integration tests prove lease
+expiry, retry, duplicate suppression, cancellation and exactly one accepted terminal result.

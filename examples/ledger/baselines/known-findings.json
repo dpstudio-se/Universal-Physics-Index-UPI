@@ -1,0 +1,61 @@
+{
+  "catalog_id": "index-triage-known-findings-v1",
+  "workflow_id": "index-triage-v1",
+  "status": "SYM",
+  "verification_type": "software_test",
+  "baseline_runs": 3,
+  "artifact_hash": "b89b24577cc6250e449d3cd0eb7ddeb02f351333cb1a87b4d2be7d8f33d28f46",
+  "claims_experimental_verification": false,
+  "findings": [
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:298d6ad054e9b81d",
+      "class": "provenance_gap",
+      "source_relpath": "data/examples/eight_hz.json"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:bd5de5f47561ce33",
+      "class": "negative_fixture",
+      "source_relpath": "data/examples/invalid_symbolic_as_established.json"
+    },
+    {
+      "code": "UPI-E005",
+      "status": "ERR",
+      "path": "path:bd5de5f47561ce33",
+      "class": "negative_fixture",
+      "source_relpath": "data/examples/invalid_symbolic_as_established.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:bd5de5f47561ce33",
+      "class": "negative_fixture",
+      "source_relpath": "data/examples/invalid_symbolic_as_established.json"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:5e5a44aa13e85b98",
+      "class": "source_manifest",
+      "source_relpath": "data/sources/external_index_sources.json"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:a361504cd4f013dc",
+      "class": "source_manifest",
+      "source_relpath": "data/sources/googlecloudplatform_generative_ai.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:70a306d1c3de3ead",
+      "class": "provenance_gap",
+      "source_relpath": "data/theories/newtonian.json"
+    }
+  ],
+  "confusion_guard": "A known-finding catalog records software-test outcomes. It does not approve scientific claims or close provenance gaps."
+}

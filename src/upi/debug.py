@@ -156,7 +156,7 @@ def generate_debug_report(
     root: Path,
     schemas_dir: Path | None = None,
     *,
-    odins_eye: bool = False,
+    inspect: bool = False,
 ) -> dict[str, Any]:
     """Scan every JSON record below *root* and return a UPI debug report.
 
@@ -175,7 +175,7 @@ def generate_debug_report(
     for path in json_paths:
         relative_path = path.relative_to(root).as_posix()
         path_id, path_hash = _path_reference(relative_path)
-        if odins_eye and any(part.startswith(".") for part in Path(relative_path).parts):
+        if inspect and any(part.startswith(".") for part in Path(relative_path).parts):
             findings.append(
                 _finding(
                     "UPI-O003",
@@ -269,7 +269,7 @@ def generate_debug_report(
     mirror_groups: list[dict[str, Any]] = []
     shadow_groups: list[dict[str, Any]] = []
     semantic_groups: list[dict[str, Any]] = []
-    if odins_eye:
+    if inspect:
         for group in _group_by(inspection_records, "content_hash"):
             paths = sorted(item["path"] for item in group)
             content_hash = group[0]["content_hash"]
@@ -378,7 +378,7 @@ def generate_debug_report(
             {"source": finding_node, "target": correction_node, "relation": "STOPS_AT"}
         )
 
-    if odins_eye:
+    if inspect:
         record_nodes_by_path = {
             record["path"]: f"record:{index}" for index, record in enumerate(records)
         }
@@ -419,8 +419,8 @@ def generate_debug_report(
             "record_type_counts": dict(sorted(type_counts.items())),
         },
         "findings": findings,
-        "odins_eye": {
-            "enabled": odins_eye,
+        "inspector": {
+            "enabled": inspect,
             "mode": "local_read_only",
             "secret_values_exposed": False,
             "source_values_redacted": True,
@@ -435,7 +435,7 @@ def generate_debug_report(
                 "evidence",
                 "finding",
                 "correction",
-                *(["shadow", "mirror"] if odins_eye else []),
+                *(["shadow", "mirror"] if inspect else []),
             ],
             "nodes": map_nodes,
             "edges": map_edges,

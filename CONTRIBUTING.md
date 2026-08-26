@@ -157,7 +157,7 @@ Include `confusion_guard` fields to prevent common misinterpretations:
 
 - Check existing documentation in `docs/`
 - Review similar examples in `data/`
-- Read the specification: `docs/index-specification.md`
+- Read the specification: `docs/ARCHITECTURE.md` and `docs/STATUS_MODEL.md`
 - Open an issue with the question label
 
 ## License

@@ -1,0 +1,16 @@
+{
+  "campaign_id": "index-triage-baseline-2026-08-26",
+  "workflow_id": "index-triage-v1",
+  "status": "SYM",
+  "verification_type": "software_test",
+  "claims_experimental_verification": false,
+  "runs": 3,
+  "identical_artifacts": true,
+  "artifact_hash": "b89b24577cc6250e449d3cd0eb7ddeb02f351333cb1a87b4d2be7d8f33d28f46",
+  "artifact": "examples/ledger/baselines/baseline-1.json",
+  "known_findings": "examples/ledger/baselines/known-findings.json",
+  "decision": "advance",
+  "approval_required": false,
+  "notes": "Three manual debug-index --inspect runs produced the same artifact hash. Source records were not mutated by the scanner. Remaining cataloged ERR items are policy, not silent closure.",
+  "confusion_guard": "Identical software-test hashes prove scanner determinism, not physical correctness."
+}

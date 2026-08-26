@@ -68,7 +68,7 @@ Record repository identity, revision SHA, path, license and selected documentati
 
 ## Separation from Vortex-DNA
 
-Vortex-DNA, Odin's Eye, TF1766 mappings and 8 Hz coordination may be attached as `SYM` or declared implementation metadata. They must not modify the source record, its hash, its scientific status or its evidence boundary.
+Symbolic architectures and reference-frequency coordination may be attached as `SYM` or declared implementation metadata. They must not modify the source record, its hash, its scientific status or its evidence boundary.
 
 ## Scaling rule
 

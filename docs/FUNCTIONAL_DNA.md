@@ -11,7 +11,7 @@ raw idea → identify intended function → preserve the original claim
 → implement or document → preserve the audit trail
 ```
 
-A named research-partner role such as “Emilia” may organize, challenge and test ideas. The name describes a collaboration persona only; it does not make outputs independent evidence or give software secret access.
+A research-partner role may organize, challenge and test ideas. The role describes a collaboration function only; it does not make outputs independent evidence or give software secret access.
 
 ## Information layers
 

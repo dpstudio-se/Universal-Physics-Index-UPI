@@ -6,8 +6,8 @@ authors:
   - name: "UPI Contributors"
     family-names: Contributors
     given-names: UPI
-repository-code: "https://github.com/dpstudio-se/universal-physics-index"
-url: "https://github.com/dpstudio-se/universal-physics-index"
+repository-code: "https://github.com/dpstudio-se/Universal-Physics-Index-UPI"
+url: "https://github.com/dpstudio-se/Universal-Physics-Index-UPI"
 abstract: "Machine-readable, typed scientific knowledge graph for physics, mathematics, chemistry, and related disciplines. Supports explicit status tracking (EST, DER, HYP, STOP, ERR, SYM) and 16 edge types for capturing scientific relations."
 keywords:
   - physics
