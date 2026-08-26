@@ -170,7 +170,11 @@ def make_handler(app: ContributionApp):
                     self._json(exc.status_code, {"errors": exc.errors})
                     return
                 self._published(stored.address)
-                self._json(200, app.service.get_node(stored.address))
+                promoted = app.service.get_node(stored.address)
+                if promoted is None:
+                    self._json(500, {"errors": ["missing after promote"]})
+                    return
+                self._json(200, promoted)
                 return
             if parsed.path == "/api/merge-check":
                 from upi.merge import merge_from_live
@@ -193,7 +197,11 @@ def make_handler(app: ContributionApp):
                 self._json(exc.status_code, {"errors": exc.errors})
                 return
             self._published(stored.address)
-            self._json(201, app.service.get_node(stored.address))
+            created = app.service.get_node(stored.address)
+            if created is None:
+                self._json(500, {"errors": ["missing after insert"]})
+                return
+            self._json(201, created)
 
         def _ingest(self, query: dict[str, list[str]]) -> None:
             mode = (query.get("mode") or ["check"])[0]

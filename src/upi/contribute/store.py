@@ -116,7 +116,7 @@ class ContributionStore:
         )
         return _row_to_contribution(row) if row else None
 
-    def list(self, limit: int = 200) -> list[Contribution]:
+    def list_all(self, limit: int = 200) -> list[Contribution]:
         rows = self._fetchall(
             "SELECT address, record_type, status, title, payload, content_hash, created_at "
             "FROM contributions ORDER BY created_at DESC LIMIT ?",

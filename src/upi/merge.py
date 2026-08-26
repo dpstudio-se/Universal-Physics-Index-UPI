@@ -40,7 +40,10 @@ def build_merge_pack(
     existing = set(graph.get_all_nodes())
     items = []
     for record in records:
-        payload = record.get("payload") if "payload" in record else record
+        raw = record.get("payload") if "payload" in record else record
+        if not isinstance(raw, dict):
+            continue
+        payload: dict[str, Any] = raw
         record_type = record.get("record_type") or (
             "bridge" if {"source", "target", "relation"} <= payload.keys() else "node"
         )

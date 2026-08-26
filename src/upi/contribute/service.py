@@ -117,7 +117,7 @@ class ContributionService:
         query: str | None = None,
         status: str | None = None,
     ) -> list[dict[str, Any]]:
-        rows = [_public_view(item) for item in self.store.list(limit=max(limit, 500))]
+        rows = [_public_view(item) for item in self.store.list_all(limit=max(limit, 500))]
         if status:
             rows = [row for row in rows if row["status"] == status]
         if query:
