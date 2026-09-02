@@ -1,0 +1,17 @@
+{
+  "source_id": "indaleko",
+  "title": "Indaleko: the unified personal index (Mason 2026). Personal-file retrieval dissertation; claimed 160TB / 31M-file corpus across eight storage platforms.",
+  "canonical_url": "https://arxiv.org/abs/2602.20507",
+  "status": "STOP",
+  "evidence_boundary": "This record cites a personal-information-retrieval dissertation (arXiv:2602.20507). Abstract: 31 million files spanning 160TB. Body: 31.9 million files, 35.1 TB capacity, 16.2 TB used, 78.6 GB ArangoDB metadata. Evaluation used synthetic activity metadata. It does not supply physics evidence.",
+  "confusion_guard": "Indaleko's UPI is the Unified Personal Index, not this Universal Physics Index. Do not ingest the 160TB. Do not treat personal-file retrieval, GPS, or Spotify collectors as a physics result.",
+  "classification_rules": [
+    "Paper metadata (arXiv ID, author, date, code URL) may be recorded as EST in the source-fact domain.",
+    "The 160TB vs 16.2TB used discrepancy remains STOP until the two figures are reconciled in the source.",
+    "Personal file payloads and cloud-drive collectors stay out of this ledger.",
+    "Memory-anchor types may be mapped symbolically onto physics provenance (when, laboratory, who, experiment). That mapping is SYM."
+  ],
+  "declared_license": "arXiv.org perpetual non-exclusive license",
+  "source_type": "arxiv_dissertation",
+  "retrieved_at": "2026-09-02"
+}
