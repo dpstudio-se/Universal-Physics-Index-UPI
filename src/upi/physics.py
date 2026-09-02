@@ -45,13 +45,13 @@ def energy_from_frequency(frequency_hz: float) -> float:
 
 
 def mass_from_frequency(frequency_hz: float) -> float:
-    """Calculate rest mass from frequency using m = h*f / c^2.
+    """Calculate the energy mass equivalent from frequency using m = h*f / c^2.
 
     Args:
         frequency_hz: Frequency in Hertz
 
     Returns:
-        Rest mass in kilograms
+        Mass equivalent in kilograms
 
     Raises:
         ValueError: If frequency is invalid
@@ -66,13 +66,13 @@ def mass_from_frequency(frequency_hz: float) -> float:
 
 
 def frequency_from_mass(mass_kg: float) -> float:
-    """Calculate rest-mass frequency from mass using f = m*c^2 / h.
+    """Calculate the equivalent frequency from mass using f = m*c^2 / h.
 
     Args:
-        mass_kg: Rest mass in kilograms
+        mass_kg: Mass equivalent in kilograms
 
     Returns:
-        Rest-mass frequency in Hertz
+        Equivalent frequency in Hertz
 
     Raises:
         ValueError: If mass is invalid
@@ -135,7 +135,7 @@ def index8_from_mass(mass_kg: float) -> float:
     """Calculate 8 Hz dimensionless index N8 = m*c^2 / (8*h).
 
     Args:
-        mass_kg: Rest mass in kilograms
+        mass_kg: Mass equivalent in kilograms
 
     Returns:
         Dimensionless index N8
