@@ -104,9 +104,9 @@ jobs:
                   (head, path, slug(record.get("address", path)), record.get("status", "UNKNOWN"), ui, note)
               )
 
-            lines = [
-              "| SHA | File | Slug | Status | UI | Note |",
-              "|---|---|---|---|---|---|",
+          lines = [
+            "| SHA | File | Slug | Status | UI | Note |",
+            "|---|---|---|---|---|---|",
           ]
           if changes:
               lines.extend("| " + " | ".join(row) + " |" for row in changes)
