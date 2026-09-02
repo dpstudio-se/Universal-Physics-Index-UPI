@@ -7,16 +7,23 @@ All notable changes are documented here.
 Software contract freeze for the gathering and validation layers.
 
 - Canonical graph load from `data/`, typed bridges, hypothesis registry
-- Canonical merge-check pack (`upi merge-check`) with human approval required
-- Uncertainty helper, dimension check, visible evidence weights, quarantine store
+- `upi merge-check` review pack with human approval gate
 - Live search, rate limit, supersede, maintainer promote token
-- OpenAPI for the live API, migration policy, triage recovery drill
-- Provenance on 8 Hz and Newtonian records; source manifests skipped by debug-index
+- Public contribute UI, OpenAPI, seed `dna_minne_7.834`
+- Schema: `verification_type`, causation, domain guards
+- Debug-index skips source manifests; quarantine path for hostile payloads
 
 ## Unreleased
 
+### Documentation
+
+- Synced README / README.sv / ROADMAP / ARCHITECTURE to the v1.0.0 main contract:
+  DNA (`data/` on GitHub main) vs RNA (grok.me), closed software gaps no longer
+  listed as open ERR, honest STOP table (Indaleko identity, promotion gate).
+
 ### Added
 
+- `data/examples/rna_engine_ping.json` — SYM software_test ping from the RNA write path (not a physical claim).
 - Information mass (HYP, T€@X 2026): `m_I = h f / c^2` as a named referent of the derived mass equivalent, with frequency-encoding assumption.
 - Derived mass equivalent of a frequency quantum (DER): composition of `E = h f` and inertia of energy.
 - Universal information measure (HYP): closed dictionary frequency → m_I → geometric entropy → 11D brane, dual to AdS/CFT.
@@ -31,6 +38,8 @@ Software contract freeze for the gathering and validation layers.
 
 ### Changed
 
+- Bump `github/codeql-action/upload-sarif` to 4.37.9 (CI Trivy SARIF upload).
+- Bump `actions/upload-artifact` to v7 (index-triage report upload).
 - Planck–Einstein confusion guard no longer sneers at `m = h f / c^2`; it names photon rest mass (zero) versus the derived mass equivalent.
 - Mass-energy record notes that `E = m c^2` is itself derived, and that applying it to radiation energy changes the referent of `m`.
 - Public repository layout now follows a standard Python `src/` package, with private product scaffolding removed.
