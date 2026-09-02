@@ -1,0 +1,68 @@
+{
+  "tags": [
+    "measure",
+    "information-mass",
+    "entropy",
+    "brane",
+    "loop",
+    "teax"
+  ],
+  "title": "Universal information measure",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "A closed dictionary that numbers every measurable is a measure — that is the right word. It is not automatically a law of nature. Entropy in its gravitational form is the area law, in-domain only for horizons. 11D branes are SYM as ontology. Sub-Planck R_s STOPS the geometric station. Same kilogram as m = h f / c²; extra claim is the closure and the universality.",
+  "definitions": [
+    "A measure assigns a number to every admissible measurable.",
+    "Here the number is m_I, or equivalently S/k constructed from m_I via a Schwarzschild area, under declared constants h, c, G.",
+    "Closing the loop through an 11D brane is a dictionary between inertial mass-equivalent, horizon entropy, and worldvolume degrees of freedom.",
+    "T€@X (2026) information mass is the inertial station of the loop."
+  ],
+  "mechanism": "Planck and Einstein supply E and inertia. T€@X names the kilogram information mass. Bekenstein–Hawking supplies the area law. 11D M-theory supplies a candidate microstate substrate. Composing them yields a number for every f. Composition is not automatic promotion: G and ℓ_P are extra constants, and lab frequencies give R_s << ℓ_P.",
+  "predictions": [
+    "Given f, the software returns a unique (E, m_I, R_s, S/k) from declared constants.",
+    "For all laboratory frequencies, R_s(m_I) << ℓ_P, so the geometric-entropy station is out of domain.",
+    "No surplus mass beyond E/c² appears when information content is varied at fixed energy."
+  ],
+  "verification_type": "software_test",
+  "address": "UPI<information_physics,1,measure,universal_information_measure>",
+  "assumptions": [
+    "The measurable is a frequency-encoded carrier (information-mass assumption).",
+    "Geometric entropy is evaluated on the Schwarzschild horizon of that mass.",
+    "That evaluation is only in-domain when R_s >> ℓ_P.",
+    "The brane station is a duality dictionary, not a laboratory object."
+  ],
+  "falsification_conditions": [
+    "A unique, parameter-free continuation of the loop below ℓ_P that disagrees with a preregistered Planck-scale observable.",
+    "A brane dictionary that predicts a laboratory mass excess not equal to E/c².",
+    "Promotion of the loop to EST without an in-domain horizon (R_s >> ℓ_P) or an independent brane observable."
+  ],
+  "primary_sources": [
+    "T€@X™ (2026), information mass m_I = h f / c²",
+    "Bekenstein (1973); Hawking (1975)",
+    "Witten (1995), M-theory"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "UPI software: m_I, R_s, S/k from f with SI constants",
+      "confidence": 1.0,
+      "notes": "Software arithmetic for the numbers. Does not establish the physical loop."
+    },
+    {
+      "type": "other",
+      "source": "T€@X™ (2026), information mass as the inertial station of a closed measure",
+      "confidence": 0.2,
+      "notes": "Authorship of the identification. Not a measurement of 11D branes or of sub-Planck horizons."
+    }
+  ],
+  "equations": [
+    "m_I = h f / c^2",
+    "R_s = 2 G m_I / c^2",
+    "A = 4 pi R_s^2",
+    "S/k = A / (4 ℓ_P^2)",
+    "loop: f -> m_I -> S -> brane -> f"
+  ],
+  "status": "HYP",
+  "description": "A proposed closed measure: every physical encoding with frequency f is assigned the number m_I = h f / c², dual to geometric entropy S = k A(m_I)/(4 ℓ_P²), dual to 11D brane degrees of freedom, returning to the encoding. That is what a measure is — a number on every measurable. The loop is HYP. The 11D closure is SYM. The geometric-entropy step STOPS when the Schwarzschild radius of m_I falls below ℓ_P."
+}

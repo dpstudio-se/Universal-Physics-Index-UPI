@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "H is finite-dimensional. S is a declared stabilizer group."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "C = { |ψ> in H : g |ψ> = |ψ> for all g in S }"
+  ],
+  "target": "UPI<quantum_information,1,finite_dimensional,hilbert_state_space>",
+  "version": "0.1.0",
+  "mechanism": "A stabilizer code is a linear subspace of a finite-dimensional Hilbert space cut out by commuting Pauli checks.",
+  "status": "EST",
+  "confusion_guard": "Existence of the subspace is linear algebra; it is not an experimental demonstration of coherence.",
+  "source": "UPI<quantum_information,1,error_correction,syndrome_measurement>"
+}

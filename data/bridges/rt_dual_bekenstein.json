@@ -1,0 +1,16 @@
+{
+  "assumptions": [
+    "For a thermal AdS black hole, the RT surface of the entire boundary is the horizon."
+  ],
+  "relation": "DUAL_TO",
+  "equations": [
+    "S_BH = A_horizon / (4 G_N)",
+    "S_RT = Area(γ) / (4 G_N)"
+  ],
+  "target": "UPI<gravity,1,horizon,bekenstein_hawking_entropy>",
+  "version": "0.1.0",
+  "mechanism": "Both are area laws in Planck units. BH is a causal horizon. RT is an extremal surface for a boundary region. They coincide for the whole-boundary thermal state.",
+  "status": "DER",
+  "confusion_guard": "Same 1/4G, different surfaces. A lab Schwarzschild radius of m_I is neither.",
+  "source": "UPI<theories,1,holography,ryu_takayanagi>"
+}

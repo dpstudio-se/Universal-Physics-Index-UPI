@@ -1,0 +1,46 @@
+{
+  "tags": [
+    "ads",
+    "gravity",
+    "negative curvature",
+    "conformal boundary"
+  ],
+  "title": "Anti-de Sitter spacetime",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "AdS is a geometry. Observational cosmology has Λ > 0 (de Sitter-like). Do not transport AdS/CFT onto the night sky without a new dictionary.",
+  "definitions": [
+    "AdS_{d+1} is the hyperboloid embedded in R^{2,d} with radius L.",
+    "Λ = -d(d-1)/(2 L^2) in mostly-plus signature conventions.",
+    "The conformal boundary is a d-dimensional Lorentzian space (Einstein static universe, or Minkowski in Poincaré coordinates)."
+  ],
+  "mechanism": "The Einstein equation with Λ < 0 admits a unique (up to isometry) maximally symmetric Lorentzian solution of negative curvature.",
+  "verification_type": "mathematical_check",
+  "address": "UPI<gravity,1,spacetime,anti_de_sitter>",
+  "assumptions": [
+    "Einstein gravity with negative cosmological constant, or the corresponding vacuum of supergravity.",
+    "No statement is made that the observed universe is asymptotically AdS."
+  ],
+  "falsification_conditions": [
+    "A demonstration that the Einstein equation with Λ < 0 does not admit this maximally symmetric solution — it does."
+  ],
+  "primary_sources": [
+    "de Sitter (1917) contrasted; anti-de Sitter as the Λ < 0 cousin",
+    "Hawking, Ellis, The large scale structure of space-time"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Einstein equation with Λ < 0; embedding of AdS as a quadric",
+      "confidence": 1.0
+    }
+  ],
+  "equations": [
+    "R_μν - (1/2) R g_μν + Λ g_μν = 0",
+    "Λ < 0",
+    "ds^2_Poincare = (L^2/z^2) (dz^2 + η_ij dx^i dx^j)"
+  ],
+  "status": "EST",
+  "description": "Maximally symmetric Lorentzian geometry of constant negative curvature: Einstein's equation with Λ < 0. It has a conformal boundary. This is a solution, not a claim that we live in AdS."
+}

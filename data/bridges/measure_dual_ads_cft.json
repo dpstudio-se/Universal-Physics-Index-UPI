@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "The measure's entropy station, when in-domain, is holographic entanglement, not S_BH(m_I) for a lab quantum."
+  ],
+  "relation": "DUAL_TO",
+  "equations": [
+    "in-domain holographic number = S_A = Area(γ_A)/4G_N"
+  ],
+  "target": "UPI<theories,1,holography,ads_cft>",
+  "version": "0.1.0",
+  "mechanism": "AdS/CFT is the controlled dictionary that actually closes information (CFT) onto inertia/geometry (bulk). The lab-frequency Schwarzschild station remains STOP.",
+  "status": "SYM",
+  "confusion_guard": "Do not replace the STOP at sub-Planck R_s by writing AdS/CFT on the same line. Different domains.",
+  "source": "UPI<information_physics,1,measure,universal_information_measure>"
+}

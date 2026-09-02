@@ -1,0 +1,66 @@
+{
+  "tags": [
+    "information-mass",
+    "teax",
+    "frequency",
+    "inertia-of-energy",
+    "hypothesis"
+  ],
+  "title": "Information mass",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Information mass is a hypothesis about the referent of the derived kilogram m = h f / c². It is not photon rest mass (zero), not Landauer's kT ln 2 / c², not a fifth force, and not a dark-matter candidate by naming. T€@X™ is provenance. A trademark is not a measurement.",
+  "definitions": [
+    "m_I is information mass: the inertial mass assigned to a physically encoded information carrier of frequency f.",
+    "The working equation is the derived mass equivalent m = h f / c².",
+    "A bit, qubit, or message has this mass only through the energy of its physical encoding, not as an abstract number.",
+    "T€@X™ (2026) is the provenance of this identification — authorship, not a measurement."
+  ],
+  "mechanism": "Planck gave E = h f. Einstein gave inertia of energy, m = E/c². The derived composition is m = h f / c². The hypothesis is that this m, when the energy is a frequency-encoded carrier of information, is information mass m_I. Same kilogram, named referent. A static bit whose energy is not h f (for example a CMOS well at ~CV²/2, or a Landauer erasure at kT ln 2) is outside this encoding assumption.",
+  "predictions": [
+    "N frequency-encoded quanta of frequency f in a closed cavity contribute inertial mass N h f / c² — identical to the energy-mass of the carriers.",
+    "No surplus mass appears after the carrier energy is accounted for.",
+    "A bit not encoded at energy h f does not weigh h f / c²."
+  ],
+  "verification_type": "none",
+  "address": "UPI<information_physics,1,inertia,information_mass>",
+  "assumptions": [
+    "The information is encoded in (or as) a radiation quantum or mode of ordinary frequency f.",
+    "The energy of that encoding is E = h f, or n h f for n quanta.",
+    "Inertia of energy holds: that energy contributes m = E/c² to a closed system.",
+    "No additional mass term beyond E/c² is introduced."
+  ],
+  "falsification_conditions": [
+    "A closed system whose information content is varied at fixed energy shows a mass change attributed to information as a separate substance.",
+    "m_I = h f / c² is applied to encodings whose energy is not h f and treated as confirmed.",
+    "The identification is promoted to EST without a declared physical encoding and a mass measurement of that encoding."
+  ],
+  "primary_sources": [
+    "T€@X™ (2026), information mass m_I = h f / c²",
+    "Planck (1900)",
+    "Einstein, inertia of energy (1905)",
+    "Einstein, light-quantum paper (1905)"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "other",
+      "source": "T€@X™ (2026), information-mass identification m_I = h f / c²",
+      "confidence": 0.2,
+      "notes": "Authorship of the named identification. Not experimental confirmation."
+    },
+    {
+      "type": "calculation",
+      "source": "Derived mass equivalent of a frequency quantum (UPI DER record)",
+      "confidence": 1.0,
+      "notes": "Supports the kilogram. Does not by itself establish that the kilogram is 'of information'."
+    }
+  ],
+  "equations": [
+    "m_I = h f / c^2",
+    "E = h f",
+    "m_I = E / c^2"
+  ],
+  "status": "HYP",
+  "description": "T€@X (2026) identification: when information is physically instantiated as a frequency quantum, its inertial mass is m_I = h f / c². This is a named reading of the derived mass equivalent, not a second formula and not a photon rest mass."
+}

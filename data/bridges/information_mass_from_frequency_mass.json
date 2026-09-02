@@ -1,0 +1,17 @@
+{
+  "assumptions": [
+    "The energy whose mass equivalent is taken is a frequency-encoded information carrier."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "m_I = h f / c^2",
+    "m = h f / c^2",
+    "m_I = m under frequency encoding"
+  ],
+  "target": "UPI<information_physics,1,inertia,frequency_mass_equivalent>",
+  "version": "0.1.0",
+  "mechanism": "The DER record supplies the kilogram. The HYP record supplies the name and the encoding assumption. Same number, extra claim.",
+  "status": "HYP",
+  "confusion_guard": "Derivation of the kilogram does not promote the information-mass identification. Status of the bridge is HYP because the referent, not the algebra, is the claim.",
+  "source": "UPI<information_physics,1,inertia,information_mass>"
+}

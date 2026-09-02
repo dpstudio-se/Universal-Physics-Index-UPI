@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "Classical bulk; leading order in G_N."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "S_A = Area(γ_A)/4G_N"
+  ],
+  "target": "UPI<theories,1,holography,ads_cft>",
+  "version": "0.1.0",
+  "mechanism": "Replica trick maps CFT entanglement to a bulk cosmic brane whose n→1 limit is the area.",
+  "status": "DER",
+  "confusion_guard": "RT inherits the domain of AdS/CFT. It does not enlarge that domain to our sky or to m_I of a lab oscillator.",
+  "source": "UPI<theories,1,holography,ryu_takayanagi>"
+}

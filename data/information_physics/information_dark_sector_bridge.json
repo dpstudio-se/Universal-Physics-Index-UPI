@@ -1,0 +1,61 @@
+{
+  "tags": [
+    "information-physics",
+    "dark-sector",
+    "cosmology",
+    "k-essence",
+    "P(X)",
+    "hypothesis",
+    "audit",
+    "boundary"
+  ],
+  "title": "Information-to-dark-sector bridge candidate",
+  "version": "0.2.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "EST equations remain EST only in their established domains. Their combination does not promote this HYP node. SYM metaphors, simulations, matching scales, or successful software checks do not establish a new physical law.",
+  "definitions": [
+    "Candidate field sector: a shift-symmetric effective theory described by P(X).",
+    "Target parameters: rho_0, X_0, and P_2.",
+    "Target bridge: (S_A, l_P, H, ...) -> (rho_0, X_0, P_2).",
+    "STOPP memory means failed assumptions and branches remain available as negative audit information."
+  ],
+  "mechanism": "Attempt to constrain the P(X) parameters from declared information and geometric inputs, then reject the bridge if dimensional, stability, background, BBN, CMB, growth, or energy-accounting tests fail.",
+  "predictions": [
+    "A successful bridge must determine rho_0, X_0, and P_2 without importing the target cosmological density as an input.",
+    "The claimed matter-like regime must have stable perturbations and observationally acceptable effective sound speed.",
+    "The same declared parameter set must pass BBN, CMB, and structure-growth checks without post-hoc retuning."
+  ],
+  "verification_type": "none",
+  "address": "UPI<information_physics,7,dark_sector,information_bridge>",
+  "assumptions": [
+    "Established equations are used only inside their established domains.",
+    "The P(X) dark-sector interpretation is hypothetical.",
+    "Observed dark-energy density must not be inserted as an input and then reported as a prediction.",
+    "Misner-Sharp or horizon energy must not be counted as an independent energy contribution when it is already the geometric representation of total bulk energy.",
+    "Symbolic architecture does not constitute physical evidence."
+  ],
+  "falsification_conditions": [
+    "A required parameter is obtained only by inserting the target cosmological density that is claimed as an output.",
+    "The construction double-counts Misner-Sharp or horizon energy.",
+    "The claimed physical regime develops a ghost or gradient instability.",
+    "The predicted background, BBN, CMB, sound-speed, or growth behavior contradicts preregistered constraints.",
+    "A symbolic or metaphorical mapping is required as evidence for the physical mechanism."
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Established Planck energy-frequency relation, mass-energy equivalence, Bekenstein-Hawking area entropy, and explicit algebraic consistency checks",
+      "confidence": 0.45,
+      "notes": "These inputs support only the stated established equations and bookkeeping constraints. They do not establish the proposed dark-sector bridge."
+    }
+  ],
+  "equations": [
+    "E = h*f",
+    "E = m*c^2",
+    "S_BH = k_B*A/(4*l_P^2)",
+    "P(X) = -rho_0 + P_2*(X-X_0)^2"
+  ],
+  "status": "HYP",
+  "description": "Research hypothesis testing whether declared information or horizon inputs can non-circularly constrain a shift-symmetric P(X) effective field model with dark-matter-like and acceleration-like regimes. This is not established physics."
+}

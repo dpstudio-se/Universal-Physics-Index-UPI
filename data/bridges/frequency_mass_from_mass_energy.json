@@ -1,0 +1,17 @@
+{
+  "assumptions": [
+    "E on the left is rest energy when m is invariant mass of a body at rest.",
+    "When E is radiation energy, m is the mass equivalent of that energy, not a photon rest mass."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "E = m c^2",
+    "m = h f / c^2"
+  ],
+  "target": "UPI<RELATIVITY,1,T_ENERGY,N_MASS_ENERGY>",
+  "version": "0.1.0",
+  "mechanism": "E = m c² is itself derived (Einstein 1905, inertia of energy). Applying it to E = h f is the same derivation with a different named energy.",
+  "status": "DER",
+  "confusion_guard": "Calling E = m c² established and m = h f / c² ‘merely a rewrite’ is an inconsistent standard: both are derived identifications whose status rides on what m names and what has been measured.",
+  "source": "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+}

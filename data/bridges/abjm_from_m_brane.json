@@ -1,0 +1,16 @@
+{
+  "assumptions": [
+    "The 11D object is an M2 stack, not an unspecified brane picture."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "M2 worldvolume → ABJM",
+    "near horizon → AdS4 × S7"
+  ],
+  "target": "UPI<theories,1,m_theory,eleven_d_brane>",
+  "version": "0.1.0",
+  "mechanism": "This is the honest way an 11D brane closes into holography: named worldvolume, named near-horizon, named CFT.",
+  "status": "DER",
+  "confusion_guard": "Promotes the 11D station from a drawing to a named pair. Still not a lab encoding.",
+  "source": "UPI<holography,1,m_theory,ads4_s7_abjm>"
+}
