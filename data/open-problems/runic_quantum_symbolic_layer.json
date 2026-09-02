@@ -1,0 +1,67 @@
+{
+  "tags": [
+    "runic-symbols",
+    "quantum-information",
+    "symbolic-layer",
+    "16-dimensional",
+    "odins-eye"
+  ],
+  "title": "Runic quantum notation as a symbolic layer",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Runic names and images are notation for a proposed state-space model. They are not physical particles, forces, frequencies or quantum operators without explicit matrices, units and measurements.",
+  "definitions": [
+    "A 16-dimensional register has Hilbert-space dimension 16 = 2^4 and can represent four qubits or one 16-level qudit.",
+    "A rune label r is a symbolic identifier for a basis state, observable, gate or channel only after its mathematical type is declared.",
+    "A valid state is |psi> = sum_j a_j |j> with sum_j |a_j|^2 = 1.",
+    "Odin's eye is a symbolic review boundary: open means the label has a defined type and inverse/check; closed means the identity gap remains."
+  ],
+  "mechanism": "The symbolic layer maps runic labels to already defined finite-dimensional quantum-information objects. The underlying state vector, unitary gate, channel or measurement must remain explicit; visual resemblance does not supply the map.",
+  "predictions": [
+    "Every accepted rune-to-object map is type-checkable as a basis label, unitary operator, channel or observable.",
+    "Every accepted state preserves normalization and every accepted unitary satisfies U^dagger U = I.",
+    "A declared measurement produces probabilities P(j) = |<j|psi>|^2.",
+    "Removing the runic labels leaves the same quantum-information calculation."
+  ],
+  "verification_type": "mathematical_check",
+  "address": "UPI<open_problems,1,symbolic_layer,runic_quantum_notation>",
+  "assumptions": [
+    "The runic labels are a notation layer and do not add physical degrees of freedom.",
+    "The register dimension and subsystem decomposition are declared before computation.",
+    "Any proposed operator is represented by an explicit finite matrix or completely positive map.",
+    "The digital calculation is a classical simulation unless independently implemented and verified on quantum hardware."
+  ],
+  "falsification_conditions": [
+    "Reject a mapping if the same rune is assigned incompatible mathematical types without a declared context.",
+    "Reject a gate if it fails the unitary or channel validity conditions.",
+    "Reject a state if normalization or Born probabilities fail beyond numerical tolerance.",
+    "Do not promote the symbolic layer if it produces no reproducible prediction beyond relabeling an existing model."
+  ],
+  "primary_sources": [
+    "UPI<quantum_information,1,finite_dimensional,hilbert_state_space>",
+    "UPI<quantum_information,1,qudit,fourier_dual_basis>",
+    "User-provided runic quantum concept images (2026)"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Finite-dimensional Hilbert-space and qudit definitions already present in UPI",
+      "notes": "Supports the mathematical substrate only; it does not validate the runic interpretation."
+    },
+    {
+      "type": "other",
+      "source": "User-provided concept images",
+      "notes": "Visual and symbolic proposal; not an experimental observation."
+    }
+  ],
+  "equations": [
+    "dim(H) = 16 = 2^4",
+    "|psi> = sum_(j=0)^15 a_j |j>",
+    "sum_j |a_j|^2 = 1",
+    "P(j) = |<j|psi>|^2",
+    "U^dagger U = I"
+  ],
+  "status": "STOP",
+  "stop_reason": "No explicit rune-to-operator dictionary, independent physical system or new measurable prediction has been supplied. The smallest next observation is one complete table assigning each rune a type, matrix or channel, units where applicable, and a round-trip test."
+}

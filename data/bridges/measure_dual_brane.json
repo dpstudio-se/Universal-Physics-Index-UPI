@@ -1,15 +1,19 @@
 {
   "assumptions": [
-    "An 11D brane worldvolume can host the degeneracy counted by S."
+    "An 11D brane worldvolume can host the degeneracy counted by S.",
+    "The Odin-eye state is a symbolic boundary variable: 0 means closed and 1 means open.",
+    "The eye state does not by itself determine a physical mass or entropy."
   ],
   "relation": "DUAL_TO",
   "equations": [
-    "microstates ~ exp(S/k) as brane degrees of freedom"
+    "microstates ~ exp(S/k) as brane degrees of freedom",
+    "eye_state ∈ {0, 1}",
+    "eye_state = 0 (closed), eye_state = 1 (open)"
   ],
   "target": "UPI<theories,1,m_theory,eleven_d_brane>",
   "version": "0.1.0",
-  "mechanism": "Holographic counting on branes is the candidate closure that returns entropy to information. Without a unique map from m = h f / c² to a named worldvolume, this station is symbolic.",
+  "mechanism": "Holographic counting on branes is the candidate closure that returns entropy to information. The Odin eye names the boundary between a closed and open symbolic state; it does not replace the missing map from m = h f / c² to a named worldvolume.",
   "status": "SYM",
-  "confusion_guard": "11D is not evidence. A loop drawn through a brane is still a drawing.",
+  "confusion_guard": "11D is not evidence. A loop drawn through a brane is still a drawing. The black-hole eye and its 0/1 state are a symbolic map, not a claim that a black hole is a binary bit.",
   "source": "UPI<information_physics,1,measure,universal_information_measure>"
 }

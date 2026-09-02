@@ -1,0 +1,19 @@
+{
+  "assumptions": [
+    "Runic labels are metadata and do not change the Hilbert-space dimension.",
+    "The represented register has dimension 16 = 2^4.",
+    "A rune becomes computationally meaningful only when mapped to an explicit state, operator or measurement."
+  ],
+  "relation": "REPRESENTS",
+  "equations": [
+    "dim(H_runic) = dim(H_16) = 16",
+    "P(j) = |<j|psi>|^2"
+  ],
+  "target": "UPI<quantum_information,1,finite_dimensional,hilbert_state_space>",
+  "version": "0.1.0",
+  "mechanism": "The runic layer provides symbolic labels for a finite-dimensional Hilbert-space model while preserving the established state, operator and measurement rules.",
+  "status": "STOP",
+  "confusion_guard": "This bridge represents a proposed notation layer; it does not establish runes as physical operators or validate cosmological claims.",
+  "stop_reason": "The complete rune-to-object dictionary and independent physical implementation are still missing.",
+  "source": "UPI<open_problems,1,symbolic_layer,runic_quantum_notation>"
+}
