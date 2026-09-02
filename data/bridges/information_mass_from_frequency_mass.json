@@ -4,9 +4,9 @@
   ],
   "relation": "DERIVED_FROM",
   "equations": [
-    "m_I = h f / c^2",
     "m = h f / c^2",
-    "m_I = m under frequency encoding"
+    "m = h f / c^2",
+    "m is the same mass equivalent under frequency encoding"
   ],
   "target": "UPI<information_physics,1,inertia,frequency_mass_equivalent>",
   "version": "0.1.0",

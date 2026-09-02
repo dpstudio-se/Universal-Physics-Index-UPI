@@ -93,7 +93,7 @@ Node: [`data/information_physics/frequency_mass_equivalent.json`](data/informati
 ```
 
 `m = hf/c²` is the same *kind* of rewrite as `E = mc²`: composition, then scope.
-The kilogram of energy `hf` is `DER`. Naming it information mass `m_I` (T€@X™ 2026) is `HYP`.
+The kilogram of energy `hf` is `DER`. Interpreting it as information-associated mass (T€@X™ 2026) is `HYP`; the quantity remains `m = hf/c²`.
 Photon rest mass stays 0 (`STOP` on a rest frame).
 
 Python (this package):

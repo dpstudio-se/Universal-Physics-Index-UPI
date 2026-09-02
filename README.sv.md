@@ -22,7 +22,7 @@ Osäkerhet ska märkas `STOP`, inte gissas.
 8 Hz och 7,834 Hz är konfigurerbara referenser, inte universella konstanter.
 `dna_minne_7.834` är `SYM` (minne/arkitektur), inte biologi och inte medicin.
 `m = hf/c²` är `DER` (samma sorts omskrivning som `E = mc²`). Att kalla kilot
-informationsmassa `m_I` (T€@X™ 2026) är `HYP`.
+en informationsrelaterad tolkning av samma massa (T€@X™ 2026) är `HYP`; storheten är fortfarande `m = hf/c²`.
 
 <p align="center">
   <img src="docs/ui/lab.jpg" alt="Einstein-karta på masskalet" width="920">

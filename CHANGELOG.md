@@ -24,10 +24,10 @@ Software contract freeze for the gathering and validation layers.
 ### Added
 
 - `data/examples/rna_engine_ping.json` — SYM software_test ping from the RNA write path (not a physical claim).
-- Information mass (HYP, T€@X 2026): `m_I = h f / c^2` as a named referent of the derived mass equivalent, with frequency-encoding assumption.
+- Information mass (HYP, T€@X 2026): an information-associated interpretation of the derived mass equivalent `m = h f / c^2`, with frequency-encoding assumption; no second mass symbol.
 - Derived mass equivalent of a frequency quantum (DER): composition of `E = h f` and inertia of energy.
-- Universal information measure (HYP): closed dictionary frequency → m_I → geometric entropy → 11D brane, dual to AdS/CFT.
-- Sub-Planck horizon STOP: Schwarzschild radius of laboratory `m_I` is below `ℓ_P`.
+- Universal information measure (HYP): proposed dictionary frequency → m → geometric entropy → 11D brane, dual to AdS/CFT.
+- Sub-Planck horizon STOP: Schwarzschild radius of laboratory `m = h f / c^2` is below `ℓ_P`.
 - AdS spacetime (EST), CFT (EST), AdS/CFT correspondence (HYP, Maldacena 1997).
 - Ryu–Takayanagi entanglement entropy (DER): `S_A = Area(γ_A)/4G_N`.
 - Domain cut: our universe is not asymptotically AdS (STOP).

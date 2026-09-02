@@ -5,8 +5,8 @@
   ],
   "relation": "DUAL_TO",
   "equations": [
-    "S/k = A(m_I) / (4 ℓ_P^2)",
-    "A = 4 pi (2 G m_I / c^2)^2"
+    "S/k = A(m) / (4 ℓ_P^2)",
+    "A = 4 pi (2 G m / c^2)^2"
   ],
   "target": "UPI<gravity,1,horizon,bekenstein_hawking_entropy>",
   "version": "0.1.0",

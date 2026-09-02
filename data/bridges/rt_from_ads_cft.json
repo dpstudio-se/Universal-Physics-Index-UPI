@@ -10,6 +10,6 @@
   "version": "0.1.0",
   "mechanism": "Replica trick maps CFT entanglement to a bulk cosmic brane whose n→1 limit is the area.",
   "status": "DER",
-  "confusion_guard": "RT inherits the domain of AdS/CFT. It does not enlarge that domain to our sky or to m_I of a lab oscillator.",
+  "confusion_guard": "RT inherits the domain of AdS/CFT. It does not enlarge that domain to our sky or to m = h f / c² of a lab oscillator.",
   "source": "UPI<theories,1,holography,ryu_takayanagi>"
 }

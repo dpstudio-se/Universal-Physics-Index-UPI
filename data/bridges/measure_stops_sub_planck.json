@@ -1,6 +1,6 @@
 {
   "assumptions": [
-    "Geometric station uses Schwarzschild radius of m_I."
+    "Geometric station uses Schwarzschild radius of m."
   ],
   "relation": "STOPS_AT",
   "equations": [
@@ -11,6 +11,6 @@
   "version": "0.1.0",
   "mechanism": "Lab frequencies fail the semiclassical horizon test. The measure still prints formal numbers; those numbers are not in-domain S_BH.",
   "status": "STOP",
-  "confusion_guard": "STOP is a domain cut, not a rejection of information mass.",
+  "confusion_guard": "STOP is a domain cut, not a rejection of the proposed information-associated interpretation of m.",
   "source": "UPI<information_physics,1,measure,universal_information_measure>"
 }

@@ -19,7 +19,7 @@
   "predictions": [
     "Every CFT observable has a bulk dual; every bulk field has a CFT source.",
     "Thermal CFT entropy equals the Bekenstein–Hawking entropy of the AdS black hole (in the classical regime).",
-    "A unique, parameter-free map from laboratory m_I = h f / c² onto this dictionary is not implied."
+    "A unique, parameter-free map from laboratory m = h f / c² onto this dictionary is not implied."
   ],
   "verification_type": "mathematical_check",
   "address": "UPI<theories,1,holography,ads_cft>",

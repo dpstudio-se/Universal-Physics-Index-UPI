@@ -8,7 +8,7 @@
   "title": "Ryu–Takayanagi entanglement entropy",
   "version": "0.1.0",
   "claims_experimental_verification": false,
-  "confusion_guard": "RT is entanglement entropy of a CFT region, dual to a bulk area. It is the precise holographic entropy. It is not S = k A/4ℓ_P² applied to the Schwarzschild radius of m_I = h f / c² for a lab frequency, and it does not require the night sky to be AdS.",
+  "confusion_guard": "RT is entanglement entropy of a CFT region, dual to a bulk area. It is the precise holographic entropy. It is not S = k A/4ℓ_P² applied to the Schwarzschild radius of m = h f / c² for a lab frequency, and it does not require the night sky to be AdS.",
   "definitions": [
     "A is a spatial region in the CFT.",
     "γ_A is the bulk extremal surface of minimal area homologous to A, anchored on ∂A.",

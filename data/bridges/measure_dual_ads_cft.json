@@ -1,6 +1,6 @@
 {
   "assumptions": [
-    "The measure's entropy station, when in-domain, is holographic entanglement, not S_BH(m_I) for a lab quantum."
+    "The measure's entropy station, when in-domain, is holographic entanglement, not S_BH(m) for a lab quantum."
   ],
   "relation": "DUAL_TO",
   "equations": [

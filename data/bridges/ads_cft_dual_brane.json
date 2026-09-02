@@ -11,6 +11,6 @@
   "version": "0.1.0",
   "mechanism": "This is the precise sense in which 11D branes close a holographic loop: the worldvolume CFT is dual to the AdS compactification, not to a laboratory frequency.",
   "status": "HYP",
-  "confusion_guard": "M-theory examples of AdS/CFT do not make the 11D brane a SYM ontology of m_I.",
+  "confusion_guard": "M-theory examples of AdS/CFT do not make the 11D brane a SYM ontology of m = h f / c².",
   "source": "UPI<theories,1,holography,ads_cft>"
 }

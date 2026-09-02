@@ -10,7 +10,7 @@
   "claims_experimental_verification": false,
   "confusion_guard": "A formal number S/k printed for a sub-Planck R_s is software, not a black hole and not 'entropy in its purest form' of a lab bit. The purest gravitational entropy remains the in-domain area law.",
   "definitions": [
-    "R_s = 2 G m_I / c².",
+    "R_s = 2 G m / c².",
     "The semiclassical horizon requires R_s >> ℓ_P.",
     "At 8 Hz, R_s / ℓ_P is of order 10⁻⁴¹."
   ],
@@ -21,13 +21,13 @@
   "verification_type": "software_test",
   "address": "UPI<information_physics,1,measure,sub_planck_horizon>",
   "assumptions": [
-    "m_I is the inertial mass equivalent of energy h f.",
+    "m is the inertial mass equivalent of energy h f.",
     "The geometric station of the measure uses a Schwarzschild horizon of that mass."
   ],
   "falsification_conditions": [
     "A controlled system with energy h f whose gravitational radius is measured to be macroscopic without additional concentration of energy."
   ],
-  "stop_reason": "R_s(m_I) << ℓ_P for laboratory frequencies. Smallest next observation: evaluate the geometric station only for a mass whose Schwarzschild radius is many Planck lengths, or replace that station with an in-domain entropy (e.g. Landauer k ln 2 per erased bit) and keep the statuses separate.",
+  "stop_reason": "R_s(m) << ℓ_P for laboratory frequencies. Smallest next observation: evaluate the geometric station only for a mass whose Schwarzschild radius is many Planck lengths, or replace that station with an in-domain entropy (e.g. Landauer k ln 2 per erased bit) and keep the statuses separate.",
   "primary_sources": [
     "Bekenstein (1973); Hawking (1975) domain of semiclassical gravity"
   ],
@@ -45,5 +45,5 @@
     "STOP if R_s < ℓ_P"
   ],
   "status": "STOP",
-  "description": "For laboratory frequencies the Schwarzschild radius of m_I = h f / c² is far below ℓ_P. Geometric entropy is then being asked of a horizon that does not exist in the semiclassical theory. The loop STOPS at this station."
+  "description": "For laboratory frequencies the Schwarzschild radius of m = h f / c² is far below ℓ_P. Geometric entropy is then being asked of a horizon that does not exist in the semiclassical theory. The loop STOPS at this station."
 }

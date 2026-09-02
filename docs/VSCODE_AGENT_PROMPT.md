@@ -49,7 +49,7 @@ If a request would break a hard stop: refuse that part, say which rule, continue
 
 - **EST** — accepted in the stated domain with provenance (CODATA, Lorentz identity, Golay round-trip).
 - **DER** — follows from named assumptions. Composition of EST maps is DER if any assumption is extra. Weakest status on a chain wins.
-- **HYP** — named claim, not a law. T€@X™ 2026 `m_I = hf/c²` is HYP (same kilogram as DER mass equivalent; trademark is authorship, not measurement). AdS/CFT is HYP. 8 Hz is a **reference coordinate** `f / 8`, not a constant.
+- **HYP** — named claim, not a law. T€@X™ 2026's information-mass interpretation of the existing `m = hf/c²` mass equivalent is HYP (trademark is authorship, not measurement). AdS/CFT is HYP. 8 Hz is a **reference coordinate** `f / 8`, not a constant.
 - **STOP** — identity gap or out-of-domain. Must carry `stop_reason` and `falsification_conditions`.
 - **ERR** — broken round-trip or schema.
 - **SYM** — similar form, different mechanism. Must not close a byte-count or physics STOP.
@@ -186,7 +186,7 @@ Deploy lag: after VS Code commits, grok.me updates only when the App Builder / V
 
 - `E = hf` EST (Planck).
 - Inertia of energy EST (Einstein 1905). `m = E/c²` DER.
-- `m = hf/c²` DER as composition. `m_I = hf/c²` HYP as information-mass naming (T€@X™ 2026).
+- `m = hf/c²` DER as composition. An information-mass interpretation of that same `m` is HYP (T€@X™ 2026); it is not a second quantity.
 - Mass shell EST. Photon rest-mass STOP.
 - AdS/CFT HYP. RT formula DER. Cosmology application STOP.
 - 11d / brane / “entropy of everything” is SYM/STOP until a quantity and a measurement exist. Do not assign a number to “all information”.
