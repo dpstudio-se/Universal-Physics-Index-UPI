@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "M2-brane near-horizon geometry."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "AdS4 × S7 ↔ ABJM"
+  ],
+  "target": "UPI<theories,1,holography,ads_cft>",
+  "version": "0.1.0",
+  "mechanism": "The general AdS/CFT pattern applied to eleven-dimensional M2-branes.",
+  "status": "DER",
+  "confusion_guard": "An instance of the duality, not a second duality.",
+  "source": "UPI<holography,1,m_theory,ads4_s7_abjm>"
+}

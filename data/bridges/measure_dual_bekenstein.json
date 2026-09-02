@@ -1,0 +1,17 @@
+{
+  "assumptions": [
+    "The mass is treated as a Schwarzschild source.",
+    "R_s >> ℓ_P for the EST area law to apply."
+  ],
+  "relation": "DUAL_TO",
+  "equations": [
+    "S/k = A(m_I) / (4 ℓ_P^2)",
+    "A = 4 pi (2 G m_I / c^2)^2"
+  ],
+  "target": "UPI<gravity,1,horizon,bekenstein_hawking_entropy>",
+  "version": "0.1.0",
+  "mechanism": "Inertia dualises to area, area to entropy. That is the purest gravitational entropy. It is not Shannon entropy of the bit.",
+  "status": "HYP",
+  "confusion_guard": "Duality here is a dictionary of numbers, not a proof that a photon is a black hole.",
+  "source": "UPI<information_physics,1,measure,universal_information_measure>"
+}

@@ -1,0 +1,16 @@
+{
+  "assumptions": [
+    "Geometric station uses Schwarzschild radius of m_I."
+  ],
+  "relation": "STOPS_AT",
+  "equations": [
+    "STOP if 2 G h f / c^4 < ℓ_P"
+  ],
+  "target": "UPI<information_physics,1,measure,sub_planck_horizon>",
+  "stop_reason": "R_s << ℓ_P for accessible f.",
+  "version": "0.1.0",
+  "mechanism": "Lab frequencies fail the semiclassical horizon test. The measure still prints formal numbers; those numbers are not in-domain S_BH.",
+  "status": "STOP",
+  "confusion_guard": "STOP is a domain cut, not a rejection of information mass.",
+  "source": "UPI<information_physics,1,measure,universal_information_measure>"
+}

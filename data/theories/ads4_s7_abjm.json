@@ -1,0 +1,48 @@
+{
+  "tags": [
+    "abjm",
+    "m2",
+    "11d",
+    "holography"
+  ],
+  "title": "AdS4 × S7 / ABJM",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "This is the honest 11D station of holography: M2-branes, AdS4, ABJM. It does not identify those M2-branes with a frequency quantum in Minkowski space.",
+  "definitions": [
+    "AdS4 × S7 is the near-horizon geometry of a stack of N M2-branes.",
+    "ABJM is U(N)×U(N) Chern–Simons theory at level k with bifundamental matter.",
+    "The 't Hooft coupling is λ = N/k."
+  ],
+  "mechanism": "A stack of M2-branes has a worldvolume CFT (ABJM) and a near-horizon AdS4 × S7. Equating them is the 11D case of Maldacena's duality.",
+  "predictions": [
+    "ABJM free energy on S3 scales as N^{3/2}, matching 11D on-shell action."
+  ],
+  "address": "UPI<holography,1,m_theory,ads4_s7_abjm>",
+  "assumptions": [
+    "11D supergravity is the low-energy bulk.",
+    "Large N, fixed λ, is the classical limit."
+  ],
+  "falsification_conditions": [
+    "A protected ABJM observable disagreeing with the 11D bulk after known corrections."
+  ],
+  "primary_sources": [
+    "Aharony, Bergman, Jafferis, Maldacena, N=6 superconformal Chern–Simons-matter theories (2008)",
+    "Witten (1995), M-theory"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Aharony, Bergman, Jafferis, Maldacena (2008)",
+      "confidence": 0.9,
+      "notes": "Standard 11D holographic pair. Derived from AdS/CFT plus the M2-brane near-horizon geometry."
+    }
+  ],
+  "equations": [
+    "AdS4 × S7  ↔  ABJM_{N,k}",
+    "R_{S7}^3 ~ N^{1/2} ℓ_P^3"
+  ],
+  "status": "DER",
+  "description": "The 11-dimensional instance of AdS/CFT: M-theory on AdS4 × S7 is dual to the ABJM 3d N=6 Chern–Simons-matter theory (M2-branes). This is how an 11D brane enters holography — as a named pair, not as a picture of the lab."
+}

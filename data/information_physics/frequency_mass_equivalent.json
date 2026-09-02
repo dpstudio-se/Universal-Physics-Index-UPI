@@ -1,0 +1,72 @@
+{
+  "tags": [
+    "mass-energy",
+    "planck",
+    "einstein",
+    "frequency",
+    "derived",
+    "inertia-of-energy"
+  ],
+  "title": "Mass equivalent of a frequency quantum",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Derived does not mean dismissed. E = m c² is also derived. The live boundary is the referent of m: energy-equivalent of h f, never photon rest mass, never the rest mass of an object that merely oscillates at f. Naming this kilogram information mass m_I is a separate HYP (T€@X 2026).",
+  "definitions": [
+    "E is the energy of a radiation quantum of frequency f (Planck–Einstein).",
+    "h is the Planck constant (SI exact).",
+    "c is the speed of light in vacuum (SI exact).",
+    "m = E/c² is the inertial mass equivalent of that energy (Einstein 1905, inertia of energy).",
+    "This m is not the invariant rest mass of a photon (which is zero) and is not the rest mass of a clock, molecule, or circuit whose kinematic frequency happens to be f."
+  ],
+  "mechanism": "Einstein (1905) showed that energy has inertia: a body that emits energy L loses mass L/c². Planck (1900) and Einstein (1905, light quantum) give E = h f for a radiation quantum. Substituting L = h f is the identical composition Einstein already licensed for any energy. The algebra is the same move as writing E = m c² from relativistic energy–momentum: derivation, then empirical scope.",
+  "predictions": [
+    "A cavity mode of frequency f storing mean energy n h f contributes inertial mass n h f / c² to the cavity (including the radiation).",
+    "Photon invariant mass remains 0; the energy-equivalent n h f / c² is not a rest mass.",
+    "Replacing f by the kinematic frequency of a massive oscillator does not assign that oscillator a rest mass h f / c²."
+  ],
+  "verification_type": "mathematical_check",
+  "address": "UPI<information_physics,1,inertia,frequency_mass_equivalent>",
+  "assumptions": [
+    "The energy being converted is a quantum of electromagnetic radiation, or any energy that has been shown to carry inertia E/c².",
+    "f is ordinary frequency in the inertial frame where E is evaluated.",
+    "SI units. h and c take their exact SI values."
+  ],
+  "falsification_conditions": [
+    "A reproducible measurement in which radiation energy h f does not contribute inertia h f / c² to a closed system.",
+    "A photon rest-mass measurement significantly different from zero that is not absorbed by existing bounds."
+  ],
+  "primary_sources": [
+    "Planck (1900), black-body quantum of action",
+    "Einstein, heuristic light-quantum paper (1905)",
+    "Einstein, inertia of energy (1905)",
+    "Einstein, Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig? (1905)"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Einstein, Ist die Trägheit eines Körpers von seinem Energieinhalt abhängig? (1905): Δm = L/c²",
+      "confidence": 1.0,
+      "notes": "Establishes inertia of energy. Composition with E = h f is then algebra under that identification."
+    },
+    {
+      "type": "experiment",
+      "source": "Photoelectric effect, Compton scattering, pair production, nuclear binding (mass defect = E/c²)",
+      "confidence": 0.99,
+      "notes": "Supports E = h f and E = m c² separately. The composition inherits both scopes."
+    },
+    {
+      "type": "calculation",
+      "source": "UPI software utility m = h f / c² (CODATA/SI exact h and c)",
+      "confidence": 1.0,
+      "notes": "Software arithmetic, not a new measurement."
+    }
+  ],
+  "equations": [
+    "E = h f",
+    "E = m c^2",
+    "m = h f / c^2"
+  ],
+  "status": "DER",
+  "description": "Compose the Planck–Einstein relation E = h f with the inertia of energy E = m c². The same kind of step Einstein took with Planck: a derived identification, not a new independent axiom. m here is the mass equivalent of energy h f — not photon rest mass, and not the rest mass of an arbitrary oscillator."
+}

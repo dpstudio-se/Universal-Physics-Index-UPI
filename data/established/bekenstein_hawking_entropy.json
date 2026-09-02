@@ -1,0 +1,51 @@
+{
+  "tags": [
+    "entropy",
+    "horizon",
+    "bekenstein",
+    "hawking",
+    "holography"
+  ],
+  "title": "Bekenstein–Hawking horizon entropy",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "S = k A / (4 ℓ_P²) is not Shannon entropy of a lab bit and is not the entropy of a photon of frequency f. Using it for a mass whose Schwarzschild radius is below ℓ_P leaves the semiclassical domain (STOP).",
+  "definitions": [
+    "A is the horizon area.",
+    "ℓ_P is the Planck length.",
+    "k is Boltzmann's constant.",
+    "S is the Bekenstein–Hawking entropy."
+  ],
+  "mechanism": "Bekenstein argued horizon area is thermodynamic entropy. Hawking's calculation of thermal radiation fixed the coefficient 1/4.",
+  "predictions": [
+    "A black hole of area A has entropy k A / (4 ℓ_P²) and temperature ħ κ / (2π k c)."
+  ],
+  "address": "UPI<gravity,1,horizon,bekenstein_hawking_entropy>",
+  "assumptions": [
+    "Semiclassical gravity: the horizon is large compared with ℓ_P.",
+    "The area is that of a causal horizon (black hole, and with care other horizons).",
+    "No firewall or other UV completion is assumed."
+  ],
+  "falsification_conditions": [
+    "A controlled horizon system whose thermodynamic entropy is reproducibly not proportional to area with coefficient 1/4, after known corrections."
+  ],
+  "primary_sources": [
+    "Bekenstein (1973), Black holes and entropy",
+    "Hawking (1975), Particle creation by black holes"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Hawking radiation and the first law of black-hole mechanics",
+      "confidence": 0.95,
+      "notes": "Direct laboratory confirmation of Hawking radiation is not claimed. The area law is established within semiclassical GR+QFT."
+    }
+  ],
+  "equations": [
+    "S = k A / (4 ℓ_P^2)",
+    "ℓ_P^2 = hbar G / c^3"
+  ],
+  "status": "EST",
+  "description": "Geometric entropy of a semiclassical event horizon: S = k A / (4 ℓ_P²). This is the purest gravitational entropy we have — an area law, not a named gas. It applies to horizons, not to an arbitrary frequency quantum."
+}

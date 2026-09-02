@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "The relation recorded here is an analogy of constructions, not an embedding of G24 into E8."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "Hamming[8,4,4] : E8  ::  Golay[24,12,8] : Λ24"
+  ],
+  "target": "UPI<coding_theory,1,binary_code,extended_golay>",
+  "version": "0.1.0",
+  "mechanism": "Even unimodular lattices arise from certain self-dual codes. E8 is the 8-dimensional cousin of that story; Λ24 is the 24-dimensional one.",
+  "status": "SYM",
+  "confusion_guard": "This is a symbolic mapping between two constructions. It does not derive the E8 root system from a 24-bit string.",
+  "source": "UPI<coding_theory,1,root_system,e8_lattice>"
+}

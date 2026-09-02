@@ -1,0 +1,16 @@
+{
+  "assumptions": [
+    "Late-universe acceleration is a positive effective cosmological constant."
+  ],
+  "relation": "STOPS_AT",
+  "equations": [
+    "Λ_AdS < 0 ≠ Λ_obs > 0"
+  ],
+  "target": "UPI<theories,1,holography,not_our_sky>",
+  "stop_reason": "Observed Λ has the wrong sign.",
+  "version": "0.1.0",
+  "mechanism": "Wrong sign of Λ; wrong conformal boundary.",
+  "status": "STOP",
+  "confusion_guard": "STOP applies to cosmology, not to the duality as a statement about AdS theories.",
+  "source": "UPI<theories,1,holography,ads_cft>"
+}

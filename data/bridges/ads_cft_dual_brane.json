@@ -1,0 +1,16 @@
+{
+  "assumptions": [
+    "The 11D Freund–Rubin vacua are the near-horizon limits of M2/M5 stacks."
+  ],
+  "relation": "DUAL_TO",
+  "equations": [
+    "AdS4 × S7 ↔ ABJM (M2)",
+    "AdS7 × S4 ↔ 6d (2,0) (M5)"
+  ],
+  "target": "UPI<theories,1,m_theory,eleven_d_brane>",
+  "version": "0.1.0",
+  "mechanism": "This is the precise sense in which 11D branes close a holographic loop: the worldvolume CFT is dual to the AdS compactification, not to a laboratory frequency.",
+  "status": "HYP",
+  "confusion_guard": "M-theory examples of AdS/CFT do not make the 11D brane a SYM ontology of m_I.",
+  "source": "UPI<theories,1,holography,ads_cft>"
+}

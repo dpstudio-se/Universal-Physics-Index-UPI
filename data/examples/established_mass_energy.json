@@ -1,11 +1,27 @@
 {
-  "address": "UPI<RELATIVITY,1,T_ENERGY,N_MASS_ENERGY>",
   "title": "Mass-energy equivalence",
-  "description": "Rest energy relation in special relativity.",
+  "claims_experimental_verification": false,
+  "confusion_guard": "E = m c² is a derived identification (Einstein 1905). When m is invariant mass, E is rest energy. When E is radiation energy h f, m = E/c² is the mass equivalent of that energy — the same derivation, a different referent. Not every oscillating object of frequency f has rest mass h f / c².",
+  "definitions": [
+    "E is rest energy",
+    "m is invariant mass",
+    "c is the speed of light in vacuum"
+  ],
+  "address": "UPI<RELATIVITY,1,T_ENERGY,N_MASS_ENERGY>",
+  "assumptions": [
+    "isolated body",
+    "invariant mass",
+    "SI units"
+  ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "Special relativity textbook treatment"
+    }
+  ],
+  "equations": [
+    "E = m c^2"
+  ],
   "status": "EST",
-  "equations": ["E = m c^2"],
-  "definitions": ["E is rest energy", "m is invariant mass", "c is the speed of light in vacuum"],
-  "assumptions": ["isolated body", "invariant mass", "SI units"],
-  "evidence": [{"type": "other", "source": "Special relativity textbook treatment"}],
-  "confusion_guard": "This node does not claim every form of energy is a rest mass."
+  "description": "Rest energy relation in special relativity."
 }

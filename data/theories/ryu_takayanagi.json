@@ -1,0 +1,53 @@
+{
+  "tags": [
+    "ryu-takayanagi",
+    "entanglement",
+    "holography",
+    "area law"
+  ],
+  "title": "Ryu–Takayanagi entanglement entropy",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "RT is entanglement entropy of a CFT region, dual to a bulk area. It is the precise holographic entropy. It is not S = k A/4ℓ_P² applied to the Schwarzschild radius of m_I = h f / c² for a lab frequency, and it does not require the night sky to be AdS.",
+  "definitions": [
+    "A is a spatial region in the CFT.",
+    "γ_A is the bulk extremal surface of minimal area homologous to A, anchored on ∂A.",
+    "In AdS3 the extremal surface is a geodesic in the Poincaré disk."
+  ],
+  "mechanism": "The replica trick in the CFT becomes a bulk cosmic brane of tension (n-1)/(4G_N) whose n→1 limit is the area law. Lewkowycz–Maldacena derive RT from the replica geometry. It reduces to Bekenstein–Hawking when A is the whole thermal system and γ_A is the horizon.",
+  "predictions": [
+    "S_A obeys strong subadditivity, matching the geometric inequalities of minimal surfaces.",
+    "At finite cutoff, S_RT and the CFT log formula share the same divergence; they need not print as identical numbers."
+  ],
+  "verification_type": "mathematical_check",
+  "address": "UPI<theories,1,holography,ryu_takayanagi>",
+  "assumptions": [
+    "The AdS/CFT dictionary holds in a regime with a classical bulk.",
+    "Leading order in G_N; quantum extremal surfaces (QES, island formula) are a further extension.",
+    "The UV cutoff of the CFT matches a radial cutoff in the bulk."
+  ],
+  "falsification_conditions": [
+    "An AdS/CFT pair in the classical regime whose entanglement entropy disagrees with the extremal-area prediction after known 1/N and α' corrections."
+  ],
+  "primary_sources": [
+    "Ryu, Takayanagi (2006), Holographic derivation of entanglement entropy",
+    "Lewkowycz, Maldacena (2013)",
+    "Hubeny, Rangamani, Takayanagi (2007) covariant HRT"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Lewkowycz–Maldacena (2013) replica derivation; matching of CFT2 interval entropy to AdS3 geodesics",
+      "confidence": 0.85,
+      "notes": "Derived inside AdS/CFT. Inherits HYP from the correspondence; the AdS3/CFT2 check is exact at this order."
+    }
+  ],
+  "equations": [
+    "S_A = Area(γ_A) / (4 G_N)",
+    "AdS3: S_A = Length(γ_A) / (4 G_N)",
+    "CFT2 interval: S = (c/3) ln((ℓ/ε) sin(πℓ/L)) + ..."
+  ],
+  "status": "DER",
+  "description": "In AdS/CFT, the entanglement entropy of a boundary region A equals the area of a bulk extremal surface γ_A homologous to A: S_A = Area(γ_A)/4G_N. This is the holographic entropy formula — area as entanglement, not the Schwarzschild entropy of a laboratory quantum."
+}

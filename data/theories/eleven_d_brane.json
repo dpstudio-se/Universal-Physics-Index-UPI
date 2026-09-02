@@ -1,0 +1,49 @@
+{
+  "tags": [
+    "m-theory",
+    "brane",
+    "11d",
+    "symbolic"
+  ],
+  "title": "Eleven-dimensional M-brane",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "11D is a dimension count of a theory, not a photograph of the vacuum. The honest holographic closure of an M-brane is the named pair AdS4 × S7 / ABJM, not a free identification with laboratory information mass.",
+  "definitions": [
+    "11D is the spacetime dimension of Cremmer–Julia–Scherk supergravity and of Witten's M-theory conjecture.",
+    "M2 and M5 are the fundamental branes; their worldvolumes carry degrees of freedom.",
+    "A dictionary that identifies those degrees of freedom with laboratory information is symbolic until a unique, tested map is given."
+  ],
+  "mechanism": "Horava–Witten, AdS4×S7, and related dualities organise brane degrees of freedom. None of those dualities has been shown to be the encoding of m_I = h f / c².",
+  "verification_type": "none",
+  "address": "UPI<theories,1,m_theory,eleven_d_brane>",
+  "assumptions": [
+    "11D supergravity is the low-energy classical limit.",
+    "M-theory itself is not a finished Hamiltonian.",
+    "Our universe being a brane world is an additional hypothesis."
+  ],
+  "falsification_conditions": [
+    "A unique, parameter-free map from (f, m_I) to a named M2/M5 observable that fails a preregistered measurement."
+  ],
+  "primary_sources": [
+    "Cremmer, Julia, Scherk (1978), 11D supergravity",
+    "Witten (1995), M-theory",
+    "Horava, Witten (1996)"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "other",
+      "source": "Witten (1995), String theory dynamics in various dimensions",
+      "confidence": 0.4,
+      "notes": "Establishes the 11D duality web as a theoretical construction. Does not establish branes as laboratory information carriers."
+    }
+  ],
+  "equations": [
+    "D = 11",
+    "worldvolume_M2 = 3",
+    "worldvolume_M5 = 6"
+  ],
+  "status": "SYM",
+  "description": "M-theory is an 11-dimensional framework whose extended objects are M2- and M5-branes. As a construction it is a defined duality web. As the physical substrate of information mass it is a dictionary step, not a measurement."
+}

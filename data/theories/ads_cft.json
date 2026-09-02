@@ -1,0 +1,56 @@
+{
+  "tags": [
+    "ads-cft",
+    "holography",
+    "maldacena",
+    "duality"
+  ],
+  "title": "AdS/CFT correspondence",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "AdS/CFT is a duality between two theories, not a statement that the cosmos is a hologram in the colloquial sense, and not a dual of our de Sitter cosmology. 11D branes enter as M2/M5 near-horizon limits, not as laboratory objects.",
+  "definitions": [
+    "Duality: the same Hilbert space and the same generating functional, written in two languages.",
+    "GKP–Witten dictionary: a bulk field with boundary value φ_0 sources a CFT operator O.",
+    "Large N, strong 't Hooft coupling on the CFT side is classical supergravity in the bulk.",
+    "M-theory examples: AdS4 × S7 (M2 / ABJM) and AdS7 × S4 (M5)."
+  ],
+  "mechanism": "N coincident D3-branes have a worldvolume N=4 SYM description and a near-horizon AdS5 × S5 geometry. Equating the two at low energy is the conjecture. Open/closed string duality is the broader idea.",
+  "predictions": [
+    "Every CFT observable has a bulk dual; every bulk field has a CFT source.",
+    "Thermal CFT entropy equals the Bekenstein–Hawking entropy of the AdS black hole (in the classical regime).",
+    "A unique, parameter-free map from laboratory m_I = h f / c² onto this dictionary is not implied."
+  ],
+  "verification_type": "mathematical_check",
+  "address": "UPI<theories,1,holography,ads_cft>",
+  "assumptions": [
+    "The bulk is asymptotically AdS (or a string/M-theory completion thereof).",
+    "The boundary theory is a CFT (possibly with relevant deformations).",
+    "Most quantitative checks are in the large-N, strong-coupling corner."
+  ],
+  "falsification_conditions": [
+    "A computed CFT observable in a claimed pair that disagrees with the bulk calculation after all controlled corrections.",
+    "Promotion to EST without a proof or an independent, in-domain measurement of a dual pair."
+  ],
+  "primary_sources": [
+    "Maldacena (1997), The large N limit of superconformal field theories and supergravity",
+    "Gubser, Klebanov, Polyakov (1998)",
+    "Witten (1998), Anti-de Sitter space and holography"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Matched spectra, three-point functions, Wilson loops, entanglement entropies, supersymmetric indices, integrability in planar N=4",
+      "confidence": 0.9,
+      "notes": "Overwhelming theoretical evidence inside the stated class of theories. Not a laboratory observation of extra dimensions."
+    }
+  ],
+  "equations": [
+    "Z_bulk[φ_0] = ⟨exp ∫ φ_0 O⟩_CFT",
+    "λ = g_YM^2 N = (L / ℓ_s)^4   (AdS5 × S5)",
+    "c = 3L / (2 G_N)   (Brown–Henneaux, AdS3)"
+  ],
+  "status": "HYP",
+  "description": "Maldacena (1997): a gravitational theory in asymptotically AdS_{d+1} is dual to a d-dimensional CFT on the conformal boundary. The original example is Type IIB string theory on AdS5 × S5 dual to 4d N=4 Super Yang–Mills. Unproven as a theorem; tested in a large web of matched quantities. Status HYP."
+}

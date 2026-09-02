@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "The area law of horizons is the special case of an extremal surface wrapping a horizon."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "horizon area law ⊂ RT when A is thermal and γ_A is the horizon"
+  ],
+  "target": "UPI<gravity,1,horizon,bekenstein_hawking_entropy>",
+  "version": "0.1.0",
+  "mechanism": "RT generalises Bekenstein–Hawking from event horizons to entanglement wedges.",
+  "status": "DER",
+  "confusion_guard": "Generalising an area law is not assigning that area law to a sub-Planck Schwarzschild radius of h f / c².",
+  "source": "UPI<theories,1,holography,ryu_takayanagi>"
+}
