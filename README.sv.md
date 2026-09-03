@@ -62,6 +62,9 @@ Se [issue #8](https://github.com/dpstudio-se/Universal-Physics-Index-UPI/issues/
 
 Fullständig engelska README: [`README.md`](README.md)
 
+En reproducerbar genomgång av repositoryt, agentkontraktet och dokumentationen
+finns i [`docs/REPOSITORY_ANALYSIS.sv.md`](docs/REPOSITORY_ANALYSIS.sv.md).
+
 ## Kör DNA-CLI lokalt
 
 ```bash
