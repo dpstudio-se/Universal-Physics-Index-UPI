@@ -2,6 +2,7 @@ const form = document.getElementById("contribute-form");
 const list = document.getElementById("node-list");
 const preview = document.getElementById("address-preview");
 const statusEl = document.getElementById("form-status");
+const robustnessLens = document.getElementById("robustness-lens");
 
 function addressFromForm(data) {
   return `UPI<${data.get("domain")},${data.get("generation")},${data.get("torus")},${data.get("node")}>`;
@@ -20,9 +21,13 @@ refreshPreview();
 function renderNode(node, prepend = false) {
   const item = document.createElement("li");
   const payload = node.payload || {};
+  const view = node.status_view || { display_status: node.status };
+  const statusLabel = view.promoted
+    ? `${view.display_status} (${view.scope}) · canonical ${view.canonical_status}`
+    : view.display_status;
   item.innerHTML = `
     <strong>${payload.title || node.title}</strong>
-    <div class="status">${node.status} · ${node.address}</div>
+    <div class="status">${statusLabel} · ${node.address}</div>
     <p>${payload.description || ""}</p>
   `;
   if (prepend) list.prepend(item);
@@ -31,8 +36,13 @@ function renderNode(node, prepend = false) {
 
 async function loadNodes() {
   const box = document.getElementById("search-box");
-  const q = box && box.value ? `?q=${encodeURIComponent(box.value)}` : "";
-  const response = await fetch(`/api/nodes${q}`);
+  const params = new URLSearchParams();
+  if (box && box.value) params.set("q", box.value);
+  if (robustnessLens && robustnessLens.checked) {
+    params.set("evidence_lens", "linked-robustness");
+  }
+  const query = params.toString();
+  const response = await fetch(`/api/nodes${query ? `?${query}` : ""}`);
   const body = await response.json();
   list.replaceChildren();
   (body.nodes || []).forEach((node) => renderNode(node));
@@ -94,6 +104,7 @@ loadNodes().catch(() => {
 listen();
 const searchBox = document.getElementById("search-box");
 if (searchBox) searchBox.addEventListener("input", () => loadNodes());
+if (robustnessLens) robustnessLens.addEventListener("change", () => loadNodes());
 
 const ingestStatus = document.getElementById("ingest-status");
 const batchFile = document.getElementById("batch-file");

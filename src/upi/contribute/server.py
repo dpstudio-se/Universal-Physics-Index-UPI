@@ -102,7 +102,15 @@ def make_handler(app: ContributionApp):
                 query = parse_qs(parsed.query)
                 q = query.get("q", [None])[0]
                 status = query.get("status", [None])[0]
-                self._json(200, {"nodes": app.service.list_nodes(query=q, status=status)})
+                evidence_lens = query.get("evidence_lens", [None])[0]
+                self._json(
+                    200,
+                    {
+                        "nodes": app.service.list_nodes(
+                            query=q, status=status, evidence_lens=evidence_lens
+                        )
+                    },
+                )
                 return
             if path == "/api/graph":
                 from upi.index import export_graph, load_graph
@@ -315,7 +323,9 @@ def make_handler(app: ContributionApp):
                 ".js": "text/javascript; charset=utf-8",
             }
             self.send_response(200)
-            self.send_header("Content-Type", content_type or types.get(path.suffix, "application/octet-stream"))
+            self.send_header(
+                "Content-Type", content_type or types.get(path.suffix, "application/octet-stream")
+            )
             self.send_header("Content-Length", str(len(data)))
             self.end_headers()
             self.wfile.write(data)
