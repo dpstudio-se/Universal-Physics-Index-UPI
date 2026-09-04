@@ -34,6 +34,7 @@ jobs:
           MANUAL_BASE_SHA: ${{ inputs.base_sha }}
           HEAD_SHA: ${{ github.sha }}
         run: |
+          export PYTHONPATH="$PWD/src"
           BASE_SHA="${MANUAL_BASE_SHA:-$EVENT_BEFORE}"
           if [ -z "$BASE_SHA" ] || [ "$BASE_SHA" = "0000000000000000000000000000000000000000" ]; then
             BASE_SHA="$(git rev-parse HEAD^ 2>/dev/null || git rev-parse HEAD)"
@@ -44,6 +45,8 @@ jobs:
           import re
           import subprocess
           from pathlib import Path
+
+          from upi.rna_surface import classify_rna_surface
 
           base = os.environ["BASE_SHA"]
           head = os.environ["HEAD_SHA"]
@@ -80,26 +83,7 @@ jobs:
                   record = read_json(path, base)
               else:
                   record = read_json(path)
-              parts = Path(path).parts
-              domain = parts[1] if len(parts) > 1 else "unknown"
-              is_new = status == "A"
-              new_domain = is_new and not existed(base, f"data/{domain}")
-              new_stop_group = is_new and record.get("status") == "STOP"
-              new_source = is_new and domain == "sources"
-              needs_surface = new_domain or new_stop_group or new_source
-              if needs_surface:
-                  reasons = []
-                  if new_domain:
-                      reasons.append("new domain")
-                  if new_stop_group:
-                      reasons.append("new STOP group")
-                  if new_source:
-                      reasons.append("new source")
-                  ui = "needs-surface"
-                  note = "; ".join(reasons) + "; review RNA UI inbox"
-              else:
-                  ui = "Catalog (auto)"
-                  note = "Catalog/Graph can transcribe this node"
+              ui, note = classify_rna_surface(record)
               changes.append(
                   (head, path, slug(record.get("address", path)), record.get("status", "UNKNOWN"), ui, note)
               )
