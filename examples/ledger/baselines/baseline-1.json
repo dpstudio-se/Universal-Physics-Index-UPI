@@ -7,23 +7,302 @@
   "input_trust": "untrusted",
   "source_paths_redacted": true,
   "summary": {
-    "files_scanned": 28,
-    "records_classified": 26,
-    "findings": 4,
+    "files_scanned": 94,
+    "records_classified": 91,
+    "findings": 36,
     "status_counts": {
-      "DER": 4,
-      "EST": 14,
-      "HYP": 2,
-      "STOP": 1,
-      "SYM": 5
+      "DER": 22,
+      "EST": 36,
+      "HYP": 12,
+      "STOP": 10,
+      "SYM": 11
     },
     "record_type_counts": {
-      "bridge": 4,
-      "node": 21,
+      "bridge": 36,
+      "node": 54,
       "theory": 1
     }
   },
   "findings": [
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:bd505c8fa07035f1",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:9c6cf5d4c3a3ab80",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:2a47ccdaf254077f",
+      "record_type": "bridge",
+      "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:2a47ccdaf254077f",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:3498dcfd18bae69e",
+      "record_type": "bridge",
+      "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:3498dcfd18bae69e",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:0e84ad5243a82f03",
+      "record_type": "bridge",
+      "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:0e84ad5243a82f03",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:c24477829b46b35b",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:c042443184af8386",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:24b7480ecdc71f4b",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:329776a42b8f5917",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:dc93823c0adb05c5",
+      "record_type": "bridge",
+      "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:dc93823c0adb05c5",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:6479038070bb3750",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:9a89799b0bf7bb2f",
+      "record_type": "bridge",
+      "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:9a89799b0bf7bb2f",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:b133813bd7ca0d66",
+      "record_type": "bridge",
+      "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:b133813bd7ca0d66",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:3bd5c188f9aa18fa",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:598598e0d9c1c907",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:586a5b090abca157",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:55aa77e30b39cd1e",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:416b032fb9612bb8",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:d5b9a8c945e399ed",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:478949fa2de7780c",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:574d2666a3d3785e",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:ee94c7d02daa9057",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:d352429f74102024",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:d426cc2827628c6e",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:bb3fcbbc671dae68",
+      "record_type": "bridge",
+      "message": "UPI-E007: Scientific claim lacks evidence provenance",
+      "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
     {
       "code": "UPI-D003",
       "status": "ERR",
@@ -58,6 +337,15 @@
       "record_type": "node",
       "message": "UPI-E007: Scientific claim lacks evidence provenance",
       "correction": "Inspect the recorded evidence.",
+      "verification_type": "software_test"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:3f70057c5352c8d1",
+      "record_type": null,
+      "message": "Could not classify record as node, bridge, or theory.",
+      "correction": "Add the required node, bridge, or theory discriminator fields.",
       "verification_type": "software_test"
     }
   ],
@@ -114,19 +402,19 @@
         "count": 3
       },
       {
-        "identity_hash": "365228a2c8176acec9955ad15279818687a4a79710a0a6ca5b95c348d69e1d86",
-        "path": "path:fea3fa6ddd2b03ad",
-        "path_hash": "fea3fa6ddd2b03ade1089fe7d0bc7bac8daa36a060ec3e53d957bc83790a8501",
+        "identity_hash": "aeccb414c7e5190964eb9d56274a1745c02e4f6e8966478b574435a5fa87a2f4",
+        "path": "path:bd505c8fa07035f1",
+        "path_hash": "bd505c8fa07035f1acdc3ec2b8a57bd83b9e283533e7dead5448d887021bb0c4",
         "record_type": "bridge",
-        "status": "SYM",
+        "status": "DER",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 0,
+        "evidence_count": 0,
+        "equation_count": 1,
         "id": "record:1",
         "layer": "record"
       },
@@ -141,14 +429,9 @@
         }
       },
       {
-        "id": "evidence:1",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "622702efe000557b7e4f253fb3960a72af7ace6e984bf0286e10ed8964749bb2",
-        "path": "path:39ee32ac96276167",
-        "path_hash": "39ee32ac96276167b9cd8cc4346240ca99d3e8133318c1167f79b6ada55266be",
+        "identity_hash": "c0ff9e1e6982e40b0577d5cde39f0f2db96a37ef87b349ac10e45f2687b7cc76",
+        "path": "path:9c6cf5d4c3a3ab80",
+        "path_hash": "9c6cf5d4c3a3ab803f05caacf8da44a15063d0b1f79bac8a04743c342d37c26f",
         "record_type": "bridge",
         "status": "DER",
         "scale": {
@@ -157,8 +440,8 @@
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 0,
+        "evidence_count": 0,
+        "equation_count": 2,
         "id": "record:2",
         "layer": "record"
       },
@@ -173,24 +456,19 @@
         }
       },
       {
-        "id": "evidence:2",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "0a51b27233599e2ba77d4a5e1430a91ee18d4bc21930ba35e89fae297963ee99",
-        "path": "path:4e5c7a52e8f3864d",
-        "path_hash": "4e5c7a52e8f3864da0ec799aae931d0322546eba04a1e5ec7de9e50991ee92dc",
+        "identity_hash": "27a44f3c45acb0fcb737c8999c8890575cd0ef5346b1b40da663f79b8b5a61d1",
+        "path": "path:2a47ccdaf254077f",
+        "path_hash": "2a47ccdaf254077ff6e78705304356ea1d38e20f506e686db7f18dbbfe9243b9",
         "record_type": "bridge",
-        "status": "EST",
+        "status": "HYP",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 1,
+        "evidence_count": 0,
+        "equation_count": 2,
         "id": "record:3",
         "layer": "record"
       },
@@ -205,24 +483,19 @@
         }
       },
       {
-        "id": "evidence:3",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "437d5783a0d2bf34c749028ef434eed0820586e47ba31d00cfeda88e99576608",
-        "path": "path:7f15f5953b3e0dc2",
-        "path_hash": "7f15f5953b3e0dc28548704c0e1aca465546c8d265af7e252659af7b11b11f25",
+        "identity_hash": "ca2ed624ef68cfebe5eec436bff632cce2d7e095bd83ffb8025e255f0d3286c8",
+        "path": "path:3498dcfd18bae69e",
+        "path_hash": "3498dcfd18bae69ec5e23d633a87e41ef921dd42e2af4b2d2dfa317e1ce92c11",
         "record_type": "bridge",
-        "status": "DER",
+        "status": "HYP",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 3,
+        "evidence_count": 0,
+        "equation_count": 1,
         "id": "record:4",
         "layer": "record"
       },
@@ -237,24 +510,19 @@
         }
       },
       {
-        "id": "evidence:4",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "1498ae25ca5e53e1f649cede16c2e75ea20504b40bf79d2bcc86a01ea6610368",
-        "path": "path:38a79c4bb365b1f4",
-        "path_hash": "38a79c4bb365b1f48d342fd81b7bcae073c5ecebc96ea324b64dd5220df56dc6",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "f80552765391abfe06ea8ba5f780bfe23afd0d362232d4dd1317344bf40b03f9",
+        "path": "path:0e84ad5243a82f03",
+        "path_hash": "0e84ad5243a82f03d86e365fd35ee28f5c31923507b3a6654874ef2a278858ef",
+        "record_type": "bridge",
+        "status": "HYP",
         "scale": {
           "scope_declared": false,
-          "unit_count": 1,
+          "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
         "evidence_count": 0,
-        "equation_count": 2,
+        "equation_count": 1,
         "id": "record:5",
         "layer": "record"
       },
@@ -263,25 +531,25 @@
         "layer": "scale",
         "value": {
           "scope_declared": false,
-          "unit_count": 1,
+          "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         }
       },
       {
-        "identity_hash": "6f00d3553cdde7412a0f98826af5e0433533ae37e11a6882bf90c81cfebf7823",
-        "path": "path:5b6e4f5d2046f712",
-        "path_hash": "5b6e4f5d2046f7126c480daed1aa5d60d1c8dd2e758850bce3bd226363335203",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "2516f1e5a7f231b10e0d6cdf8d69d15f13b9107b8ea32b72c6609a8131fa6efc",
+        "path": "path:40a551cddda4a46f",
+        "path_hash": "40a551cddda4a46f09b8a0f9334e88d558c1b44ed826365369d5280f5efc6eb2",
+        "record_type": "bridge",
+        "status": "STOP",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 3,
+        "evidence_count": 0,
+        "equation_count": 1,
         "id": "record:6",
         "layer": "record"
       },
@@ -296,16 +564,11 @@
         }
       },
       {
-        "id": "evidence:6",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "5606affd4b68465913e605f4f0984514a984729bf984fb20dc9b8713203db0b5",
-        "path": "path:661eaa46b6296b2f",
-        "path_hash": "661eaa46b6296b2fbe625b9a641597fddf283be7a3d3479c64f6f6f239b10401",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "365228a2c8176acec9955ad15279818687a4a79710a0a6ca5b95c348d69e1d86",
+        "path": "path:fea3fa6ddd2b03ad",
+        "path_hash": "fea3fa6ddd2b03ade1089fe7d0bc7bac8daa36a060ec3e53d957bc83790a8501",
+        "record_type": "bridge",
+        "status": "SYM",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -313,7 +576,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 1,
-        "equation_count": 3,
+        "equation_count": 0,
         "id": "record:7",
         "layer": "record"
       },
@@ -333,19 +596,19 @@
         "count": 1
       },
       {
-        "identity_hash": "ea45ab41c87c4bd93798b13ef46d81e7cf7347fccaebc38d29f4b45093b06bcc",
-        "path": "path:758d9da09bbb7aae",
-        "path_hash": "758d9da09bbb7aaeb89b137bed5d635d87c2fe31d9c8b79b0b4271e01188636f",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "03ba7d915e39b8f078076240b1fd64a2dd8c776618b4a570b713632a76a7fa91",
+        "path": "path:9530a7c55a88776c",
+        "path_hash": "9530a7c55a88776c951953d649bcc62f3103c425be884c1f7e3f95d568a7f0cb",
+        "record_type": "bridge",
+        "status": "SYM",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 3,
+        "evidence_count": 0,
+        "equation_count": 1,
         "id": "record:8",
         "layer": "record"
       },
@@ -360,16 +623,11 @@
         }
       },
       {
-        "id": "evidence:8",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "726c374bdeccc2c2b54c4912f0cbf692ff6c07e044d0f955b76af7722b62ed0d",
-        "path": "path:d9e8e6f93faf426d",
-        "path_hash": "d9e8e6f93faf426d44b2d2b8224d3f09e1889e4e41e38eed82968a4a07235128",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "622702efe000557b7e4f253fb3960a72af7ace6e984bf0286e10ed8964749bb2",
+        "path": "path:39ee32ac96276167",
+        "path_hash": "39ee32ac96276167b9cd8cc4346240ca99d3e8133318c1167f79b6ada55266be",
+        "record_type": "bridge",
+        "status": "DER",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -377,7 +635,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 1,
-        "equation_count": 4,
+        "equation_count": 0,
         "id": "record:9",
         "layer": "record"
       },
@@ -397,19 +655,19 @@
         "count": 1
       },
       {
-        "identity_hash": "2546a9b8f13ea71c58bdab8948d315b3e026b142622e49ee33a0ceed139e5261",
-        "path": "path:c709e0163c04a031",
-        "path_hash": "c709e0163c04a03195b40a37d35b99280fc63756aa3f8d1a50cb32b853c75332",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "60c994645783f61a7ffdd326d4e4c2f3f60991c9b46185753aa471d108d9f4ef",
+        "path": "path:c24477829b46b35b",
+        "path_hash": "c24477829b46b35b3b963efaa434cf679619e59fd2f6efd8d91124d2fa4e6b9a",
+        "record_type": "bridge",
+        "status": "DER",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 3,
+        "evidence_count": 0,
+        "equation_count": 2,
         "id": "record:10",
         "layer": "record"
       },
@@ -424,15 +682,10 @@
         }
       },
       {
-        "id": "evidence:10",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "ce65afb4fd7dea289be1bbe522d9fd220d6ddbe38d616514986ee5b52ca3bf76",
-        "path": "path:fc56fa07b0934261",
-        "path_hash": "fc56fa07b0934261f8066e73d81f7df3c1f4c3c66aee8d556cfce1f79080f477",
-        "record_type": "node",
+        "identity_hash": "e42f2b5fa069467f568c411c817fac92d154fbbd2aac9ad34c395b2270ffa675",
+        "path": "path:c042443184af8386",
+        "path_hash": "c042443184af83868a44b6db000bd2ef05b3cea178f78ace62af81e6156376c7",
+        "record_type": "bridge",
         "status": "EST",
         "scale": {
           "scope_declared": false,
@@ -440,7 +693,7 @@
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
+        "evidence_count": 0,
         "equation_count": 2,
         "id": "record:11",
         "layer": "record"
@@ -456,23 +709,18 @@
         }
       },
       {
-        "id": "evidence:11",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "83966cc28fe7a50193a91b5ed77fab2ae7174629bc512e3d9b06ad72941ed97f",
-        "path": "path:350dafda741ad556",
-        "path_hash": "350dafda741ad556ba09ba7bc9f55b5038bdce6d5f90a59fa68bfd29e3891868",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "65e327158c9964bd141b06903bc708c9454f850c25d8bf942ae4f857d3ae31ff",
+        "path": "path:24b7480ecdc71f4b",
+        "path_hash": "24b7480ecdc71f4b785f622b49b88c3096f5e310704f1870d374a1dd7d39f5ec",
+        "record_type": "bridge",
+        "status": "DER",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
+        "evidence_count": 0,
         "equation_count": 2,
         "id": "record:12",
         "layer": "record"
@@ -488,15 +736,10 @@
         }
       },
       {
-        "id": "evidence:12",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "e92a4b2cbdfb602c0c57933da56a35be084cb8edcc4111fea1aa7be9f7f0f75b",
-        "path": "path:77874809aa07ff45",
-        "path_hash": "77874809aa07ff451dd22a6d4889f2ec833a5aa1e17e165844b1a2e1622bb083",
-        "record_type": "node",
+        "identity_hash": "375ec05b941f02939bfff4e6dc33507cd84da178381e0ce57f678eac1e9b73be",
+        "path": "path:329776a42b8f5917",
+        "path_hash": "329776a42b8f5917c854ce66efeb5be412594950f1c5cac15e4d48f2ea7eb291",
+        "record_type": "bridge",
         "status": "EST",
         "scale": {
           "scope_declared": false,
@@ -504,8 +747,8 @@
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 3,
+        "evidence_count": 0,
+        "equation_count": 2,
         "id": "record:13",
         "layer": "record"
       },
@@ -520,16 +763,11 @@
         }
       },
       {
-        "id": "evidence:13",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "bd6fb3e2a250b79e4ddd1ac32088c4d20f69ea14460c26b4bd2af7f488985df7",
-        "path": "path:a7d913bcbc8663c0",
-        "path_hash": "a7d913bcbc8663c0debca908ce9ae33b24cbb94fa38fe04322d0408a7b9242c8",
-        "record_type": "node",
-        "status": "SYM",
+        "identity_hash": "b5b65aff88f938f782428925d8374613b9a418adba2502e0a3989f9de796861a",
+        "path": "path:dc93823c0adb05c5",
+        "path_hash": "dc93823c0adb05c5b2b90d3456b4554f901635fcd32d94f4a6dce483dcec9187",
+        "record_type": "bridge",
+        "status": "HYP",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -537,7 +775,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 0,
-        "equation_count": 0,
+        "equation_count": 3,
         "id": "record:14",
         "layer": "record"
       },
@@ -552,19 +790,19 @@
         }
       },
       {
-        "identity_hash": "0daef93106e43abae0cfd77fde59ec6b7b6607260cf2c490d3154dc9155ff6f0",
-        "path": "path:8d47f5e6141f8f4b",
-        "path_hash": "8d47f5e6141f8f4b31ab7be817c1f93548f13eb7f9fea9da38250ad85ec2da1a",
-        "record_type": "node",
-        "status": "SYM",
+        "identity_hash": "2c8dc752c57af80cd0e3362293af7e5c7541283c4866460909b6f40143988d72",
+        "path": "path:6479038070bb3750",
+        "path_hash": "6479038070bb375011ba08786bf0c493b43469dc6bbbe0b8e3cbf20b2a229a7c",
+        "record_type": "bridge",
+        "status": "EST",
         "scale": {
           "scope_declared": false,
-          "unit_count": 1,
+          "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
         "evidence_count": 0,
-        "equation_count": 0,
+        "equation_count": 1,
         "id": "record:15",
         "layer": "record"
       },
@@ -573,25 +811,25 @@
         "layer": "scale",
         "value": {
           "scope_declared": false,
-          "unit_count": 1,
+          "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         }
       },
       {
-        "identity_hash": "39b4b92f0d17394c09f7deec363187152912f32e6bae5334cd12902be70bafeb",
-        "path": "path:8313370c9b03345f",
-        "path_hash": "8313370c9b03345f3045d7aff42439bca3ad21e5bfd59427bdde90a994415543",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "3a899ec0dc97aa9c6ddfbc4f1bfd5194fda2b4568d646bb0c343d8b6cf8ff11b",
+        "path": "path:83dfb821e9f126c3",
+        "path_hash": "83dfb821e9f126c39afb4ef3e4a957781e4dfcf839dacda34f18734371cb1d77",
+        "record_type": "bridge",
+        "status": "SYM",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 3,
-        "equation_count": 9,
+        "evidence_count": 0,
+        "equation_count": 1,
         "id": "record:16",
         "layer": "record"
       },
@@ -606,24 +844,19 @@
         }
       },
       {
-        "id": "evidence:16",
-        "layer": "evidence",
-        "count": 3
-      },
-      {
-        "identity_hash": "954d429a5367c86eac5d81f8d7e13fa7f0708f8193faa6d737e2784ed73f950d",
-        "path": "path:298d6ad054e9b81d",
-        "path_hash": "298d6ad054e9b81d9c4f398b184f983b6a411c8be574801b64a7b6af937baee8",
-        "record_type": "node",
-        "status": "DER",
+        "identity_hash": "580f53d84121f92ec1944853fa604dcbaf16aa0d2d79d5d5e2ae0d690c4faee5",
+        "path": "path:9a89799b0bf7bb2f",
+        "path_hash": "9a89799b0bf7bb2f7dd4b8698ad0b9308dfa1761fbbd7f5ec8b134d2581d85d2",
+        "record_type": "bridge",
+        "status": "HYP",
         "scale": {
           "scope_declared": false,
-          "unit_count": 1,
+          "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 0,
+        "evidence_count": 0,
+        "equation_count": 2,
         "id": "record:17",
         "layer": "record"
       },
@@ -632,30 +865,25 @@
         "layer": "scale",
         "value": {
           "scope_declared": false,
-          "unit_count": 1,
+          "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         }
       },
       {
-        "id": "evidence:17",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "aa36e4e1e523cdf460f3e21b1bfa542ef96dfa21ad722f4f977d19a3721b5acf",
-        "path": "path:f3edb7f8aa5791d5",
-        "path_hash": "f3edb7f8aa5791d5fea183c96ee3657bd8b1fc3e4c0357cb619e56649a74508b",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "f311fd0b11df81efbf9b44d140a3ac3cf18d816707427c039b2296c2f4371c79",
+        "path": "path:41767d47c546ae9c",
+        "path_hash": "41767d47c546ae9c787993dae554e3d10ad91a9f4a17d67188490b23180a1341",
+        "record_type": "bridge",
+        "status": "SYM",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 1,
+        "evidence_count": 0,
+        "equation_count": 3,
         "id": "record:18",
         "layer": "record"
       },
@@ -670,24 +898,19 @@
         }
       },
       {
-        "id": "evidence:18",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "a2e9cce05397385fda3fd5bfacbf7de6f93fea23fac6c2df51163527091207b3",
-        "path": "path:1f1c536a462bbb61",
-        "path_hash": "1f1c536a462bbb61f736c5538a694d3b6897797992e81c5797a50c8b246134bf",
-        "record_type": "node",
+        "identity_hash": "bebfff4d82b1438a87e5a4bf0d7ed8609085c3c7dd3c2a516e31b4442de475f2",
+        "path": "path:b133813bd7ca0d66",
+        "path_hash": "b133813bd7ca0d66be491f190f65909bce6aaec0306a6804a974871b42a689ca",
+        "record_type": "bridge",
         "status": "HYP",
         "scale": {
           "scope_declared": false,
-          "unit_count": 1,
+          "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
         "evidence_count": 0,
-        "equation_count": 0,
+        "equation_count": 1,
         "id": "record:19",
         "layer": "record"
       },
@@ -696,17 +919,17 @@
         "layer": "scale",
         "value": {
           "scope_declared": false,
-          "unit_count": 1,
+          "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         }
       },
       {
-        "identity_hash": "5ea98f566ad95b0dda4b69d8dce8604832c516ebf1c083b0df1fa069d072d8c6",
-        "path": "path:bd5de5f47561ce33",
-        "path_hash": "bd5de5f47561ce33613f8a9f112eb63e6cdb29e27b7141882884a3ed8e2d0843",
-        "record_type": "node",
-        "status": "EST",
+        "identity_hash": "eabd393e86f8e3fd18b489714ff7d92252a0314772a04bb633f8d827c221a3c7",
+        "path": "path:694398e64d9da49e",
+        "path_hash": "694398e64d9da49e587d0341f7c8ef293f5fc91f3ddc59e4a84a5ba1e4ac075a",
+        "record_type": "bridge",
+        "status": "STOP",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -714,7 +937,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 0,
-        "equation_count": 0,
+        "equation_count": 1,
         "id": "record:20",
         "layer": "record"
       },
@@ -729,11 +952,11 @@
         }
       },
       {
-        "identity_hash": "4e97ba6d1f4fefb454205b91b7027bf0599d1d0299180196edfcd312525b0334",
-        "path": "path:76aabe9cdad435d4",
-        "path_hash": "76aabe9cdad435d4c8029f22c705306f2dc052052509694c2b15a39eeada3883",
-        "record_type": "node",
-        "status": "SYM",
+        "identity_hash": "ebe9e0fe4c2cc7875d6330062f18c5c9d67a60c2f9ff4f6a5b74b2fc3e74f8ea",
+        "path": "path:3bd5c188f9aa18fa",
+        "path_hash": "3bd5c188f9aa18fac754d2a5b9e8089176c33e82fadb7a2bae8b33dab7521cc0",
+        "record_type": "bridge",
+        "status": "EST",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -756,6 +979,1282 @@
         }
       },
       {
+        "identity_hash": "0a51b27233599e2ba77d4a5e1430a91ee18d4bc21930ba35e89fae297963ee99",
+        "path": "path:4e5c7a52e8f3864d",
+        "path_hash": "4e5c7a52e8f3864da0ec799aae931d0322546eba04a1e5ec7de9e50991ee92dc",
+        "record_type": "bridge",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 1,
+        "id": "record:22",
+        "layer": "record"
+      },
+      {
+        "id": "scale:22",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:22",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "437d5783a0d2bf34c749028ef434eed0820586e47ba31d00cfeda88e99576608",
+        "path": "path:7f15f5953b3e0dc2",
+        "path_hash": "7f15f5953b3e0dc28548704c0e1aca465546c8d265af7e252659af7b11b11f25",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:23",
+        "layer": "record"
+      },
+      {
+        "id": "scale:23",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:23",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "030251756569b23836ff093c46fbeb863e15012405e2119b89335cebcce1eaf1",
+        "path": "path:598598e0d9c1c907",
+        "path_hash": "598598e0d9c1c90719a1a8b13a1094a9ff0ccd8f9f412eb84ed8dbdd6eba6eb1",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 1,
+        "id": "record:24",
+        "layer": "record"
+      },
+      {
+        "id": "scale:24",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "0c5af5ac7150c7ed23007abcc7c100afc276070a898276299a926531eb43df30",
+        "path": "path:586a5b090abca157",
+        "path_hash": "586a5b090abca157dbf013739b423c7c05b3c3084c3055d24172c31f53554e54",
+        "record_type": "bridge",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 1,
+        "id": "record:25",
+        "layer": "record"
+      },
+      {
+        "id": "scale:25",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "ac1ce748ed26e15551cc8ef73162fe53e2341416b179cdcc6f7979e32c11a83c",
+        "path": "path:55aa77e30b39cd1e",
+        "path_hash": "55aa77e30b39cd1e7ab55688f9f6939fbe0e6f6fe040cbca23cd38d3d6920f80",
+        "record_type": "bridge",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:26",
+        "layer": "record"
+      },
+      {
+        "id": "scale:26",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "5544c194137532033416f78c164d8700b75437d5328e25b77732e15eb1c6ab75",
+        "path": "path:416b032fb9612bb8",
+        "path_hash": "416b032fb9612bb8eb13113bdd6b276771140a7f6e4a8126084deb2ec654ed7b",
+        "record_type": "bridge",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:27",
+        "layer": "record"
+      },
+      {
+        "id": "scale:27",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "6fbf2c54e0cf6a3ebef6c63d2d750931541b9a4f158ab6da1451db860f842793",
+        "path": "path:d5b9a8c945e399ed",
+        "path_hash": "d5b9a8c945e399edbf23a8094531969da96f53444775fca5fce437311e13ee7d",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:28",
+        "layer": "record"
+      },
+      {
+        "id": "scale:28",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "0883d6f744eeb88479a890efcc2bf5ff9462502ba83e9b0d1a3dc1d589363fe1",
+        "path": "path:478949fa2de7780c",
+        "path_hash": "478949fa2de7780c510fabc811d44b04fa1d5c3d6a5e29879ef23a0ca668e531",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 1,
+        "id": "record:29",
+        "layer": "record"
+      },
+      {
+        "id": "scale:29",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "d103a0e23f648c119bea9d4f95accf9c0d482c5299113bac673abbdfee473a48",
+        "path": "path:574d2666a3d3785e",
+        "path_hash": "574d2666a3d3785e9b4a113f58fb03757a72c065a79ba05d0e3550e771cd2d95",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 1,
+        "id": "record:30",
+        "layer": "record"
+      },
+      {
+        "id": "scale:30",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "e19d83d5940611e2a4550a2a1ac9a756786648c0cb324b42ef435bdb1129ec5b",
+        "path": "path:d7c7756bab6b6e52",
+        "path_hash": "d7c7756bab6b6e52991be3c1cb36b903c1e5e835ae68ceb44653a503dcca3bec",
+        "record_type": "bridge",
+        "status": "STOP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:31",
+        "layer": "record"
+      },
+      {
+        "id": "scale:31",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "349aefeb27029b8e1d72e44cfd03b221ba6cc19cab400cf2e0e5d787b3fad8a9",
+        "path": "path:ee94c7d02daa9057",
+        "path_hash": "ee94c7d02daa90578e4a4f4831d8107bfb2090a3431f90f323b401c7cab58a31",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 3,
+        "id": "record:32",
+        "layer": "record"
+      },
+      {
+        "id": "scale:32",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "167236565293ae1600096cdebb0684fd619df7374919076a88d6968eaeab301a",
+        "path": "path:d352429f74102024",
+        "path_hash": "d352429f7410202445810e4ec73b0b75c252a3963e2f96bad7210ec3b06700b5",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:33",
+        "layer": "record"
+      },
+      {
+        "id": "scale:33",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "0b66eca99a257fb8d55d87a7bdf2eda31795f7d91e885a7b01a4516f61caf9be",
+        "path": "path:d426cc2827628c6e",
+        "path_hash": "d426cc2827628c6e2afc7e59b3a6e9edb402a6197aa9b4b80a33b6afe8b8e9cb",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:34",
+        "layer": "record"
+      },
+      {
+        "id": "scale:34",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "5dfcab21c43ba3cfcba6b70b676eee3e4e586920d150e49b54ceb85cd726e691",
+        "path": "path:bb3fcbbc671dae68",
+        "path_hash": "bb3fcbbc671dae683eba266616a9f1351ce3c187a77567216d56b996d8069b24",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:35",
+        "layer": "record"
+      },
+      {
+        "id": "scale:35",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "a50206805db10f059894bcb54d7fdb89ac4e757fe883b476d46e23111bc0824c",
+        "path": "path:e51dc749ada200b2",
+        "path_hash": "e51dc749ada200b2dfe2f7b695f4a8ff90c80a51d11eb11535935fdf31a06b2c",
+        "record_type": "bridge",
+        "status": "STOP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:36",
+        "layer": "record"
+      },
+      {
+        "id": "scale:36",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "0c3d30b6cea23fe151ea9bcf789c6c1dd6ccbe7ef14a764876e2e0b3a01f8180",
+        "path": "path:e1b7d554a4ee0340",
+        "path_hash": "e1b7d554a4ee0340b00b9ce28dd4c4d687bc5ff1077bd2abd9564caac0020ad4",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:37",
+        "layer": "record"
+      },
+      {
+        "id": "scale:37",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:37",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "56cbc3d0d75f1ccf6b811ab09b79eef67e3c675c0368217ea358713d98371e17",
+        "path": "path:52f5efda3f6949f3",
+        "path_hash": "52f5efda3f6949f3a5bb7ef81c216104875cd76f1b0f1e8e7e9d21692f8e9560",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 2,
+        "equation_count": 3,
+        "id": "record:38",
+        "layer": "record"
+      },
+      {
+        "id": "scale:38",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:38",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "966edcb7a3aa9aef7cf1914660744d9a2c96c6eb030e0c451b53915e8b1847a6",
+        "path": "path:7f18b21044220be2",
+        "path_hash": "7f18b21044220be2ea90a9094ef1ba6d86a440f3826a63e40c8d2406cd59efe3",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 2,
+        "equation_count": 3,
+        "id": "record:39",
+        "layer": "record"
+      },
+      {
+        "id": "scale:39",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:39",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "0974e8cb16abbe59db88a0406feed5aa4d12b06eec51b58ea665fc476325f81e",
+        "path": "path:538f5102fc7051f0",
+        "path_hash": "538f5102fc7051f02bc3ee29fbe30d8c6eb505b2c5e066cb07f8b819f734f667",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 5,
+        "id": "record:40",
+        "layer": "record"
+      },
+      {
+        "id": "scale:40",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:40",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "1498ae25ca5e53e1f649cede16c2e75ea20504b40bf79d2bcc86a01ea6610368",
+        "path": "path:38a79c4bb365b1f4",
+        "path_hash": "38a79c4bb365b1f48d342fd81b7bcae073c5ecebc96ea324b64dd5220df56dc6",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:41",
+        "layer": "record"
+      },
+      {
+        "id": "scale:41",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "a904ff83c2e7c13a53448bfdbff0be4dc05d7dd696a13de8e015d68398e28ebe",
+        "path": "path:f05fba9f9828ce06",
+        "path_hash": "f05fba9f9828ce06aca32f5a0e4abeecf229ef49e505dd577aa7629d5ce98201",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:42",
+        "layer": "record"
+      },
+      {
+        "id": "scale:42",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:42",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "9d6658bac3507f2b5b733d441ab86dac6af1d92d9c4a561d644cfbc8a5550782",
+        "path": "path:2b019515bd3f1aee",
+        "path_hash": "2b019515bd3f1aee3e8aa5e278bd3de9a0365470afdd940e9f79c157f95036e9",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:43",
+        "layer": "record"
+      },
+      {
+        "id": "scale:43",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:43",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "6f00d3553cdde7412a0f98826af5e0433533ae37e11a6882bf90c81cfebf7823",
+        "path": "path:5b6e4f5d2046f712",
+        "path_hash": "5b6e4f5d2046f7126c480daed1aa5d60d1c8dd2e758850bce3bd226363335203",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:44",
+        "layer": "record"
+      },
+      {
+        "id": "scale:44",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:44",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "5606affd4b68465913e605f4f0984514a984729bf984fb20dc9b8713203db0b5",
+        "path": "path:661eaa46b6296b2f",
+        "path_hash": "661eaa46b6296b2fbe625b9a641597fddf283be7a3d3479c64f6f6f239b10401",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:45",
+        "layer": "record"
+      },
+      {
+        "id": "scale:45",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:45",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "ea45ab41c87c4bd93798b13ef46d81e7cf7347fccaebc38d29f4b45093b06bcc",
+        "path": "path:758d9da09bbb7aae",
+        "path_hash": "758d9da09bbb7aaeb89b137bed5d635d87c2fe31d9c8b79b0b4271e01188636f",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:46",
+        "layer": "record"
+      },
+      {
+        "id": "scale:46",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:46",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "73f48b9dd2c020f3990676ba4f2116acb94fe1f6c7f9f5da37575b494b476b03",
+        "path": "path:25d6ed4434293302",
+        "path_hash": "25d6ed4434293302685ee7fa5b4e85859c00b7922b6a85ce539de61dd4d0e231",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:47",
+        "layer": "record"
+      },
+      {
+        "id": "scale:47",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:47",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "726c374bdeccc2c2b54c4912f0cbf692ff6c07e044d0f955b76af7722b62ed0d",
+        "path": "path:d9e8e6f93faf426d",
+        "path_hash": "d9e8e6f93faf426d44b2d2b8224d3f09e1889e4e41e38eed82968a4a07235128",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 4,
+        "id": "record:48",
+        "layer": "record"
+      },
+      {
+        "id": "scale:48",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:48",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "2546a9b8f13ea71c58bdab8948d315b3e026b142622e49ee33a0ceed139e5261",
+        "path": "path:c709e0163c04a031",
+        "path_hash": "c709e0163c04a03195b40a37d35b99280fc63756aa3f8d1a50cb32b853c75332",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:49",
+        "layer": "record"
+      },
+      {
+        "id": "scale:49",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:49",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "ce65afb4fd7dea289be1bbe522d9fd220d6ddbe38d616514986ee5b52ca3bf76",
+        "path": "path:fc56fa07b0934261",
+        "path_hash": "fc56fa07b0934261f8066e73d81f7df3c1f4c3c66aee8d556cfce1f79080f477",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:50",
+        "layer": "record"
+      },
+      {
+        "id": "scale:50",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:50",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "83966cc28fe7a50193a91b5ed77fab2ae7174629bc512e3d9b06ad72941ed97f",
+        "path": "path:350dafda741ad556",
+        "path_hash": "350dafda741ad556ba09ba7bc9f55b5038bdce6d5f90a59fa68bfd29e3891868",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:51",
+        "layer": "record"
+      },
+      {
+        "id": "scale:51",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:51",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "e92a4b2cbdfb602c0c57933da56a35be084cb8edcc4111fea1aa7be9f7f0f75b",
+        "path": "path:77874809aa07ff45",
+        "path_hash": "77874809aa07ff451dd22a6d4889f2ec833a5aa1e17e165844b1a2e1622bb083",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:52",
+        "layer": "record"
+      },
+      {
+        "id": "scale:52",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:52",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "bd6fb3e2a250b79e4ddd1ac32088c4d20f69ea14460c26b4bd2af7f488985df7",
+        "path": "path:a7d913bcbc8663c0",
+        "path_hash": "a7d913bcbc8663c0debca908ce9ae33b24cbb94fa38fe04322d0408a7b9242c8",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 0,
+        "id": "record:53",
+        "layer": "record"
+      },
+      {
+        "id": "scale:53",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "0daef93106e43abae0cfd77fde59ec6b7b6607260cf2c490d3154dc9155ff6f0",
+        "path": "path:8d47f5e6141f8f4b",
+        "path_hash": "8d47f5e6141f8f4b31ab7be817c1f93548f13eb7f9fea9da38250ad85ec2da1a",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 0,
+        "id": "record:54",
+        "layer": "record"
+      },
+      {
+        "id": "scale:54",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "f1abf17456acdbb7b12d154043a0d0d8098d11a70f0cee21e436a886ed05b622",
+        "path": "path:018110d7f7593ef6",
+        "path_hash": "018110d7f7593ef6b990cafdf6d38b03f9d6a08d8b0171f5ecf6c4885ced75d3",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:55",
+        "layer": "record"
+      },
+      {
+        "id": "scale:55",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:55",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "39b4b92f0d17394c09f7deec363187152912f32e6bae5334cd12902be70bafeb",
+        "path": "path:8313370c9b03345f",
+        "path_hash": "8313370c9b03345f3045d7aff42439bca3ad21e5bfd59427bdde90a994415543",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 3,
+        "equation_count": 9,
+        "id": "record:56",
+        "layer": "record"
+      },
+      {
+        "id": "scale:56",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:56",
+        "layer": "evidence",
+        "count": 3
+      },
+      {
+        "identity_hash": "954d429a5367c86eac5d81f8d7e13fa7f0708f8193faa6d737e2784ed73f950d",
+        "path": "path:298d6ad054e9b81d",
+        "path_hash": "298d6ad054e9b81d9c4f398b184f983b6a411c8be574801b64a7b6af937baee8",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 0,
+        "id": "record:57",
+        "layer": "record"
+      },
+      {
+        "id": "scale:57",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:57",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "aa36e4e1e523cdf460f3e21b1bfa542ef96dfa21ad722f4f977d19a3721b5acf",
+        "path": "path:f3edb7f8aa5791d5",
+        "path_hash": "f3edb7f8aa5791d5fea183c96ee3657bd8b1fc3e4c0357cb619e56649a74508b",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 1,
+        "id": "record:58",
+        "layer": "record"
+      },
+      {
+        "id": "scale:58",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:58",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "a2e9cce05397385fda3fd5bfacbf7de6f93fea23fac6c2df51163527091207b3",
+        "path": "path:1f1c536a462bbb61",
+        "path_hash": "1f1c536a462bbb61f736c5538a694d3b6897797992e81c5797a50c8b246134bf",
+        "record_type": "node",
+        "status": "HYP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 0,
+        "id": "record:59",
+        "layer": "record"
+      },
+      {
+        "id": "scale:59",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 1,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "0d88c07a1e5cbfcf0278ea42e17f279f5c2702df687442d51234ab080e57fd2d",
+        "path": "path:c1a16a035af026b3",
+        "path_hash": "c1a16a035af026b3742e6e910e81366459c9c76b8ec76133bad841b3bb182e81",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 0,
+        "id": "record:60",
+        "layer": "record"
+      },
+      {
+        "id": "scale:60",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:60",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "5ea98f566ad95b0dda4b69d8dce8604832c516ebf1c083b0df1fa069d072d8c6",
+        "path": "path:bd5de5f47561ce33",
+        "path_hash": "bd5de5f47561ce33613f8a9f112eb63e6cdb29e27b7141882884a3ed8e2d0843",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 0,
+        "id": "record:61",
+        "layer": "record"
+      },
+      {
+        "id": "scale:61",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "fa468e7568060d2e159adc412f6418789a3df259566268119ea94cd7d6e0e7d4",
+        "path": "path:45ea575dfd57673f",
+        "path_hash": "45ea575dfd57673fd0e3a6e52bbd0076e3f7540884b78e27808685ec0c240299",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 2,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:62",
+        "layer": "record"
+      },
+      {
+        "id": "scale:62",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 2,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:62",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "4e97ba6d1f4fefb454205b91b7027bf0599d1d0299180196edfcd312525b0334",
+        "path": "path:76aabe9cdad435d4",
+        "path_hash": "76aabe9cdad435d4c8029f22c705306f2dc052052509694c2b15a39eeada3883",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:63",
+        "layer": "record"
+      },
+      {
+        "id": "scale:63",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "90a607152a1814c07d662e60cda9beb1abd65901e8d449461d121482a13052cf",
+        "path": "path:29ef4184484d4a0e",
+        "path_hash": "29ef4184484d4a0e4f8e2cc13b48a486190171e8d17ea63aa3d35e25f837cf32",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 0,
+        "id": "record:64",
+        "layer": "record"
+      },
+      {
+        "id": "scale:64",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
         "identity_hash": "755e6fd8e5592c7d2122903cae7eb902f0f86782e15f07ec8afcd23169d72a2f",
         "path": "path:90dade09744eb913",
         "path_hash": "90dade09744eb913ca32c9343d27c118d4a1485f3365aea076bcb015828e62e3",
@@ -769,11 +2268,11 @@
         },
         "evidence_count": 0,
         "equation_count": 0,
-        "id": "record:22",
+        "id": "record:65",
         "layer": "record"
       },
       {
-        "id": "scale:22",
+        "id": "scale:65",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -781,6 +2280,38 @@
           "time_scale_declared": false,
           "length_scale_declared": false
         }
+      },
+      {
+        "identity_hash": "782e4f9f179c3074c06d3341082ca2b1d6ac75e7ee1ee555a89dcdf39e6065a8",
+        "path": "path:b49ed0ef8b45c56e",
+        "path_hash": "b49ed0ef8b45c56e260798030b80d55abdee3b94b6268d7340d93cbf41622c21",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 3,
+        "equation_count": 15,
+        "id": "record:66",
+        "layer": "record"
+      },
+      {
+        "id": "scale:66",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:66",
+        "layer": "evidence",
+        "count": 3
       },
       {
         "identity_hash": "fa8b48f33fc587c7f079bf4d36994f36c1ecd0b509d583be4e3adbf83431c773",
@@ -796,11 +2327,11 @@
         },
         "evidence_count": 1,
         "equation_count": 12,
-        "id": "record:23",
+        "id": "record:67",
         "layer": "record"
       },
       {
-        "id": "scale:23",
+        "id": "scale:67",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -810,9 +2341,201 @@
         }
       },
       {
-        "id": "evidence:23",
+        "id": "evidence:67",
         "layer": "evidence",
         "count": 1
+      },
+      {
+        "identity_hash": "e1a083ee78d014187078646b172570610d4b965ea774dae746b511a7b309433c",
+        "path": "path:33bc77a57fd945da",
+        "path_hash": "33bc77a57fd945da5f39469d61850ae960f7c7e02dca0320675074f062ea41e3",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 3,
+        "equation_count": 3,
+        "id": "record:68",
+        "layer": "record"
+      },
+      {
+        "id": "scale:68",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:68",
+        "layer": "evidence",
+        "count": 3
+      },
+      {
+        "identity_hash": "4974ea76c2db2296f3a2d7aecf050629bd94ab62b04071c941e9b21707a82490",
+        "path": "path:142e52a61b3689b6",
+        "path_hash": "142e52a61b3689b6750e9151f9c88754938ea3c39c837fde81f33c2aa83fe4fb",
+        "record_type": "node",
+        "status": "HYP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 4,
+        "id": "record:69",
+        "layer": "record"
+      },
+      {
+        "id": "scale:69",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:69",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "24b3a66f1eba3b1189fc5af2bca8f6be713a22831550272344cc1f8209d96910",
+        "path": "path:4f1c9a8d8c564233",
+        "path_hash": "4f1c9a8d8c5642333438ad859ef75e4b39c0e8a279a3f935ff6c2006500d6b4a",
+        "record_type": "node",
+        "status": "HYP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 2,
+        "equation_count": 3,
+        "id": "record:70",
+        "layer": "record"
+      },
+      {
+        "id": "scale:70",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:70",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "aa78f326b8db0c21feff71a63917b86856607b1cc7f14975baad0651beeb6847",
+        "path": "path:167d543b63e0bb0c",
+        "path_hash": "167d543b63e0bb0c414413d251c0ea3bf8cc3dce3d4d7d39df67357cfff6c3dd",
+        "record_type": "node",
+        "status": "STOP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:71",
+        "layer": "record"
+      },
+      {
+        "id": "scale:71",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:71",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "2c6fe2e87f1a667806378cbef8b7d66d0873c2bf344b345ca80aa913e0a667dc",
+        "path": "path:393e1abddf818d06",
+        "path_hash": "393e1abddf818d06ced898d568afe53565da2d63a999a40eaaf171f1a1d0c8bd",
+        "record_type": "node",
+        "status": "HYP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 2,
+        "equation_count": 5,
+        "id": "record:72",
+        "layer": "record"
+      },
+      {
+        "id": "scale:72",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:72",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "ef24c9f98c7573679ed46d5e8f6ee8249b129900c81fc0f76b2f05eb1626e5ea",
+        "path": "path:8077d5a99d9b6571",
+        "path_hash": "8077d5a99d9b6571e03b05d017f1db9ff3fc17de0a34727419c7e3cc1aee7b34",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 3,
+        "equation_count": 29,
+        "id": "record:73",
+        "layer": "record"
+      },
+      {
+        "id": "scale:73",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:73",
+        "layer": "evidence",
+        "count": 3
       },
       {
         "identity_hash": "96a9ba6092956b808029d59a6f6746dd679dcf2d4253838ffca24e5d64c0a92f",
@@ -828,11 +2551,11 @@
         },
         "evidence_count": 0,
         "equation_count": 0,
-        "id": "record:24",
+        "id": "record:74",
         "layer": "record"
       },
       {
-        "id": "scale:24",
+        "id": "scale:74",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -840,6 +2563,444 @@
           "time_scale_declared": false,
           "length_scale_declared": false
         }
+      },
+      {
+        "identity_hash": "6f0cbc394f1ff6f795a930882e9b221d026b2a59d7ffb5f8145fad96132b398f",
+        "path": "path:0754753478762a8b",
+        "path_hash": "0754753478762a8b5f0a5b4c701477ff6e9eb949ae24cbd8b0c569d49ece92c8",
+        "record_type": "node",
+        "status": "STOP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:75",
+        "layer": "record"
+      },
+      {
+        "id": "scale:75",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "f0daef09624f219fa8a8bc84928315fb66ab75956a99a497f23e3407c0fca857",
+        "path": "path:4cbde559231bf6f5",
+        "path_hash": "4cbde559231bf6f5ad918c8d6c2f49e09479c71b1a606d18f46db4776124b54c",
+        "record_type": "node",
+        "status": "STOP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 3,
+        "id": "record:76",
+        "layer": "record"
+      },
+      {
+        "id": "scale:76",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "ddf0e926a786366bebb740771c9b900f3e1b4e9fe68e0c2df91da3958ac44ca8",
+        "path": "path:effa0bf9e94b48f4",
+        "path_hash": "effa0bf9e94b48f479cdc5f8ea81c594c4b9be79650ee798d5fcce5ce744913f",
+        "record_type": "node",
+        "status": "STOP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 2,
+        "equation_count": 5,
+        "id": "record:77",
+        "layer": "record"
+      },
+      {
+        "id": "scale:77",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:77",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "3ccf70f573239411f07ba466da085d3ac3695ab637167e2d3e2f15baf8279f00",
+        "path": "path:2528d0bc9eeda1b0",
+        "path_hash": "2528d0bc9eeda1b01b8d0fe62908fb27d1e006ab7ae5bf3634c922fc2a869423",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 7,
+        "id": "record:78",
+        "layer": "record"
+      },
+      {
+        "id": "scale:78",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:78",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "ca8324b739075d77c3e95f4e6b54513f8085a226c2f24ca594297e31174e9fbd",
+        "path": "path:7c57706665747c3f",
+        "path_hash": "7c57706665747c3f62e41d9b5bf4f9c5999e90005ac291e64dd83148a02a9df7",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 5,
+        "id": "record:79",
+        "layer": "record"
+      },
+      {
+        "id": "scale:79",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:79",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "dadb57e19ae2fe3880903d58098c7add6c27ecb8dc3234c1bf4228f880658f40",
+        "path": "path:d7320ff79ab5ba71",
+        "path_hash": "d7320ff79ab5ba71e280e5638656b6d107e5c82e04c7e4d17c567b5351c618e8",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 5,
+        "id": "record:80",
+        "layer": "record"
+      },
+      {
+        "id": "scale:80",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:80",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "389b0d7b779bf076d7e6805404265b0bd5c92c35735243aabf513fe140a92b27",
+        "path": "path:216053aebc852219",
+        "path_hash": "216053aebc8522195bc4427061f9a2fa90197e54f599e71e80e5b679fc80133c",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 2,
+        "equation_count": 5,
+        "id": "record:81",
+        "layer": "record"
+      },
+      {
+        "id": "scale:81",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:81",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "48880b46367fb359bccd6d7068bbba668a958d83dd4a4606ffe3f845a87260cc",
+        "path": "path:54c85276bbdb6241",
+        "path_hash": "54c85276bbdb624147636552fc636bd8640737d4ac7b8ba96a5eae7de4314916",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 5,
+        "id": "record:82",
+        "layer": "record"
+      },
+      {
+        "id": "scale:82",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:82",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "c5d970cf745228cc1db5b7735601a1f376d1e50185149e261c8e7df50b180a9f",
+        "path": "path:064e6ba150d367db",
+        "path_hash": "064e6ba150d367db36de948f6e5d05e76edc51f6088d07f07725d6a5ea59580c",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 4,
+        "id": "record:83",
+        "layer": "record"
+      },
+      {
+        "id": "scale:83",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:83",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "db1104382a412e1d07409d52c58381f1b6da338048da1de0ee6cb7ace9e751f5",
+        "path": "path:336ecc83934ecf68",
+        "path_hash": "336ecc83934ecf68e2a916fc3d0b30991a3c968050330b1fbdbd1a518902a128",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 2,
+        "equation_count": 2,
+        "id": "record:84",
+        "layer": "record"
+      },
+      {
+        "id": "scale:84",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:84",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "6eff53bd7a2b3e2370f0250248cbf6221bb9cfdfcb11cc2e75c81c66be56755a",
+        "path": "path:6e54dee2907fdc7c",
+        "path_hash": "6e54dee2907fdc7ca6c9681f7ff868e5f11e504d466201bd46512a55474cfba6",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:85",
+        "layer": "record"
+      },
+      {
+        "id": "scale:85",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:85",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "df32909ff0f24c5f597870483396924694fe3e3e2e8e3fe50ccd99b609985515",
+        "path": "path:b812721795dab836",
+        "path_hash": "b812721795dab836f11ba92f4a0e6d92928a9da088149f7e216a133876f91826",
+        "record_type": "node",
+        "status": "HYP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:86",
+        "layer": "record"
+      },
+      {
+        "id": "scale:86",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:86",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "fd47bd9c5c9c99e1c4429f4a7a12f6e66f589e87bb054c7768287b6e9dbc45bb",
+        "path": "path:c5ed917f1fecac66",
+        "path_hash": "c5ed917f1fecac6605e875f104f3c61f0acf96a3a45cd2bb2418b7746ab66794",
+        "record_type": "node",
+        "status": "STOP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:87",
+        "layer": "record"
+      },
+      {
+        "id": "scale:87",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:87",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "a8b506d1c170a87b0197deabc50689d8f8c5a8d5062c31463d42437b4e8c9e5f",
+        "path": "path:9472c18a13345549",
+        "path_hash": "9472c18a13345549ad48b2076883fd2e0463c461005abac1121f354e6af9e358",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:88",
+        "layer": "record"
+      },
+      {
+        "id": "scale:88",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:88",
+        "layer": "evidence",
+        "count": 1
       },
       {
         "identity_hash": "046fcf55d302d26af49d20a1252356aacce8a7586265fa9e089f483649f559ee",
@@ -855,11 +3016,11 @@
         },
         "evidence_count": 1,
         "equation_count": 5,
-        "id": "record:25",
+        "id": "record:89",
         "layer": "record"
       },
       {
-        "id": "scale:25",
+        "id": "scale:89",
         "layer": "scale",
         "value": {
           "scope_declared": true,
@@ -869,50 +3030,82 @@
         }
       },
       {
-        "id": "evidence:25",
+        "id": "evidence:89",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "9b88102a1dd37eac0606ccd11876e07667bbc3f229b1657725c018241c5cf6be",
+        "path": "path:f14716811a152c46",
+        "path_hash": "f14716811a152c4671f1f48ef1808f53384ee1880e463e1db27b2cf901012c9e",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:90",
+        "layer": "record"
+      },
+      {
+        "id": "scale:90",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:90",
         "layer": "evidence",
         "count": 1
       },
       {
         "id": "finding:0",
         "layer": "finding",
-        "code": "UPI-D003",
+        "code": "UPI-E007",
         "status": "ERR",
-        "path": "path:bd5de5f47561ce33",
-        "record_type": "node",
-        "message": "$ failed additionalProperties validation.",
-        "correction": "Correct the record so it validates against its declared UPI schema.",
+        "path": "path:bd505c8fa07035f1",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
         "verification_type": "software_test"
       },
       {
         "id": "correction:0",
         "layer": "correction",
-        "value": "Correct the record so it validates against its declared UPI schema."
+        "value": "Inspect the recorded evidence."
       },
       {
         "id": "finding:1",
         "layer": "finding",
-        "code": "UPI-D003",
+        "code": "UPI-E007",
         "status": "ERR",
-        "path": "path:bd5de5f47561ce33",
-        "record_type": "node",
-        "message": "$.address failed type validation.",
-        "correction": "Correct the record so it validates against its declared UPI schema.",
+        "path": "path:9c6cf5d4c3a3ab80",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
         "verification_type": "software_test"
       },
       {
         "id": "correction:1",
         "layer": "correction",
-        "value": "Correct the record so it validates against its declared UPI schema."
+        "value": "Inspect the recorded evidence."
       },
       {
         "id": "finding:2",
         "layer": "finding",
-        "code": "UPI-E005",
+        "code": "UPI-E004",
         "status": "ERR",
-        "path": "path:bd5de5f47561ce33",
-        "record_type": "node",
-        "message": "UPI-E005: Symbolic statement cannot be marked established",
+        "path": "path:2a47ccdaf254077f",
+        "record_type": "bridge",
+        "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
         "correction": "Inspect the recorded evidence.",
         "verification_type": "software_test"
       },
@@ -926,8 +3119,8 @@
         "layer": "finding",
         "code": "UPI-E007",
         "status": "ERR",
-        "path": "path:bd5de5f47561ce33",
-        "record_type": "node",
+        "path": "path:2a47ccdaf254077f",
+        "record_type": "bridge",
         "message": "UPI-E007: Scientific claim lacks evidence provenance",
         "correction": "Inspect the recorded evidence.",
         "verification_type": "software_test"
@@ -936,6 +3129,518 @@
         "id": "correction:3",
         "layer": "correction",
         "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:4",
+        "layer": "finding",
+        "code": "UPI-E004",
+        "status": "ERR",
+        "path": "path:3498dcfd18bae69e",
+        "record_type": "bridge",
+        "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:4",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:5",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:3498dcfd18bae69e",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:5",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:6",
+        "layer": "finding",
+        "code": "UPI-E004",
+        "status": "ERR",
+        "path": "path:0e84ad5243a82f03",
+        "record_type": "bridge",
+        "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:6",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:7",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:0e84ad5243a82f03",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:7",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:8",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:c24477829b46b35b",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:8",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:9",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:c042443184af8386",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:9",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:10",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:24b7480ecdc71f4b",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:10",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:11",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:329776a42b8f5917",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:11",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:12",
+        "layer": "finding",
+        "code": "UPI-E004",
+        "status": "ERR",
+        "path": "path:dc93823c0adb05c5",
+        "record_type": "bridge",
+        "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:12",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:13",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:dc93823c0adb05c5",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:13",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:14",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:6479038070bb3750",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:14",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:15",
+        "layer": "finding",
+        "code": "UPI-E004",
+        "status": "ERR",
+        "path": "path:9a89799b0bf7bb2f",
+        "record_type": "bridge",
+        "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:15",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:16",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:9a89799b0bf7bb2f",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:16",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:17",
+        "layer": "finding",
+        "code": "UPI-E004",
+        "status": "ERR",
+        "path": "path:b133813bd7ca0d66",
+        "record_type": "bridge",
+        "message": "UPI-E004: Hypothesis lacks test or falsification metadata",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:17",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:18",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:b133813bd7ca0d66",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:18",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:19",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:3bd5c188f9aa18fa",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:19",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:20",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:598598e0d9c1c907",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:20",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:21",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:586a5b090abca157",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:21",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:22",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:55aa77e30b39cd1e",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:22",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:23",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:416b032fb9612bb8",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:23",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:24",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:d5b9a8c945e399ed",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:24",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:25",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:478949fa2de7780c",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:25",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:26",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:574d2666a3d3785e",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:26",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:27",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:ee94c7d02daa9057",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:27",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:28",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:d352429f74102024",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:28",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:29",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:d426cc2827628c6e",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:29",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:30",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:bb3fcbbc671dae68",
+        "record_type": "bridge",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:30",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:31",
+        "layer": "finding",
+        "code": "UPI-D003",
+        "status": "ERR",
+        "path": "path:bd5de5f47561ce33",
+        "record_type": "node",
+        "message": "$ failed additionalProperties validation.",
+        "correction": "Correct the record so it validates against its declared UPI schema.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:31",
+        "layer": "correction",
+        "value": "Correct the record so it validates against its declared UPI schema."
+      },
+      {
+        "id": "finding:32",
+        "layer": "finding",
+        "code": "UPI-D003",
+        "status": "ERR",
+        "path": "path:bd5de5f47561ce33",
+        "record_type": "node",
+        "message": "$.address failed type validation.",
+        "correction": "Correct the record so it validates against its declared UPI schema.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:32",
+        "layer": "correction",
+        "value": "Correct the record so it validates against its declared UPI schema."
+      },
+      {
+        "id": "finding:33",
+        "layer": "finding",
+        "code": "UPI-E005",
+        "status": "ERR",
+        "path": "path:bd5de5f47561ce33",
+        "record_type": "node",
+        "message": "UPI-E005: Symbolic statement cannot be marked established",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:33",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:34",
+        "layer": "finding",
+        "code": "UPI-E007",
+        "status": "ERR",
+        "path": "path:bd5de5f47561ce33",
+        "record_type": "node",
+        "message": "UPI-E007: Scientific claim lacks evidence provenance",
+        "correction": "Inspect the recorded evidence.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:34",
+        "layer": "correction",
+        "value": "Inspect the recorded evidence."
+      },
+      {
+        "id": "finding:35",
+        "layer": "finding",
+        "code": "UPI-D002",
+        "status": "STOP",
+        "path": "path:3f70057c5352c8d1",
+        "record_type": null,
+        "message": "Could not classify record as node, bridge, or theory.",
+        "correction": "Add the required node, bridge, or theory discriminator fields.",
+        "verification_type": "software_test"
+      },
+      {
+        "id": "correction:35",
+        "layer": "correction",
+        "value": "Add the required node, bridge, or theory discriminator fields."
       }
     ],
     "edges": [
@@ -955,19 +3660,9 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:1",
-        "target": "evidence:1",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:2",
         "target": "scale:2",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:2",
-        "target": "evidence:2",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:3",
@@ -975,19 +3670,9 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:3",
-        "target": "evidence:3",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:4",
         "target": "scale:4",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:4",
-        "target": "evidence:4",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:5",
@@ -998,11 +3683,6 @@
         "source": "record:6",
         "target": "scale:6",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:6",
-        "target": "evidence:6",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:7",
@@ -1020,11 +3700,6 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:8",
-        "target": "evidence:8",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:9",
         "target": "scale:9",
         "relation": "MEASURED_BY"
@@ -1040,19 +3715,9 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:10",
-        "target": "evidence:10",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:11",
         "target": "scale:11",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:11",
-        "target": "evidence:11",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:12",
@@ -1060,19 +3725,9 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:12",
-        "target": "evidence:12",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:13",
         "target": "scale:13",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:13",
-        "target": "evidence:13",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:14",
@@ -1090,29 +3745,14 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:16",
-        "target": "evidence:16",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:17",
         "target": "scale:17",
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:17",
-        "target": "evidence:17",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:18",
         "target": "scale:18",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:18",
-        "target": "evidence:18",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:19",
@@ -1135,6 +3775,11 @@
         "relation": "MEASURED_BY"
       },
       {
+        "source": "record:22",
+        "target": "evidence:22",
+        "relation": "DERIVED_FROM"
+      },
+      {
         "source": "record:23",
         "target": "scale:23",
         "relation": "MEASURED_BY"
@@ -1155,8 +3800,543 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:25",
-        "target": "evidence:25",
+        "source": "record:26",
+        "target": "scale:26",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:27",
+        "target": "scale:27",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:28",
+        "target": "scale:28",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:29",
+        "target": "scale:29",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:30",
+        "target": "scale:30",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:31",
+        "target": "scale:31",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:32",
+        "target": "scale:32",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:33",
+        "target": "scale:33",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:34",
+        "target": "scale:34",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:35",
+        "target": "scale:35",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:36",
+        "target": "scale:36",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:37",
+        "target": "scale:37",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:37",
+        "target": "evidence:37",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:38",
+        "target": "scale:38",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:38",
+        "target": "evidence:38",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:39",
+        "target": "scale:39",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:39",
+        "target": "evidence:39",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:40",
+        "target": "scale:40",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:40",
+        "target": "evidence:40",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:41",
+        "target": "scale:41",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:42",
+        "target": "scale:42",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:42",
+        "target": "evidence:42",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:43",
+        "target": "scale:43",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:43",
+        "target": "evidence:43",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:44",
+        "target": "scale:44",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:44",
+        "target": "evidence:44",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:45",
+        "target": "scale:45",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:45",
+        "target": "evidence:45",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:46",
+        "target": "scale:46",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:46",
+        "target": "evidence:46",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:47",
+        "target": "scale:47",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:47",
+        "target": "evidence:47",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:48",
+        "target": "scale:48",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:48",
+        "target": "evidence:48",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:49",
+        "target": "scale:49",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:49",
+        "target": "evidence:49",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:50",
+        "target": "scale:50",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:50",
+        "target": "evidence:50",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:51",
+        "target": "scale:51",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:51",
+        "target": "evidence:51",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:52",
+        "target": "scale:52",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:52",
+        "target": "evidence:52",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:53",
+        "target": "scale:53",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:54",
+        "target": "scale:54",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:55",
+        "target": "scale:55",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:55",
+        "target": "evidence:55",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:56",
+        "target": "scale:56",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:56",
+        "target": "evidence:56",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:57",
+        "target": "scale:57",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:57",
+        "target": "evidence:57",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:58",
+        "target": "scale:58",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:58",
+        "target": "evidence:58",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:59",
+        "target": "scale:59",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:60",
+        "target": "scale:60",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:60",
+        "target": "evidence:60",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:61",
+        "target": "scale:61",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:62",
+        "target": "scale:62",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:62",
+        "target": "evidence:62",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:63",
+        "target": "scale:63",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:64",
+        "target": "scale:64",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:65",
+        "target": "scale:65",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:66",
+        "target": "scale:66",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:66",
+        "target": "evidence:66",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:67",
+        "target": "scale:67",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:67",
+        "target": "evidence:67",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:68",
+        "target": "scale:68",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:68",
+        "target": "evidence:68",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:69",
+        "target": "scale:69",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:69",
+        "target": "evidence:69",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:70",
+        "target": "scale:70",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:70",
+        "target": "evidence:70",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:71",
+        "target": "scale:71",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:71",
+        "target": "evidence:71",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:72",
+        "target": "scale:72",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:72",
+        "target": "evidence:72",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:73",
+        "target": "scale:73",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:73",
+        "target": "evidence:73",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:74",
+        "target": "scale:74",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:75",
+        "target": "scale:75",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:76",
+        "target": "scale:76",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:77",
+        "target": "scale:77",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:77",
+        "target": "evidence:77",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:78",
+        "target": "scale:78",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:78",
+        "target": "evidence:78",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:79",
+        "target": "scale:79",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:79",
+        "target": "evidence:79",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:80",
+        "target": "scale:80",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:80",
+        "target": "evidence:80",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:81",
+        "target": "scale:81",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:81",
+        "target": "evidence:81",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:82",
+        "target": "scale:82",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:82",
+        "target": "evidence:82",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:83",
+        "target": "scale:83",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:83",
+        "target": "evidence:83",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:84",
+        "target": "scale:84",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:84",
+        "target": "evidence:84",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:85",
+        "target": "scale:85",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:85",
+        "target": "evidence:85",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:86",
+        "target": "scale:86",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:86",
+        "target": "evidence:86",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:87",
+        "target": "scale:87",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:87",
+        "target": "evidence:87",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:88",
+        "target": "scale:88",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:88",
+        "target": "evidence:88",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:89",
+        "target": "scale:89",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:89",
+        "target": "evidence:89",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:90",
+        "target": "scale:90",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:90",
+        "target": "evidence:90",
         "relation": "DERIVED_FROM"
       },
       {
@@ -1177,6 +4357,166 @@
       {
         "source": "finding:3",
         "target": "correction:3",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:4",
+        "target": "correction:4",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:5",
+        "target": "correction:5",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:6",
+        "target": "correction:6",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:7",
+        "target": "correction:7",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:8",
+        "target": "correction:8",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:9",
+        "target": "correction:9",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:10",
+        "target": "correction:10",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:11",
+        "target": "correction:11",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:12",
+        "target": "correction:12",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:13",
+        "target": "correction:13",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:14",
+        "target": "correction:14",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:15",
+        "target": "correction:15",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:16",
+        "target": "correction:16",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:17",
+        "target": "correction:17",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:18",
+        "target": "correction:18",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:19",
+        "target": "correction:19",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:20",
+        "target": "correction:20",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:21",
+        "target": "correction:21",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:22",
+        "target": "correction:22",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:23",
+        "target": "correction:23",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:24",
+        "target": "correction:24",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:25",
+        "target": "correction:25",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:26",
+        "target": "correction:26",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:27",
+        "target": "correction:27",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:28",
+        "target": "correction:28",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:29",
+        "target": "correction:29",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:30",
+        "target": "correction:30",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:31",
+        "target": "correction:31",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:32",
+        "target": "correction:32",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:33",
+        "target": "correction:33",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:34",
+        "target": "correction:34",
+        "relation": "STOPS_AT"
+      },
+      {
+        "source": "finding:35",
+        "target": "correction:35",
         "relation": "STOPS_AT"
       }
     ],

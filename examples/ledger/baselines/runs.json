@@ -1,16 +1,16 @@
 {
-  "campaign_id": "index-triage-baseline-2026-08-26",
+  "campaign_id": "index-triage-baseline-2026-09-03",
   "workflow_id": "index-triage-v1",
   "status": "SYM",
   "verification_type": "software_test",
   "claims_experimental_verification": false,
   "runs": 3,
   "identical_artifacts": true,
-  "artifact_hash": "af2fabe022813f16582d4c04b4466f30d594d98e95e312a1ee23f25859bba694",
+  "artifact_hash": "4929c31a0377e173af4e7ba268bfc083f2f402b19a2dedfbe93169e8b66d1df3",
   "artifact": "examples/ledger/baselines/baseline-1.json",
   "known_findings": "examples/ledger/baselines/known-findings.json",
   "decision": "advance",
   "approval_required": false,
-  "notes": "Catalog rebuilt at v1.0.0 after source-manifest skip and provenance repairs.",
+  "notes": "Catalog regenerated from three byte-identical read-only reports after canonical data expansion; findings remain open until source records are corrected.",
   "confusion_guard": "Identical software-test hashes prove scanner determinism, not physical correctness."
 }
