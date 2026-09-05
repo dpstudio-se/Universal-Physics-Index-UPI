@@ -35,7 +35,7 @@ def status_through_lens(payload: dict[str, Any], lens: str | None = None) -> dic
         and bool(links)
         and all(_valid_test_link(link) for link in links)
     )
-    if canonical in {"HYP", "DER"} and qualified:
+    if canonical in {"HYP", "DER"} and qualified and isinstance(links, list):
         view.update(
             {
                 "display_status": "EST-LINKED-ROBUSTNESS",

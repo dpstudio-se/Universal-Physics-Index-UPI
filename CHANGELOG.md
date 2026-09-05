@@ -15,6 +15,17 @@ Software contract freeze for the gathering and validation layers.
 
 ## Unreleased
 
+### Fixed
+
+- Integrated current canonical graph fixes with local recovery and ResonanceFS work.
+- Fixed evidence-lens type checking and SUNET test import formatting.
+- Installed test dependencies in index triage and added ResonanceFS CI verification.
+- Documented the review-token API, used constant-time token comparison, and stopped
+  printing database connection strings at startup.
+- Rendered public contribution text without interpreting HTML and rejected malformed
+  Content-Length headers with a JSON 400 response.
+- Aligned RNA report uploads with the pinned upload-artifact v7 used by index triage.
+
 ### Documentation
 
 - Synced README / README.sv / ROADMAP / ARCHITECTURE to the v1.0.0 main contract:

@@ -29,15 +29,20 @@ All numeric inputs in physics functions are validated:
 - ✓ Bridges without relation types rejected
 - ✓ STOP nodes without `stop_reason` rejected
 
-### No Credentials in Repository
+### Credentials and access control
 
-- ✓ No API keys, secrets, or credentials stored
-- ✓ `.gitignore` prevents accidental commits
-- ✓ No embedded authentication
+- Public reads and contributions do not require a login.
+- EST promotion requires the shared `UPI_REVIEW_TOKEN` environment value.
+- The token is read at startup, compared with `X-UPI-Review-Token`, and has no
+  built-in expiry or per-user identity. An empty value disables promotion.
+- `.env` is ignored by Git; database examples and Docker Compose contain
+  development credentials, which must be replaced for a deployed database.
+- The built-in server uses HTTP. Use HTTPS termination for remote review-token
+  requests. Database connection strings are not printed by server startup.
 
 ### Known Limitations
 
-- This is alpha software (v0.1.0-alpha)
+- Package version is declared in `pyproject.toml`.
 - Do not rely on this for critical decision-making
 - Always verify against original scientific literature
 - Use in research and educational contexts only

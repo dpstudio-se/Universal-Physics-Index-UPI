@@ -32,3 +32,19 @@ upi serve --database postgresql://upi:upi@host:5432/upi
 ```
 
 `UPI_DATABASE_URL` is accepted when `--database` is omitted.
+
+## Maintainer promotion
+
+Set `UPI_REVIEW_TOKEN` in the server environment before starting `upi serve`.
+The server reads environment variables directly; it does not load `.env` itself.
+An empty token disables promotion. There are no accounts, sessions, refresh
+tokens, or automatic expiry. Restart the server to rotate the shared token.
+
+Send `POST /api/promote` with `X-UPI-Review-Token` and a JSON object containing
+`address`. Missing or incorrect credentials return 403. A matching token permits
+promotion only when the record has evidence or primary sources. The public form
+does not collect or store this token. Use HTTPS termination for remote access;
+the built-in server serves HTTP.
+
+Promotion updates the live database. Canonical Git changes still require the
+maintainer merge workflow. See `openapi.yaml` for the endpoint contract.

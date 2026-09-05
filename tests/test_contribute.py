@@ -5,6 +5,8 @@ from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
+import pytest
+
 from upi.contribute.server import STREAM_OVERFLOW, ContributionApp, make_handler
 from upi.contribute.service import (
     DNA_MINNE_ADDRESS,
@@ -14,6 +16,76 @@ from upi.contribute.service import (
 from upi.contribute.store import ContributionStore
 
 ROOT = Path(__file__).parents[1]
+
+
+@pytest.mark.parametrize(
+    ("configured", "supplied", "evidence", "expected"),
+    [
+        ("", "", True, 403),
+        ("review-test", "", True, 403),
+        ("review-test", "wrong", True, 403),
+        ("review-test", "review-test", False, 400),
+        ("review-test", "review-test", True, 200),
+    ],
+)
+def test_http_promotion_boundary(configured, supplied, evidence, expected) -> None:
+    """verification_type: software_test; token possession is not physical evidence."""
+    service = make_service()
+    seeded = service.seed()
+    if evidence:
+        service.store.update_payload(
+            seeded.address, {**seeded.payload, "primary_sources": ["test fixture"]}
+        )
+    app = ContributionApp(service, review_token=configured)
+    server = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(app))
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        host, port = server.server_address
+        request = Request(
+            f"http://{host}:{port}/api/promote",
+            data=json.dumps({"address": seeded.address}).encode(),
+            headers={"Content-Type": "application/json", "X-UPI-Review-Token": supplied},
+        )
+        try:
+            with urlopen(request, timeout=2) as response:
+                observed = response.status
+        except HTTPError as error:
+            observed = error.code
+            error.close()
+        assert observed == expected
+        assert service.get_node(seeded.address)["status"] == (
+            "EST" if expected == 200 else "SYM"
+        )
+    finally:
+        server.shutdown()
+        thread.join(timeout=2)
+        server.server_close()
+        service.store.close()
+
+
+def test_invalid_content_length_returns_json_error() -> None:
+    service = make_service()
+    server = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(ContributionApp(service)))
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        host, port = server.server_address
+        request = Request(
+            f"http://{host}:{port}/api/nodes",
+            data=b"{}",
+            headers={"Content-Length": "invalid"},
+        )
+        with pytest.raises(HTTPError) as rejected:
+            urlopen(request, timeout=2)
+        with rejected.value as response:
+            assert response.code == 400
+            assert json.load(response)["errors"] == ["invalid Content-Length"]
+    finally:
+        server.shutdown()
+        thread.join(timeout=2)
+        server.server_close()
+        service.store.close()
 
 
 def make_service() -> ContributionService:

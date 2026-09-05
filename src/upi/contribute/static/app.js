@@ -25,11 +25,14 @@ function renderNode(node, prepend = false) {
   const statusLabel = view.promoted
     ? `${view.display_status} (${view.scope}) · canonical ${view.canonical_status}`
     : view.display_status;
-  item.innerHTML = `
-    <strong>${payload.title || node.title}</strong>
-    <div class="status">${statusLabel} · ${node.address}</div>
-    <p>${payload.description || ""}</p>
-  `;
+  const title = document.createElement("strong");
+  title.textContent = payload.title || node.title;
+  const status = document.createElement("div");
+  status.className = "status";
+  status.textContent = `${statusLabel} · ${node.address}`;
+  const description = document.createElement("p");
+  description.textContent = payload.description || "";
+  item.append(title, status, description);
   if (prepend) list.prepend(item);
   else list.append(item);
 }

@@ -4,6 +4,33 @@ info:
   version: "1.0.0"
   description: Public contribution and review API. software_test only.
 paths:
+  /api/promote:
+    post:
+      summary: Promote a live record to EST using the shared maintainer token
+      description: Requires evidence or primary_sources. Does not write canonical Git data.
+      security:
+        - ReviewToken: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [address]
+              properties:
+                address:
+                  type: string
+      responses:
+        "200":
+          description: Promoted live record
+        "400":
+          description: Invalid request or missing evidence
+        "403":
+          description: Review token missing, incorrect, or disabled on the server
+        "404":
+          description: Record not found
+        "429":
+          description: POST rate limit exceeded
   /api/health:
     get:
       summary: Liveness
@@ -76,3 +103,9 @@ paths:
       responses:
         "200":
           description: Markdown
+components:
+  securitySchemes:
+    ReviewToken:
+      type: apiKey
+      in: header
+      name: X-UPI-Review-Token

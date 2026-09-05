@@ -38,6 +38,13 @@ jobs:
       
       - name: Run tests with pytest
         run: pytest tests/ -v --tb=short
+
+      - name: Verify ResonanceFS prototype
+        working-directory: projects/resonancefs
+        run: |
+          ruff check src tests
+          mypy src
+          pytest tests -q
       
       - name: Validate JSON schemas
         run: |

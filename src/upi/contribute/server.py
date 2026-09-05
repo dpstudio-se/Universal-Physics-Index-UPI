@@ -258,7 +258,11 @@ def make_handler(app: ContributionApp):
             self._json(code, report)
 
         def _read_json(self, limit: int) -> dict[str, Any] | None:
-            length = int(self.headers.get("Content-Length") or 0)
+            try:
+                length = int(self.headers.get("Content-Length") or 0)
+            except ValueError:
+                self._json(400, {"errors": ["invalid Content-Length"]})
+                return None
             if length <= 0 or length > limit:
                 self._json(400, {"errors": ["invalid Content-Length"]})
                 return None
@@ -407,7 +411,7 @@ def serve(
     handler = make_handler(app)
     httpd = ThreadingHTTPServer((host, port), handler)
     print(f"UPI contribution UI on http://{host}:{port}/")
-    print(f"Database: {database}")
+    print(f"Database backend: {store.kind}")
     print(f"Loaded repo records: {loaded}")
     print("dna_minne_7.834 seeded. verification_type=software_test")
     try:

@@ -4,7 +4,6 @@ from pathlib import Path
 from upi.graph import UPIGraph
 from upi.index import bridge_from_json, node_from_json
 
-
 ROOT = Path(__file__).parents[1]
 OPTICAL = "UPI<infrastructure_physics,1,optical_network,sunet_optical_transmission>"
 MONITOR = "UPI<infrastructure_physics,1,optical_measurement,sunet_alm_otdr_monitoring>"

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import hmac
 import json
 from pathlib import Path
 from typing import Any
@@ -263,7 +264,9 @@ class ContributionService:
 
     def promote(self, address: str, token: str, expected_token: str) -> Contribution:
         """Maintainer-only EST promotion. Token mismatch is rejection, not science."""
-        if not expected_token or token != expected_token:
+        if not expected_token or not hmac.compare_digest(
+            token.encode("utf-8"), expected_token.encode("utf-8")
+        ):
             raise ContributionError(["review token rejected"], status_code=403)
         item = self.store.get(address)
         if item is None:
