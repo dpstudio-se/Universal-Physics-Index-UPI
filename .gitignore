@@ -144,3 +144,4 @@ upi.db
 quarantine/
 screenshots/
 *.tmp
+examples/dual_observer_lorentz.py
