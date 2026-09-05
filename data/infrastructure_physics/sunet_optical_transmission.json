@@ -1,0 +1,57 @@
+{
+  "address": "UPI<infrastructure_physics,1,optical_network,sunet_optical_transmission>",
+  "title": "SUNET optical-fibre transmission physics map",
+  "description": "A bounded UPI map of the photon, wavelength, polarization and propagation concepts exposed by SUNET's public optical-network material. It describes the physical layer used to carry information; it does not assert that SUNET experimentally established the underlying laws.",
+  "status": "DER",
+  "definitions": [
+    "An optical carrier is electromagnetic radiation guided by a dielectric fibre.",
+    "A transceiver converts between electrical data signals and modulated optical signals.",
+    "Wavelength and polarization are physical degrees of freedom that can carry or multiplex encoded information."
+  ],
+  "equations": [
+    "c0 = lambda0 f",
+    "v_g = c0 / n_g",
+    "P(z) = P0 exp(-alpha z)"
+  ],
+  "assumptions": [
+    "Linear guided-wave optics is adequate for the conceptual map.",
+    "Dispersion, nonlinearities, connector loss and amplifier noise require link-specific parameters.",
+    "SUNET documents are treated as infrastructure documentation and educational material, not primary experimental papers."
+  ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "https://sunet.se/om-sunet/sunets-nat",
+      "date": "2026-09-04",
+      "confidence": 0.9,
+      "notes": "Public SUNET network description retrieved and hashed."
+    },
+    {
+      "type": "other",
+      "source": "https://sunet.se/wp-content/uploads/2020/11/Grundlaggande-om-foton-SUNET-2015-11-10.pdf",
+      "date": "2015-11-10",
+      "confidence": 0.8,
+      "notes": "Historical SUNET educational PDF."
+    },
+    {
+      "type": "other",
+      "source": "https://sunet.se/wp-content/uploads/2020/11/Den-optiska-transceivern-SUNET-2015-10-17.pdf",
+      "date": "2015-10-17",
+      "confidence": 0.8,
+      "notes": "Historical SUNET educational PDF."
+    }
+  ],
+  "primary_sources": [
+    "SUNET public network page and selected historical technical PDFs; see data/sources/sunet_optical_physics.json"
+  ],
+  "falsification_conditions": [
+    "Falsified as a map of SUNET material if the cited corpus contains no optical-fibre, photon, wavelength, polarization or transceiver concepts.",
+    "Any quantitative use fails unless its fibre-specific refractive index, attenuation and dispersion parameters are supplied and dimensionally consistent."
+  ],
+  "information_layer": "PUBLIC",
+  "verification_type": "none",
+  "claims_experimental_verification": false,
+  "confusion_guard": "The map links SUNET infrastructure language to established optics. Website documentation is not experimental verification, and information carried by light is not matter, consciousness or a universal memory mechanism.",
+  "tags": ["sunet", "optical-fibre", "photon", "wavelength", "polarization", "transceiver"],
+  "version": "0.1.0"
+}

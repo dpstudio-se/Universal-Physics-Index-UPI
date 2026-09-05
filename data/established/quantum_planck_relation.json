@@ -7,7 +7,7 @@
   ],
   "title": "Planck-Einstein energy-frequency relation",
   "claims_experimental_verification": true,
-  "confusion_guard": "E = h f assigns energy to a quantum of frequency f. Photon invariant mass remains zero. The derived mass equivalent m = h f / c² is the inertia of that energy (see frequency-mass-equivalent), not a photon rest mass.",
+  "confusion_guard": "E = h f assigns energy to a quantum of frequency f. A photon's zero invariant mass is unchanged. The derived mass equivalent m = h f / c^2 is the inertia of that energy (see frequency-mass-equivalent), not a photon rest mass.",
   "definitions": [
     "E is photon energy",
     "h is the Planck constant",

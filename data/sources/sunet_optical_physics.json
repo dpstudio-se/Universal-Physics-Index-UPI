@@ -1,0 +1,66 @@
+{
+  "version": "0.1.0",
+  "operation": "upi_external_source_map",
+  "status": "DER",
+  "verification_type": "software_test",
+  "claims_experimental_verification": false,
+  "retrieved_at": "2026-09-04T11:58:25+02:00",
+  "scope": {
+    "domain": "sunet.se",
+    "topic": "optical-network physics",
+    "maximum_records": 4,
+    "store_raw_content": false
+  },
+  "records": [
+    {
+      "source_id": "sunet_network_page",
+      "canonical_url": "https://sunet.se/om-sunet/sunets-nat",
+      "content_hash": "sha256:df08eadba2989029108828d3874a8e532125427454480f9a9157b767708cb69e",
+      "content_bytes": 712047,
+      "source_type": "official_web_page",
+      "declared_license": "unknown",
+      "revision_or_timestamp": "retrieved 2026-09-04",
+      "upi_status": "EST",
+      "evidence_boundary": "Establishes what the retrieved SUNET page states about its network, not the truth of every physical interpretation.",
+      "relations": []
+    },
+    {
+      "source_id": "sunet_photon_pdf",
+      "canonical_url": "https://sunet.se/wp-content/uploads/2020/11/Grundlaggande-om-foton-SUNET-2015-11-10.pdf",
+      "content_hash": "sha256:07f3af7d2d2a681d7982f546fd267423040be06764dc026b310469a0ccecb488",
+      "content_bytes": 109347,
+      "source_type": "historical_educational_pdf",
+      "declared_license": "unknown",
+      "revision_or_timestamp": "title date 2015-11-10; retrieved 2026-09-04",
+      "upi_status": "EST",
+      "evidence_boundary": "Establishes document identity and bytes only; scientific claims were not independently reviewed in this indexing pass.",
+      "relations": []
+    },
+    {
+      "source_id": "sunet_transceiver_pdf",
+      "canonical_url": "https://sunet.se/wp-content/uploads/2020/11/Den-optiska-transceivern-SUNET-2015-10-17.pdf",
+      "content_hash": "sha256:cddc1d0ddc5b014cba6810c77efb323a8470add687cb83c86be09a277c2bc618",
+      "content_bytes": 4954482,
+      "source_type": "historical_educational_pdf",
+      "declared_license": "unknown",
+      "revision_or_timestamp": "title date 2015-10-17; retrieved 2026-09-04",
+      "upi_status": "EST",
+      "evidence_boundary": "Establishes document identity and bytes only; scientific claims were not independently reviewed in this indexing pass.",
+      "relations": []
+    },
+    {
+      "source_id": "sunet_alm_article",
+      "canonical_url": "https://web-wp.sunet.se/vi-installerar-alm-pa-samtliga-delstrackor-i-sunets-nat/",
+      "content_hash": "unavailable",
+      "source_type": "official_web_article_discovered_in_embedded_public_page_data",
+      "declared_license": "unknown",
+      "revision_or_timestamp": "observed 2026-09-04",
+      "upi_status": "STOP",
+      "stop_reason": "The article content was observed in SUNET's embedded public page data, but a later direct retrieval failed, so no canonical payload hash or confirmed publication timestamp was captured.",
+      "smallest_next_observation": "Successfully retrieve the canonical article payload once and record its SHA-256 hash and publication timestamp.",
+      "evidence_boundary": "Supports only the attributed SUNET operational description until the canonical payload is recaptured.",
+      "relations": []
+    }
+  ],
+  "confusion_guard": "This is a bounded source map, not a crawl of all SUNET content. Source existence and hashing do not experimentally verify physics claims."
+}

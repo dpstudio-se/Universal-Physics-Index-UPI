@@ -7,16 +7,22 @@
   "artifact": {
     "kind": "report",
     "ref": "examples/ledger/baselines/baseline-1.json",
-    "content_hash": "af2fabe022813f16582d4c04b4466f30d594d98e95e312a1ee23f25859bba694"
+    "content_hash": "4929c31a0377e173af4e7ba268bfc083f2f402b19a2dedfbe93169e8b66d1df3"
   },
   "evidence": [
-    {"kind": "hash", "ref": "examples/ledger/baselines/runs.json"},
-    {"kind": "test", "ref": "tests/test_triage.py"}
+    {
+      "kind": "hash",
+      "ref": "examples/ledger/baselines/runs.json"
+    },
+    {
+      "kind": "test",
+      "ref": "tests/test_triage.py"
+    }
   ],
   "decision": "advance",
-  "deadline_at": "2026-08-26T23:59:59Z",
+  "deadline_at": "2026-09-03T23:59:59Z",
   "next_owner": "verifier",
   "verification_type": "software_test",
   "status": "SYM",
-  "notes": "Three identical manual baselines completed. Routine may start. Provenance gaps remain cataloged."
+  "notes": "Three identical read-only baselines completed for the current data set. Cataloged findings remain unresolved."
 }

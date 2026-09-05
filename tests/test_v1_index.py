@@ -23,6 +23,7 @@ def test_hypothesis_registry_lists_hyp() -> None:
     rows = hypothesis_registry(ROOT / "data")
     assert rows
     assert all(row["address"] for row in rows)
+    assert all("/bridges/" not in row["path"] for row in rows)
 
 
 def test_uncertainty_and_dimensions() -> None:

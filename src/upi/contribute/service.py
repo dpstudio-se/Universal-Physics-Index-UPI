@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 from typing import Any
 
+from upi.evidence_lens import status_through_lens
 from upi.schema_resources import schema_path
 from upi.validation import validate_bridge_json, validate_json_schema, validate_node_json
 
@@ -116,8 +117,11 @@ class ContributionService:
         *,
         query: str | None = None,
         status: str | None = None,
+        evidence_lens: str | None = None,
     ) -> list[dict[str, Any]]:
         rows = [_public_view(item) for item in self.store.list_all(limit=max(limit, 500))]
+        for row in rows:
+            row["status_view"] = status_through_lens(row["payload"], evidence_lens)
         if status:
             rows = [row for row in rows if row["status"] == status]
         if query:
@@ -143,9 +147,7 @@ class ContributionService:
         """Validate a remote LLM batch and insert records that pass."""
         return self._run_batch(batch, insert=True, allow_est=allow_est)
 
-    def _run_batch(
-        self, batch: dict[str, Any], *, insert: bool, allow_est: bool
-    ) -> dict[str, Any]:
+    def _run_batch(self, batch: dict[str, Any], *, insert: bool, allow_est: bool) -> dict[str, Any]:
         ok, schema_errors = validate_json_schema(batch, schema_path("contribution-batch"))
         results: list[dict[str, Any]] = []
         inserted = 0
@@ -234,9 +236,7 @@ class ContributionService:
             ok, schema_errors = validate_bridge_json(payload, schema_path("bridge"))
             if not ok:
                 raise ContributionError(schema_errors)
-            address = (
-                f"{payload.get('source')}->{payload.get('target')}:{payload.get('relation')}"
-            )
+            address = f"{payload.get('source')}->{payload.get('target')}:{payload.get('relation')}"
         else:
             raise ContributionError([f"unknown record_type: {record_type}"])
         existing = self.store.get(address)

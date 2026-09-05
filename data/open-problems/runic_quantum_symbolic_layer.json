@@ -7,6 +7,7 @@
     "odins-eye"
   ],
   "title": "Runic quantum notation as a symbolic layer",
+  "description": "A proposed notation layer that assigns runic labels to explicit finite-dimensional quantum-information objects without changing their mathematical or physical content.",
   "version": "0.1.0",
   "claims_experimental_verification": false,
   "confusion_guard": "Runic names and images are notation for a proposed state-space model. They are not physical particles, forces, frequencies or quantum operators without explicit matrices, units and measurements.",

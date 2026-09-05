@@ -138,10 +138,10 @@ def load_graph(root: Path) -> UPIGraph:
 
 
 def hypothesis_registry(root: Path) -> list[dict[str, Any]]:
-    """Return HYP records with falsification metadata."""
+    """Return HYP node and theory records with falsification metadata."""
     rows = []
     for path, data in iter_records(root):
-        if data.get("status") != "HYP":
+        if classify(data) not in {"node", "theory"} or data.get("status") != "HYP":
             continue
         rows.append(
             {

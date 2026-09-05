@@ -3,7 +3,11 @@
 import json
 
 from upi.constants import C
-from upi.dual_observer import Event1D, dual_observer_trace, lorentz_transform_event
+from upi.dual_observer import (
+    Event1D,
+    dual_observer_trace,
+    lorentz_transform_event,
+)
 
 
 def main() -> None:
@@ -28,7 +32,12 @@ def main() -> None:
         position_tolerance_m=0.1,
     )
 
-    print(json.dumps({"clean": clean.as_dict(), "biased": biased.as_dict()}, indent=2))
+    print(
+        json.dumps(
+            {"clean": clean.as_dict(), "biased": biased.as_dict()},
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":
