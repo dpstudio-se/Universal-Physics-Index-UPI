@@ -7,6 +7,7 @@ import os
 import queue
 import threading
 import time
+from dataclasses import dataclass
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from typing import Any
@@ -19,6 +20,15 @@ STATIC_DIR = Path(__file__).resolve().parent / "static"
 PROMPT_FILE = STATIC_DIR / "upi-remote-indexer.system.md"
 MAX_READ = 256_000
 MAX_BATCH_READ = 1_000_000
+STREAM_OVERFLOW = "_upi_stream_overflow"
+
+
+@dataclass
+class EventStreamSubscriber:
+    """One bounded live-event lane with an explicit overflow trip wire."""
+
+    events: queue.Queue[dict[str, Any]]
+    overflowed: bool = False
 
 
 class RateLimiter:
@@ -50,33 +60,48 @@ class ContributionApp:
         service: ContributionService,
         data_root: Path | None = None,
         review_token: str = "",
+        subscriber_queue_size: int = 64,
     ):
+        if subscriber_queue_size < 1:
+            raise ValueError("subscriber_queue_size must be positive")
         self.service = service
         self.data_root = data_root or Path("data")
         self.review_token = review_token
         self.limiter = RateLimiter()
-        self.subscribers: list[queue.Queue[dict[str, Any]]] = []
+        self.subscriber_queue_size = subscriber_queue_size
+        self.subscribers: list[EventStreamSubscriber] = []
         self._sub_lock = threading.Lock()
 
     def publish(self, event: dict[str, Any]) -> None:
         with self._sub_lock:
-            listeners = list(self.subscribers)
-        for listener in listeners:
-            try:
-                listener.put_nowait(event)
-            except queue.Full:
-                continue
+            for subscriber in self.subscribers:
+                if subscriber.overflowed:
+                    continue
+                try:
+                    subscriber.events.put_nowait(event)
+                except queue.Full:
+                    # Never hide a stream gap.  Trip this connection and let
+                    # EventSource reconnect from its last durable event ID.
+                    subscriber.overflowed = True
+                    while True:
+                        try:
+                            subscriber.events.get_nowait()
+                        except queue.Empty:
+                            break
+                    subscriber.events.put_nowait({"kind": STREAM_OVERFLOW})
 
-    def subscribe(self) -> queue.Queue[dict[str, Any]]:
-        listener: queue.Queue[dict[str, Any]] = queue.Queue(maxsize=64)
+    def subscribe(self) -> EventStreamSubscriber:
+        subscriber = EventStreamSubscriber(
+            events=queue.Queue(maxsize=self.subscriber_queue_size)
+        )
         with self._sub_lock:
-            self.subscribers.append(listener)
-        return listener
+            self.subscribers.append(subscriber)
+        return subscriber
 
-    def unsubscribe(self, listener: queue.Queue[dict[str, Any]]) -> None:
+    def unsubscribe(self, subscriber: EventStreamSubscriber) -> None:
         with self._sub_lock:
-            if listener in self.subscribers:
-                self.subscribers.remove(listener)
+            if subscriber in self.subscribers:
+                self.subscribers.remove(subscriber)
 
 
 def make_handler(app: ContributionApp):
@@ -271,34 +296,53 @@ def make_handler(app: ContributionApp):
 
         def _sse(self, query: dict[str, list[str]]) -> None:
             last_id = 0
-            if "last_id" in query:
-                try:
-                    last_id = int(query["last_id"][0])
-                except ValueError:
-                    last_id = 0
+            supplied_last_id = (
+                query["last_id"][0]
+                if "last_id" in query
+                else self.headers.get("Last-Event-ID", "0")
+            )
+            try:
+                last_id = int(supplied_last_id)
+            except (TypeError, ValueError):
+                last_id = 0
             self.send_response(200)
             self.send_header("Content-Type", "text/event-stream")
             self.send_header("Cache-Control", "no-cache")
             self.send_header("Connection", "keep-alive")
             self.end_headers()
-            for event in app.service.store.events_since(last_id):
-                self._write_sse(event)
-            listener = app.subscribe()
+            subscriber = app.subscribe()
             try:
+                replay_cursor = last_id
+                while True:
+                    replay = app.service.store.events_since(replay_cursor, limit=50)
+                    if not replay:
+                        break
+                    for event in replay:
+                        self._write_sse(event)
+                    replay_cursor = int(replay[-1]["id"])
+                    if len(replay) < 50:
+                        break
                 while True:
                     try:
-                        event = listener.get(timeout=15)
+                        event = subscriber.events.get(timeout=15)
                     except queue.Empty:
                         self.wfile.write(b": keepalive\n\n")
                         self.wfile.flush()
                         continue
+                    if event.get("kind") == STREAM_OVERFLOW:
+                        # Closing forces the browser to reconnect.  The
+                        # Last-Event-ID header then replays the durable log.
+                        return
                     self._write_sse(event)
             except (BrokenPipeError, ConnectionResetError, OSError):
                 return
             finally:
-                app.unsubscribe(listener)
+                app.unsubscribe(subscriber)
 
         def _write_sse(self, event: dict[str, Any]) -> None:
+            event_id = event.get("id")
+            if isinstance(event_id, int) and event_id >= 0:
+                self.wfile.write(f"id: {event_id}\n".encode("ascii"))
             self.wfile.write(b"data: " + json.dumps(event).encode("utf-8") + b"\n\n")
             self.wfile.flush()
 

@@ -188,6 +188,30 @@ Auto-debug: if build, typecheck, or a mirror fails, **that is the task**. Patch 
 
 Deploy lag: after VS Code commits, grok.me updates only when the App Builder / Vercel snapshot rebuilds. If grok.me disagrees with `main`, `main` wins.
 
+### 8.1 Discovery gear: do not brake the collaboration to zero
+
+Strict status does not mean passive skepticism. Before rejecting a broad proposal, reconstruct the
+whole function the owner is pointing at and help turn it into a map that can fail cleanly.
+
+1. Steelman the intended mechanism; ask only for the identity that cannot be recovered from context.
+1. Keep a free exploration branch. A provisional map may be calculated before it is promoted.
+1. Derive from start to target, then independently work backward from target to start.
+1. Attack dimensions, domains, limits, sign/branch choices and hidden changes of meaning.
+1. Preserve every sub-chain that closes. Tear down the proposed bridge at its first failed link,
+   not the established nodes underneath it.
+1. Do not require a new particle, future observation or invented constant to rescue a map. Put
+   such a dependency on a separate `HYP` branch.
+1. Do not end at "not established" when a calculation, boundary, null model or falsification test
+   can still be produced.
+
+The human may see a cross-domain shape before the agent sees its typed mechanism. The agent
+contributes search, units, algebra, inverses and edge cases; the human contributes intent,
+selection and review. Neither agreement nor a closed software mirror is independent physical
+evidence, but both can compress the path from intuition to a precise research question.
+
+Read [`COLLABORATIVE_DISCOVERY.md`](COLLABORATIVE_DISCOVERY.md) for the full method and the failure
+analysis that motivated it.
+
 ---
 
 ## 9. Physics claims already in DNA (do not re-argue)

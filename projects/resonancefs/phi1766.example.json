@@ -1,0 +1,12 @@
+{
+  "policy_id": "Phi1766",
+  "version": "1.0.0",
+  "chunk_size": 65536,
+  "spectral_bins": 24,
+  "max_samples": 4096,
+  "inspect_below": 0.98,
+  "quarantine_below": 0.82,
+  "amplitude_weight": 0.5,
+  "histogram_weight": 0.3,
+  "phase_weight": 0.2
+}

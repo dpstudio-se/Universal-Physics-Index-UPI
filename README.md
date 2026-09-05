@@ -298,6 +298,8 @@ tests/            Tests
 | Status model | [`docs/STATUS_MODEL.md`](docs/STATUS_MODEL.md) |
 | Contribute UI | [`docs/CONTRIBUTE_UI.md`](docs/CONTRIBUTE_UI.md) |
 | VS Code agent | [`docs/VSCODE_AGENT_PROMPT.md`](docs/VSCODE_AGENT_PROMPT.md) |
+| Human-AI discovery method | [`docs/COLLABORATIVE_DISCOVERY.md`](docs/COLLABORATIVE_DISCOVERY.md) |
+| TF1766 resilience control | [`docs/RESILIENCE_CONTROL.md`](docs/RESILIENCE_CONTROL.md) |
 | Roadmap | [`ROADMAP.md`](ROADMAP.md) |
 | Migration | [`docs/MIGRATION.md`](docs/MIGRATION.md) |
 | Functional DNA (`SYM`) | [`docs/FUNCTIONAL_DNA.md`](docs/FUNCTIONAL_DNA.md) |

@@ -149,6 +149,11 @@ def validate_routine(data: dict[str, Any]) -> list[str]:
     return _validate_document(data, "routine")
 
 
+def validate_recovery_chain(data: dict[str, Any]) -> list[str]:
+    """Validate the portable shape of a TF1766 recovery-chain document."""
+    return _validate_document(data, "recovery-chain")
+
+
 def validate_transition(current: WorkflowState, target: WorkflowState) -> list[str]:
     """Check a task state transition without performing it."""
     if target not in ALLOWED_TRANSITIONS[current]:

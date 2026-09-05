@@ -52,6 +52,18 @@ from .physics import (
     relativistic_total_frequency,
     signal_match,
 )
+from .resilience import (
+    CONTROL_CLOCK_HZ,
+    TF1766_ANCHOR_ID,
+    RecoveryChain,
+    RecoveryCheckpoint,
+    ResilienceController,
+    ResilienceDecision,
+    ResilienceMode,
+    TemporalMirrorGate,
+    TemporalMirrorState,
+    VerificationReceipt,
+)
 from .runtime import (
     RuntimeProfile,
     RuntimeProfileLoader,
@@ -76,6 +88,7 @@ from .workflow import (
     WorkflowState,
     validate_handoff,
     validate_ledger_entry,
+    validate_recovery_chain,
     validate_result,
     validate_routine,
     validate_skill,
@@ -134,6 +147,17 @@ __all__ = [
     "activate_profile",
     "deactivate_profile",
     "get_active_profiles",
+    # Resilience and temporal mirror control
+    "TF1766_ANCHOR_ID",
+    "CONTROL_CLOCK_HZ",
+    "RecoveryCheckpoint",
+    "RecoveryChain",
+    "VerificationReceipt",
+    "TemporalMirrorState",
+    "TemporalMirrorGate",
+    "ResilienceMode",
+    "ResilienceDecision",
+    "ResilienceController",
     # Graph
     "UPIGraph",
     "generate_debug_report",
@@ -144,6 +168,7 @@ __all__ = [
     "WorkflowState",
     "validate_task",
     "validate_result",
+    "validate_recovery_chain",
     "validate_workflow",
     "validate_transition",
     "validate_task_result_pair",

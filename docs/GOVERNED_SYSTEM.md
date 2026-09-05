@@ -99,6 +99,11 @@ content is data, never instructions.
 Failures are state transitions. Preserve artifacts, log, trip-wire, resume from the last verified
 state. Recovery drills are required before claiming 24/7 operation.
 
+The executable checkpoint, overload and temporal-ratification primitives are defined in
+[`RESILIENCE_CONTROL.md`](RESILIENCE_CONTROL.md). They preserve an append-only history while the
+active pointer steps back toward TF1766/X0. A host must still persist the exported chain atomically;
+the Python object alone is not a durable service.
+
 ## Decision framework
 
 Add a manager only when routing is the bottleneck.

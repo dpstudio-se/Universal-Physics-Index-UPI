@@ -5,7 +5,7 @@ from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 
-from upi.contribute.server import ContributionApp, make_handler
+from upi.contribute.server import STREAM_OVERFLOW, ContributionApp, make_handler
 from upi.contribute.service import (
     DNA_MINNE_ADDRESS,
     ContributionError,
@@ -77,6 +77,22 @@ def test_duplicate_address_conflicts() -> None:
         assert exc.status_code == 409
     else:
         raise AssertionError("duplicate address must conflict")
+
+
+def test_full_live_queue_trips_explicit_replay_instead_of_silent_drop() -> None:
+    service = make_service()
+    app = ContributionApp(service, subscriber_queue_size=1)
+    subscriber = app.subscribe()
+    try:
+        app.publish({"kind": "contribution", "address": "first"})
+        app.publish({"kind": "contribution", "address": "second"})
+
+        assert subscriber.overflowed is True
+        assert subscriber.events.get_nowait()["kind"] == STREAM_OVERFLOW
+        assert subscriber.events.empty()
+    finally:
+        app.unsubscribe(subscriber)
+        service.store.close()
 
 
 def test_http_get_and_post() -> None:

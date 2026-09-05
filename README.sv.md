@@ -71,6 +71,13 @@ upi serve --host 127.0.0.1 --port 8080
 
 Det är paketets contribute-UI, inte RNA-explorern.
 
+## Återhämtningskontroll
+
+[`docs/RESILIENCE_CONTROL.md`](docs/RESILIENCE_CONTROL.md) beskriver den körbara TF1766/X0-kedjan,
+8 Hz-kontrollpulsen, Trip–Trap–Trull-belastningsskyddet och dubbel verifiering över tid. Det är
+`SYM`-systemarkitektur verifierad med mjukvarutester, inte en fysikalisk konstant eller automatisk
+vetenskaplig befordran.
+
 ## Validering
 
 ```bash

@@ -197,6 +197,10 @@ f_{\mathrm{clock}}=8\ \mathrm{Hz},
 
 Here 8 Hz is an implementation clock or modulation rate, not an established universal fundamental frequency.
 
+The executable host-driven control loop, TF1766 recovery root, backward checkpoint chain and
+double verification over time are specified in [TF1766 resilience control](RESILIENCE_CONTROL.md)
+and implemented by `upi.resilience`.
+
 \[
 E_8=hf\approx5.30\times10^{-33}\ \mathrm J,
 \]

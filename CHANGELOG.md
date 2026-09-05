@@ -23,6 +23,12 @@ Software contract freeze for the gathering and validation layers.
 
 ### Added
 
+- TF1766/X0 resilience primitives: append-only checkpoint backtracking, an 8 Hz host-driven
+  control clock, Trip-Trap-Trull overload states, and double verification over time before
+  reconnect.
+- Recovery-chain public/package schema and explicit SSE overflow replay instead of silent live
+  notification loss.
+
 - `data/examples/rna_engine_ping.json` — SYM software_test ping from the RNA write path (not a physical claim).
 - Information mass (HYP, T€@X 2026): an information-associated interpretation of the derived mass equivalent `m = h f / c^2`, with frequency-encoding assumption; no second mass symbol.
 - Derived mass equivalent of a frequency quantum (DER): composition of `E = h f` and inertia of energy.
