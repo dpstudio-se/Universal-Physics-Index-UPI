@@ -1,0 +1,17 @@
+{
+  "source": "UPI<coding_theory,1,binary_code,extended_golay>",
+  "target": "UPI<open-problems,1,loop,omega_golay_scale>",
+  "relation": "STOPS_AT",
+  "status": "STOP",
+  "stop_reason": "Weight-enumerator values are counts. Multiplying them by h f0 / c^2 is a definition, not a reconstruction of G24 from physics.",
+  "mechanism": "Keep G24 EST. The Omega identity C^{-1} C = 1 is not evidence.",
+  "equations": [
+    "W(1,1) = 4096",
+    "C^{-1}(C Omega) = Omega"
+  ],
+  "assumptions": [
+    "Source node status EST is unchanged."
+  ],
+  "confusion_guard": "Any code can be scaled the same way. That is why the loop does not select Golay.",
+  "version": "0.1.0"
+}

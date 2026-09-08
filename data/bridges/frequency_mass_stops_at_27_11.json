@@ -1,0 +1,17 @@
+{
+  "source": "UPI<information_physics,1,inertia,frequency_mass_equivalent>",
+  "target": "UPI<open-problems,1,loop,compactification_27_11>",
+  "relation": "STOPS_AT",
+  "status": "STOP",
+  "stop_reason": "m = hf/c^2 assigns a mass equivalent to a named frequency. It does not invert a 16-dimensional fibre.",
+  "mechanism": "The DER rewrite stays DER for a quantum. Compactification uniqueness is a separate missing theorem.",
+  "equations": [
+    "m = h f / c^2",
+    "spectrum {f_n} does not determine K16"
+  ],
+  "assumptions": [
+    "Source node remains DER for an electromagnetic quantum."
+  ],
+  "confusion_guard": "Do not promote the frequency-mass node to a compactification engine.",
+  "version": "0.1.0"
+}

@@ -1,0 +1,16 @@
+{
+  "source": "UPI<coding_theory,1,root_system,e8_lattice>",
+  "target": "UPI<open-problems,1,loop,e8_forced_inverse>",
+  "relation": "STOPS_AT",
+  "status": "STOP",
+  "stop_reason": "EST lattice facts do not promote an arbitrary map to a Weyl inversion.",
+  "mechanism": "E8 remains the unique even unimodular lattice in dimension 8. The claimed forward-back loop uses a pseudoinverse, which is extra structure.",
+  "equations": [
+    "L* = L does not imply A* A = I"
+  ],
+  "assumptions": [
+    "Source node status EST is unchanged."
+  ],
+  "confusion_guard": "Do not lower the E8 node from EST because the loop is STOP.",
+  "version": "0.1.0"
+}

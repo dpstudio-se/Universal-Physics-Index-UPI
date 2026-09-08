@@ -1,0 +1,38 @@
+{
+  "address": "UPI<open-problems,1,loop,omega_golay_scale>",
+  "title": "Omega_phys = C * Omega_code is a unit conversion, not a closed physics loop",
+  "description": "The extended Golay weight enumerator W(x,y) and the counts W(1,1)=4096, W(1,-1)=24 are established. Defining Omega_phys := C * Omega_code with C = h f0 / c^2 makes C^{-1}(C(x)) = x an identity. That identity does not show that nature uses G24, and the units of an L2 space-time integral do not match a dimensionless code count times mass without extra factors.",
+  "status": "STOP",
+  "stop_reason": "The algebraic loop is tautological. Close this STOP only with a derivation that forces G24 (not Hamming, Reed-Muller, or a random self-dual code) as the spectrum of the named physical integral, with matching units.",
+  "definitions": [
+    "Omega_code: a dimensionless combination of Golay weight-enumerator values.",
+    "Scale C: h f0 / c^2 for a named characteristic frequency f0.",
+    "Tautological loop: multiply then divide by the same C."
+  ],
+  "equations": [
+    "W(x,y) = x^24 + 759 x^16 y^8 + 2576 x^12 y^12 + 759 x^8 y^16 + y^24",
+    "W(1,1) = 4096",
+    "C^{-1}(C Omega_code) = Omega_code"
+  ],
+  "assumptions": [
+    "G24 is the unique (up to equivalence) binary extended Golay code.",
+    "f0 must be named before C is a quantity, not a free symbol."
+  ],
+  "mechanism": "Keep Golay EST as a code. Park the information-energy Omega loop until the code is forced, not scaled into an integral.",
+  "falsification_conditions": [
+    "A uniqueness proof that the physical integral's spectrum is the Golay weight distribution.",
+    "A unit-consistent identity without inserting C by definition."
+  ],
+  "confusion_guard": "Evaluating a weight enumerator at (1,1) does not produce an energy. Pictures of a code on the left and an integral on the right do not close a loop.",
+  "primary_sources": [
+    "MacWilliams and Sloane, The Theory of Error-Correcting Codes",
+    "Conway and Sloane on the Golay code and the Leech lattice"
+  ],
+  "predictions": [
+    "Any code admits an identical C-scale identity.",
+    "Unit mismatch remains unless extra conversion factors are declared."
+  ],
+  "tags": ["open-problem", "golay", "omega", "loop", "STOP", "TEAX"],
+  "verification_type": "mathematical_check",
+  "version": "0.1.0"
+}
