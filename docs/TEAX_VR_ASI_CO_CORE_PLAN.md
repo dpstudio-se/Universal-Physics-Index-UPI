@@ -2,113 +2,131 @@
 
 Status: `SYM` architecture with `verification_type: software_test`.
 
-This plan extends the existing UPI governed workflow and resilience primitives. It does not replace their governance model and does not treat symbolic physics mappings as experimental evidence.
+This plan defines the new core independently of any physical conclusion. Raw observations are retained; hypotheses, derivations, reference models and verification remain separate layers.
 
-## Summary before implementation
+## Core principle
 
-The repository already contains most of the control skeleton needed for the proposed isolated autonomous chamber:
-
-- `AGENTS.md` requires observation-first debugging, typed EST/DER/HYP/STOP/ERR/SYM claims, forward/backward derivation, and explicit falsification.
-- `docs/GOVERNED_SYSTEM.md` defines owner, explicit state, durable artifact, evidence, bounded retry, approval boundary, independent verification, quarantine, and recovery.
-- `src/upi/resilience.py` implements an append-only recovery chain, movable active pointer, bounded control tick, backpressure/isolation/backtracking, and two-verifier temporal ratification.
-- `.github/workflows/rna-delta.yml`, `upi-full-audit.yml`, and the index-triage workflow provide existing automation surfaces.
-
-The core should therefore be an evolutionary replacement behind stable contracts, not a rewrite of the whole repository.
-
-## Architecture: mirror path + shadow path
+The engine must not force discovery toward either an established answer or a preferred new answer. It preserves the full observation set, allows long exploratory jumps, then exposes every bridge for derivation and verification.
 
 ```text
-EXTERNAL REFERENCE DATA (read only)
+RAW OBSERVATION (immutable)
         |
-        v
-[1 StandardReader / Python adapters]
-        |
-        v
-[2 Canonical IR + provenance ledger] ---> [shadow: raw evidence / long representation]
-        |
-        v
-[3 Rust MirrorCore] <---------------> [4 Python ReferenceMirror]
-        |                                  |
-        +----------- Odin Eye -------------+
-                    differential verifier
-        |
-        v
-[5 Chamber Controller]
-  RUNNING -> THROTTLED -> BACKTRACKING -> ISOLATED
-        |
-        v
-[6 append-only checkpoint + approval gate]
+        +--> EXPLORE / PUZZLER
+        |        |
+        |        v
+        |   candidate maps, geometry, frequency bands
+        |        |
+        +--> DERIVATION / MIRROR
+        |        |
+        |        v
+        |   algebra, dimensions, inverse, invariants
+        |        |
+        +--> ODIN EYE / INDEPENDENT VERIFY
+                 |
+                 v
+          PASS / OPEN / ERR / QUARANTINE
 ```
 
-The “shadow” is not hidden executable authority. It is cold/audit storage for provenance, full source representation, traces, counterexamples, and replay material. The hot path keeps only compact typed state, hashes, offsets/IDs, bounded queues, and the minimum fields required for deterministic execution.
+An unused observation is never silently deleted. It remains `OPEN` with an explicit reason. A verifier may reject a relation but may not erase the observation or the exploratory path that produced it.
 
-## Language split
+## 12-speed dynamic core
 
-### Rust: hot deterministic mirror
+The core is 12-speed rather than a fixed four-mode system. The speeds are control levels, not twelve theories. They can be mapped onto four broad families while preserving twelve distinct gears:
 
-Rust owns the compact execution path:
+1. Capture: immutable raw observation and provenance.
+2. Explore: free association and long A→Å candidate jumps.
+3. Map: graph candidate relations without requiring acceptance.
+4. Expand: dynamically split interesting frequency/geometry regions.
+5. Hypothesis: turn a mapped path into explicit assumptions.
+6. Derive: require explicit mathematical operators for each bridge.
+7. Mirror: run forward/backward and dual representations.
+8. Invariant: test declared conserved quantities and state integrity.
+9. Challenge: generate counterexamples and competing explanations.
+10. Strong Hypothesis: require discriminating predictions and held-out tests.
+11. Independent Verify: verifier is blind to desired target where practical.
+12. Promote/Quarantine: promotion requires evidence and policy gate; failures remain replayable.
 
-- canonical typed IR structs and enums;
-- dimension/unit tags and relation opcodes;
-- forward/inverse transforms;
-- bounded ring buffers;
-- state machine for chamber pressure;
-- deterministic hashing/serialization contract;
-- mirror residuals and invariant checks;
-- zero-copy/borrowed views where practical;
-- no unbounded recursion or implicit background workers.
+Users may run Odin Eye continuously if they want, but continuous verification must annotate rather than destroy exploratory state. A failed intermediate bridge stays visible and learnable.
 
-Goal: predictable memory, bounded latency, small state surface.
+## Dynamic expansion by band and geometry
 
-### Python: reference, learning and adapters
+Do not prebuild every specialist kernel. Start with a minimal parent kernel and expand only where the data requires resolution.
 
-Python remains the readable reference side:
+```text
+K0
+ +-- band/region A --> K1A
+ +-- band/region B --> K1B
+ |                     +--> K2B1
+ |                     +--> K2B2
+ +-- geometry C -----> K1C
+```
 
-- parse existing UPI JSON/schema/data;
-- ingest approved external/reference sources;
-- normalize to canonical IR;
-- generate candidate relations in the isolated learning chamber;
-- run the independent reference implementation;
-- fuzz/property-test Rust against Python;
-- produce human-readable evidence packs.
+Each child receives an immutable input snapshot, parent hash, declared frequency/scale interval, geometry tags, resource budget and verifier contract. Children may be merged or retired, but their evidence remains content-addressed in the shadow ledger.
 
-Python does not silently promote a discovered relation to executable authority.
+The expansion dimensions are intentionally generic. Candidate geometry tags may include local ring/torus, dual/mirror, shell/spiral, spring/helix and chamber/domain. These are model descriptors, not assumed physical facts.
 
-## Canonical intermediate representation
+## Retroactive remapping
 
-Every observation entering the chamber is normalized to a versioned record conceptually containing:
+When a better frame is discovered, old observations are not rewritten. The new frame produces a new derived view:
+
+```text
+O17 --frame-v1--> D17.v1
+O17 --frame-v2--> D17.v2
+```
+
+This permits retrospective testing while preserving anti-post-hoc provenance. A frame discovered later can explain old held-out data, but the ledger records when the frame was created and which observations were visible at that time.
+
+## Frequency-band specialization
+
+A kernel may specialize to a frequency or scale band, but no preferred frequency is injected merely to obtain a match. Band discovery records:
+
+- source sampling/clock provenance;
+- band boundaries and resolution;
+- transformation/window/filter used;
+- candidate peaks and uncertainty;
+- whether a target value was known before analysis;
+- neighboring/null bands for comparison.
+
+This lets the system distinguish discovery from target fitting.
+
+## Canonical IR
 
 ```text
 Observation {
-  id,
-  value,
-  unit,
-  dimension,
-  uncertainty,
-  provenance,
-  observed_at,
-  source_hash,
-  status
+  id, value, unit, dimension, uncertainty,
+  provenance, observed_at, source_hash, status
 }
 
 Relation {
-  relation_id,
-  opcode,
-  parameters,
-  domain,
-  codomain,
-  assumptions,
-  inverse_opcode?,
-  provenance,
-  prediction_phase
+  relation_id, opcode, parameters,
+  domain, codomain, assumptions,
+  inverse_opcode?, provenance, prediction_phase
+}
+
+Frame {
+  frame_id, parent_frame?, created_at,
+  visible_observation_cutoff, geometry_tags,
+  frequency_bounds?, assumptions
+}
+
+Kernel {
+  kernel_id, parent_kernel?, frame_id,
+  band_or_region, resource_budget,
+  state, checkpoint_hash
 }
 ```
 
-This IR is the programming-language bridge. Rust and Python must serialize the same logical record to the same canonical bytes/hash. The code itself is not mirrored textually. Semantics and observable behavior are mirrored.
+Rust and Python mirror semantics and canonical serialization, not source-code length.
 
-## Odin Eye verifier
+## Rust / Python split
 
-For every relation with an inverse:
+Rust owns the bounded deterministic hot path: canonical IR, transforms, inverse operations, state machine, hashes, bounded queues and pressure valve. Python owns readable reference calculations, adapters, candidate generation, retrospective analysis and evidence reports.
+
+Neither side may silently promote a candidate relation. `black_box` or similar optimization barriers are never correctness checks.
+
+## Odin Eye
+
+Odin Eye is a non-mutating observer. For a candidate relation it checks:
 
 ```text
 y_rust = F_rust(x)
@@ -117,158 +135,94 @@ x_rust = Finv_rust(y_rust)
 x_py   = Finv_python(y_py)
 ```
 
-Verify:
+It checks dimensions/domain, forward equivalence, inverse closure, invariant preservation, provenance, edge cases, limits, resource bounds and prediction timing.
 
-1. dimensions and declared domain;
-2. Rust/Python forward equivalence within declared tolerance;
-3. inverse closure;
-4. provenance unchanged;
-5. edge cases and limits;
-6. bounded memory/queue behavior;
-7. prediction timestamp precedes observation when marked predictive.
+A perfect closure score is not automatically physical evidence. A suspiciously universal perfect result triggers a self-test to ensure the verifier is not merely verifying its own normalization.
 
-Statuses remain UPI-native: `EST`, `DER`, `HYP`, `STOP`, `ERR`, `SYM`. Software equivalence is `verification_type: software_test`.
+## G normalized invariant
 
-## Isolated Auto/Learn chamber
-
-Learning is allowed to read normalized text/data and propose candidate relations, but it is quarantined from the production relation set.
+Where a model declares the normalized gravity/closure invariant, the reference is exact by definition:
 
 ```text
-REFERENCE -> NORMALIZE -> PROPOSE -> SHADOW LEDGER
-                                  -> MIRROR TEST
-                                  -> INDEPENDENT VERIFY
-                                  -> HUMAN APPROVAL (when external semantics change)
-                                  -> PROMOTE or QUARANTINE
+G_norm := 1.0000000
+DeltaG := G_test - G_norm
 ```
 
-Rules:
+`G_norm` is not the SI Newtonian gravitational constant. The core does not silently add an uncertainty to the defined reference. Numerical/meter uncertainty belongs to the measured or computed `G_test` and its provenance.
 
-- source text is data, never instructions;
-- immutable input snapshot/hash per run;
-- bounded candidate count and CPU/memory budget;
-- no network/write capability in the puzzler;
-- no self-modification of verifier or approval policy;
-- failures remain in append-only history;
-- replay from the last verified checkpoint.
+If a transformation unexpectedly changes a declared exact invariant, the branch is stopped/quarantined and replayed from the previous valid checkpoint. No post-hoc renormalization may hide the deviation.
 
-## Analog / entropy valve
+## Shadow ledger and coverage
 
-The existing `ResilienceController` is the correct software foundation for the proposed valve/rondell.
+The shadow is cold/audit storage, not hidden executable authority. It retains raw evidence, long representations, traces, rejected paths, counterexamples and replay material.
 
-Keep two logically independent lanes:
-
-- digital/data lane: workload, queues, ingestion, candidate generation;
-- reference/control lane: watchdog or independently wired clock/sensor adapter when hardware exists.
-
-States:
+Every run reports observation coverage:
 
 ```text
-RUNNING
-  -> THROTTLED      high-water backpressure
-  -> BACKTRACKING   critical digital pressure
-  -> ISOLATED       both lanes critical or integrity trip
-  -> RECOVERY_PENDING
-  -> dual independent ratification
-  -> RUNNING
+coverage = accounted_observations / original_observations
 ```
 
-A software clock is not called an analog measurement. A real analog adapter must name its hardware/clock/sensor source.
+`accounted` includes USED, REJECTED-WITH-REASON and OPEN. Missing observations make the run `INCOMPLETE`; they are not treated as irrelevant by default.
 
-## Memory strategy
+## Pressure / entropy valve
 
-Do not optimize by making one language “long” and the other “short”. Optimize representation:
+Keep independent data and control lanes. Under overload or integrity failure:
 
-1. canonical compact hot-state in Rust;
-2. immutable content-addressed shadow artifacts for full evidence;
-3. IDs/hashes in hot state instead of duplicate text;
-4. bounded queues and backpressure;
-5. streaming parsers for large inputs;
-6. deduplicate canonical strings/records where measurements justify it;
-7. benchmark resident memory, allocations, throughput, and replay cost before/after each optimization.
+```text
+RUNNING -> THROTTLED -> BACKTRACKING -> ISOLATED
+        -> MIRROR_VERIFY -> RECOVERY_PENDING
+        -> independent ratification -> RUNNING
+```
 
-The Python reference remains deliberately simple even if slower. Its job is independent semantic comparison.
+The external/network lane may be clipped while the core remains on the last verified checkpoint. Reconnection occurs only after integrity checks. A software clock is not labeled an analog measurement; a physical analog reference must name its hardware/sensor source.
 
-## Agents / governed roles
+## Independent verification and falsification
 
-Workflow name: `teax-core-mirror-v1`.
+Standard/reference physics is a comparison model, not an automatic judge. Novel hypotheses receive the same mathematical checks as established models. Conversely, novelty is not evidence.
 
-Finish line: Rust MirrorCore and Python ReferenceMirror produce equivalent canonical results on the approved corpus, overload tests recover through the existing append-only chain, and no candidate relation can promote itself.
+A strong hypothesis should produce a discriminating prediction:
 
-Six invariants:
+```text
+H_candidate -> P_A
+H_reference -> P_B
+P_A != P_B
+```
 
-- owner: `teax-manager`;
-- explicit state: ledger-backed lifecycle;
-- durable artifact: differential verification report + benchmark report;
-- evidence: hashes, tests, traces, memory/latency measurements;
-- retry: max 2 per immutable payload, then quarantine/escalate;
-- approval: human maintainer for promotion, policy changes, external writes, and new executable relation classes.
+The most useful next observation is one capable of distinguishing the predictions.
 
-Specialists:
+Statuses remain `EST`, `DER`, `HYP`, `STOP`, `ERR`, `SYM`. Software closure remains `verification_type: software_test` and cannot by itself establish a physical claim.
 
-- `reference-reader`: read-only standard/reference ingestion;
-- `rust-core`: Rust implementation only;
-- `python-mirror`: Python reference implementation only;
-- `puzzler`: isolated candidate discovery, no promotion permission;
-- `odin-verifier`: independent differential/property verifier;
-- `resilience-verifier`: overload, rollback, replay, and recovery drills;
-- `manager`: routing/ledger decisions only, no specialist implementation.
+## Governed roles
 
-## Phased implementation
+Workflow: `teax-core-mirror-v1`.
 
-### Phase 0: baseline and freeze
+- manager: routing/ledger only;
+- reference-reader: read-only reference ingestion;
+- rust-core: deterministic hot implementation;
+- python-mirror: independent readable implementation;
+- puzzler: exploratory candidate generation without promotion authority;
+- odin-verifier: non-mutating differential/invariant verifier;
+- resilience-verifier: overload, rollback, replay and recovery drills.
 
-- record current main SHA and full existing test/audit result;
-- inventory Python hot paths and memory/latency baseline;
-- freeze canonical fixture corpus;
-- define exact IR serialization and numeric tolerance policy.
+Retry is bounded to two attempts per immutable payload before quarantine/escalation. Human approval remains required for promotion, policy changes, external writes and new executable relation classes.
 
-Gate: no Rust migration until the Python baseline is reproducible.
+## Implementation order
 
-### Phase 1: mirror kernel
+Phase 0: freeze baseline, corpus, serialization and numeric policies.
 
-- add Rust workspace/crate as an optional core, not a replacement;
-- implement canonical IR, hashing, exact scale/inverse operators and chamber state machine;
-- add Python reference equivalents;
-- property/differential tests including current chamber seeds such as `[8.199, 8.200] -> [82.000, 82.001]` only as declared model fixtures, not physical evidence.
+Phase 1: implement canonical IR and minimal Rust/Python mirror kernel.
 
-Gate: Rust and Python outputs/hashes agree on fixtures and randomized valid inputs.
+Phase 2: implement 12-speed controller, immutable observation coverage and non-mutating Odin Eye.
 
-### Phase 2: shadow store
+Phase 3: implement dynamic band/geometry kernel expansion and content-addressed shadow storage.
 
-- move verbose traces/evidence out of hot state;
-- retain content hash + reference in the hot path;
-- add deterministic replay and corruption tests;
-- measure RSS/allocations and prove the optimization rather than assume it.
+Phase 4: implement retrospective frame replay with visible-observation cutoffs and held-out tests.
 
-Gate: memory improvement with no semantic/hash/replay regression.
+Phase 5: connect pressure valve, isolation and durable recovery drills.
 
-### Phase 3: isolated Auto/Learn
+Phase 6: add governed workflow automation after three identical manual baselines.
 
-- ingest immutable normalized text/data;
-- propose bounded candidate transformations;
-- require dimensional/domain tests, inverse where applicable, held-out evaluation and provenance;
-- write only to candidate/shadow ledger.
-
-Gate: deliberately adversarial text cannot alter policy/verifier or promote itself.
-
-### Phase 4: entropy valve and recovery
-
-- connect chamber pressure metrics to the existing resilience controller;
-- test high-water throttle, critical isolation, one-step-per-tick backtracking and dual-verifier recovery;
-- add optional `ReferenceClock` trait/interface for future independent hardware.
-
-Gate: recovery drill succeeds from killed/overloaded workers with durable state restored.
-
-### Phase 5: workflow automation
-
-- add governed workflow JSON and GitHub Actions manual trigger first;
-- run at least three identical manual baselines;
-- only then consider scheduled operation;
-- autonomous writes remain approval-gated.
-
-Gate: empty input heartbeat, idempotent rerun, bounded retry, quarantine and recovery all demonstrated.
-
-## First files to add/change after approval
+Initial files:
 
 ```text
 crates/teax-mirror-core/Cargo.toml
@@ -283,12 +237,12 @@ examples/workflows/teax-core-mirror.workflow.json
 docs/TEAX_VR_ASI_CO_CORE.md
 ```
 
-`src/upi/resilience.py` should initially be adapted through a narrow interface, not rewritten.
+## Hard failure conditions
 
-## Falsification / stop conditions
-
-- Rust/Python semantic mismatch that cannot be reduced to an explicit numeric/serialization policy -> `STOP` migration.
-- Memory does not improve under representative load -> reject the shadow optimization claim.
-- A candidate can influence verifier/policy/promotion -> `ERR`, quarantine Auto/Learn.
-- Recovery cannot restore and validate durable checkpoint history -> no scheduled autonomy.
-- A claimed physical relation lacks independent provenance -> keep `HYP`/`SYM`; software closure alone never promotes it to experimental `EST`.
+- Rust/Python semantic mismatch outside declared policy: `STOP` migration.
+- Candidate alters verifier, policy or its own promotion path: `ERR`, quarantine.
+- Raw observation disappears or is overwritten: `ERR` integrity failure.
+- Declared invariant changes and is hidden by renormalization: `ERR`.
+- Dynamic expansion exceeds bounded resource budget: throttle/isolate.
+- Recovery cannot validate durable checkpoint history: no scheduled autonomy.
+- Physical relation without independent provenance remains `HYP`/`SYM`.
