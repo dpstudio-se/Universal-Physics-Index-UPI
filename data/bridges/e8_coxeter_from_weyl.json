@@ -1,0 +1,16 @@
+{
+  "source": "UPI<coding_theory,1,root_system,e8_weyl_group>",
+  "target": "UPI<coding_theory,1,root_system,e8_coxeter_plane>",
+  "relation": "DERIVED_FROM",
+  "status": "EST",
+  "mechanism": "A Coxeter element of W(E8) rotates a unique (up to W-action) plane by 2pi/30. Orthogonal projection onto that plane is the portrait.",
+  "equations": [
+    "c^30 = 1",
+    "angle(c|plane) = 2pi/30"
+  ],
+  "assumptions": [
+    "Coxeter element is the product of one simple reflection per Dynkin node."
+  ],
+  "confusion_guard": "The plane is a drawing aid. It is not a physical slice and not a dual of m = hf/c^2.",
+  "version": "0.1.0"
+}

@@ -1,0 +1,17 @@
+{
+  "source": "UPI<coding_theory,1,root_system,e8_weyl_group>",
+  "target": "UPI<open-problems,1,loop,e8_forced_inverse>",
+  "relation": "STOPS_AT",
+  "status": "STOP",
+  "stop_reason": "Inversion w^{-1} = w* is true inside W(E8) and false as a claim about unnamed maps.",
+  "mechanism": "Sync keeps the group EST and the loop claim STOP. Same object, two statuses, no promotion.",
+  "equations": [
+    "w in W(E8)  =>  w^{-1} = w*",
+    "A unnamed  =/>  A in W(E8)"
+  ],
+  "assumptions": [
+    "The STOP node e8_forced_inverse remains open."
+  ],
+  "confusion_guard": "Do not read this bridge as closing the loop. It marks the boundary of the group.",
+  "version": "0.1.0"
+}

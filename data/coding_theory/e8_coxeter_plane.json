@@ -1,0 +1,55 @@
+{
+  "address": "UPI<coding_theory,1,root_system,e8_coxeter_plane>",
+  "title": "E8 Coxeter-plane projection",
+  "description": "The Coxeter plane of E8 is a 2-plane invariant under the Coxeter element (rotation by 2pi/30). Orthogonal projection of the 240 roots onto that plane is the standard 240-point portrait. This is a drawing of a root system, not a slice of spacetime and not a compactification.",
+  "status": "EST",
+  "definitions": [
+    "Coxeter plane: real eigenplane of the Coxeter element acting on R^8.",
+    "Projection: orthogonal map R^8 to that 2-plane.",
+    "240 image points: the projected roots; some overlapping radii, 240 distinct directions in the usual drawing."
+  ],
+  "equations": [
+    "Coxeter element c has order 30",
+    "c acts as rotation by 2pi/30 on the Coxeter plane",
+    "projection is linear and not injective"
+  ],
+  "quantities": [
+    {
+      "name": "rotation_order",
+      "value": 30,
+      "unit": "1"
+    },
+    {
+      "name": "projected_roots",
+      "value": 240,
+      "unit": "1"
+    },
+    {
+      "name": "plane_dimension",
+      "value": 2,
+      "unit": "1"
+    }
+  ],
+  "assumptions": [
+    "The Coxeter element is a product of the eight simple reflections.",
+    "The Euclidean metric defines the orthogonal projection."
+  ],
+  "mechanism": "A finite-order orthogonal transformation singles out two real invariant planes. One of them is used as the canvas for the 240-root portrait in this index.",
+  "falsification_conditions": [
+    "A Coxeter element of E8 whose order is not 30.",
+    "A projection of the 240 roots onto that plane with a different count of image vectors."
+  ],
+  "confusion_guard": "A 2D picture of E8 is a projection. It does not place E8 in physical 3-space and it does not invert a 27D or 11D bulk.",
+  "primary_sources": [
+    "Coxeter, Regular Complex Polytopes",
+    "Conway and Sloane, Sphere Packings, Lattices and Groups"
+  ],
+  "predictions": [
+    "The projected figure has 30-fold rotational symmetry.",
+    "The lattice in R^8 is unchanged by how it is drawn."
+  ],
+  "tags": ["e8", "coxeter", "projection", "lattice", "EST"],
+  "verification_type": "mathematical_check",
+  "information_layer": "ACADEMIC",
+  "version": "0.1.0"
+}
