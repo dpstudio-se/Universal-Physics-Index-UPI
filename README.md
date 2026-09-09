@@ -25,6 +25,10 @@ Swedish overview: [`README.sv.md`](README.sv.md) · Agent contract: [`docs/VSCOD
 Version **1.0.0**. Schema policy: [`docs/MIGRATION.md`](docs/MIGRATION.md).
 Software tests are `software_test`. They are not experimental verification.
 
+**ODEN Knot Engine:** compare typed paths, inspect residuals and preserve conflicting
+observations in the [Knot Map](docs/ODEN_KNOT_ENGINE.md). Run `upi serve` and open
+`/oden/`, or build a static bundle with `python -m upi.knot_site`.
+
 Two different projects named UPI exist. **This** one is Universal Physics Index.
 Mason 2026 ([arXiv:2602.20507](https://arxiv.org/abs/2602.20507)) is Unified Personal Index — a cited corpus, not infrastructure.
 

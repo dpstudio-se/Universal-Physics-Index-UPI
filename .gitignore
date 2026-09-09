@@ -132,6 +132,8 @@ dmypy.json
 
 # Caches
 .ruff_cache/
+.browser-tools/
+.uv-cache/
 .pytest-tmp/
 uv.lock
 

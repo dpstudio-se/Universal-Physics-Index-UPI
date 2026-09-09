@@ -114,6 +114,28 @@ def make_handler(app: ContributionApp):
         def do_GET(self) -> None:
             parsed = urlparse(self.path)
             path = unquote(parsed.path)
+            if path == "/oden":
+                self.send_response(302)
+                self.send_header("Location", "/oden/")
+                self.send_header("Content-Length", "0")
+                self.end_headers()
+                return
+            if path == "/oden/":
+                self._static("oden.html")
+                return
+            if path in {"/oden/oden.css", "/oden/oden.js"}:
+                self._static(Path(path).name)
+                return
+            if path in {"/api/knots", "/oden/knots.json"}:
+                from upi.knot_examples import example_report
+
+                self._json(200, example_report())
+                return
+            if path == "/oden/paths.example.json":
+                from upi.knot_examples import example_document
+
+                self._json(200, example_document())
+                return
             if path == "/":
                 self._static("index.html", "text/html; charset=utf-8")
                 return
@@ -189,6 +211,19 @@ def make_handler(app: ContributionApp):
                 self._json(429, {"errors": ["rate limit"]})
                 return
             parsed = urlparse(self.path)
+            if parsed.path == "/api/knots/analyze":
+                from upi.knot_io import analyze_document
+
+                payload = self._read_json(MAX_READ)
+                if payload is None:
+                    return
+                try:
+                    result = analyze_document(payload)
+                except (ValueError, TypeError, KeyError, AttributeError, OverflowError) as exc:
+                    self._json(400, {"errors": [f"Invalid path document: {type(exc).__name__}"]})
+                    return
+                self._json(200, result)
+                return
             if parsed.path == "/api/promote":
                 payload = self._read_json(MAX_READ)
                 if payload is None:
