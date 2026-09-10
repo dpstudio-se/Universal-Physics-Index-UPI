@@ -1,0 +1,45 @@
+{
+  "name": "T€@X™ Bridge",
+  "mark": "™ := Team Work",
+  "status": "DER",
+  "source_relations": [
+    {"name": "Planck relation", "equation": "E = h f", "status": "EST"},
+    {"name": "mass-energy equivalence", "equation": "E = m_eq c^2", "status": "EST"}
+  ],
+  "forward": "m_eq = h f / c^2",
+  "inverse": "f = m_eq c^2 / h",
+  "input_unit": "Hz",
+  "output_unit": "kg mass-equivalent",
+  "domain": {
+    "assumptions": [
+      "f is ordinary frequency in the frame where E is evaluated",
+      "E = h f names the energy being converted",
+      "the named energy has inertia E/c^2"
+    ],
+    "confusion_guard": "Mass-equivalent is not automatically particle rest mass. Particle identity requires a separate evidenced bridge."
+  },
+  "uncertainty": {
+    "input": "f ± sigma_f",
+    "forward": "sigma_m = (h/c^2) sigma_f",
+    "inverse": "sigma_f = (c^2/h) sigma_m"
+  },
+  "closure": {
+    "forward_inverse": "B^-1(B(f)) = f",
+    "inverse_forward": "B(B^-1(m_eq)) = m_eq",
+    "numerical_tolerance_relative": 1e-14
+  },
+  "power_100_definition": [
+    "units", "forward", "inverse", "closure", "provenance", "attribution", "domain", "uncertainty"
+  ],
+  "reference_frequency": {
+    "value_hz": 7.834,
+    "role": "PROJECT_REFERENCE / CONTROL_CANDIDATE",
+    "physical_origin": "OPEN"
+  },
+  "knot_statuses": ["HYP", "OPEN", "STOP", "CONFLICT"],
+  "routing_rule": "Shortcuts must remain expandable to source relations, assumptions, units, uncertainty, provenance and status. A shortcut may not cross HYP, OPEN, STOP or CONFLICT as if verified.",
+  "attribution": {
+    "bridge_name": "T€@X™ Bridge",
+    "preserve_provenance": true
+  }
+}
