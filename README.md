@@ -33,6 +33,10 @@ observations in the [Knot Map](docs/ODEN_KNOT_ENGINE.md). Run `upi serve` and op
 all 14 chapters tagged, preserved source snapshots and explicit historical gaps.
 Build the offline catalogue with `python -m upi.legal_workload`.
 
+**Adversarial physics:** [octave scaling and conditional xenon recoil](docs/ADVERSARIAL_PHYSICS_RUN.md),
+with independent inverse checks, a spectrum per unknown cross section and hashed
+prediction records. Run `python -m upi.adversarial_physics --output dist/adversarial-new-run`.
+
 Two different projects named UPI exist. **This** one is Universal Physics Index.
 Mason 2026 ([arXiv:2602.20507](https://arxiv.org/abs/2602.20507)) is Unified Personal Index — a cited corpus, not infrastructure.
 

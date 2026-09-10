@@ -1,0 +1,128 @@
+{
+  "claims_experimental_verification": false,
+  "closures": [
+    {
+      "claim": "Named energy and elastic recoil inverses close",
+      "status": "DER",
+      "type": "algebraic"
+    },
+    {
+      "claim": "No octave evolution law",
+      "next_observation": "Specify equations of motion and initial conditions",
+      "status": "STOP",
+      "stop_reason": "No octave evolution law",
+      "type": "dynamical"
+    },
+    {
+      "claim": "No physical low-frequency to DM coupling channel",
+      "next_observation": "Specify mediator and source",
+      "status": "STOP",
+      "stop_reason": "No physical low-frequency to DM coupling channel",
+      "type": "causal"
+    },
+    {
+      "claim": "No energy budget for physical doubling",
+      "next_observation": "Specify reservoir and boundary fluxes",
+      "status": "STOP",
+      "stop_reason": "No energy budget for physical doubling",
+      "type": "thermodynamic"
+    },
+    {
+      "claim": "Write-once freeze then comparison is an audit sequence only",
+      "status": "DER",
+      "type": "feedback"
+    },
+    {
+      "claim": "No metric or causal patch for scale chain",
+      "next_observation": "Specify geometry and boundary conditions",
+      "status": "STOP",
+      "stop_reason": "No metric or causal patch for scale chain",
+      "type": "spatial_boundary"
+    },
+    {
+      "claim": "NR elastic contact benchmark v<0.01c; no candidate EFT completion",
+      "status": "DER",
+      "type": "effective_theory_domain"
+    }
+  ],
+  "conclusion": "KINEMATICALLY COMPATIBLE under H_DM and halo assumptions; no particle discovery",
+  "invariants": [
+    "DERIVATION != IDENTIFICATION",
+    "COMPATIBILITY != DISCOVERY",
+    "CLOSURE != EVIDENCE"
+  ],
+  "prediction_sha256": "a0c7089119028705502a23533b23dcc3d7725919264ee79fe435c7de973914eb",
+  "red_team": [
+    {
+      "attack": "A",
+      "claim": "84-octave physical mechanism not found",
+      "status": "HYP"
+    },
+    {
+      "attack": "B",
+      "claim": "Starting frequency is a configurable SYM reference, not an independently measured universal input",
+      "status": "HYP"
+    },
+    {
+      "attack": "C",
+      "claim": "Energy equivalent does not identify particle rest mass",
+      "status": "HYP"
+    },
+    {
+      "attack": "D",
+      "claim": "Multiple masses generate supplied recoil under allowed speeds; mapping is not unique",
+      "status": "DER"
+    },
+    {
+      "attack": "E",
+      "claim": "Halo assumptions change rate and maximum support",
+      "status": "DER"
+    },
+    {
+      "attack": "F",
+      "claim": "Xe isotopes produce different target masses and speeds",
+      "status": "DER"
+    },
+    {
+      "attack": "G",
+      "claim": "Look-elsewhere significance unavailable",
+      "next_observation": "Dated model/search history and preregistered selection protocol with held-out data",
+      "status": "STOP",
+      "stop_reason": "Look-elsewhere significance unavailable"
+    },
+    {
+      "attack": "H",
+      "claim": "SI and natural-unit checks pass; 84 semitones differ by factor 2^77",
+      "status": "DER"
+    },
+    {
+      "attack": "I",
+      "claim": "Fitting speed then reconstructing recoil does not independently validate candidate mass",
+      "status": "ERR"
+    },
+    {
+      "attack": "J",
+      "claim": "Targets supplied before this run prevent a claim of prospective validation",
+      "next_observation": "Dated model/search history and preregistered selection protocol with held-out data",
+      "status": "STOP",
+      "stop_reason": "Targets supplied before this run prevent a claim of prospective validation"
+    }
+  ],
+  "status": "DER",
+  "supersession": {
+    "earlier_record": "run-001",
+    "reason": "Run-002 attaches ODEN comparisons and inverse-domain flags to committed code; original files preserved, primary arithmetic unchanged",
+    "status": "EST"
+  },
+  "tests": {
+    "mypy": "2.3.1 pass, 40 files",
+    "new": 23,
+    "passed": 205,
+    "pytest": "9.1.1",
+    "python": "3.14.7",
+    "ruff": "0.16.6 pass",
+    "status": "EST"
+  },
+  "timestamp": "2026-09-10T10:44:02.800764+00:00",
+  "verification_type": "software_test"
+}
