@@ -2,6 +2,35 @@
 
 `verification_type: software_test`. No experimental verification or new physical claim.
 
+## Follow-up — 2026-09-10
+
+EST: the two previously failing E8 bridges now carry explicit mathematical evidence
+references. The Weyl-generation relation cites
+[Borcherds, section 18](https://math.berkeley.edu/~reb/courses/261/28.pdf).
+The Coxeter-plane relation cites
+[Stembridge's construction](https://dept.math.lsa.umich.edu/~jrs/coxplane.html) and
+[Vogan's E8 projection explanation](https://math.mit.edu/~dav/e8plane.html).
+Existing EST labels, equations, assumptions and the accepted finding catalog were preserved.
+
+EST: full suite **166 passed**, including both triage regression checks; Ruff and mypy
+passed. Reproduction: use the commands below with a fresh short temporary directory.
+DER: the missing-provenance diagnosis is supported by removal of precisely the two
+baseline failures after adding sourced evidence. Falsification condition: either bridge
+fails schema/evidence validation or the unchanged triage controls fail again.
+
+ERR/superseded: the two-failure totals and E8 provenance STOP below describe the previous
+revision. They are retained as history, not the current test result.
+
+STOP deployment remains: the remote document root and usable authentication are not
+verified. No matching credential environment variables or available OpenSSH ssh-add
+executable were found in the checked PATH/standard Windows location. This does not prove
+that no credentials exist elsewhere. Next observation: an authenticated directory listing
+for the confirmed hosting account and ODEN destination. No remote content was changed.
+
+Token discipline for this follow-up: inspect the two failing records and validator,
+verify supporting sources, make one focused patch, then run the existing controls once.
+No unmeasured token savings or time/memory manipulation is claimed.
+
 ## Problem and source
 
 Implement typed residual discovery and the ODEN Knot Map without erasing conflicting

@@ -11,6 +11,18 @@
   "assumptions": [
     "Coxeter element is the product of one simple reflection per Dynkin node."
   ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "https://dept.math.lsa.umich.edu/~jrs/coxplane.html",
+      "notes": "John Stembridge, Coxeter Planes: Coxeter elements are conjugate, and the primitive eigenvalue determines a unique real plane with rotation 2pi/h. The source Weyl-group node supplies h=30 for E8. Mathematical provenance; projection is not a physical equivalence."
+    },
+    {
+      "type": "other",
+      "source": "https://math.mit.edu/~dav/e8plane.html",
+      "notes": "David Vogan's explanation of the Stembridge/McMullen E8 projection describes the planar portrait and its rings of 30 root images."
+    }
+  ],
   "confusion_guard": "The plane is a drawing aid. It is not a physical slice and not a dual of m = hf/c^2.",
   "version": "0.1.0"
 }

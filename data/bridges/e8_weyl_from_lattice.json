@@ -10,6 +10,13 @@
   "assumptions": [
     "Roots are the norm-2 vectors of L_E8."
   ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "https://math.berkeley.edu/~reb/courses/261/28.pdf",
+      "notes": "Richard Borcherds, Root systems and reflection groups, section 18: root-hyperplane reflections generate the Weyl group. Applied to the E8 root system identified by the source node; mathematical provenance, not experimental verification."
+    }
+  ],
   "confusion_guard": "Deriving W(E8) from the lattice does not derive a frequency-mass embedding.",
   "version": "0.1.0"
 }
