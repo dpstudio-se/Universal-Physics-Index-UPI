@@ -117,6 +117,7 @@ def bridge_from_json(data: dict[str, Any]) -> Bridge:
         confusion_guard=data.get("confusion_guard"),
         stop_reason=data.get("stop_reason"),
         version=str(data.get("version") or "0.1.0"),
+        falsification_conditions=list(data.get("falsification_conditions") or []),
     )
 
 

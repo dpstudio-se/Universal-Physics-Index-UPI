@@ -1,0 +1,38 @@
+{
+  "version": "0.1.0",
+  "verification_type": "software_test",
+  "claims_experimental_verification": false,
+  "source_status": "personal_note",
+  "address": "UPI<open-problems,1,dark_matter,H_DM_octave_84>",
+  "title": "Conditional dark matter particle identification",
+  "description": "H_DM asks whether the derived energy-equivalent mass belongs to a massive dark matter degree of freedom. Elastic Xe recoil compatibility alone does not establish that identity.",
+  "status": "HYP",
+  "equations": [
+    "m_chi ?= h*f0*2^84/c^2"
+  ],
+  "quantities": [
+    {
+      "name": "conditional_candidate_mass",
+      "value": 626.6843346379718,
+      "unit": "GeV/c^2",
+      "reference": "Derived in run-001/prediction.json, not hard-coded by the implementation"
+    }
+  ],
+  "assumptions": [
+    "H_OCTAVE_84 has an independently justified physical realization",
+    "Mass equivalent is separately identified as particle rest mass",
+    "Spin-independent elastic contact scattering is only a declared benchmark"
+  ],
+  "confusion_guard": "248 keV is a supplied unverified recoil observation claim, not a rest mass, model constant or detection.",
+  "falsification_conditions": [
+    "Independent particle evidence contradicts the mass or required properties.",
+    "A calibrated preregistered spectrum rejects a completed model with independently fixed nonzero coupling."
+  ],
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "examples/adversarial_physics/run-001/prediction.json",
+      "notes": "Conditional mass derivation only; particle identification remains unestablished."
+    }
+  ]
+}

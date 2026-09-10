@@ -1,0 +1,22 @@
+{
+  "version": "0.1.0",
+  "verification_type": "software_test",
+  "claims_experimental_verification": false,
+  "source_status": "personal_note",
+  "address": "UPI<open-problems,1,ground_state,zero_frequency_dm_inference>",
+  "title": "Correction: zero temperature does not identify zero frequency dark matter",
+  "description": "Audit metadata for the proposed inference, not a claim that this literal equation existed in a historical repository node. No matching historical node was found in the inspected scope; raw historical material is preserved.",
+  "status": "ERR",
+  "equations": [
+    "E_n = (n+1/2) hbar omega for the harmonic oscillator",
+    "n=0 does not imply omega=0",
+    "h*0/c^2 = 0"
+  ],
+  "assumptions": [
+    "Harmonic oscillator formula assumes a defined oscillator with omega>0; omega->0 is a limit, not a normalizable bound oscillator at omega=0"
+  ],
+  "confusion_guard": "A zero-temperature ground state can have nonzero zero-point energy. Massive dark matter needs a separately identified energy contribution; it does not follow from the zero of hf.",
+  "primary_sources": [
+    "https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/808334d09369e3a726f6f20d82315c20_MIT8_04S13_Lec08.pdf"
+  ]
+}

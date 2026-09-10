@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0",
+  "verification_type": "software_test",
+  "claims_experimental_verification": false,
+  "source_status": "personal_note",
+  "address": "UPI<open-problems,1,scale,H_OCTAVE_84>",
+  "title": "84 octave scale transformation: physical origin open",
+  "description": "The user declares 7 nodes times 12 doublings. f_N=f0*2^84 is algebraically defined; no independent mechanism requiring that exponent was located in the inspected repository. H_OCTAVE_84 remains open.",
+  "status": "HYP",
+  "equations": [
+    "f_N = f0 * 2^N",
+    "N = 7 * 12 = 84"
+  ],
+  "assumptions": [
+    "f0=7.834 Hz is an input choice, not a universal constant",
+    "Each step means an octave doubling, not a 12-TET semitone"
+  ],
+  "confusion_guard": "Scale transformation does not establish scale invariance, RG flow, an eigenmode ladder or a physical energy source.",
+  "falsification_conditions": [
+    "A timestamped independent mechanism requires another exponent or step ratio."
+  ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "examples/adversarial_physics/input-freeze.json",
+      "notes": "Known target values were supplied before this freeze; no claim of prospective validation."
+    }
+  ]
+}

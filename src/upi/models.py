@@ -180,6 +180,7 @@ class Bridge:
     version: str = "0.1.0"
     created_at: str | None = None
     updated_at: str | None = None
+    falsification_conditions: list[str] = field(default_factory=list)
 
     def validate(self) -> list[str]:
         """Validate bridge consistency. Returns list of error strings."""

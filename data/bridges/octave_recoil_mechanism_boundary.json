@@ -1,0 +1,9 @@
+{
+  "source": "UPI<open-problems,1,scale,H_OCTAVE_84>",
+  "target": "UPI<information_physics,1,inertia,frequency_mass_equivalent>",
+  "relation": "STOPS_AT",
+  "status": "STOP",
+  "version": "0.1.0",
+  "stop_reason": "No mechanism connects the chosen low frequency to 84 physical doublings. Smallest next observation: a dated pre-target dynamical or spectral derivation of N=84 with defined degrees of freedom.",
+  "confusion_guard": "A SHA-256 hash preserves a record; it does not prove that the idea predates the supplied target."
+}

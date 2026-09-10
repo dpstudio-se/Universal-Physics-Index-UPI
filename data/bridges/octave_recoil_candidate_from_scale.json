@@ -1,0 +1,22 @@
+{
+  "source": "UPI<open-problems,1,dark_matter,H_DM_octave_84>",
+  "target": "UPI<open-problems,1,scale,H_OCTAVE_84>",
+  "relation": "CANDIDATE_BRIDGE",
+  "status": "HYP",
+  "version": "0.1.0",
+  "assumptions": [
+    "84 actual octave doublings, not 84 semitones"
+  ],
+  "mechanism": "The proposed mass depends on the freely declared exponent and starting frequency.",
+  "confusion_guard": "Numerical closure cannot supply an independent reason for the exponent.",
+  "falsification_conditions": [
+    "Reject the proposed identification if independently established degrees of freedom or a pre-target scale mechanism contradict it; arithmetic alone cannot test this identification."
+  ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "examples/adversarial_physics/input-freeze.json",
+      "notes": "Provenance of the proposal only, not experimental support."
+    }
+  ]
+}

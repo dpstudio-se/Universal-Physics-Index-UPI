@@ -1,0 +1,98 @@
+{
+  "status": "EST",
+  "observations": [
+    {
+      "status": "EST",
+      "command": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit_code": 0,
+      "stdout": "20e528a230e871a2cf5ef6c57900248e9f454b98\n",
+      "stderr": ""
+    },
+    {
+      "status": "EST",
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "exit_code": 0,
+      "stdout": "?? examples/adversarial_physics/\n?? src/upi/adversarial_physics.py\n?? src/upi/dark_matter_candidate.py\n",
+      "stderr": ""
+    },
+    {
+      "status": "EST",
+      "command": [
+        "rg",
+        "-n",
+        "-i",
+        "7\\.834|84.?octave|H_OCTAVE|626\\.68|248.?keV|zero.frequency|absolute.zero|ground.state|0\\s*K\\s*=|0\\s*Hz",
+        "data",
+        "docs",
+        "projects"
+      ],
+      "exit_code": 0,
+      "stdout": "docs\\ARCHITECTURE.md:13:Example: `UPI<symbolic,1,memory,dna_minne_7.834>` is a `SYM` memory coordinate,\ndocs\\CONTRIBUTE_UI.md:20:## dna_minne_7.834\ndocs\\CONTRIBUTE_UI.md:22:Address: `UPI<symbolic,1,memory,dna_minne_7.834>`\ndocs\\CONTRIBUTE_UI.md:24:This is a symbolic memory slot at 7.834 Hz. It is not biological DNA, not a\ndata\\bridges\\dna_minne_represents_memory.json:2:  \"source\": \"UPI<symbolic,1,memory,dna_minne_7.834>\",\ndata\\bridges\\dna_minne_represents_memory.json:6:  \"assumptions\": [\"Both are declared frequency coordinates, 7.834 Hz versus 8 Hz\"],\ndata\\bridges\\dna_minne_represents_memory.json:13:  \"confusion_guard\": \"FORM_SIMILAR is not MECHANISM_SHARED. 7.834 Hz is not a universal constant.\"\ndata\\examples\\hypothesis_8hz.json:10:  \"control_condition\": \"Compare 7.834, 8.000 and 8.200 Hz with a sham control.\",\ndata\\examples\\eight_hz.json:24:    \"UPI example dataset: configurable 8 Hz reference, compared with 7.834 Hz and 8.200 Hz\"\ndata\\examples\\dna_sonification_acoustics.json:27:      \"reference\": \"Mapped to A4 (440.0 Hz)\"\ndata\\examples\\dna_sonification_acoustics.json:39:      \"reference\": \"Mapped to G4 (392.0 Hz)\"\ndata\\examples\\musical_notes_acoustics.json:19:    \"A4 standard reference tuning is set to 440.0 Hz.\",\ndata\\examples\\musical_notes_acoustics.json:47:      \"notes\": \"12-TET pitch frequencies calculated logarithmically relative to A4 = 440 Hz.\"\ndata\\examples\\dna_minne_7.834.json:2:  \"address\": \"UPI<symbolic,1,memory,dna_minne_7.834>\",\ndata\\examples\\dna_minne_7.834.json:3:  \"title\": \"DNA-minne 7.834 Hz\",\ndata\\examples\\dna_minne_7.834.json:4:  \"description\": \"Symbolic memory-organization coordinate at 7.834 Hz. DNA is Functional DNA, a collaboration architecture, not biology. Minne is inspectable memory of classified claims. 7.834 Hz is a configurable reference frequency alongside 8.000 and 8.200 Hz.\",\ndata\\examples\\dna_minne_7.834.json:9:      \"value\": 7.834,\ndata\\examples\\dna_minne_7.834.json:11:      \"reference\": \"Configurable alternative to 8.000 Hz and 8.200 Hz\"\ndata\\examples\\dna_minne_7.834.json:15:    \"dna_minne_7.834 is a named memory slot for symbolic collaboration state\",\ndata\\examples\\dna_minne_7.834.json:16:    \"nu_ref = 7.834 Hz in this declared normalization context\"\ndata\\examples\\dna_minne_7.834.json:25:  \"confusion_guard\": \"Not biological DNA, not a medical frequency, not a universal physical constant. Numerical agreement with 7.834 Hz does not prove physical equivalence.\",\ndata\\examples\\dna_minne_7.834.json:26:  \"tags\": [\"dna_minne\", \"7.834\", \"memory\", \"SYM\"],\n",
+      "stderr": ""
+    },
+    {
+      "status": "EST",
+      "command": [
+        "git",
+        "log",
+        "--all",
+        "--oneline",
+        "-S",
+        "7.834",
+        "--",
+        "data",
+        "src",
+        "docs"
+      ],
+      "exit_code": 0,
+      "stdout": "303e831 Sync DNA documentation and RNA engine example\n968fae0 Release UPI 1.0.0 with live ingest, remote LLM batches, and canonical merge.\n38e42a7 Add UPI v0.1.0-alpha source tree, schemas, tests, and docs.\n",
+      "stderr": ""
+    },
+    {
+      "status": "EST",
+      "command": [
+        "git",
+        "log",
+        "--all",
+        "--oneline",
+        "-S",
+        "626.68",
+        "--",
+        "data",
+        "src",
+        "docs"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "root_uncommitted_files_inspected": {
+    "data/open-problems/aureum_braid_chamber_cosmology.json": "5eed1b3f6432120664257ffe74fd95333882d71dfac6f8b3141bb63ac9089cef",
+    "data/bridges/aureum_braid_from_frequency_mass_equivalent.json": "0344b994340f585c50f023ed21363cc8747cf9a0d9bbd1f5f7955197dd7f7466",
+    "data/bridges/aureum_braid_11d_boundary.json": "df62547f14717f6a2d0c408171a105f099fe9ffe62625c1199443a503a8d8635"
+  },
+  "scope": "Worktree tracked data/docs/projects plus inspected uncommitted Aureum root files; local history only, no claim about unavailable private or remote history",
+  "conclusions": [
+    {
+      "status": "DER",
+      "claim": "No independent N=84 derivation found in this inspected scope; negative search is not proof of universal absence"
+    },
+    {
+      "status": "EST",
+      "claim": "7.834 exists as a configurable SYM memory reference in data/examples/dna_minne_7.834.json"
+    },
+    {
+      "status": "DER",
+      "claim": "No literal 0 K = 0 Hz = dark matter claim found in inspected scope; attach correction to this proposed inference, do not invent or erase a historical node"
+    }
+  ]
+}

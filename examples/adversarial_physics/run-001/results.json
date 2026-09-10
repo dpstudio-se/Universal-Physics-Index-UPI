@@ -1,0 +1,795 @@
+{
+  "additional_experimental_comparisons": [],
+  "angle_perturbations": [
+    {
+      "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+      "cos_theta_CM": -1,
+      "mu_GeV_c2": 102.05653022965609,
+      "mu_kg": 1.8193229029387435e-25,
+      "q_MeV_c": 408.5087299814171,
+      "q_kg_m_s": 2.1831874835264925e-19,
+      "recoil_keV": 684.4383797441487,
+      "speed_km_s": 600.0,
+      "status": "DER"
+    },
+    {
+      "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+      "cos_theta_CM": -0.5,
+      "mu_GeV_c2": 102.05653022965609,
+      "mu_kg": 1.8193229029387435e-25,
+      "q_MeV_c": 353.77893783162494,
+      "q_kg_m_s": 1.890695821958163e-19,
+      "recoil_keV": 513.3287848081114,
+      "speed_km_s": 600.0,
+      "status": "DER"
+    },
+    {
+      "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+      "cos_theta_CM": 0,
+      "mu_GeV_c2": 102.05653022965609,
+      "mu_kg": 1.8193229029387435e-25,
+      "q_MeV_c": 288.8592931437644,
+      "q_kg_m_s": 1.543746674203177e-19,
+      "recoil_keV": 342.21918987207437,
+      "speed_km_s": 600.0,
+      "status": "DER"
+    },
+    {
+      "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+      "cos_theta_CM": 0.5,
+      "mu_GeV_c2": 102.05653022965609,
+      "mu_kg": 1.8193229029387435e-25,
+      "q_MeV_c": 204.25436499070855,
+      "q_kg_m_s": 1.0915937417632462e-19,
+      "recoil_keV": 171.10959493603718,
+      "speed_km_s": 600.0,
+      "status": "DER"
+    },
+    {
+      "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+      "cos_theta_CM": 1,
+      "mu_GeV_c2": 102.05653022965609,
+      "mu_kg": 1.8193229029387435e-25,
+      "q_MeV_c": 0.0,
+      "q_kg_m_s": 0.0,
+      "recoil_keV": 0.0,
+      "speed_km_s": 600.0,
+      "status": "DER"
+    }
+  ],
+  "binding_approximation_controls": [
+    {
+      "assumed_binding_eV": 0,
+      "minimum_speed_km_s": 361.1685399693463,
+      "status": "DER"
+    },
+    {
+      "assumed_binding_eV": 100000,
+      "minimum_speed_km_s": 361.16844008615584,
+      "status": "DER"
+    },
+    {
+      "assumed_binding_eV": 1000000,
+      "minimum_speed_km_s": 361.1675411438624,
+      "status": "DER"
+    }
+  ],
+  "conditional_outcome": "KINEMATICALLY COMPATIBLE",
+  "form_factor_perturbations": [
+    {
+      "radius_factor": 0.9,
+      "rate": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.0017490828546217717,
+        "rate_per_sigma_A_m2": 1.5239513616207668e+32,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "skin_fm": 0.8,
+      "status": "DER"
+    },
+    {
+      "radius_factor": 0.9,
+      "rate": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.001519415601595489,
+        "rate_per_sigma_A_m2": 1.3238455049746615e+32,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "skin_fm": 0.9,
+      "status": "DER"
+    },
+    {
+      "radius_factor": 0.9,
+      "rate": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.001269705333632168,
+        "rate_per_sigma_A_m2": 1.106276450502579e+32,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "skin_fm": 1,
+      "status": "DER"
+    },
+    {
+      "radius_factor": 1,
+      "rate": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.00023779462638963376,
+        "rate_per_sigma_A_m2": 2.0718712307710997e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "skin_fm": 0.8,
+      "status": "DER"
+    },
+    {
+      "radius_factor": 1,
+      "rate": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 2.325228269010282e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "skin_fm": 0.9,
+      "status": "DER"
+    },
+    {
+      "radius_factor": 1,
+      "rate": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.00028431834685715187,
+        "rate_per_sigma_A_m2": 2.477225882592152e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "skin_fm": 1,
+      "status": "DER"
+    },
+    {
+      "radius_factor": 1.1,
+      "rate": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 8.007944250793953e-05,
+        "rate_per_sigma_A_m2": 6.977209520139977e+30,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "skin_fm": 0.8,
+      "status": "DER"
+    },
+    {
+      "radius_factor": 1.1,
+      "rate": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 3.6334987523143684e-05,
+        "rate_per_sigma_A_m2": 3.165816505721931e+30,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "skin_fm": 0.9,
+      "status": "DER"
+    },
+    {
+      "radius_factor": 1.1,
+      "rate": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 1.095268660762499e-05,
+        "rate_per_sigma_A_m2": 9.542922237783322e+29,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "skin_fm": 1,
+      "status": "DER"
+    }
+  ],
+  "halo_perturbations": [
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 1.5501521793401881e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1144.8676826689234,
+      "parameter": "rho_GeV_cm3",
+      "status": "DER",
+      "value": 0.2
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 2.325228269010282e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1144.8676826689234,
+      "parameter": "rho_GeV_cm3",
+      "status": "DER",
+      "value": 0.3
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 4.650456538020564e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1144.8676826689234,
+      "parameter": "rho_GeV_cm3",
+      "status": "DER",
+      "value": 0.6
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 6.681043075711761e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 1.7848269934255372e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1144.8676826689234,
+      "parameter": "v0_m_s",
+      "status": "DER",
+      "value": 180000
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 2.325228269010282e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1144.8676826689234,
+      "parameter": "v0_m_s",
+      "status": "DER",
+      "value": 220000
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 1.0174053555867093e-06,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 2.7179775991990755e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1144.8676826689234,
+      "parameter": "v0_m_s",
+      "status": "DER",
+      "value": 260000
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.633056330480785e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 2.306303342126526e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1018.7180844111907,
+      "parameter": "vesc_m_s",
+      "status": "DER",
+      "value": 500000
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 2.325228269010282e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1144.8676826689234,
+      "parameter": "vesc_m_s",
+      "status": "DER",
+      "value": 544000
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.741323046503007e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 2.335226573881833e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1316.068536055593,
+      "parameter": "vesc_m_s",
+      "status": "DER",
+      "value": 600000
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 7.433759165853111e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 1.9859135574313958e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1052.3924526946028,
+      "parameter": "earth_m_s",
+      "status": "DER",
+      "value": 200000
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 8.703896950989556e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 2.325228269010282e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1144.8676826689234,
+      "parameter": "earth_m_s",
+      "status": "DER",
+      "value": 232000
+    },
+    {
+      "at_supplied_energy": {
+        "cross_section": "sigma_A(0) in m² remains an unknown parameter",
+        "detector_response": "not applied",
+        "energy_keV": 248.0,
+        "eta_s_m": 9.872917167954995e-07,
+        "form_factor_squared": 0.00026687314312199276,
+        "rate_per_sigma_A_m2": 2.6375296290606824e+31,
+        "status": "DER",
+        "unit": "events kg^-1 day^-1 keV^-1 m^-2",
+        "vmin_km_s": 361.1685399693463
+      },
+      "endpoint_keV": 1228.9775546685928,
+      "parameter": "earth_m_s",
+      "status": "DER",
+      "value": 260000
+    }
+  ],
+  "isotope_perturbations": [
+    {
+      "A": 129,
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 100.74745927206843,
+        "mu_kg": 1.7959865934507385e-25,
+        "q_MeV_c": 403.2688211472022,
+        "q_kg_m_s": 2.1551839121408863e-19,
+        "recoil_keV": 677.3450733571414,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "mass_kg": 2.1400223411837255e-25,
+      "minimum_speed_km_s": 363.05473281461735,
+      "status": "DER"
+    },
+    {
+      "A": 131,
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 102.05653022965609,
+        "mu_kg": 1.8193229029387435e-25,
+        "q_MeV_c": 408.5087299814171,
+        "q_kg_m_s": 2.1831874835264925e-19,
+        "recoil_keV": 684.4383797441487,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "mass_kg": 2.1732381572983167e-25,
+      "minimum_speed_km_s": 361.1685399693463,
+      "status": "DER"
+    },
+    {
+      "A": 132,
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 102.70792135644483,
+        "mu_kg": 1.8309350045168693e-25,
+        "q_MeV_c": 411.11609828334576,
+        "q_kg_m_s": 2.1971220054202433e-19,
+        "recoil_keV": 687.9516704135494,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "mass_kg": 2.1898281220046643e-25,
+      "minimum_speed_km_s": 360.2451362730863,
+      "status": "DER"
+    },
+    {
+      "A": 136,
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 105.30175857974332,
+        "mu_kg": 1.877174353005622e-25,
+        "q_MeV_c": 421.4986298811159,
+        "q_kg_m_s": 2.252609223606746e-19,
+        "recoil_keV": 701.8339773084566,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "mass_kg": 2.2563004872671704e-25,
+      "minimum_speed_km_s": 356.6645092904731,
+      "status": "DER"
+    }
+  ],
+  "look_elsewhere": {
+    "next_observation": "Dated search history and fixed selection/likelihood protocol; no p-value can be assigned",
+    "status": "STOP",
+    "stop_reason": "No record of all tried frequencies, scales, targets or selection rule"
+  },
+  "mass_perturbations": [
+    {
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 5.960443139500261,
+        "mu_kg": 1.0625455020815354e-26,
+        "q_MeV_c": 23.85827787368925,
+        "q_kg_m_s": 1.2750546024978425e-20,
+        "recoil_keV": 2.3345858848386087,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "factor": 0.01,
+      "minimum_speed_km_s": 6184.038192246348,
+      "status": "DER"
+    },
+    {
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 41.391091161945994,
+        "mu_kg": 7.378632210903014e-26,
+        "q_MeV_c": 165.67898247238494,
+        "q_kg_m_s": 8.854358653083617e-20,
+        "recoil_keV": 112.58136443871462,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "factor": 0.1,
+      "minimum_speed_km_s": 890.5203265399829,
+      "status": "DER"
+    },
+    {
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 87.76402123963446,
+        "mu_kg": 1.564535787528384e-25,
+        "q_MeV_c": 351.29911602900086,
+        "q_kg_m_s": 1.8774429450340608e-19,
+        "recoil_keV": 506.15762597664656,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "factor": 0.5,
+      "minimum_speed_km_s": 419.9854051438615,
+      "status": "DER"
+    },
+    {
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 102.05653022965609,
+        "mu_kg": 1.8193229029387435e-25,
+        "q_MeV_c": 408.5087299814171,
+        "q_kg_m_s": 2.1831874835264925e-19,
+        "recoil_keV": 684.4383797441487,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "factor": 1,
+      "minimum_speed_km_s": 361.1685399693463,
+      "status": "DER"
+    },
+    {
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 111.10319534268497,
+        "mu_kg": 1.9805943570859046e-25,
+        "q_MeV_c": 444.7204419372751,
+        "q_kg_m_s": 2.3767132285030857e-19,
+        "recoil_keV": 811.1587470967374,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "factor": 2,
+      "minimum_speed_km_s": 331.76010738208873,
+      "status": "DER"
+    },
+    {
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 119.58344762051408,
+        "mu_kg": 2.1317685853007467e-25,
+        "q_MeV_c": 478.6649340745486,
+        "q_kg_m_s": 2.558122302360896e-19,
+        "recoil_keV": 939.7122686466793,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "factor": 10,
+      "minimum_speed_km_s": 308.2333613122827,
+      "status": "DER"
+    },
+    {
+      "at_600_km_s": {
+        "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+        "cos_theta_CM": -1.0,
+        "mu_GeV_c2": 121.67302787915571,
+        "mu_kg": 2.1690187368934047e-25,
+        "q_MeV_c": 487.0290414543612,
+        "q_kg_m_s": 2.6028224842720854e-19,
+        "recoil_keV": 972.8399310964345,
+        "speed_km_s": 600.0,
+        "status": "DER"
+      },
+      "factor": 100,
+      "minimum_speed_km_s": 302.9398434465763,
+      "status": "DER"
+    }
+  ],
+  "minimum_speed_km_s": 361.1685399693463,
+  "observation": {
+    "provenance": "experiment, event ID, recoil calibration and uncertainty not supplied; unverified observation claim",
+    "raw_value": "248",
+    "source": "user request",
+    "status": "HYP",
+    "unit": "keV"
+  },
+  "observation_boundary": {
+    "next_observation": "Event/source identifier, nuclear vs electron equivalent energy, uncertainty and calibration",
+    "status": "STOP",
+    "stop_reason": "No experimental provenance for 248 keV"
+  },
+  "octave_perturbations": [
+    {
+      "N": 72,
+      "decimal_frequency_residual_Hz": "0E-48",
+      "energy_J": "2.4513159127216683487889229569064960E-11",
+      "energy_eV": "152999105.13622359747813691788657654334509536980302759801701115059452302560542772",
+      "existing_api_energy_relative_residual": -1.1102230246251565e-16,
+      "existing_api_inverse_relative_residual": 0.0,
+      "existing_api_mass_relative_residual": 0.0,
+      "f0_Hz": "7.834",
+      "f_N_Hz": "36995019026800800604094.464",
+      "mass_equivalent_GeV_c2": "0.15299910513622359747813691788657654334509536980302759801701115059452302560542772",
+      "mass_equivalent_kg": "2.7274567876948911166969568705448722805170216133853864205457597565300767415289754E-28",
+      "mass_exact_rational_kg": "4976470613821489152/18245827527949035129495314322412014007568359375",
+      "rational_inverse_residual_Hz": "0",
+      "scope": "Energy equivalent only; N mechanism and particle identity remain HYP",
+      "status": "DER",
+      "verification_type": "software_test"
+    },
+    {
+      "N": 83,
+      "decimal_frequency_residual_Hz": "0E-45",
+      "energy_J": "5.0202949892539767783197142157445038080E-8",
+      "energy_eV": "313342167318.98592763522440783170876077075531735660052073883883641758315643991597",
+      "existing_api_energy_relative_residual": -1.1102230246251565e-16,
+      "existing_api_inverse_relative_residual": 0.0,
+      "existing_api_mass_relative_residual": 0.0,
+      "f0_Hz": "7.834",
+      "f_N_Hz": "75765798966888039637185462.272",
+      "mass_equivalent_GeV_c2": "313.34216731898592763522440783170876077075531735660052073883883641758315643991597",
+      "mass_equivalent_kg": "5.5858315011991370069953676708758984304988602642132713892777159813735971666513416E-25",
+      "mass_exact_rational_kg": "10191811817106409783296/18245827527949035129495314322412014007568359375",
+      "rational_inverse_residual_Hz": "0",
+      "scope": "Energy equivalent only; N mechanism and particle identity remain HYP",
+      "status": "DER",
+      "verification_type": "software_test"
+    },
+    {
+      "N": 84,
+      "decimal_frequency_residual_Hz": "0E-44",
+      "energy_J": "1.00405899785079535566394284314890076160E-7",
+      "energy_eV": "626684334637.97185527044881566341752154151063471320104147767767283516631287983195",
+      "existing_api_energy_relative_residual": -1.1102230246251565e-16,
+      "existing_api_inverse_relative_residual": 0.0,
+      "existing_api_mass_relative_residual": 0.0,
+      "f0_Hz": "7.834",
+      "f_N_Hz": "151531597933776079274370924.544",
+      "mass_equivalent_GeV_c2": "626.68433463797185527044881566341752154151063471320104147767767283516631287983195",
+      "mass_equivalent_kg": "1.1171663002398274013990735341751796860997720528426542778555431962747194333302683E-24",
+      "mass_exact_rational_kg": "20383623634212819566592/18245827527949035129495314322412014007568359375",
+      "rational_inverse_residual_Hz": "0",
+      "scope": "Energy equivalent only; N mechanism and particle identity remain HYP",
+      "status": "DER",
+      "verification_type": "software_test"
+    },
+    {
+      "N": 85,
+      "decimal_frequency_residual_Hz": "0E-44",
+      "energy_J": "2.00811799570159071132788568629780152320E-7",
+      "energy_eV": "1253368669275.9437105408976313268350430830212694264020829553553456703326257596639",
+      "existing_api_energy_relative_residual": -1.1102230246251565e-16,
+      "existing_api_inverse_relative_residual": 0.0,
+      "existing_api_mass_relative_residual": 0.0,
+      "f0_Hz": "7.834",
+      "f_N_Hz": "303063195867552158548741849.088",
+      "mass_equivalent_GeV_c2": "1253.3686692759437105408976313268350430830212694264020829553553456703326257596639",
+      "mass_equivalent_kg": "2.2343326004796548027981470683503593721995441056853085557110863925494388666605366E-24",
+      "mass_exact_rational_kg": "40767247268425639133184/18245827527949035129495314322412014007568359375",
+      "rational_inverse_residual_Hz": "0",
+      "scope": "Energy equivalent only; N mechanism and particle identity remain HYP",
+      "status": "DER",
+      "verification_type": "software_test"
+    },
+    {
+      "N": 96,
+      "decimal_frequency_residual_Hz": "0E-41",
+      "energy_J": "0.000411262565519685777679950988553789751951360",
+      "energy_eV": "2566899034677132.7191877583489573581682340275597852714658925677479328412175557917",
+      "existing_api_energy_relative_residual": -1.1102230246251565e-16,
+      "existing_api_inverse_relative_residual": 0.0,
+      "existing_api_mass_relative_residual": 0.0,
+      "f0_Hz": "7.834",
+      "f_N_Hz": "620673425136746820707823306932.224",
+      "mass_equivalent_GeV_c2": "2566899.0346771327191877583489573581682340275597852714658925677479328412175557917",
+      "mass_equivalent_kg": "4.5759131657823330361306051959815359942646663284435119220963049319412507989207790E-21",
+      "mass_exact_rational_kg": "83491322405735708944760832/18245827527949035129495314322412014007568359375",
+      "rational_inverse_residual_Hz": "0",
+      "scope": "Energy equivalent only; N mechanism and particle identity remain HYP",
+      "status": "DER",
+      "verification_type": "software_test"
+    }
+  ],
+  "posthoc_control": {
+    "result": "Every positive recoil admits an inverse speed for every positive mass; halo bounds must then be checked. This closure does not select N or a unique mass.",
+    "status": "DER"
+  },
+  "prediction_sha256": "61eb36d1154d56b0118e4d14c812ab0b51f4aaf30e84f5f6c5f1cea36d18c6fc",
+  "required_points": [
+    {
+      "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+      "cos_theta_CM": -1.0,
+      "energy_conservation_relative_residual": 0.0,
+      "inverse_residual_m_s": 0.0,
+      "mu_GeV_c2": 102.05653022965609,
+      "mu_kg": 1.8193229029387435e-25,
+      "q_MeV_c": 149.7865343265196,
+      "q_kg_m_s": 8.005020772930472e-20,
+      "recoil_keV": 92.01893772115774,
+      "speed_km_s": 220.0,
+      "status": "DER"
+    },
+    {
+      "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+      "cos_theta_CM": -1.0,
+      "energy_conservation_relative_residual": 0.0,
+      "inverse_residual_m_s": 0.0,
+      "mu_GeV_c2": 102.05653022965609,
+      "mu_kg": 1.8193229029387435e-25,
+      "q_MeV_c": 245.9008359535339,
+      "q_kg_m_s": 1.3141643931743576e-19,
+      "recoil_keV": 248.00000000000003,
+      "speed_km_s": 361.1685399693463,
+      "status": "DER"
+    },
+    {
+      "assumptions": "elastic two-body scattering; stationary free nucleus; v<0.01c; H_DM conditional",
+      "cos_theta_CM": -1.0,
+      "energy_conservation_relative_residual": 0.0,
+      "inverse_residual_m_s": 1.1641532182693481e-10,
+      "mu_GeV_c2": 102.05653022965609,
+      "mu_kg": 1.8193229029387435e-25,
+      "q_MeV_c": 408.5087299814171,
+      "q_kg_m_s": 2.1831874835264925e-19,
+      "recoil_keV": 684.4383797441487,
+      "speed_km_s": 600.0,
+      "status": "DER"
+    }
+  ],
+  "semitone_control": {
+    "N": 7,
+    "decimal_frequency_residual_Hz": "0E-68",
+    "energy_J": "6.64430509505280E-31",
+    "energy_eV": "4.1470490544257931051564692835234545057033954971534056213180300318872332274944412E-12",
+    "existing_api_energy_relative_residual": -1.1102230246251565e-16,
+    "existing_api_inverse_relative_residual": 0.0,
+    "existing_api_mass_relative_residual": 0.0,
+    "f0_Hz": "7.834",
+    "f_N_Hz": "1002.752",
+    "mass_equivalent_GeV_c2": "4.1470490544257931051564692835234545057033954971534056213180300318872332274944412E-21",
+    "mass_equivalent_kg": "7.3927864364478404650398489336467956379928099223166238671395803290120692594072639E-48",
+    "mass_exact_rational_kg": "74155190793/10030749762687696875000000000000000000000000000000000000000",
+    "rational_inverse_residual_Hz": "0",
+    "scope": "Energy equivalent only; N mechanism and particle identity remain HYP",
+    "status": "DER",
+    "verification_type": "software_test"
+  },
+  "sigma_control": {
+    "result": "Rate linear in sigma_A; sigma_A=0 gives zero at every energy. No sigma value predicted.",
+    "status": "DER"
+  },
+  "status": "DER",
+  "timestamp": "2026-09-10T10:34:02.920801+00:00",
+  "verification_type": "software_test"
+}

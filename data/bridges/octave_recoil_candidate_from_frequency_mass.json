@@ -1,0 +1,26 @@
+{
+  "source": "UPI<open-problems,1,dark_matter,H_DM_octave_84>",
+  "target": "UPI<information_physics,1,inertia,frequency_mass_equivalent>",
+  "relation": "CANDIDATE_BRIDGE",
+  "status": "HYP",
+  "version": "0.1.0",
+  "equations": [
+    "m_eq = h f / c^2",
+    "m_chi ?= m_eq"
+  ],
+  "assumptions": [
+    "A separate particle identification is required"
+  ],
+  "mechanism": "The established energy conversion is reused; the particle identification is unestablished.",
+  "confusion_guard": "DERIVATION != IDENTIFICATION",
+  "falsification_conditions": [
+    "Reject the proposed identification if independently established degrees of freedom or a pre-target scale mechanism contradict it; arithmetic alone cannot test this identification."
+  ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "examples/adversarial_physics/input-freeze.json",
+      "notes": "Provenance of the proposal only, not experimental support."
+    }
+  ]
+}

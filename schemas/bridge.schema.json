@@ -50,6 +50,11 @@
       "type": "array",
       "items": {"type": "string"}
     },
+    "falsification_conditions": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1},
+      "description": "Testable failure conditions for a hypothesis bridge"
+    },
     "mechanism": {
       "type": "string",
       "description": "Physical or mathematical mechanism connecting source and target"

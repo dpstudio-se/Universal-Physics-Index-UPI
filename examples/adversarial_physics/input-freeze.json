@@ -1,0 +1,31 @@
+{
+  "N": 84,
+  "N_nodes": 7,
+  "f0_Hz": "7.834",
+  "git_commit": "20e528a230e871a2cf5ef6c57900248e9f454b98",
+  "known_before_freeze": {
+    "user_supplied_mass_ballpark_GeV_c2": "626.68",
+    "user_supplied_recoil_keV": "248",
+    "user_supplied_velocity_ballpark_km_s": "361"
+  },
+  "model_version": "octave-recoil-0.1.0",
+  "provenance_limit": "Known targets preclude claiming prospective validation on those values. No additional experimental comparisons authorized by this freeze.",
+  "request_sha256": "c08afe3abdefd83a551db59cb10eb4889dfcd10842938afd41ebba9b6a08b868",
+  "reused_sha256": {
+    "data/bridges/frequency_mass_from_mass_energy.json": "121b22a8860becda196b754ab7a9d55258f92e373459f6013999b4e936e45cdc",
+    "data/bridges/frequency_mass_from_planck_constant.json": "41cdae0f5cee3c36ea5c6c7bfdee5a1766d9c14321a264b0014bab528a9bdc93",
+    "data/bridges/frequency_mass_from_planck_einstein.json": "7ed331e42c69e51b1743d2910b746806f08a1cce82f3de62660d8b73eb0e7dde",
+    "data/bridges/frequency_mass_stops_at_27_11.json": "dbcc65d608b1d0ac167f990050800d338d1520b3d415da417a40dd9240105136",
+    "data/bridges/information_mass_from_frequency_mass.json": "ab46a6bf9dc1dfdf6342457fb1c597d7eebf26a45bb08e43e9dd35ed6c0226f3",
+    "data/information_physics/frequency_mass_equivalent.json": "71d0863d963757b1cfebcbd27511e4cfcb240ffbf1f7ee5c2b638e9b09389c70"
+  },
+  "scope": "input declaration and repository snapshot, not physical evidence",
+  "sensitivity_f0_Hz": [
+    "7.83",
+    "7.834",
+    "8.0"
+  ],
+  "status": "EST",
+  "steps_per_node": 12,
+  "timestamp": "2026-09-10T10:28:21.493765+00:00"
+}
