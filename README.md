@@ -29,6 +29,10 @@ Software tests are `software_test`. They are not experimental verification.
 observations in the [Knot Map](docs/ODEN_KNOT_ENGINE.md). Run `upi serve` and open
 `/oden/`, or build a static bundle with `python -m upi.knot_site`.
 
+**TF control workload:** [six legal control loops](docs/TF_CONTROL_LOOPS.md), with
+all 14 chapters tagged, preserved source snapshots and explicit historical gaps.
+Build the offline catalogue with `python -m upi.legal_workload`.
+
 Two different projects named UPI exist. **This** one is Universal Physics Index.
 Mason 2026 ([arXiv:2602.20507](https://arxiv.org/abs/2602.20507)) is Unified Personal Index — a cited corpus, not infrastructure.
 
