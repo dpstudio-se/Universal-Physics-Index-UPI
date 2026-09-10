@@ -1,0 +1,43 @@
+{
+  "status": "EST",
+  "version": "foundation-0.1.0",
+  "timestamp": "2026-09-10T15:24:45.117009+00:00",
+  "inspected_commit": "23511491daba38fd5664e1929ddb67390c2f0535",
+  "baseline": {
+    "verification_type": "software_test",
+    "passed": 205
+  },
+  "root_uncommitted_sha256": {
+    "Update-UPI.ps1": "b2f870e66ea20f9a92a24bb0f967d58895705cffe430d295d027f3a00db12bba",
+    "data/bridges/aureum_braid_11d_boundary.json": "df62547f14717f6a2d0c408171a105f099fe9ffe62625c1199443a503a8d8635",
+    "data/bridges/aureum_braid_from_frequency_mass_equivalent.json": "0344b994340f585c50f023ed21363cc8747cf9a0d9bbd1f5f7955197dd7f7466",
+    "data/open-problems/aureum_braid_chamber_cosmology.json": "5eed1b3f6432120664257ffe74fd95333882d71dfac6f8b3141bb63ac9089cef",
+    "docs/ONE_COM_UI.md": "fc43b3d60c2a617d61606938e1a4088daa1f682b0095e742f1b394cfa1bc3799",
+    "docs/REMOTE_INDEXING.md": "903d8a4ac791c867a7d6c7fbc2d3bb6c45edc71f8638ad28b7e481151ecf4d88",
+    "docs/TEAX_LAB_V1.md": "1276a9a7db315582278d170b83da981282cb440d1916532114ee5c8513f31026",
+    "docs/ui/teax-lab-v1.png": "fb2d0a581a468b6f309ca4a502d0b501dec1de4ec0b8070445b7feec05a2d86d",
+    "src/upi/contribute/static/lab-math.js": "0d5c767e8b5cc34cf60008d6851690c9e37aa76c917af368429fa46b43f62296",
+    "src/upi/contribute/static/lab.css": "348eb445419ca59931ffc5c0cd1a81de268bb12f0e7a65c48bcc8ce3e43e9518",
+    "src/upi/contribute/static/lab.html": "757ad2cd10373d9f92272917069afc00bb947102fba664ab722bd117ee457e06",
+    "src/upi/contribute/static/lab.js": "6584adf6e3916e3dbea45690ad1579fc8d28081526375b4d60bc873610dc6d59",
+    "src/upi/site.py": "7b808c93c6132ef2026b4ff2b50877a8e18437168f2feb99d1444a0f5695c25f",
+    "tests/test_aureum_braid.py": "19a08ee48127680b9748e2fd055e19f4370bc5791a4881ad422053060c4598e1",
+    "tests/test_lab_math.cjs": "9d4d81c534091572cc33254bacfb4a138443a4710c8b5c87c325cceec3da3aed",
+    "tests/test_lab_ui.py": "b039bf4cafdd78656ba1dfed67a8711b8eda2e71225e4d4f976edd6a0326464e",
+    "tests/test_static_site.py": "e98d2999f7b1b519f3ba4a414981d436f9cfa64af9ca11dfc04c94b71986b05d",
+    ".github/workflows/ci.yml": "a0ba10af8ecb6b22da89c66e7d2e88a53b58eb09647ad66a2132a67f37120a21",
+    "CHANGELOG.md": "2d2ed0fa45cdf45656e88e3e4dd23d6263364da2772128aead26ac49d8ea2b18",
+    "README.md": "d20d694b1185ebc2c103ab12f81bbe3bcde5305cc5f5bce0ccd99a60eb500adf",
+    "README.sv.md": "1c68a1410ea9a1c4740516746b1f313b9d73d956b74791e14ddb0691a0a79354",
+    "docs/CONTRIBUTE_UI.md": "73470053b69add03ba8bc7a0f8bcfee5e0b0aa34a48216146028d584e5103ec1",
+    "examples/ledger/baselines/baseline-1.json": "733aff76a4d707fff1d2d1f13b6a6fdd4a3e4dc7711c4fe0c4d135a18c33c271",
+    "examples/ledger/baselines/known-findings.json": "a18e3cbe35565d205587f7570d319f2bdd2104b0c5d06452f7cb1a731a3007cd",
+    "examples/ledger/baselines/runs.json": "0c39b4c4382afcecd55ac59b3dbc065736eb0b58820741811de820793ffa5c8f",
+    "examples/ledger/baselines/summary.md": "1920cfb85102f7c6a73ae93552437b66136666c2be7aa0b558c12e8455d45940",
+    "examples/ledger/index-triage.ledger.json": "b61fad1937d4f135a1640e95ba8fcab2db30089c450402de761b520dd3a119c3",
+    "src/upi/contribute/server.py": "f760bda30c32bf7c9752a1365a531f8802aac3cb4971d7ae039649adc43d8d19",
+    "src/upi/contribute/static/index.html": "3b1264593541bee4b645a1c32f4d21ea36f64f55755eef79159fed8932ac7694"
+  },
+  "request_sha256": "9e8b6f7be253dc6df1948c60df18f4c929c59c9f92315837aecd2d55039dca40",
+  "preservation": "No root uncommitted file replaced; additive work in isolated worktree"
+}

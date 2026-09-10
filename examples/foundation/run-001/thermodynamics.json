@@ -1,0 +1,32 @@
+{
+  "TF1766": {
+    "function": "information/provenance operator, not a physical thermodynamic law",
+    "status": "SYM"
+  },
+  "assumptions": "one unbiased bit, isothermal logically irreversible reset; actual cost can exceed bound",
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "thermodynamics",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": "empirical validation not claimed",
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "entropy": "Delta_S_total >= 0; subsystem decrease requires environmental accounting",
+  "erasure_lower_bound_J": 2.870978885078724e-21,
+  "provenance": [
+    "https://research.ibm.com/publications/the-physical-nature-of-information"
+  ],
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "status": "DER",
+  "temperature_K": 300.0,
+  "timestamp": "2026-09-10T15:41:09.212140+00:00",
+  "version": "foundation-0.1.0"
+}

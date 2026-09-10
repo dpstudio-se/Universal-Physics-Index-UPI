@@ -1,0 +1,228 @@
+{
+  "RF_observation_fields": [
+    "frequency_Hz",
+    "band",
+    "NR_ARFCN",
+    "EARFCN",
+    "PCI",
+    "RSRP_dBm",
+    "RSRQ_dB",
+    "SINR_dB",
+    "azimuth_deg",
+    "timestamp",
+    "location_uncertainty_m"
+  ],
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "geographic_multilayer",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": "empirical validation not claimed",
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "coordinate_status": "No verified coordinates supplied; no geographic routes drawn",
+  "edges": [],
+  "layers": [
+    "natural_water",
+    "water_supply",
+    "sewer",
+    "electricity",
+    "district_heating",
+    "fiber",
+    "RF",
+    "transport",
+    "topography"
+  ],
+  "missing": {
+    "next_observation": "Import public source-bound geometry or authorized measurements with CRS, time and uncertainty",
+    "status": "STOP",
+    "stop_reason": "No surveyed routes, natural hydrology geometry, or calibrated RF observations"
+  },
+  "nodes": [
+    {
+      "id": "water_supply:service",
+      "label": "Miva / water_supply",
+      "layer": "water_supply",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "https://miva.se/vatten-och-avlopp"
+      ],
+      "scope": "public operator/service identity only; no route or plant coordinate",
+      "status": "EST",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "sewer:service",
+      "label": "Miva / sewer",
+      "layer": "sewer",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "https://miva.se/vatten-och-avlopp"
+      ],
+      "scope": "public operator/service identity only; no route or plant coordinate",
+      "status": "EST",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "electricity:service",
+      "label": "Övik Energi / electricity",
+      "layer": "electricity",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "https://www.ovikenergi.se/"
+      ],
+      "scope": "public operator/service identity only; no route or plant coordinate",
+      "status": "EST",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "district_heating:service",
+      "label": "Övik Energi / district_heating",
+      "layer": "district_heating",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "https://www.ovikenergi.se/"
+      ],
+      "scope": "public operator/service identity only; no route or plant coordinate",
+      "status": "EST",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "fiber:service",
+      "label": "Övik Energi / fiber",
+      "layer": "fiber",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "https://www.ovikenergi.se/"
+      ],
+      "scope": "public operator/service identity only; no route or plant coordinate",
+      "status": "EST",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "RF:Åsberget",
+      "label": "Åsberget",
+      "layer": "RF",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "user handoff: candidate location"
+      ],
+      "scope": "candidate observation area; antenna identity and geometry unverified",
+      "status": "HYP",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "RF:Skyttis",
+      "label": "Skyttis",
+      "layer": "RF",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "user handoff: candidate location"
+      ],
+      "scope": "candidate observation area; antenna identity and geometry unverified",
+      "status": "HYP",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "RF:Gullänget",
+      "label": "Gullänget",
+      "layer": "RF",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "user handoff: candidate location"
+      ],
+      "scope": "candidate observation area; antenna identity and geometry unverified",
+      "status": "HYP",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "RF:Bonäset",
+      "label": "Bonäset",
+      "layer": "RF",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "user handoff: candidate location"
+      ],
+      "scope": "candidate observation area; antenna identity and geometry unverified",
+      "status": "HYP",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "RF:hospital area",
+      "label": "hospital area",
+      "layer": "RF",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "user handoff: candidate location"
+      ],
+      "scope": "candidate observation area; antenna identity and geometry unverified",
+      "status": "HYP",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "id": "RF:SK3LH",
+      "label": "SK3LH / Gullängets Radioklubb",
+      "layer": "RF",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "https://www.ssa.se/distrikt2/om/medlemsklubbar-smcb/?distrikt=3"
+      ],
+      "scope": "public club/callsign listing only; no private antenna ownership inferred",
+      "status": "EST",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    },
+    {
+      "historical_observation": {
+        "reported_year": 2012,
+        "scope": "club operating from a former medium-wave station"
+      },
+      "id": "RF:Skyttis-history",
+      "label": "Skyttis RF activity — historical report",
+      "layer": "RF",
+      "lifecycle": "UNKNOWN",
+      "position": null,
+      "provenance": [
+        "https://www.sverigesradio.se/artikel/5330316"
+      ],
+      "scope": "existence of historical report; present facility status not inferred",
+      "status": "EST",
+      "timestamp": "2026-09-10T15:41:09.206754+00:00"
+    }
+  ],
+  "provenance": [
+    "declared fixture/input; source details retained in nested records"
+  ],
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "status": "DER",
+  "styles": {
+    "RF": "arcs",
+    "district_heating": "parallel",
+    "electricity": "zigzag",
+    "fiber": "dotted",
+    "natural_water": "wavy",
+    "sewer": "dashed",
+    "topography": "contours",
+    "transport": "solid",
+    "water_supply": "double"
+  },
+  "timestamp": "2026-09-10T15:41:09.212084+00:00",
+  "version": "foundation-0.1.0"
+}

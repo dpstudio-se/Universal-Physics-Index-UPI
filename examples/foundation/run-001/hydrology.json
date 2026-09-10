@@ -1,0 +1,33 @@
+{
+  "assumptions": [
+    "specified static head and constant density; no pipe losses included"
+  ],
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "hydrology",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": "empirical validation not claimed",
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "power": {
+    "next_observation": "A sourced flow measurement with units, time and uncertainty",
+    "status": "STOP",
+    "stop_reason": "Discharge Q is not measured or supplied"
+  },
+  "pressure_difference_Pa": 98066.5,
+  "provenance": [
+    "declared fixture/input; source details retained in nested records"
+  ],
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "status": "DER",
+  "timestamp": "2026-09-10T15:41:09.212127+00:00",
+  "version": "foundation-0.1.0"
+}

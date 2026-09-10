@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="sv"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>UPI · Fysik och analog grund</title><link rel="icon" href="data:,"><link rel="stylesheet" href="/foundation/foundation.css"></head>
+<body><header><a href="/">UPI</a><span>Fysik / analog grund / observation</span></header>
+<main><h1>Från beräkning till prövbar observation</h1><p class="lead">Utforska beräkningskedjor, RF och en reglerbar stubmodell. Alla visade experiment är modeller. UPI är en avgränsad fysiktjänst som OdinOS kan använda.</p>
+<aside>DER = härlett under angivna antaganden · HYP = hypotes · STOP = angivet underlag saknas. En sluten beräkning är inte en verifierad mätning.</aside>
+<section aria-labelledby="derive-title"><h2 id="derive-title">1. Frekvens → energi → mass­ekvivalent</h2>
+<form id="derive"><label>Frekvens (Hz)<input name="value" type="number" min="0.0000001" step="any" value="7.834" required></label>
+<label>Mål<select name="target"><option value="mass_equivalent">Mass­ekvivalent (kg)</option><option value="vacuum_wavelength">Vakuumvåglängd (m)</option><option value="dark_matter_particle">Mörk materia-identitet (hypotes)</option></select></label>
+<label>Sökmetod<select name="method"><option value="dijkstra">Dijkstra</option><option value="bidirectional">Dubbelriktad</option><option value="cch">CCH, expanderbara genvägar</option></select></label><button>Beräkna kedjan</button></form>
+<div id="derive-result" class="result" aria-live="polite"></div><ol id="trace"></ol></section>
+<section aria-labelledby="analog-title"><h2 id="analog-title">2. ANGELICA ↔ EMILIA</h2><p>Kontinuerlig referens och digitala stickprov. Analog funktion är skyddad även när stickproven överensstämmer.</p>
+<button id="analog-run">Jämför ett simulerat 8 Hz-fält</button><div id="analog-result" class="result" aria-live="polite"></div>
+<svg id="analog-plot" viewBox="0 0 600 170" role="img" aria-label="Kontinuerlig simulerad signal som heldragen kurva, digitala prov som cirklar"></svg>
+<p>Heldragen kurva: referensens realdel. Cirklar: digitala prov. Ingen fysisk ADC är ansluten.</p></section>
+<section aria-labelledby="rf-title"><h2 id="rf-title">3. RF och långsam modulation</h2>
+<form id="rf"><label>Bärvåg<select name="frequency"><option value="450000000">450 MHz</option><option value="900000000" selected>900 MHz</option><option value="2400000000">2,4 GHz</option><option value="5000000000">5 GHz</option><option value="6000000000">6 GHz</option></select></label>
+<label>Avstånd (m)<input name="distance" type="number" min="1" step="any" value="1000" required></label><button>Visa våglängd och sidband</button></form>
+<div id="rf-result" class="result" aria-live="polite"></div><p>Frirymdsmodell med 8 Hz AM. Gemensam modulationsfas betyder inte gemensam bärvågsfas. Terräng och byggnader kräver ytterligare underlag.</p></section>
+<section aria-labelledby="stub-title"><h2 id="stub-title">4. Stub och analog spegel</h2><p>900 MHz · Z₀ = 50 Ω · ideal λg/8-stub. Ändra spegelns styrvärde och jämför grundlasten.</p>
+<form id="stub"><label>α <output id="alpha-label">1.00</output><input name="alpha" id="alpha" type="range" min="0" max="2" step="0.01" value="1"></label>
+<label>Grundlast<select name="load"><option value="0.02">Matchad: 50 Ω</option><option value="0.01">Omatchad: 100 Ω</option><option value="0">Öppen krets</option></select></label>
+<label>Modell<select name="model"><option value="ideal">Ideal</option><option value="lossy">Exempel med förlust och fasfel</option></select></label><button>Pröva inställningen</button></form>
+<svg id="smith" viewBox="0 0 400 400" role="img" aria-label="Reflektionskoefficient i komplexplanet; kryss visar aktuell modellpunkt"></svg>
+<div id="stub-result" class="result" aria-live="polite"></div><p>Extra reaktans = 0 betyder inte total admittans = 0. Hårdvaruprövning kräver uppmätt komplex S11, frekvenssvep och kontrollfall.</p></section>
+<section aria-labelledby="geo-title"><h2 id="geo-title">5. Örnsköldsvik · separata lager</h2><p>Observationsunderlag, ingen karta över verifierade ledningar. Naturligt vatten, kommunala rör, energi och kommunikation behåller skilda fysikmodeller.</p>
+<button id="geo-run">Visa källbundna tjänster och kandidatområden</button><div id="geo-result" aria-live="polite"></div>
+<p>Linjestil och text identifierar varje lager. Föreslagna och okända anläggningar visas aldrig som byggda.</p></section>
+<section aria-labelledby="triangle-title"><h2 id="triangle-title">6. Triangelgenerationer</h2><form id="triangle"><label>Generation<input name="generation" type="number" min="0" max="20" value="4" required></label><button>Räkna utan att anta topologi</button></form><div id="triangle-result" class="result" aria-live="polite"></div></section>
+<footer>UPI ≠ OdinOS · Gemensam topologi ≠ gemensam fysik · Observation ≠ exekvering ≠ commit.</footer></main><script src="/foundation/foundation.js"></script></body></html>

@@ -114,6 +114,12 @@ def make_handler(app: ContributionApp):
         def do_GET(self) -> None:
             parsed = urlparse(self.path)
             path = unquote(parsed.path)
+            if path in {"/foundation", "/foundation/"}:
+                self._static("foundation.html")
+                return
+            if path in {"/foundation/foundation.css", "/foundation/foundation.js"}:
+                self._static(Path(path).name)
+                return
             if path == "/oden":
                 self.send_response(302)
                 self.send_header("Location", "/oden/")
@@ -211,6 +217,19 @@ def make_handler(app: ContributionApp):
                 self._json(429, {"errors": ["rate limit"]})
                 return
             parsed = urlparse(self.path)
+            if parsed.path == "/api/foundation":
+                from upi.foundation import handle_request
+
+                payload = self._read_json(65536)
+                if payload is None:
+                    return
+                try:
+                    result = handle_request(payload)
+                except (ValueError, TypeError, KeyError, AttributeError, OverflowError, ZeroDivisionError):
+                    self._json(400, {"status": "ERR", "errors": ["Invalid input or outside declared model domain"]})
+                    return
+                self._json(200, result)
+                return
             if parsed.path == "/api/knots/analyze":
                 from upi.knot_io import analyze_document
 

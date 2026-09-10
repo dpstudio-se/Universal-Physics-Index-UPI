@@ -37,6 +37,10 @@ Build the offline catalogue with `python -m upi.legal_workload`.
 with independent inverse checks, a spectrum per unknown cross section and hashed
 prediction records. Run `python -m upi.adversarial_physics --output dist/adversarial-new-run`.
 
+**Realtime / analog foundation:** [bounded derivation, RF and multilayer experiments](docs/REALTIME_ANALOG_FOUNDATION.md).
+Run `upi serve` and open `/foundation/`. Export the audited examples with
+`python -m upi.foundation --output dist/foundation-new-run`.
+
 Two different projects named UPI exist. **This** one is Universal Physics Index.
 Mason 2026 ([arXiv:2602.20507](https://arxiv.org/abs/2602.20507)) is Unified Personal Index — a cited corpus, not infrastructure.
 

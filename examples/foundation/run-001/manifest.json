@@ -1,0 +1,19 @@
+{
+  "status": "EST",
+  "scope": "artifact byte hashes",
+  "version": "foundation-0.1.0",
+  "sha256": {
+    "derivation.json": "308d87047088d66d9b08559774e5651be1e8c6e3adbd2657775d87b9a77d7b86",
+    "analog_digital.json": "0df3eb12c86b4ae4ff6f9b7bfd0c29c1a35d6a4c69789bf7954b61e0b150f7c6",
+    "rf.json": "dba77304b398fe80c9dd26c4d4ee3b40fd9e42daeeb81230e904dd55e1ba1daa",
+    "smith_stub.json": "82a898c93ee12fa73e48339c53c5944eb12a114678fee82f30cdc24eff97e4a6",
+    "geographic_multilayer.json": "1b7d3ef522bba0e754ff2b387c230dd0f456535129cf6c68c766e5ec4af54c39",
+    "motif.json": "b68fce55ddeb7415d8ea7147d4240227488982a0e75efb985e9caf77cf09a2a7",
+    "triangle.json": "657e9e1ee4ad38410ef67b7d23be57ade80165d481a75c57c6901e57a2865ae0",
+    "hydrology.json": "be0709e55a1a182596332891be1da32d3234562241f67e15dc1b30704162b3a4",
+    "thermodynamics.json": "c88c88032e77b9eb77e23f1f674f72714c30bcb09cfe277ee885caefe5e05c7b",
+    "remote_observation.json": "dc2e44f93db5e399166400a37b7c23ef55fed17ea2856030cb22bd6e17c789a7",
+    "optimization.json": "2a9f889253f87f056c6b9002406d32f57ab04f07774c1ebc258aa567937e2eab",
+    "hypotheses.json": "dda32a9aa506fe09f9668444c3e4e677fbe8b1c58573b0d354b61fc400d6cbb5"
+  }
+}

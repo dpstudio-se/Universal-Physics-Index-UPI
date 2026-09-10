@@ -1,0 +1,55 @@
+{
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "hypotheses",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": "empirical validation not claimed",
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "items": [
+    {
+      "falsification_condition": "Reject the specified interpretation if its preregistered independent predictions fail",
+      "name": "global_8Hz_lock",
+      "next_observation": "Independent multi-site phase/time measurements and null controls",
+      "state": "OPEN",
+      "status": "HYP"
+    },
+    {
+      "falsification_condition": "Reject the specified interpretation if its preregistered independent predictions fail",
+      "name": "biological_1024Hz_or_DNA_0.0123Hz",
+      "next_observation": "Independently replicated biological measurements and causal protocol",
+      "state": "OPEN",
+      "status": "HYP"
+    },
+    {
+      "falsification_condition": "Reject the specified interpretation if its preregistered independent predictions fail",
+      "name": "Smith_physical_torus",
+      "next_observation": "Physical state variables, topology and map; helix alone insufficient",
+      "state": "OPEN",
+      "status": "HYP"
+    },
+    {
+      "falsification_condition": "Reject the specified interpretation if its preregistered independent predictions fail",
+      "name": "5D_11D_M_theory",
+      "next_observation": "Identify dimensions, fields, dynamics and an explicit bridge",
+      "state": "OPEN",
+      "status": "HYP"
+    }
+  ],
+  "provenance": [
+    "user handoff; unverified interpretations",
+    "https://ntrs.nasa.gov/api/citations/20120000051/downloads/20120000051.pdf"
+  ],
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "status": "HYP",
+  "timestamp": "2026-09-10T15:41:09.212180+00:00",
+  "version": "foundation-0.1.0"
+}

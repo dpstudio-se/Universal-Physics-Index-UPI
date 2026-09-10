@@ -1,0 +1,5021 @@
+{
+  "assumptions": "lumped connector/T-junction; phenomenological loss/Q/dispersion and thermal expansion, no measured component model",
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "smith_stub",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": "empirical validation not claimed",
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "best_grid_point": {
+    "Gamma": {
+      "imag": -0.019233565169972894,
+      "real": -0.003459305508391245
+    },
+    "S11": {
+      "imag": -0.019233565169972894,
+      "real": -0.003459305508391245
+    },
+    "VSWR": 1.0398633786037579,
+    "alpha": 1.0,
+    "hardware_boundary": {
+      "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+      "status": "STOP",
+      "stop_reason": "No measured circuit or active-element stability model"
+    },
+    "load_Y_S": {
+      "imag": 0.0,
+      "real": 0.02
+    },
+    "magnitude": 0.019542180629294685,
+    "mirror_Y_S": {
+      "imag": 0.016781153530906895,
+      "real": -6.781712925067037e-05
+    },
+    "model": {
+      "conductor_np_m": 0.01,
+      "connector_l_h": 1e-10,
+      "connector_r_ohm": 0.1,
+      "dielectric_np_m": 0.01,
+      "dispersion_per_fraction": 0.01,
+      "frequency_hz": 1000000000.0,
+      "junction_c_f": 1e-13,
+      "length_m": 0.027480975316666666,
+      "length_temp_coefficient": 1e-05,
+      "q": 100.0,
+      "reference_hz": 900000000.0,
+      "temperature_c": 30.0,
+      "velocity_factor": 0.66,
+      "z0_ohm": 50.0
+    },
+    "passive_reflection_domain": true,
+    "phase_rad": -1.7487514633997892,
+    "status": "DER",
+    "stub_Y_S": {
+      "imag": -0.016006748862118357,
+      "real": 0.00019172341662367795
+    },
+    "total_Y_S": {
+      "imag": 0.0007744046687885378,
+      "real": 0.020123906287373008
+    },
+    "verification_type": "simulation"
+  },
+  "frequency_alpha_sweep": [
+    {
+      "Gamma": {
+        "imag": 0.4266356707236005,
+        "real": -0.2518768907636405
+      },
+      "S11": {
+        "imag": 0.4266356707236005,
+        "real": -0.2518768907636405
+      },
+      "VSWR": 2.963843110561075,
+      "alpha": 0.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.495439162394875,
+      "mirror_Y_S": {
+        "imag": 0.0,
+        "real": 0.0001
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 800000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 2.104111787675029,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.023008338396829316,
+        "real": 0.0002460630251657937
+      },
+      "total_Y_S": {
+        "imag": -0.023008338396829316,
+        "real": 0.020346063025165794
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.25479576570313905,
+        "real": -0.07589279240833392
+      },
+      "S11": {
+        "imag": 0.25479576570313905,
+        "real": -0.07589279240833392
+      },
+      "VSWR": 1.7242694533895282,
+      "alpha": 0.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.26585822943776516,
+      "mirror_Y_S": {
+        "imag": 0.011916940054111426,
+        "real": -1.9173373013364596e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 800000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.8602862329925411,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.023008338396829316,
+        "real": 0.0002460630251657937
+      },
+      "total_Y_S": {
+        "imag": -0.01109139834271789,
+        "real": 0.02022688965215243
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.03863303032693541,
+        "real": -0.004777669253134099
+      },
+      "S11": {
+        "imag": 0.03863303032693541,
+        "real": -0.004777669253134099
+      },
+      "VSWR": 1.081008092346717,
+      "alpha": 0.9,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.03892733173150009,
+      "mirror_Y_S": {
+        "imag": 0.02145049209740057,
+        "real": -0.00011451207142405629
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 800000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.6938395906575814,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.023008338396829316,
+        "real": 0.0002460630251657937
+      },
+      "total_Y_S": {
+        "imag": -0.0015578462994287473,
+        "real": 0.02013155095374174
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.02051914158900076,
+        "real": -0.003108022544470166
+      },
+      "S11": {
+        "imag": -0.02051914158900076,
+        "real": -0.003108022544470166
+      },
+      "VSWR": 1.0423860292806408,
+      "alpha": 1.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.020753191939708825,
+      "mirror_Y_S": {
+        "imag": 0.023833880108222853,
+        "real": -0.00013834674602672918
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 800000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.7211230525662378,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.023008338396829316,
+        "real": 0.0002460630251657937
+      },
+      "total_Y_S": {
+        "imag": 0.0008255417113935369,
+        "real": 0.020107716279139067
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.07937910607206404,
+        "real": -0.008447374949227407
+      },
+      "S11": {
+        "imag": -0.07937910607206404,
+        "real": -0.008447374949227407
+      },
+      "VSWR": 1.1735050801937426,
+      "alpha": 1.1,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.07982731753186267,
+      "mirror_Y_S": {
+        "imag": 0.026217268119045144,
+        "real": -0.0001621814206294022
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 800000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.676815429111885,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.023008338396829316,
+        "real": 0.0002460630251657937
+      },
+      "total_Y_S": {
+        "imag": 0.003208929722215828,
+        "real": 0.02008388160453639
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.28936273859078254,
+        "real": -0.09191988652510402
+      },
+      "S11": {
+        "imag": -0.28936273859078254,
+        "real": -0.09191988652510402
+      },
+      "VSWR": 1.87196091521089,
+      "alpha": 1.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.3036116928307366,
+      "mirror_Y_S": {
+        "imag": 0.03575082016233428,
+        "real": -0.0002575201190400938
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 800000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.878378075037662,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.023008338396829316,
+        "real": 0.0002460630251657937
+      },
+      "total_Y_S": {
+        "imag": 0.012742481765504965,
+        "real": 0.0199885429061257
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.44883180077347423,
+        "real": -0.27432844718950994
+      },
+      "S11": {
+        "imag": -0.44883180077347423,
+        "real": -0.27432844718950994
+      },
+      "VSWR": 3.2196638387002445,
+      "alpha": 2.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.5260285945868032,
+      "mirror_Y_S": {
+        "imag": 0.047667760216445705,
+        "real": -0.0003766934920534584
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 800000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -2.1194144207283347,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.023008338396829316,
+        "real": 0.0002460630251657937
+      },
+      "total_Y_S": {
+        "imag": 0.02465942181961639,
+        "real": 0.019869369533112337
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.40650725635743096,
+        "real": -0.22000928069387052
+      },
+      "S11": {
+        "imag": 0.40650725635743096,
+        "real": -0.22000928069387052
+      },
+      "VSWR": 2.719029587162666,
+      "alpha": 0.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.46222530551959223,
+      "mirror_Y_S": {
+        "imag": 0.0,
+        "real": 0.0001
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 850000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 2.066872576262807,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.021018074638728217,
+        "real": 0.00022868515753338015
+      },
+      "total_Y_S": {
+        "imag": -0.021018074638728217,
+        "real": 0.02032868515753338
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.23504872532387763,
+        "real": -0.06451710466089264
+      },
+      "S11": {
+        "imag": 0.23504872532387763,
+        "real": -0.06451710466089264
+      },
+      "VSWR": 1.6446015400440164,
+      "alpha": 0.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.24374240515389245,
+      "mirror_Y_S": {
+        "imag": 0.010912539360989282,
+        "real": -9.129031268519566e-06
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 850000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.8386827151284735,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.021018074638728217,
+        "real": 0.00022868515753338015
+      },
+      "total_Y_S": {
+        "imag": -0.010105535277738935,
+        "real": 0.020219556126264863
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.03412124146362854,
+        "real": -0.004464907529805779
+      },
+      "S11": {
+        "imag": 0.03412124146362854,
+        "real": -0.004464907529805779
+      },
+      "VSWR": 1.071277049904854,
+      "alpha": 0.9,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.03441212748827018,
+      "mirror_Y_S": {
+        "imag": 0.01964257084978071,
+        "real": -9.643225628333523e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 850000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.7009112363792755,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.021018074638728217,
+        "real": 0.00022868515753338015
+      },
+      "total_Y_S": {
+        "imag": -0.0013755037889475082,
+        "real": 0.020132252901250047
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.02005604915619284,
+        "real": -0.003156595871178235
+      },
+      "S11": {
+        "imag": -0.02005604915619284,
+        "real": -0.003156595871178235
+      },
+      "VSWR": 1.041447375155253,
+      "alpha": 1.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.020302935877590782,
+      "mirror_Y_S": {
+        "imag": 0.021825078721978565,
+        "real": -0.00011825806253703914
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 850000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.7269044553600188,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.021018074638728217,
+        "real": 0.00022868515753338015
+      },
+      "total_Y_S": {
+        "imag": 0.0008070040832503476,
+        "real": 0.020110427094996344
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.07399630343376712,
+        "real": -0.007728234773904663
+      },
+      "S11": {
+        "imag": -0.07399630343376712,
+        "real": -0.007728234773904663
+      },
+      "VSWR": 1.1607577407939786,
+      "alpha": 1.1,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.0743987804643512,
+      "mirror_Y_S": {
+        "imag": 0.024007586594176424,
+        "real": -0.00014008386879074306
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 850000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.674859872317798,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.021018074638728217,
+        "real": 0.00022868515753338015
+      },
+      "total_Y_S": {
+        "imag": 0.002989511955448207,
+        "real": 0.02008860128874264
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.26980996335181284,
+        "real": -0.07908112496445553
+      },
+      "S11": {
+        "imag": -0.26980996335181284,
+        "real": -0.07908112496445553
+      },
+      "VSWR": 1.782262339119841,
+      "alpha": 1.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.2811605246999486,
+      "mirror_Y_S": {
+        "imag": 0.032737618082967844,
+        "real": -0.0002273870938055587
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 850000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.8559102881962244,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.021018074638728217,
+        "real": 0.00022868515753338015
+      },
+      "total_Y_S": {
+        "imag": 0.011719543444239627,
+        "real": 0.020001298063727822
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.4303503018369282,
+        "real": -0.24144820731734787
+      },
+      "S11": {
+        "imag": -0.4303503018369282,
+        "real": -0.24144820731734787
+      },
+      "VSWR": 2.9483227134214984,
+      "alpha": 2.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.49345579245551086,
+      "mirror_Y_S": {
+        "imag": 0.04365015744395713,
+        "real": -0.0003365161250740783
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 850000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -2.082083922272397,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.021018074638728217,
+        "real": 0.00022868515753338015
+      },
+      "total_Y_S": {
+        "imag": 0.022632082805228913,
+        "real": 0.019892169032459304
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.38525921459237844,
+        "real": -0.19133573727260153
+      },
+      "S11": {
+        "imag": 0.38525921459237844,
+        "real": -0.19133573727260153
+      },
+      "VSWR": 2.509731360264151,
+      "alpha": 0.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.43015581686870896,
+      "mirror_Y_S": {
+        "imag": 0.0,
+        "real": 0.0001
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 900000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 2.0317535759739864,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.019206241044847017,
+        "real": 0.00021415775669072609
+      },
+      "total_Y_S": {
+        "imag": -0.019206241044847017,
+        "real": 0.020314157756690727
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.21638192749080287,
+        "real": -0.054864550876553196
+      },
+      "S11": {
+        "imag": 0.21638192749080287,
+        "real": -0.054864550876553196
+      },
+      "VSWR": 1.574761943650435,
+      "alpha": 0.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.22322915913366015,
+      "mirror_Y_S": {
+        "imag": 0.009999500004166655,
+        "real": 1.6666583333433457e-09
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 900000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.8191173306725623,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.019206241044847017,
+        "real": 0.00021415775669072609
+      },
+      "total_Y_S": {
+        "imag": -0.009206741040680363,
+        "real": 0.02021415942334906
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.029950006464758507,
+        "real": -0.004243632739219917
+      },
+      "S11": {
+        "imag": 0.029950006464758507,
+        "real": -0.004243632739219917
+      },
+      "VSWR": 1.062385413585717,
+      "alpha": 0.9,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.030249153807411795,
+      "mirror_Y_S": {
+        "imag": 0.01799910000749998,
+        "real": -7.9997000015e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 900000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.7115499292600305,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.019206241044847017,
+        "real": 0.00021415775669072609
+      },
+      "total_Y_S": {
+        "imag": -0.001207141037347037,
+        "real": 0.020134160756675727
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.019698635287570303,
+        "real": -0.00323520064171026
+      },
+      "S11": {
+        "imag": -0.019698635287570303,
+        "real": -0.00323520064171026
+      },
+      "VSWR": 1.0407383074219305,
+      "alpha": 1.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.019962533791701705,
+      "mirror_Y_S": {
+        "imag": 0.01999900000833331,
+        "real": -9.999666668333332e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 900000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.7335778958136254,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.019206241044847017,
+        "real": 0.00021415775669072609
+      },
+      "total_Y_S": {
+        "imag": 0.0007927589634862918,
+        "real": 0.020114161090007392
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.06915343425084247,
+        "real": -0.007165217358703419
+      },
+      "S11": {
+        "imag": -0.06915343425084247,
+        "real": -0.007165217358703419
+      },
+      "VSWR": 1.1494366820190456,
+      "alpha": 1.1,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.06952364927478316,
+      "mirror_Y_S": {
+        "imag": 0.02199890000916664,
+        "real": -0.00011999633335166666
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 900000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.6740412355585328,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.019206241044847017,
+        "real": 0.00021415775669072609
+      },
+      "total_Y_S": {
+        "imag": 0.002792658964319624,
+        "real": 0.02009416142333906
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.2513325756436946,
+        "real": -0.06814109835561898
+      },
+      "S11": {
+        "imag": -0.2513325756436946,
+        "real": -0.06814109835561898
+      },
+      "VSWR": 1.7041862668471475,
+      "alpha": 1.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.2604059770143604,
+      "mirror_Y_S": {
+        "imag": 0.029998500012499964,
+        "real": -0.00019999500002499998
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 900000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.8355510638960852,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.019206241044847017,
+        "real": 0.00021415775669072609
+      },
+      "total_Y_S": {
+        "imag": 0.010792258967652946,
+        "real": 0.02001416275666573
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.41061264590119867,
+        "real": -0.2117424656081288
+      },
+      "S11": {
+        "imag": -0.41061264590119867,
+        "real": -0.2117424656081288
+      },
+      "VSWR": 2.7174243841352066,
+      "alpha": 2.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.4619930916321074,
+      "mirror_Y_S": {
+        "imag": 0.03999800001666662,
+        "real": -0.00029999333336666665
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 900000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -2.0469047497767323,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.019206241044847017,
+        "real": 0.00021415775669072609
+      },
+      "total_Y_S": {
+        "imag": 0.0207917589718196,
+        "real": 0.01991416442332406
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.3632168559758899,
+        "real": -0.16560250533347706
+      },
+      "S11": {
+        "imag": 0.3632168559758899,
+        "real": -0.16560250533347706
+      },
+      "VSWR": 2.3288256464583674,
+      "alpha": 0.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.3991875176376819,
+      "mirror_Y_S": {
+        "imag": 0.0,
+        "real": 0.0001
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 950000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.9985730670737865,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.01754362170586171,
+        "real": 0.00020196770306257238
+      },
+      "total_Y_S": {
+        "imag": -0.01754362170586171,
+        "real": 0.02030196770306257
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.1987013544364548,
+        "real": -0.04664487473445609
+      },
+      "S11": {
+        "imag": 0.1987013544364548,
+        "real": -0.04664487473445609
+      },
+      "VSWR": 1.5128874945364768,
+      "alpha": 0.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.2041028480787927,
+      "mirror_Y_S": {
+        "imag": 0.009162853578405262,
+        "real": 8.368409809244928e-06
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 950000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.8013700783529552,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.01754362170586171,
+        "real": 0.00020196770306257238
+      },
+      "total_Y_S": {
+        "imag": -0.00838076812745645,
+        "real": 0.020210336112871815
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.02606526128627483,
+        "real": -0.004096267466178517
+      },
+      "S11": {
+        "imag": 0.02606526128627483,
+        "real": -0.004096267466178517
+      },
+      "VSWR": 1.0542004297783603,
+      "alpha": 0.9,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.026385171082944487,
+      "mirror_Y_S": {
+        "imag": 0.016493136441129472,
+        "real": -6.493686234335914e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 950000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.7266756793377434,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.01754362170586171,
+        "real": 0.00020196770306257238
+      },
+      "total_Y_S": {
+        "imag": -0.00105048526473224,
+        "real": 0.020137030840719213
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.019429220826902793,
+        "real": -0.003337591161184017
+      },
+      "S11": {
+        "imag": -0.019429220826902793,
+        "real": -0.003337591161184017
+      },
+      "VSWR": 1.0402205108141231,
+      "alpha": 1.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.0197138057386129,
+      "mirror_Y_S": {
+        "imag": 0.018325707156810523,
+        "real": -8.326318038151015e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 950000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.7409179566128956,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.01754362170586171,
+        "real": 0.00020196770306257238
+      },
+      "total_Y_S": {
+        "imag": 0.0007820854509488114,
+        "real": 0.020118704522681063
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.06476422803207198,
+        "real": -0.006725981272983599
+      },
+      "S11": {
+        "imag": -0.06476422803207198,
+        "real": -0.006725981272983599
+      },
+      "VSWR": 1.1392949474071539,
+      "alpha": 1.1,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.06511254914895241,
+      "mirror_Y_S": {
+        "imag": 0.020158277872491578,
+        "real": -0.00010158949841966118
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 950000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.6742786920610988,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.01754362170586171,
+        "real": 0.00020196770306257238
+      },
+      "total_Y_S": {
+        "imag": 0.002614656166629866,
+        "real": 0.02010037820464291
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.23385159931752397,
+        "real": -0.05877803839386683
+      },
+      "S11": {
+        "imag": -0.23385159931752397,
+        "real": -0.05877803839386683
+      },
+      "VSWR": 1.6354813230341767,
+      "alpha": 1.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.24112533732645075,
+      "mirror_Y_S": {
+        "imag": 0.027488560735215786,
+        "real": -0.00017489477057226527
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 950000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.817042917216957,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.01754362170586171,
+        "real": 0.00020196770306257238
+      },
+      "total_Y_S": {
+        "imag": 0.009944939029354075,
+        "real": 0.020027072932490307
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.3899654536755577,
+        "real": -0.18496904271091105
+      },
+      "S11": {
+        "imag": -0.3899654536755577,
+        "real": -0.18496904271091105
+      },
+      "VSWR": 2.518706511149709,
+      "alpha": 2.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.4316093161897393,
+      "mirror_Y_S": {
+        "imag": 0.036651414313621046,
+        "real": -0.0002665263607630203
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 950000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -2.013691014193998,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.01754362170586171,
+        "real": 0.00020196770306257238
+      },
+      "total_Y_S": {
+        "imag": 0.019107792607759334,
+        "real": 0.01993544134229955
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.34063453651929343,
+        "real": -0.14256463634122293
+      },
+      "S11": {
+        "imag": 0.34063453651929343,
+        "real": -0.14256463634122293
+      },
+      "VSWR": 2.170903261199272,
+      "alpha": 0.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.3692648954406836,
+      "mirror_Y_S": {
+        "imag": 0.0,
+        "real": 0.0001
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 1000000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.9671712494190972,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.016006748862118357,
+        "real": 0.00019172341662367795
+      },
+      "total_Y_S": {
+        "imag": -0.016006748862118357,
+        "real": 0.020291723416623678
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.18191409285399526,
+        "real": -0.03962672171685711
+      },
+      "S11": {
+        "imag": 0.18191409285399526,
+        "real": -0.03962672171685711
+      },
+      "VSWR": 1.457546071892402,
+      "alpha": 0.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.1861800586875975,
+      "mirror_Y_S": {
+        "imag": 0.008390576765453447,
+        "real": 1.609143537466482e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 1000000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.7852778384567718,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.016006748862118357,
+        "real": 0.00019172341662367795
+      },
+      "total_Y_S": {
+        "imag": -0.00761617209666491,
+        "real": 0.020207814851998344
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": 0.02242330958632386,
+        "real": -0.004009701695881574
+      },
+      "S11": {
+        "imag": 0.02242330958632386,
+        "real": -0.004009701695881574
+      },
+      "VSWR": 1.046619941243367,
+      "alpha": 0.9,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.022778992964880583,
+      "mirror_Y_S": {
+        "imag": 0.015103038177816205,
+        "real": -5.103541632560332e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 1000000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": 1.7477445705302637,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.016006748862118357,
+        "real": 0.00019172341662367795
+      },
+      "total_Y_S": {
+        "imag": -0.0009037106843021517,
+        "real": 0.020140688000298074
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.019233565169972894,
+        "real": -0.003459305508391245
+      },
+      "S11": {
+        "imag": -0.019233565169972894,
+        "real": -0.003459305508391245
+      },
+      "VSWR": 1.0398633786037579,
+      "alpha": 1.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.019542180629294685,
+      "mirror_Y_S": {
+        "imag": 0.016781153530906895,
+        "real": -6.781712925067037e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 1000000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.7487514633997892,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.016006748862118357,
+        "real": 0.00019172341662367795
+      },
+      "total_Y_S": {
+        "imag": 0.0007744046687885378,
+        "real": 0.020123906287373008
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.06075871789924014,
+        "real": -0.006386310395403534
+      },
+      "S11": {
+        "imag": -0.06075871789924014,
+        "real": -0.006386310395403534
+      },
+      "VSWR": 1.130137392200323,
+      "alpha": 1.1,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.06109342649766735,
+      "mirror_Y_S": {
+        "imag": 0.018459268883997584,
+        "real": -8.459884217573738e-05
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 1000000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.6755211578571605,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.016006748862118357,
+        "real": 0.00019172341662367795
+      },
+      "total_Y_S": {
+        "imag": 0.0024525200218792273,
+        "real": 0.02010712457444794
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.21728285102226777,
+        "real": -0.05073404430270087
+      },
+      "S11": {
+        "imag": -0.21728285102226777,
+        "real": -0.05073404430270087
+      },
+      "VSWR": 1.5744242707994085,
+      "alpha": 1.5,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.22312727444145736,
+      "mirror_Y_S": {
+        "imag": 0.025171730296360342,
+        "real": -0.00015172569387600555
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 1000000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.8001797626768214,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.016006748862118357,
+        "real": 0.00019172341662367795
+      },
+      "total_Y_S": {
+        "imag": 0.009164981434241985,
+        "real": 0.02003999772274767
+      },
+      "verification_type": "simulation"
+    },
+    {
+      "Gamma": {
+        "imag": -0.36868128164960257,
+        "real": -0.16088899065722118
+      },
+      "S11": {
+        "imag": -0.36868128164960257,
+        "real": -0.16088899065722118
+      },
+      "VSWR": 2.345922772896452,
+      "alpha": 2.0,
+      "hardware_boundary": {
+        "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+        "status": "STOP",
+        "stop_reason": "No measured circuit or active-element stability model"
+      },
+      "load_Y_S": {
+        "imag": 0.0,
+        "real": 0.02
+      },
+      "magnitude": 0.4022575726490341,
+      "mirror_Y_S": {
+        "imag": 0.03356230706181379,
+        "real": -0.00023563425850134075
+      },
+      "model": {
+        "conductor_np_m": 0.01,
+        "connector_l_h": 1e-10,
+        "connector_r_ohm": 0.1,
+        "dielectric_np_m": 0.01,
+        "dispersion_per_fraction": 0.01,
+        "frequency_hz": 1000000000.0,
+        "junction_c_f": 1e-13,
+        "length_m": 0.027480975316666666,
+        "length_temp_coefficient": 1e-05,
+        "q": 100.0,
+        "reference_hz": 900000000.0,
+        "temperature_c": 30.0,
+        "velocity_factor": 0.66,
+        "z0_ohm": 50.0
+      },
+      "passive_reflection_domain": true,
+      "phase_rad": -1.9822750952063395,
+      "status": "DER",
+      "stub_Y_S": {
+        "imag": -0.016006748862118357,
+        "real": 0.00019172341662367795
+      },
+      "total_Y_S": {
+        "imag": 0.017555558199695433,
+        "real": 0.019956089158122338
+      },
+      "verification_type": "simulation"
+    }
+  ],
+  "ideal_matched": {
+    "Gamma": {
+      "imag": -0.0,
+      "real": -0.0
+    },
+    "S11": {
+      "imag": -0.0,
+      "real": -0.0
+    },
+    "VSWR": 1.0,
+    "alpha": 1.0,
+    "hardware_boundary": {
+      "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+      "status": "STOP",
+      "stop_reason": "No measured circuit or active-element stability model"
+    },
+    "load_Y_S": {
+      "imag": 0.0,
+      "real": 0.02
+    },
+    "magnitude": 0.0,
+    "mirror_Y_S": {
+      "imag": 0.020000000000000004,
+      "real": 0.0
+    },
+    "model": {
+      "conductor_np_m": 0.0,
+      "connector_l_h": 0.0,
+      "connector_r_ohm": 0.0,
+      "dielectric_np_m": 0.0,
+      "dispersion_per_fraction": 0.0,
+      "frequency_hz": 900000000.0,
+      "junction_c_f": 0.0,
+      "length_m": 0.027480975316666666,
+      "length_temp_coefficient": 0.0,
+      "q": null,
+      "reference_hz": 900000000.0,
+      "temperature_c": 20.0,
+      "velocity_factor": 0.66,
+      "z0_ohm": 50.0
+    },
+    "passive_reflection_domain": true,
+    "phase_rad": -3.141592653589793,
+    "status": "DER",
+    "stub_Y_S": {
+      "imag": -0.020000000000000004,
+      "real": 0.0
+    },
+    "total_Y_S": {
+      "imag": 0.0,
+      "real": 0.02
+    },
+    "verification_type": "simulation"
+  },
+  "open_control": {
+    "Gamma": {
+      "imag": -0.0,
+      "real": 1.0
+    },
+    "S11": {
+      "imag": -0.0,
+      "real": 1.0
+    },
+    "VSWR": null,
+    "alpha": 1.0,
+    "hardware_boundary": {
+      "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+      "status": "STOP",
+      "stop_reason": "No measured circuit or active-element stability model"
+    },
+    "load_Y_S": {
+      "imag": 0.0,
+      "real": 0.0
+    },
+    "magnitude": 1.0,
+    "mirror_Y_S": {
+      "imag": 0.020000000000000004,
+      "real": 0.0
+    },
+    "model": {
+      "conductor_np_m": 0.0,
+      "connector_l_h": 0.0,
+      "connector_r_ohm": 0.0,
+      "dielectric_np_m": 0.0,
+      "dispersion_per_fraction": 0.0,
+      "frequency_hz": 900000000.0,
+      "junction_c_f": 0.0,
+      "length_m": 0.027480975316666666,
+      "length_temp_coefficient": 0.0,
+      "q": null,
+      "reference_hz": 900000000.0,
+      "temperature_c": 20.0,
+      "velocity_factor": 0.66,
+      "z0_ohm": 50.0
+    },
+    "passive_reflection_domain": true,
+    "phase_rad": -0.0,
+    "status": "DER",
+    "stub_Y_S": {
+      "imag": -0.020000000000000004,
+      "real": 0.0
+    },
+    "total_Y_S": {
+      "imag": 0.0,
+      "real": 0.0
+    },
+    "verification_type": "simulation"
+  },
+  "provenance": [
+    "https://eng.libretexts.org/Bookshelves/Electrical_Engineering/Electro-Optics/Book%3A_Electromagnetics_I_%28Ellingson%29/03%3A_Transmission_Lines/3.16%3A_Input_Impedance_for_Open-_and_Short-Circuit_Terminations"
+  ],
+  "representations": {
+    "assumptions": [
+      "lossless line, Gamma_L supplied, V+=1 V reference"
+    ],
+    "coordinates": {
+      "1D": "line coordinate z [m]",
+      "2D": "complex Gamma [1]",
+      "3D": "Re Gamma, Im Gamma, z; geometric helix",
+      "4D": "Re/Im V+, Re/Im V- in volts; C^2 representation"
+    },
+    "higher_dimensions": {
+      "claim": "physical torus / 5D-11D / M-theory identification",
+      "next_observation": "Identify independent physical degrees of freedom and a sourced transformation",
+      "state": "OPEN",
+      "status": "HYP"
+    },
+    "samples": [
+      {
+        "Im_Gamma": 0.2,
+        "Re_Gamma": 0.3,
+        "V_minus_V": [
+          0.3,
+          0.2
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.0,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.06997087679273044,
+        "Re_Gamma": 0.353700546226404,
+        "V_minus_V": [
+          0.353700546226404,
+          0.06997087679273044
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.006870243829166667,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.07071067811865472,
+        "Re_Gamma": 0.3535533905932738,
+        "V_minus_V": [
+          0.3535533905932738,
+          -0.07071067811865472
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.013740487658333333,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.20062717328036805,
+        "Re_Gamma": 0.2995809362117843,
+        "V_minus_V": [
+          0.2995809362117843,
+          -0.20062717328036805
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.0206107314875,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.3,
+        "Re_Gamma": 0.20000000000000004,
+        "V_minus_V": [
+          0.20000000000000004,
+          -0.3
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.027480975316666666,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.353700546226404,
+        "Re_Gamma": 0.06997087679273045,
+        "V_minus_V": [
+          0.06997087679273045,
+          -0.353700546226404
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.034351219145833334,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.35355339059327373,
+        "Re_Gamma": -0.0707106781186547,
+        "V_minus_V": [
+          -0.0707106781186547,
+          -0.35355339059327373
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.041221462975,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.2995809362117842,
+        "Re_Gamma": -0.20062717328036814,
+        "V_minus_V": [
+          -0.20062717328036814,
+          -0.2995809362117842
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.04809170680416667,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.20000000000000004,
+        "Re_Gamma": -0.3,
+        "V_minus_V": [
+          -0.3,
+          -0.20000000000000004
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.05496195063333333,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.06997087679273063,
+        "Re_Gamma": -0.35370054622640396,
+        "V_minus_V": [
+          -0.35370054622640396,
+          -0.06997087679273063
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.0618321944625,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.0707106781186547,
+        "Re_Gamma": -0.35355339059327384,
+        "V_minus_V": [
+          -0.35355339059327384,
+          0.0707106781186547
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.06870243829166667,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.2006271732803681,
+        "Re_Gamma": -0.2995809362117842,
+        "V_minus_V": [
+          -0.2995809362117842,
+          0.2006271732803681
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.07557268212083333,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.29999999999999993,
+        "Re_Gamma": -0.20000000000000007,
+        "V_minus_V": [
+          -0.20000000000000007,
+          0.29999999999999993
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.08244292595,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.3537005462264039,
+        "Re_Gamma": -0.06997087679273065,
+        "V_minus_V": [
+          -0.06997087679273065,
+          0.3537005462264039
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.08931316977916666,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.35355339059327373,
+        "Re_Gamma": 0.07071067811865497,
+        "V_minus_V": [
+          0.07071067811865497,
+          0.35355339059327373
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.09618341360833334,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.2995809362117844,
+        "Re_Gamma": 0.20062717328036783,
+        "V_minus_V": [
+          0.20062717328036783,
+          0.2995809362117844
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.1030536574375,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.2000000000000001,
+        "Re_Gamma": 0.29999999999999993,
+        "V_minus_V": [
+          0.29999999999999993,
+          0.2000000000000001
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.10992390126666667,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.06997087679273069,
+        "Re_Gamma": 0.3537005462264039,
+        "V_minus_V": [
+          0.3537005462264039,
+          0.06997087679273069
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.11679414509583333,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.07071067811865434,
+        "Re_Gamma": 0.35355339059327384,
+        "V_minus_V": [
+          0.35355339059327384,
+          -0.07071067811865434
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.123664388925,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.20062717328036783,
+        "Re_Gamma": 0.29958093621178444,
+        "V_minus_V": [
+          0.29958093621178444,
+          -0.20062717328036783
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.13053463275416666,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.29999999999999993,
+        "Re_Gamma": 0.2000000000000001,
+        "V_minus_V": [
+          0.2000000000000001,
+          -0.29999999999999993
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.13740487658333334,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.35370054622640384,
+        "Re_Gamma": 0.06997087679273103,
+        "V_minus_V": [
+          0.06997087679273103,
+          -0.35370054622640384
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.14427512041249999,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.35355339059327373,
+        "Re_Gamma": -0.07071067811865495,
+        "V_minus_V": [
+          -0.07071067811865495,
+          -0.35355339059327373
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.15114536424166666,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.2995809362117841,
+        "Re_Gamma": -0.20062717328036836,
+        "V_minus_V": [
+          -0.20062717328036836,
+          -0.2995809362117841
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.15801560807083334,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.20000000000000012,
+        "Re_Gamma": -0.29999999999999993,
+        "V_minus_V": [
+          -0.29999999999999993,
+          -0.20000000000000012
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.1648858519,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": -0.06997087679273042,
+        "Re_Gamma": -0.353700546226404,
+        "V_minus_V": [
+          -0.353700546226404,
+          -0.06997087679273042
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.17175609572916667,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.07071067811865428,
+        "Re_Gamma": -0.35355339059327384,
+        "V_minus_V": [
+          -0.35355339059327384,
+          0.07071067811865428
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.17862633955833332,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.2006271732803678,
+        "Re_Gamma": -0.29958093621178444,
+        "V_minus_V": [
+          -0.29958093621178444,
+          0.2006271732803678
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.1854965833875,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.30000000000000027,
+        "Re_Gamma": -0.1999999999999996,
+        "V_minus_V": [
+          -0.1999999999999996,
+          0.30000000000000027
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.19236682721666667,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.35370054622640384,
+        "Re_Gamma": -0.06997087679273108,
+        "V_minus_V": [
+          -0.06997087679273108,
+          0.35370054622640384
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.19923707104583332,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.35355339059327384,
+        "Re_Gamma": 0.07071067811865428,
+        "V_minus_V": [
+          0.07071067811865428,
+          0.35355339059327384
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.206107314875,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.29958093621178444,
+        "Re_Gamma": 0.20062717328036778,
+        "V_minus_V": [
+          0.20062717328036778,
+          0.29958093621178444
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.21297755870416665,
+        "status": "DER"
+      },
+      {
+        "Im_Gamma": 0.20000000000000015,
+        "Re_Gamma": 0.2999999999999999,
+        "V_minus_V": [
+          0.2999999999999999,
+          0.20000000000000015
+        ],
+        "V_plus_V": [
+          1.0,
+          0.0
+        ],
+        "distance_m": 0.21984780253333333,
+        "status": "DER"
+      }
+    ],
+    "status": "DER"
+  },
+  "robustness": [
+    {
+      "parameter": "length_m",
+      "result": {
+        "Gamma": {
+          "imag": -0.019799809343819086,
+          "real": -0.00577381006099945
+        },
+        "S11": {
+          "imag": -0.019799809343819086,
+          "real": -0.00577381006099945
+        },
+        "VSWR": 1.042117621841829,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020624483815894254,
+        "mirror_Y_S": {
+          "imag": 0.020316652761268532,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.0272061655635,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8545376367322173,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019515752574784474,
+          "real": 0.00021634385979850287
+        },
+        "total_Y_S": {
+          "imag": 0.0008009001864840576,
+          "real": 0.020216343859798504
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.0272061655635
+    },
+    {
+      "parameter": "length_m",
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.027480975316666666
+    },
+    {
+      "parameter": "length_m",
+      "result": {
+        "Gamma": {
+          "imag": -0.019456563305134233,
+          "real": -0.005653731498131927
+        },
+        "S11": {
+          "imag": -0.019456563305134233,
+          "real": -0.005653731498131927
+        },
+        "VSWR": 1.0413607360196575,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020261355717218557,
+        "mirror_Y_S": {
+          "imag": 0.01968828254832194,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.02775578506983333,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8535907254760713,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.01890144590405161,
+          "real": 0.00021203893414604126
+        },
+        "total_Y_S": {
+          "imag": 0.0007868366442703306,
+          "real": 0.020212038934146043
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.02775578506983333
+    },
+    {
+      "parameter": "q",
+      "result": {
+        "Gamma": {
+          "imag": -0.019538876568979777,
+          "real": -0.009494020664521156
+        },
+        "S11": {
+          "imag": -0.019538876568979777,
+          "real": -0.009494020664521156
+        },
+        "VSWR": 1.0444114749903222,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.02172335439006098,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 50.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -2.0231037770102533,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019203700547320252,
+          "real": 0.0003676929139865762
+        },
+        "total_Y_S": {
+          "imag": 0.0007962994526797516,
+          "real": 0.020367692913986577
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 50.0
+    },
+    {
+      "parameter": "q",
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 100.0
+    },
+    {
+      "parameter": "q",
+      "result": {
+        "Gamma": {
+          "imag": -0.01968012045058853,
+          "real": -0.0038114761929826818
+        },
+        "S11": {
+          "imag": -0.01968012045058853,
+          "real": -0.0038114761929826818
+        },
+        "VSWR": 1.0409117283859637,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.02004580982947176,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 200.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.7620993407348942,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.01920706933617099,
+          "real": 0.00013737768853548638
+        },
+        "total_Y_S": {
+          "imag": 0.0007929306638290133,
+          "real": 0.020137377688535487
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 200.0
+    },
+    {
+      "parameter": "velocity_factor",
+      "result": {
+        "Gamma": {
+          "imag": -0.019114618534811726,
+          "real": -0.005518459959412817
+        },
+        "S11": {
+          "imag": -0.019114618534811726,
+          "real": -0.005518459959412817
+        },
+        "VSWR": 1.0405982675294048,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.019895276878068587,
+        "mirror_Y_S": {
+          "imag": 0.01904158293401851,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.64,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8518575413204672,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.018268774664186783,
+          "real": 0.00020710938796282067
+        },
+        "total_Y_S": {
+          "imag": 0.0007728082698317262,
+          "real": 0.020207109387962822
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.64
+    },
+    {
+      "parameter": "velocity_factor",
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.66
+    },
+    {
+      "parameter": "velocity_factor",
+      "result": {
+        "Gamma": {
+          "imag": -0.020153589594100216,
+          "real": -0.005914351575466932
+        },
+        "S11": {
+          "imag": -0.020153589594100216,
+          "real": -0.005914351575466932
+        },
+        "VSWR": 1.0429082087426833,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.021003493235308566,
+        "mirror_Y_S": {
+          "imag": 0.020946019103087778,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.68,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.856245991181358,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.02013058977180494,
+          "real": 0.00022144996789954496
+        },
+        "total_Y_S": {
+          "imag": 0.0008154293312828374,
+          "real": 0.020221449967899544
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.68
+    },
+    {
+      "parameter": "temperature_c",
+      "result": {
+        "Gamma": {
+          "imag": -0.019397806415900717,
+          "real": -0.005705463405841839
+        },
+        "S11": {
+          "imag": -0.019397806415900717,
+          "real": -0.005705463405841839
+        },
+        "VSWR": 1.0412734799716294,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020219475918632494,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 0.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8568585023298692,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.01921545611337867,
+          "real": 0.00021422234353798248
+        },
+        "total_Y_S": {
+          "imag": 0.000784543886621334,
+          "real": 0.020214222343537983
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.0
+    },
+    {
+      "parameter": "temperature_c",
+      "result": {
+        "Gamma": {
+          "imag": -0.01954963770729146,
+          "real": -0.00571034749019443
+        },
+        "S11": {
+          "imag": -0.01954963770729146,
+          "real": -0.00571034749019443
+        },
+        "VSWR": 1.0415799421788385,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020366551081248928,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 20.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8549849570353534,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019209312262664806,
+          "real": 0.0002141792789110609
+        },
+        "total_Y_S": {
+          "imag": 0.0007906877373351981,
+          "real": 0.02021417927891106
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 20.0
+    },
+    {
+      "parameter": "temperature_c",
+      "result": {
+        "Gamma": {
+          "imag": -0.019701420277980143,
+          "real": -0.005715276753837222
+        },
+        "S11": {
+          "imag": -0.019701420277980143,
+          "real": -0.005715276753837222
+        },
+        "VSWR": 1.0418865720103945,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.02051366250435449,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 40.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8531410602735605,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019203170298526646,
+          "real": 0.0002141362411962467
+        },
+        "total_Y_S": {
+          "imag": 0.0007968297014733575,
+          "real": 0.020214136241196248
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 40.0
+    },
+    {
+      "parameter": "amplitude",
+      "result": {
+        "Gamma": {
+          "imag": 0.005101122044959191,
+          "real": -0.005351593305354395
+        },
+        "S11": {
+          "imag": 0.005101122044959191,
+          "real": -0.005351593305354395
+        },
+        "VSWR": 1.0148967514322305,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.007393307583448873,
+        "mirror_Y_S": {
+          "imag": 0.019000000000000003,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": 2.3801522206895647,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": -0.00020624104484701436,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.95
+    },
+    {
+      "parameter": "amplitude",
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 1.0
+    },
+    {
+      "parameter": "amplitude",
+      "result": {
+        "Gamma": {
+          "imag": -0.04427951917853776,
+          "real": -0.007300526907050586
+        },
+        "S11": {
+          "imag": -0.04427951917853776,
+          "real": -0.007300526907050586
+        },
+        "VSWR": 1.093971836268152,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.04487731622772314,
+        "mirror_Y_S": {
+          "imag": 0.021000000000000005,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.7341999629334246,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0017937589551529874,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 1.05
+    },
+    {
+      "parameter": "phase_rad",
+      "result": {
+        "Gamma": {
+          "imag": -0.018097474019101736,
+          "real": -0.029787488287923686
+        },
+        "S11": {
+          "imag": -0.018097474019101736,
+          "real": -0.029787488287923686
+        },
+        "VSWR": 1.0722257026985738,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.03485416796274519,
+        "mirror_Y_S": {
+          "imag": 0.01997500520789933,
+          "real": 0.0009995833854135668
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -2.5956380723797947,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007687641630523129,
+          "real": 0.021213741142104295
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": -0.05
+    },
+    {
+      "parameter": "phase_rad",
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.0
+    },
+    {
+      "parameter": "phase_rad",
+      "result": {
+        "Gamma": {
+          "imag": -0.019989007673799325,
+          "real": 0.019637056077096617
+        },
+        "S11": {
+          "imag": -0.019989007673799325,
+          "real": 0.019637056077096617
+        },
+        "VSWR": 1.0576575471599488,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.02802096356584201,
+        "mirror_Y_S": {
+          "imag": 0.01997500520789933,
+          "real": -0.0009995833854135668
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -0.7942797506421907,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007687641630523129,
+          "real": 0.01921457437127716
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.05
+    },
+    {
+      "parameter": "delta_g_s",
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.0
+    },
+    {
+      "parameter": "delta_g_s",
+      "result": {
+        "Gamma": {
+          "imag": -0.019528330528820425,
+          "real": -0.008177240013713345
+        },
+        "S11": {
+          "imag": -0.019528330528820425,
+          "real": -0.008177240013713345
+        },
+        "VSWR": 1.0432583882427093,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.02117127647272914,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0001
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.9673504584351633,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020314157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.0001
+    },
+    {
+      "parameter": "delta_g_s",
+      "result": {
+        "Gamma": {
+          "imag": -0.01868506921354182,
+          "real": -0.029819587845565407
+        },
+        "S11": {
+          "imag": -0.01868506921354182,
+          "real": -0.029819587845565407
+        },
+        "VSWR": 1.072947112897529,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.035190050167543674,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.001
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -2.5818408231857157,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.02121415775669073
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.001
+    },
+    {
+      "parameter": "delta_b_s",
+      "result": {
+        "Gamma": {
+          "imag": 0.005101122044959191,
+          "real": -0.005351593305354395
+        },
+        "S11": {
+          "imag": 0.005101122044959191,
+          "real": -0.005351593305354395
+        },
+        "VSWR": 1.0148967514322305,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.007393307583448873,
+        "mirror_Y_S": {
+          "imag": 0.019000000000000003,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": 2.3801522206895647,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": -0.00020624104484701436,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": -0.001
+    },
+    {
+      "parameter": "delta_b_s",
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.0
+    },
+    {
+      "parameter": "delta_b_s",
+      "result": {
+        "Gamma": {
+          "imag": -0.04427951917853776,
+          "real": -0.007300526907050586
+        },
+        "S11": {
+          "imag": -0.04427951917853776,
+          "real": -0.007300526907050586
+        },
+        "VSWR": 1.093971836268152,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.04487731622772314,
+        "mirror_Y_S": {
+          "imag": 0.021000000000000005,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.7341999629334246,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0017937589551529874,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "value": 0.001
+    }
+  ],
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "slow_control": [
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.0
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.03707143213406164,
+          "real": -0.006709005336134097
+        },
+        "S11": {
+          "imag": -0.03707143213406164,
+          "real": -0.006709005336134097
+        },
+        "VSWR": 1.0782969757285015,
+        "alpha": 1.0353553390593273,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.03767362251059239,
+        "mirror_Y_S": {
+          "imag": 0.02070710678118655,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.7498335815213073,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0015008657363395315,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.015625
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.04427951917853776,
+          "real": -0.007300526907050586
+        },
+        "S11": {
+          "imag": -0.04427951917853776,
+          "real": -0.007300526907050586
+        },
+        "VSWR": 1.093971836268152,
+        "alpha": 1.05,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.04487731622772314,
+        "mirror_Y_S": {
+          "imag": 0.021000000000000005,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.7341999629334246,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0017937589551529874,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.03125
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.03707143213406164,
+          "real": -0.006709005336134097
+        },
+        "S11": {
+          "imag": -0.03707143213406164,
+          "real": -0.006709005336134097
+        },
+        "VSWR": 1.0782969757285015,
+        "alpha": 1.0353553390593273,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.03767362251059239,
+        "mirror_Y_S": {
+          "imag": 0.02070710678118655,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.7498335815213073,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0015008657363395315,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.046875
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.0625
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.0021432828223518713,
+          "real": -0.005330050130691768
+        },
+        "S11": {
+          "imag": -0.0021432828223518713,
+          "real": -0.005330050130691768
+        },
+        "VSWR": 1.0115560517411162,
+        "alpha": 0.9646446609406726,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.005744832082165321,
+        "mirror_Y_S": {
+          "imag": 0.019292893218813455,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -2.7592659925918577,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 8.665217396643804e-05,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.078125
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": 0.005101122044959191,
+          "real": -0.005351593305354395
+        },
+        "S11": {
+          "imag": 0.005101122044959191,
+          "real": -0.005351593305354395
+        },
+        "VSWR": 1.0148967514322305,
+        "alpha": 0.95,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.007393307583448873,
+        "mirror_Y_S": {
+          "imag": 0.019000000000000003,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": 2.3801522206895647,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": -0.00020624104484701436,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.09375
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.0021432828223518713,
+          "real": -0.005330050130691768
+        },
+        "S11": {
+          "imag": -0.0021432828223518713,
+          "real": -0.005330050130691768
+        },
+        "VSWR": 1.0115560517411162,
+        "alpha": 0.9646446609406726,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.005744832082165321,
+        "mirror_Y_S": {
+          "imag": 0.019292893218813455,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -2.7592659925918577,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 8.665217396643804e-05,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.109375
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.125
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.03707143213406164,
+          "real": -0.006709005336134097
+        },
+        "S11": {
+          "imag": -0.03707143213406164,
+          "real": -0.006709005336134097
+        },
+        "VSWR": 1.0782969757285015,
+        "alpha": 1.0353553390593273,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.03767362251059239,
+        "mirror_Y_S": {
+          "imag": 0.02070710678118655,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.7498335815213073,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0015008657363395315,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.140625
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.04427951917853776,
+          "real": -0.007300526907050586
+        },
+        "S11": {
+          "imag": -0.04427951917853776,
+          "real": -0.007300526907050586
+        },
+        "VSWR": 1.093971836268152,
+        "alpha": 1.05,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.04487731622772314,
+        "mirror_Y_S": {
+          "imag": 0.021000000000000005,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.7341999629334246,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0017937589551529874,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.15625
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.03707143213406164,
+          "real": -0.006709005336134097
+        },
+        "S11": {
+          "imag": -0.03707143213406164,
+          "real": -0.006709005336134097
+        },
+        "VSWR": 1.0782969757285015,
+        "alpha": 1.0353553390593273,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.03767362251059239,
+        "mirror_Y_S": {
+          "imag": 0.02070710678118655,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.7498335815213073,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0015008657363395315,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.171875
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.1875
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.0021432828223518713,
+          "real": -0.005330050130691768
+        },
+        "S11": {
+          "imag": -0.0021432828223518713,
+          "real": -0.005330050130691768
+        },
+        "VSWR": 1.0115560517411162,
+        "alpha": 0.9646446609406726,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.005744832082165321,
+        "mirror_Y_S": {
+          "imag": 0.019292893218813455,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -2.7592659925918577,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 8.665217396643804e-05,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.203125
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": 0.005101122044959191,
+          "real": -0.005351593305354395
+        },
+        "S11": {
+          "imag": 0.005101122044959191,
+          "real": -0.005351593305354395
+        },
+        "VSWR": 1.0148967514322305,
+        "alpha": 0.95,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.007393307583448873,
+        "mirror_Y_S": {
+          "imag": 0.019000000000000003,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": 2.3801522206895647,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": -0.00020624104484701436,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.21875
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.0021432828223518713,
+          "real": -0.005330050130691768
+        },
+        "S11": {
+          "imag": -0.0021432828223518713,
+          "real": -0.005330050130691768
+        },
+        "VSWR": 1.0115560517411162,
+        "alpha": 0.9646446609406726,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.005744832082165321,
+        "mirror_Y_S": {
+          "imag": 0.019292893218813455,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -2.7592659925918577,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 8.665217396643804e-05,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.234375
+    },
+    {
+      "result": {
+        "Gamma": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "S11": {
+          "imag": -0.019625535082138067,
+          "real": -0.0057128064773063775
+        },
+        "VSWR": 1.041733236374275,
+        "alpha": 1.0,
+        "hardware_boundary": {
+          "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+          "status": "STOP",
+          "stop_reason": "No measured circuit or active-element stability model"
+        },
+        "load_Y_S": {
+          "imag": 0.0,
+          "real": 0.02
+        },
+        "magnitude": 0.020440102375168908,
+        "mirror_Y_S": {
+          "imag": 0.020000000000000004,
+          "real": 0.0
+        },
+        "model": {
+          "conductor_np_m": 0.01,
+          "connector_l_h": 1e-10,
+          "connector_r_ohm": 0.1,
+          "dielectric_np_m": 0.01,
+          "dispersion_per_fraction": 0.01,
+          "frequency_hz": 900000000.0,
+          "junction_c_f": 1e-13,
+          "length_m": 0.027480975316666666,
+          "length_temp_coefficient": 1e-05,
+          "q": 100.0,
+          "reference_hz": 900000000.0,
+          "temperature_c": 30.0,
+          "velocity_factor": 0.66,
+          "z0_ohm": 50.0
+        },
+        "passive_reflection_domain": true,
+        "phase_rad": -1.8540593425137883,
+        "status": "DER",
+        "stub_Y_S": {
+          "imag": -0.019206241044847017,
+          "real": 0.00021415775669072609
+        },
+        "total_Y_S": {
+          "imag": 0.0007937589551529865,
+          "real": 0.020214157756690727
+        },
+        "verification_type": "simulation"
+      },
+      "status": "DER",
+      "time_s": 0.25
+    }
+  ],
+  "status": "DER",
+  "timestamp": "2026-09-10T15:41:09.212070+00:00",
+  "unmatched_control": {
+    "Gamma": {
+      "imag": -0.0,
+      "real": 0.3333333333333333
+    },
+    "S11": {
+      "imag": -0.0,
+      "real": 0.3333333333333333
+    },
+    "VSWR": 1.9999999999999998,
+    "alpha": 1.0,
+    "hardware_boundary": {
+      "next_observation": "Calibrated complex S11 frequency/alpha sweeps, repeatability, null control and stability characterization",
+      "status": "STOP",
+      "stop_reason": "No measured circuit or active-element stability model"
+    },
+    "load_Y_S": {
+      "imag": 0.0,
+      "real": 0.01
+    },
+    "magnitude": 0.3333333333333333,
+    "mirror_Y_S": {
+      "imag": 0.020000000000000004,
+      "real": 0.0
+    },
+    "model": {
+      "conductor_np_m": 0.0,
+      "connector_l_h": 0.0,
+      "connector_r_ohm": 0.0,
+      "dielectric_np_m": 0.0,
+      "dispersion_per_fraction": 0.0,
+      "frequency_hz": 900000000.0,
+      "junction_c_f": 0.0,
+      "length_m": 0.027480975316666666,
+      "length_temp_coefficient": 0.0,
+      "q": null,
+      "reference_hz": 900000000.0,
+      "temperature_c": 20.0,
+      "velocity_factor": 0.66,
+      "z0_ohm": 50.0
+    },
+    "passive_reflection_domain": true,
+    "phase_rad": -0.0,
+    "status": "DER",
+    "stub_Y_S": {
+      "imag": -0.020000000000000004,
+      "real": 0.0
+    },
+    "total_Y_S": {
+      "imag": 0.0,
+      "real": 0.01
+    },
+    "verification_type": "simulation"
+  },
+  "version": "foundation-0.1.0"
+}
