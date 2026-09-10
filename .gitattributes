@@ -1,0 +1,11 @@
+# Preserve the byte-hashed audit artifacts across Windows/Linux checkouts.
+/examples/adversarial_physics/** -text
+/src/upi/adversarial_physics.py text eol=lf
+/src/upi/dark_matter_candidate.py text eol=lf
+# The preserved input snapshot hashed these existing Windows CRLF source bytes.
+/data/information_physics/frequency_mass_equivalent.json text eol=crlf
+/data/bridges/frequency_mass_from_mass_energy.json text eol=crlf
+/data/bridges/frequency_mass_from_planck_constant.json text eol=crlf
+/data/bridges/frequency_mass_from_planck_einstein.json text eol=crlf
+/data/bridges/information_mass_from_frequency_mass.json text eol=crlf
+/data/bridges/frequency_mass_stops_at_27_11.json text eol=crlf
