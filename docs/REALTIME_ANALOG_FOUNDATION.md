@@ -218,6 +218,12 @@ Every envelope answers observed/derived/assumed/tested/failed/open. Nested
 MISFIT/STOP/HYP entries are collected. Unknown uncertainty stays null.
 Timestamps and local benchmark measurements vary across runs.
 
+The completed artifact set is [run-002](../examples/foundation/run-002/manifest.json),
+bound to code commit `88edfe8ddacfa5c94c213ceb9474dc0058c78af9` and source hashes.
+[Review metadata](../examples/foundation/review.json) records verification and
+the correction of run-001's inferred Skyttis publication year to unknown.
+Run-001 is retained; run-002 is the current reviewed output.
+
 The six-panel UI uses statuses as text, line styles, symbols, control labels and
 keyboard focus. Smith Γ is a model plot, not sensor data. Multilayer records are
 an observational list, not an invented map. No color-only status encoding.

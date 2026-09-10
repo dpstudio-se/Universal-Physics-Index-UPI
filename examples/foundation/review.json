@@ -1,0 +1,38 @@
+{
+  "status": "DER",
+  "verification_type": "software_test",
+  "current_run": "run-002",
+  "code_commit": "88edfe8ddacfa5c94c213ceb9474dc0058c78af9",
+  "tests": {
+    "status": "EST",
+    "passed": 222,
+    "baseline": 205,
+    "ruff": "pass",
+    "mypy": "pass, 44 files",
+    "browser": "six panels, 1440/390px, no console errors"
+  },
+  "preservation": {
+    "status": "EST",
+    "root_file_hashes_unchanged": 29,
+    "existing_scientific_records_changed": false
+  },
+  "corrections": [
+    {
+      "status": "ERR",
+      "superseded_record": "run-001/geographic_multilayer.json / RF:Skyttis-history / reported_year=2012",
+      "reason": "Publication year was inferred from search age, not resolved from the source; run-002 retains the historical report but leaves the year null"
+    },
+    {
+      "status": "DER",
+      "record": "run-002",
+      "change": "Includes recursive MISFIT/STOP/HYP audit summaries and committed source hashes; run-001 remains preserved"
+    }
+  ],
+  "boundaries": [
+    "No physical analog acquisition",
+    "No calibrated hardware S11",
+    "No surveyed infrastructure routes",
+    "No VM/EMU capability adapter",
+    "No external deployment or main merge"
+  ]
+}

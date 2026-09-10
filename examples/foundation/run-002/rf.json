@@ -1,0 +1,248 @@
+{
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "rf",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": [
+      {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "path": "rf/bands/0/propagation_boundary",
+        "reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent",
+        "status": "STOP"
+      },
+      {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "path": "rf/bands/1/propagation_boundary",
+        "reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent",
+        "status": "STOP"
+      },
+      {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "path": "rf/bands/2/propagation_boundary",
+        "reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent",
+        "status": "STOP"
+      },
+      {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "path": "rf/bands/3/propagation_boundary",
+        "reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent",
+        "status": "STOP"
+      },
+      {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "path": "rf/bands/4/propagation_boundary",
+        "reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent",
+        "status": "STOP"
+      }
+    ],
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "bands": [
+    {
+      "assumptions": [
+        "vacuum free-space far field; antenna far-field distance still requires aperture dimensions",
+        "ideal linear AM; common control phase does not imply common carrier phase"
+      ],
+      "distance_m": 1000.0,
+      "frequency_Hz": 450000000.0,
+      "fspl_dB": 85.51203349739025,
+      "midpoint_first_fresnel_radius_m": 12.90547812192774,
+      "propagation_boundary": {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "status": "STOP",
+        "stop_reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent"
+      },
+      "sidebands": [
+        {
+          "frequency_Hz": 449999992.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 450000000.0,
+          "relative_amplitude": 1.0,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 450000008.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        }
+      ],
+      "status": "DER",
+      "wavelength_m": 0.6662054622222222
+    },
+    {
+      "assumptions": [
+        "vacuum free-space far field; antenna far-field distance still requires aperture dimensions",
+        "ideal linear AM; common control phase does not imply common carrier phase"
+      ],
+      "distance_m": 1000.0,
+      "frequency_Hz": 900000000.0,
+      "fspl_dB": 91.53263341066987,
+      "midpoint_first_fresnel_radius_m": 9.125551094469735,
+      "propagation_boundary": {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "status": "STOP",
+        "stop_reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent"
+      },
+      "sidebands": [
+        {
+          "frequency_Hz": 899999992.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 900000000.0,
+          "relative_amplitude": 1.0,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 900000008.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        }
+      ],
+      "status": "DER",
+      "wavelength_m": 0.3331027311111111
+    },
+    {
+      "assumptions": [
+        "vacuum free-space far field; antenna far-field distance still requires aperture dimensions",
+        "ideal linear AM; common control phase does not imply common carrier phase"
+      ],
+      "distance_m": 1000.0,
+      "frequency_Hz": 2400000000.0,
+      "fspl_dB": 100.0520080561155,
+      "midpoint_first_fresnel_radius_m": 5.588235950786855,
+      "propagation_boundary": {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "status": "STOP",
+        "stop_reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent"
+      },
+      "sidebands": [
+        {
+          "frequency_Hz": 2399999992.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 2400000000.0,
+          "relative_amplitude": 1.0,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 2400000008.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        }
+      ],
+      "status": "DER",
+      "wavelength_m": 0.12491352416666666
+    },
+    {
+      "assumptions": [
+        "vacuum free-space far field; antenna far-field distance still requires aperture dimensions",
+        "ideal linear AM; common control phase does not imply common carrier phase"
+      ],
+      "distance_m": 1000.0,
+      "frequency_Hz": 5000000000.0,
+      "fspl_dB": 106.42718330860374,
+      "midpoint_first_fresnel_radius_m": 3.871643436578322,
+      "propagation_boundary": {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "status": "STOP",
+        "stop_reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent"
+      },
+      "sidebands": [
+        {
+          "frequency_Hz": 4999999992.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 5000000000.0,
+          "relative_amplitude": 1.0,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 5000000008.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        }
+      ],
+      "status": "DER",
+      "wavelength_m": 0.0599584916
+    },
+    {
+      "assumptions": [
+        "vacuum free-space far field; antenna far-field distance still requires aperture dimensions",
+        "ideal linear AM; common control phase does not imply common carrier phase"
+      ],
+      "distance_m": 1000.0,
+      "frequency_Hz": 6000000000.0,
+      "fspl_dB": 108.01080822955625,
+      "midpoint_first_fresnel_radius_m": 3.534310741384615,
+      "propagation_boundary": {
+        "next_observation": "Supply path geometry, antenna data and calibrated propagation measurements",
+        "status": "STOP",
+        "stop_reason": "Terrain, antenna pattern, polarization, buildings and atmospheric observations absent"
+      },
+      "sidebands": [
+        {
+          "frequency_Hz": 5999999992.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 6000000000.0,
+          "relative_amplitude": 1.0,
+          "status": "DER"
+        },
+        {
+          "frequency_Hz": 6000000008.0,
+          "relative_amplitude": 0.125,
+          "status": "DER"
+        }
+      ],
+      "status": "DER",
+      "wavelength_m": 0.04996540966666667
+    }
+  ],
+  "domain": "rf",
+  "guard": "No atmospheric shells; no global RF phase lock",
+  "periods": [
+    {
+      "frequency_Hz": 7.834,
+      "period_s": 0.12764871074802145,
+      "status": "DER"
+    },
+    {
+      "frequency_Hz": 8.0,
+      "period_s": 0.125,
+      "status": "DER"
+    },
+    {
+      "frequency_Hz": 0.0123,
+      "period_s": 81.30081300813008,
+      "status": "DER"
+    }
+  ],
+  "provenance": [
+    "https://www.itu.int/rec/R-REC-P.525-5-202411-I/en"
+  ],
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "status": "DER",
+  "timestamp": "2026-09-10T15:50:20.604536+00:00",
+  "uncertainty": null,
+  "uncertainty_scope": "unspecified unless explicitly propagated in the result; numerical tolerance is not measurement uncertainty",
+  "version": "foundation-0.1.0"
+}

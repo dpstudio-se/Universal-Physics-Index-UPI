@@ -1,0 +1,148 @@
+{
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "triangle",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": [
+      {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "path": "triangle/generations/0/topology",
+        "reason": "Triangle counts do not determine shared vertices, edges or state",
+        "status": "STOP"
+      },
+      {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "path": "triangle/generations/1/topology",
+        "reason": "Triangle counts do not determine shared vertices, edges or state",
+        "status": "STOP"
+      },
+      {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "path": "triangle/generations/2/topology",
+        "reason": "Triangle counts do not determine shared vertices, edges or state",
+        "status": "STOP"
+      },
+      {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "path": "triangle/generations/3/topology",
+        "reason": "Triangle counts do not determine shared vertices, edges or state",
+        "status": "STOP"
+      },
+      {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "path": "triangle/generations/4/topology",
+        "reason": "Triangle counts do not determine shared vertices, edges or state",
+        "status": "STOP"
+      }
+    ],
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "domain": "triangle",
+  "generations": [
+    {
+      "cumulative": 1,
+      "edges": [],
+      "generation": 0,
+      "levels": [
+        1,
+        1
+      ],
+      "selected": [],
+      "status": "DER",
+      "topology": {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "status": "STOP",
+        "stop_reason": "Triangle counts do not determine shared vertices, edges or state"
+      },
+      "triangles": 1
+    },
+    {
+      "cumulative": 4,
+      "edges": [],
+      "generation": 1,
+      "levels": [
+        2,
+        4
+      ],
+      "selected": [],
+      "status": "DER",
+      "topology": {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "status": "STOP",
+        "stop_reason": "Triangle counts do not determine shared vertices, edges or state"
+      },
+      "triangles": 3
+    },
+    {
+      "cumulative": 13,
+      "edges": [],
+      "generation": 2,
+      "levels": [
+        5,
+        13
+      ],
+      "selected": [],
+      "status": "DER",
+      "topology": {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "status": "STOP",
+        "stop_reason": "Triangle counts do not determine shared vertices, edges or state"
+      },
+      "triangles": 9
+    },
+    {
+      "cumulative": 40,
+      "edges": [],
+      "generation": 3,
+      "levels": [
+        14,
+        40
+      ],
+      "selected": [],
+      "status": "DER",
+      "topology": {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "status": "STOP",
+        "stop_reason": "Triangle counts do not determine shared vertices, edges or state"
+      },
+      "triangles": 27
+    },
+    {
+      "cumulative": 121,
+      "edges": [],
+      "generation": 4,
+      "levels": [
+        41,
+        121
+      ],
+      "selected": [
+        41,
+        42
+      ],
+      "status": "DER",
+      "topology": {
+        "next_observation": "Supply triangle incidence and parent/state relations",
+        "status": "STOP",
+        "stop_reason": "Triangle counts do not determine shared vertices, edges or state"
+      },
+      "triangles": 81
+    }
+  ],
+  "provenance": [
+    "declared fixture/input; source details retained in nested records"
+  ],
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "status": "DER",
+  "timestamp": "2026-09-10T15:50:20.606038+00:00",
+  "uncertainty": null,
+  "uncertainty_scope": "unspecified unless explicitly propagated in the result; numerical tolerance is not measurement uncertainty",
+  "version": "foundation-0.1.0"
+}

@@ -1,0 +1,168 @@
+{
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "motif",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": [
+      {
+        "scope": "No empirical validation is claimed by this calculation",
+        "status": "DER"
+      }
+    ],
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "blinded_comparison": {
+    "articulation_points": [
+      "x"
+    ],
+    "assumptions": "undirected unweighted simple topology only",
+    "betweenness": {
+      "w": 0.0,
+      "x": 1.0,
+      "y": 0.0,
+      "z": 0.0
+    },
+    "blinded_signature": {
+      "betweenness": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "closeness": [
+        0.6,
+        0.6,
+        0.6,
+        1.0
+      ],
+      "cycle_rank": 0,
+      "degree": [
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    "closeness": {
+      "w": 0.6,
+      "x": 1.0,
+      "y": 0.6,
+      "z": 0.6
+    },
+    "community_method": "connected components; no modularity optimization",
+    "components": [
+      [
+        "w",
+        "x",
+        "y",
+        "z"
+      ]
+    ],
+    "cycle_rank": 0,
+    "degree_distribution": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "guard": "SHARED TOPOLOGY != SHARED PHYSICS",
+    "mean_reachable_path_length": 1.5,
+    "modularity": 0.0,
+    "redundancy_cycle_rank": 0,
+    "status": "DER",
+    "verification_type": "software_test",
+    "vertex_removal_components": {
+      "w": 1,
+      "x": 3,
+      "y": 1,
+      "z": 1
+    }
+  },
+  "domain": "motif",
+  "guard": "synthetic relabeling control, not measured cross-infrastructure equivalence",
+  "provenance": [
+    "declared fixture/input; source details retained in nested records"
+  ],
+  "same_signature": true,
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "status": "DER",
+  "synthetic_reference": {
+    "articulation_points": [
+      "b"
+    ],
+    "assumptions": "undirected unweighted simple topology only",
+    "betweenness": {
+      "a": 0.0,
+      "b": 1.0,
+      "c": 0.0,
+      "d": 0.0
+    },
+    "blinded_signature": {
+      "betweenness": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "closeness": [
+        0.6,
+        0.6,
+        0.6,
+        1.0
+      ],
+      "cycle_rank": 0,
+      "degree": [
+        1,
+        1,
+        1,
+        3
+      ]
+    },
+    "closeness": {
+      "a": 0.6,
+      "b": 1.0,
+      "c": 0.6,
+      "d": 0.6
+    },
+    "community_method": "connected components; no modularity optimization",
+    "components": [
+      [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    "cycle_rank": 0,
+    "degree_distribution": [
+      1,
+      1,
+      1,
+      3
+    ],
+    "guard": "SHARED TOPOLOGY != SHARED PHYSICS",
+    "mean_reachable_path_length": 1.5,
+    "modularity": 0.0,
+    "redundancy_cycle_rank": 0,
+    "status": "DER",
+    "verification_type": "software_test",
+    "vertex_removal_components": {
+      "a": 1,
+      "b": 3,
+      "c": 1,
+      "d": 1
+    }
+  },
+  "timestamp": "2026-09-10T15:50:20.605993+00:00",
+  "uncertainty": null,
+  "uncertainty_scope": "unspecified unless explicitly propagated in the result; numerical tolerance is not measurement uncertainty",
+  "version": "foundation-0.1.0"
+}

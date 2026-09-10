@@ -1,0 +1,850 @@
+{
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "derivation",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": [
+      {
+        "next_observation": null,
+        "path": "derivation/edges/6",
+        "reason": "unverified hypothesis",
+        "status": "HYP"
+      },
+      {
+        "next_observation": "Supply a physically justified, sourced bridge and its domain tests",
+        "path": "derivation/unsupported",
+        "reason": "No executable EST/DER route to requested identity",
+        "status": "STOP"
+      },
+      {
+        "next_observation": null,
+        "path": "derivation/unsupported/blocked_bridges/0",
+        "reason": "unverified hypothesis",
+        "status": "HYP"
+      }
+    ],
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "domain": "derivation",
+  "edges": [
+    {
+      "assumptions": [
+        "same electromagnetic quantum and lab frame; vacuum wavelength"
+      ],
+      "cost": 1.0,
+      "equation": "E=h*f",
+      "factor": 6.62607015e-34,
+      "id": "planck",
+      "input_unit": "Hz",
+      "inverse": "frequency_from_energy",
+      "output_unit": "J",
+      "provenance": [
+        "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+      ],
+      "reciprocal": false,
+      "source": "frequency",
+      "status": "DER",
+      "target": "energy"
+    },
+    {
+      "assumptions": [
+        "same electromagnetic quantum and lab frame; vacuum wavelength"
+      ],
+      "cost": 1.0,
+      "equation": "m_eq=E/c^2",
+      "factor": 1.1126500560536185e-17,
+      "id": "mass_equivalent",
+      "input_unit": "J",
+      "inverse": "energy_from_mass",
+      "output_unit": "kg",
+      "provenance": [
+        "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+      ],
+      "reciprocal": false,
+      "source": "energy",
+      "status": "DER",
+      "target": "mass_equivalent"
+    },
+    {
+      "assumptions": [
+        "same electromagnetic quantum and lab frame; vacuum wavelength"
+      ],
+      "cost": 1.0,
+      "equation": "f=E/h",
+      "factor": 1.5091901796421518e+33,
+      "id": "frequency_from_energy",
+      "input_unit": "J",
+      "inverse": "planck",
+      "output_unit": "Hz",
+      "provenance": [
+        "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+      ],
+      "reciprocal": false,
+      "source": "energy",
+      "status": "DER",
+      "target": "frequency"
+    },
+    {
+      "assumptions": [
+        "same electromagnetic quantum and lab frame; vacuum wavelength"
+      ],
+      "cost": 1.0,
+      "equation": "E=m_eq*c^2",
+      "factor": 89875517873681764,
+      "id": "energy_from_mass",
+      "input_unit": "kg",
+      "inverse": "mass_equivalent",
+      "output_unit": "J",
+      "provenance": [
+        "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+      ],
+      "reciprocal": false,
+      "source": "mass_equivalent",
+      "status": "DER",
+      "target": "energy"
+    },
+    {
+      "assumptions": [
+        "same electromagnetic quantum and lab frame; vacuum wavelength"
+      ],
+      "cost": 1.0,
+      "equation": "lambda=c/f",
+      "factor": 299792458,
+      "id": "wavelength",
+      "input_unit": "Hz",
+      "inverse": "frequency_from_wavelength",
+      "output_unit": "m",
+      "provenance": [
+        "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+      ],
+      "reciprocal": true,
+      "source": "frequency",
+      "status": "DER",
+      "target": "vacuum_wavelength"
+    },
+    {
+      "assumptions": [
+        "same electromagnetic quantum and lab frame; vacuum wavelength"
+      ],
+      "cost": 1.0,
+      "equation": "f=c/lambda",
+      "factor": 299792458,
+      "id": "frequency_from_wavelength",
+      "input_unit": "m",
+      "inverse": "wavelength",
+      "output_unit": "Hz",
+      "provenance": [
+        "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+      ],
+      "reciprocal": true,
+      "source": "vacuum_wavelength",
+      "status": "DER",
+      "target": "frequency"
+    },
+    {
+      "assumptions": [
+        "Independent particle identification is missing"
+      ],
+      "cost": 1.0,
+      "equation": "m_chi ?= m_eq",
+      "factor": 1.0,
+      "id": "dm_identity",
+      "input_unit": "kg",
+      "inverse": null,
+      "output_unit": "kg",
+      "provenance": [
+        "UPI<open-problems,1,dark_matter,H_DM_octave_84>"
+      ],
+      "reciprocal": false,
+      "source": "mass_equivalent",
+      "status": "HYP",
+      "target": "dark_matter_particle"
+    }
+  ],
+  "provenance": [
+    "data/information_physics/frequency_mass_equivalent.json",
+    "https://arxiv.org/abs/1402.0402"
+  ],
+  "queries": [
+    {
+      "cost": 2.0,
+      "expanded_edges": [
+        "planck",
+        "mass_equivalent"
+      ],
+      "graph_version": "e8a6db30cbc4ab746c03465ea11a8f80d6d323992248e0f33b0982887b706ba5",
+      "input": {
+        "domain": "frequency",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "scope": "declared input, not a sensor measurement",
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "Hz",
+        "value": 7.834
+      },
+      "method": "dijkstra",
+      "output": {
+        "domain": "mass_equivalent",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "kg",
+        "value": 5.775614403474875e-50
+      },
+      "shortcuts": [],
+      "source": "frequency",
+      "status": "DER",
+      "target": "mass_equivalent",
+      "trace": [
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "E=h*f",
+          "factor": 6.62607015e-34,
+          "id": "planck",
+          "input": 7.834,
+          "input_unit": "Hz",
+          "inverse": "frequency_from_energy",
+          "output": 5.1908633555099995e-33,
+          "output_uncertainty": null,
+          "output_unit": "J",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "frequency",
+          "status": "DER",
+          "target": "energy",
+          "tests": "tests/test_foundation.py"
+        },
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "m_eq=E/c^2",
+          "factor": 1.1126500560536185e-17,
+          "id": "mass_equivalent",
+          "input": 5.1908633555099995e-33,
+          "input_unit": "J",
+          "inverse": "energy_from_mass",
+          "output": 5.775614403474875e-50,
+          "output_uncertainty": null,
+          "output_unit": "kg",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "energy",
+          "status": "DER",
+          "target": "mass_equivalent",
+          "tests": "tests/test_foundation.py"
+        }
+      ],
+      "uncertainty_method": "first-order propagation; does not estimate missing input uncertainty",
+      "verification_type": "software_test"
+    },
+    {
+      "cost": 2.0,
+      "expanded_edges": [
+        "planck",
+        "mass_equivalent"
+      ],
+      "graph_version": "e8a6db30cbc4ab746c03465ea11a8f80d6d323992248e0f33b0982887b706ba5",
+      "input": {
+        "domain": "frequency",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "scope": "declared input, not a sensor measurement",
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "Hz",
+        "value": 7.834
+      },
+      "method": "bidirectional",
+      "output": {
+        "domain": "mass_equivalent",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "kg",
+        "value": 5.775614403474875e-50
+      },
+      "shortcuts": [],
+      "source": "frequency",
+      "status": "DER",
+      "target": "mass_equivalent",
+      "trace": [
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "E=h*f",
+          "factor": 6.62607015e-34,
+          "id": "planck",
+          "input": 7.834,
+          "input_unit": "Hz",
+          "inverse": "frequency_from_energy",
+          "output": 5.1908633555099995e-33,
+          "output_uncertainty": null,
+          "output_unit": "J",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "frequency",
+          "status": "DER",
+          "target": "energy",
+          "tests": "tests/test_foundation.py"
+        },
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "m_eq=E/c^2",
+          "factor": 1.1126500560536185e-17,
+          "id": "mass_equivalent",
+          "input": 5.1908633555099995e-33,
+          "input_unit": "J",
+          "inverse": "energy_from_mass",
+          "output": 5.775614403474875e-50,
+          "output_uncertainty": null,
+          "output_unit": "kg",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "energy",
+          "status": "DER",
+          "target": "mass_equivalent",
+          "tests": "tests/test_foundation.py"
+        }
+      ],
+      "uncertainty_method": "first-order propagation; does not estimate missing input uncertainty",
+      "verification_type": "software_test"
+    },
+    {
+      "cost": 2.0,
+      "expanded_edges": [
+        "planck",
+        "mass_equivalent"
+      ],
+      "graph_version": "e8a6db30cbc4ab746c03465ea11a8f80d6d323992248e0f33b0982887b706ba5",
+      "input": {
+        "domain": "frequency",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "scope": "declared input, not a sensor measurement",
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "Hz",
+        "value": 7.834
+      },
+      "method": "cch",
+      "output": {
+        "domain": "mass_equivalent",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "kg",
+        "value": 5.775614403474875e-50
+      },
+      "shortcuts": [
+        {
+          "cost": 2.0,
+          "expanded_edges": [
+            "planck",
+            "mass_equivalent"
+          ],
+          "source": "frequency",
+          "status": "DER",
+          "target": "mass_equivalent"
+        },
+        {
+          "cost": 2.0,
+          "expanded_edges": [
+            "energy_from_mass",
+            "frequency_from_energy"
+          ],
+          "source": "mass_equivalent",
+          "status": "DER",
+          "target": "frequency"
+        },
+        {
+          "cost": 3.0,
+          "expanded_edges": [
+            "energy_from_mass",
+            "frequency_from_energy",
+            "wavelength"
+          ],
+          "source": "mass_equivalent",
+          "status": "DER",
+          "target": "vacuum_wavelength"
+        },
+        {
+          "cost": 3.0,
+          "expanded_edges": [
+            "frequency_from_wavelength",
+            "planck",
+            "mass_equivalent"
+          ],
+          "source": "vacuum_wavelength",
+          "status": "DER",
+          "target": "mass_equivalent"
+        }
+      ],
+      "source": "frequency",
+      "status": "DER",
+      "target": "mass_equivalent",
+      "trace": [
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "E=h*f",
+          "factor": 6.62607015e-34,
+          "id": "planck",
+          "input": 7.834,
+          "input_unit": "Hz",
+          "inverse": "frequency_from_energy",
+          "output": 5.1908633555099995e-33,
+          "output_uncertainty": null,
+          "output_unit": "J",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "frequency",
+          "status": "DER",
+          "target": "energy",
+          "tests": "tests/test_foundation.py"
+        },
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "m_eq=E/c^2",
+          "factor": 1.1126500560536185e-17,
+          "id": "mass_equivalent",
+          "input": 5.1908633555099995e-33,
+          "input_unit": "J",
+          "inverse": "energy_from_mass",
+          "output": 5.775614403474875e-50,
+          "output_uncertainty": null,
+          "output_unit": "kg",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "energy",
+          "status": "DER",
+          "target": "mass_equivalent",
+          "tests": "tests/test_foundation.py"
+        }
+      ],
+      "uncertainty_method": "first-order propagation; does not estimate missing input uncertainty",
+      "verification_type": "software_test"
+    },
+    {
+      "cost": 2.0,
+      "expanded_edges": [
+        "planck",
+        "mass_equivalent"
+      ],
+      "graph_version": "e8a6db30cbc4ab746c03465ea11a8f80d6d323992248e0f33b0982887b706ba5",
+      "input": {
+        "domain": "frequency",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "scope": "declared input, not a sensor measurement",
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "Hz",
+        "value": 8.0
+      },
+      "method": "dijkstra",
+      "output": {
+        "domain": "mass_equivalent",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "kg",
+        "value": 5.897997859050167e-50
+      },
+      "shortcuts": [],
+      "source": "frequency",
+      "status": "DER",
+      "target": "mass_equivalent",
+      "trace": [
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "E=h*f",
+          "factor": 6.62607015e-34,
+          "id": "planck",
+          "input": 8.0,
+          "input_unit": "Hz",
+          "inverse": "frequency_from_energy",
+          "output": 5.30085612e-33,
+          "output_uncertainty": null,
+          "output_unit": "J",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "frequency",
+          "status": "DER",
+          "target": "energy",
+          "tests": "tests/test_foundation.py"
+        },
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "m_eq=E/c^2",
+          "factor": 1.1126500560536185e-17,
+          "id": "mass_equivalent",
+          "input": 5.30085612e-33,
+          "input_unit": "J",
+          "inverse": "energy_from_mass",
+          "output": 5.897997859050167e-50,
+          "output_uncertainty": null,
+          "output_unit": "kg",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "energy",
+          "status": "DER",
+          "target": "mass_equivalent",
+          "tests": "tests/test_foundation.py"
+        }
+      ],
+      "uncertainty_method": "first-order propagation; does not estimate missing input uncertainty",
+      "verification_type": "software_test"
+    },
+    {
+      "cost": 2.0,
+      "expanded_edges": [
+        "planck",
+        "mass_equivalent"
+      ],
+      "graph_version": "e8a6db30cbc4ab746c03465ea11a8f80d6d323992248e0f33b0982887b706ba5",
+      "input": {
+        "domain": "frequency",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "scope": "declared input, not a sensor measurement",
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "Hz",
+        "value": 8.0
+      },
+      "method": "bidirectional",
+      "output": {
+        "domain": "mass_equivalent",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "kg",
+        "value": 5.897997859050167e-50
+      },
+      "shortcuts": [],
+      "source": "frequency",
+      "status": "DER",
+      "target": "mass_equivalent",
+      "trace": [
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "E=h*f",
+          "factor": 6.62607015e-34,
+          "id": "planck",
+          "input": 8.0,
+          "input_unit": "Hz",
+          "inverse": "frequency_from_energy",
+          "output": 5.30085612e-33,
+          "output_uncertainty": null,
+          "output_unit": "J",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "frequency",
+          "status": "DER",
+          "target": "energy",
+          "tests": "tests/test_foundation.py"
+        },
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "m_eq=E/c^2",
+          "factor": 1.1126500560536185e-17,
+          "id": "mass_equivalent",
+          "input": 5.30085612e-33,
+          "input_unit": "J",
+          "inverse": "energy_from_mass",
+          "output": 5.897997859050167e-50,
+          "output_uncertainty": null,
+          "output_unit": "kg",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "energy",
+          "status": "DER",
+          "target": "mass_equivalent",
+          "tests": "tests/test_foundation.py"
+        }
+      ],
+      "uncertainty_method": "first-order propagation; does not estimate missing input uncertainty",
+      "verification_type": "software_test"
+    },
+    {
+      "cost": 2.0,
+      "expanded_edges": [
+        "planck",
+        "mass_equivalent"
+      ],
+      "graph_version": "e8a6db30cbc4ab746c03465ea11a8f80d6d323992248e0f33b0982887b706ba5",
+      "input": {
+        "domain": "frequency",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "scope": "declared input, not a sensor measurement",
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "Hz",
+        "value": 8.0
+      },
+      "method": "cch",
+      "output": {
+        "domain": "mass_equivalent",
+        "provenance": [
+          "separate declared reference"
+        ],
+        "status": "DER",
+        "uncertainty": null,
+        "unit": "kg",
+        "value": 5.897997859050167e-50
+      },
+      "shortcuts": [
+        {
+          "cost": 2.0,
+          "expanded_edges": [
+            "planck",
+            "mass_equivalent"
+          ],
+          "source": "frequency",
+          "status": "DER",
+          "target": "mass_equivalent"
+        },
+        {
+          "cost": 2.0,
+          "expanded_edges": [
+            "energy_from_mass",
+            "frequency_from_energy"
+          ],
+          "source": "mass_equivalent",
+          "status": "DER",
+          "target": "frequency"
+        },
+        {
+          "cost": 3.0,
+          "expanded_edges": [
+            "energy_from_mass",
+            "frequency_from_energy",
+            "wavelength"
+          ],
+          "source": "mass_equivalent",
+          "status": "DER",
+          "target": "vacuum_wavelength"
+        },
+        {
+          "cost": 3.0,
+          "expanded_edges": [
+            "frequency_from_wavelength",
+            "planck",
+            "mass_equivalent"
+          ],
+          "source": "vacuum_wavelength",
+          "status": "DER",
+          "target": "mass_equivalent"
+        }
+      ],
+      "source": "frequency",
+      "status": "DER",
+      "target": "mass_equivalent",
+      "trace": [
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "E=h*f",
+          "factor": 6.62607015e-34,
+          "id": "planck",
+          "input": 8.0,
+          "input_unit": "Hz",
+          "inverse": "frequency_from_energy",
+          "output": 5.30085612e-33,
+          "output_uncertainty": null,
+          "output_unit": "J",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "frequency",
+          "status": "DER",
+          "target": "energy",
+          "tests": "tests/test_foundation.py"
+        },
+        {
+          "assumptions": [
+            "same electromagnetic quantum and lab frame; vacuum wavelength"
+          ],
+          "constraints": [
+            "positive finite scalar; named-energy referent"
+          ],
+          "cost": 1.0,
+          "equation": "m_eq=E/c^2",
+          "factor": 1.1126500560536185e-17,
+          "id": "mass_equivalent",
+          "input": 5.30085612e-33,
+          "input_unit": "J",
+          "inverse": "energy_from_mass",
+          "output": 5.897997859050167e-50,
+          "output_uncertainty": null,
+          "output_unit": "kg",
+          "provenance": [
+            "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+          ],
+          "reciprocal": false,
+          "source": "energy",
+          "status": "DER",
+          "target": "mass_equivalent",
+          "tests": "tests/test_foundation.py"
+        }
+      ],
+      "uncertainty_method": "first-order propagation; does not estimate missing input uncertainty",
+      "verification_type": "software_test"
+    }
+  ],
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "status": "DER",
+  "timestamp": "2026-09-10T15:50:20.604191+00:00",
+  "uncertainty": null,
+  "uncertainty_scope": "unspecified unless explicitly propagated in the result; numerical tolerance is not measurement uncertainty",
+  "unsupported": {
+    "blocked_bridges": [
+      {
+        "assumptions": [
+          "Independent particle identification is missing"
+        ],
+        "cost": 1.0,
+        "equation": "m_chi ?= m_eq",
+        "factor": 1.0,
+        "id": "dm_identity",
+        "input_unit": "kg",
+        "inverse": null,
+        "output_unit": "kg",
+        "provenance": [
+          "UPI<open-problems,1,dark_matter,H_DM_octave_84>"
+        ],
+        "reciprocal": false,
+        "source": "mass_equivalent",
+        "status": "HYP",
+        "target": "dark_matter_particle"
+      }
+    ],
+    "input": {
+      "domain": "frequency",
+      "provenance": [
+        "control"
+      ],
+      "scope": "declared input, not a sensor measurement",
+      "status": "DER",
+      "uncertainty": null,
+      "unit": "Hz",
+      "value": 8.0
+    },
+    "method": "cch",
+    "next_observation": "Supply a physically justified, sourced bridge and its domain tests",
+    "source": "frequency",
+    "status": "STOP",
+    "stop_reason": "No executable EST/DER route to requested identity",
+    "target": "dark_matter_particle"
+  },
+  "version": "foundation-0.1.0"
+}

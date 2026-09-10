@@ -1,0 +1,57 @@
+{
+  "audit": {
+    "assumed": "declared operator/domain assumptions in result",
+    "derived": "remote_observation",
+    "failed": [],
+    "observed": {
+      "input": {
+        "origin": "declared example fixtures",
+        "physical_measurement": false
+      },
+      "scope": "received declaration; no physical measurement implied",
+      "sha256": "41f2c66ed92fffa16cb07d846afc50957ed06c299a4fbf5ab7e5c98185711b9f"
+    },
+    "open": [
+      {
+        "next_observation": "Provide a separately audited isolation runtime and explicit capability grants",
+        "path": "remote_observation/execution_boundary",
+        "reason": "No isolated VM/EMU capability adapter is installed in this service",
+        "status": "STOP"
+      }
+    ],
+    "tested": "tests/test_foundation.py; verification_type=software_test"
+  },
+  "committed": false,
+  "domain": "remote_observation",
+  "executed": false,
+  "execution_boundary": {
+    "next_observation": "Provide a separately audited isolation runtime and explicit capability grants",
+    "status": "STOP",
+    "stop_reason": "No isolated VM/EMU capability adapter is installed in this service"
+  },
+  "granted_capabilities": [],
+  "inherited_authority": [],
+  "policy": {
+    "host_writes": "DENY",
+    "network": "DENY",
+    "runtime_inheritance": "NONE",
+    "secrets": "NONE",
+    "tools": "DENY"
+  },
+  "provenance": [
+    "declared fixture/input; source details retained in nested records"
+  ],
+  "requested_capabilities": [
+    "network",
+    "host_write"
+  ],
+  "scope": "text-only inspection, not an asserted host sandbox or semantic safety verdict",
+  "service_boundary": "UPI != OdinOS; observe != execute != commit",
+  "status": "DER",
+  "text_sha256": "efa80a5222a686b65ff55e515937178c4500abfea9c1743409d624ea38078263",
+  "timestamp": "2026-09-10T15:50:20.606243+00:00",
+  "uncertainty": null,
+  "uncertainty_scope": "unspecified unless explicitly propagated in the result; numerical tolerance is not measurement uncertainty",
+  "verdict": "FLAG",
+  "version": "foundation-0.1.0"
+}

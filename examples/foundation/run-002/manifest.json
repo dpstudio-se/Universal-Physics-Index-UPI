@@ -1,0 +1,26 @@
+{
+  "status": "EST",
+  "scope": "artifact byte hashes",
+  "version": "foundation-0.1.0",
+  "git_commit": "88edfe8ddacfa5c94c213ceb9474dc0058c78af9",
+  "source_sha256": {
+    "src\\upi\\foundation.py": "d6c3e87772d72fd532ab8b7d2e1bdbb2f6bd432b3535fb9ddaf270fd59e5c66d",
+    "src\\upi\\analog_rf.py": "cc1f658bd26cf6a46dcce699ff827683ae12a878f7e8c2df670e6cdcc1747c7b",
+    "src\\upi\\derivation_router.py": "4dbe01f1f28459f4c3c6bd5151888a85732edae8218a5fef164b096998fe51d1",
+    "src\\upi\\multilayer.py": "99f6a92c3c8251cdb95e97622ec2ac48c952754b7edb142c318e4b7c03b40a29"
+  },
+  "sha256": {
+    "derivation.json": "a42dbd57994dda99ead71dda6029899902fdad99bd4e9b80ab3d627eb82ce477",
+    "analog_digital.json": "bfbb717af13dd9a730eeeb94e82f4773a4558e8a43901ba7a7a819266584f0a1",
+    "rf.json": "849eeea9c82d22212814b1d690d1b1783820408c55c8d0142a55262b88b61a30",
+    "smith_stub.json": "6b005394ea6d20be8e1f38c0444a94cb0110f775a7fe6df991ac858cfea7e9a5",
+    "geographic_multilayer.json": "df6d171794d143ed6e618c151a2e288a4545747be85144a7cb7f45a1e85acba2",
+    "motif.json": "21623816faa165d1f1c6a1d4ec800c9add30bcb17b77d1d9a24efbde55da7455",
+    "triangle.json": "0368534610081f55c97c2038e3573d0462d9dcaefae9702eec9138093095b38e",
+    "hydrology.json": "aa3bc91880bd0bb46a40e1fb632208b09c4453929a061fe7c3ed6300d36e72f5",
+    "thermodynamics.json": "d781b2babac988de5c4b7a4b6f381dd6afe0e9e1824f28076ec82b47c7d45b63",
+    "remote_observation.json": "99417e86b1c0966a4ec934610e291224ebf6bb9997686d5b95cccf763ab44ef8",
+    "optimization.json": "9128329013d38d6bd80ef3cff3f35eabab956e293e221963ec8f65e5852c5969",
+    "hypotheses.json": "c1ab27bf037734646b8e3f9e34afaecee0a03a10f9b3b2349c796d0d2c8f5023"
+  }
+}
