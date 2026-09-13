@@ -46,7 +46,7 @@ def run_legacy_review(*, use_original=False):
             EvidenceArtifact(
                 "workspace:data/mechanics/hyperbolic_orbit.json@0.1.1",
                 corrected.read_bytes(),
-                "53fa70e66f2041f4ecb46218792783fec6676904cd5dfe43a709f237e50303f9",
+                "db6fd8853dfd6c4bd38af007f3167fa0d8198c5602500ac0ee074f88474df9ff",
             ),
         )
     case = json.loads(artifacts[0].content)
@@ -128,7 +128,7 @@ def run_review(*, use_original=False, use_primary=True):
         EvidenceArtifact(
             "workspace:data/mechanics/hyperbolic_orbit.json@0.1.1",
             (root.parents[1] / "data/mechanics/hyperbolic_orbit.json").read_bytes(),
-            "53fa70e66f2041f4ecb46218792783fec6676904cd5dfe43a709f237e50303f9",
+            "db6fd8853dfd6c4bd38af007f3167fa0d8198c5602500ac0ee074f88474df9ff",
         ),
     )
 

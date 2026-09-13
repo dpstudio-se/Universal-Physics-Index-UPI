@@ -64,3 +64,17 @@ def test_published_atlas_case_is_scoped_stop():
     )
     assert published == candidate
     assert published["status"] == "STOP"
+
+
+@pytest.mark.parametrize(
+    "filename,source,target",
+    [
+        ("e8_weyl_from_lattice", "e8_weyl_group", "e8_lattice"),
+        ("e8_coxeter_from_weyl", "e8_coxeter_plane", "e8_weyl_group"),
+    ],
+)
+def test_e8_derivation_points_from_result_to_premise(filename, source, target):
+    bridge = json.loads((ROOT / f"data/bridges/{filename}.json").read_bytes())
+    assert bridge["relation"] == "DERIVED_FROM"
+    assert bridge["source"].endswith("," + source + ">")
+    assert bridge["target"].endswith("," + target + ">")

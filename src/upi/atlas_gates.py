@@ -245,6 +245,7 @@ def binding_snapshot(repo: Path) -> dict[str, Any]:
         ".gitattributes",
         ".gitignore",
         ".github/workflows/ci.yml",
+        ".github/workflows/upi-full-audit.yml",
         "projects/resonancefs/pyproject.toml",
     ):
         if (repo / name).is_file():

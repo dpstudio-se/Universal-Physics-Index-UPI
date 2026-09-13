@@ -1,6 +1,6 @@
 {
-  "source": "UPI<coding_theory,1,root_system,e8_weyl_group>",
-  "target": "UPI<coding_theory,1,root_system,e8_coxeter_plane>",
+  "source": "UPI<coding_theory,1,root_system,e8_coxeter_plane>",
+  "target": "UPI<coding_theory,1,root_system,e8_weyl_group>",
   "relation": "DERIVED_FROM",
   "status": "DER",
   "mechanism": "A Coxeter element of W(E8) rotates a unique (up to W-action) plane by 2pi/30. Orthogonal projection onto that plane is the portrait.",
