@@ -1,0 +1,20 @@
+{
+  "source": "UPI<open_problems,1,symbolic_cosmology,aureum_braid_chambers>",
+  "target": "UPI<theories,1,m_theory,eleven_d_brane>",
+  "relation": "STOPS_AT",
+  "status": "STOP",
+  "equations": [
+    "D_bulk = 11 != number_of_chambers",
+    "M_11 = X_4 x Y_7",
+    "dim(worldvolume_M2) = 3",
+    "dim(worldvolume_M5) = 6"
+  ],
+  "assumptions": [
+    "The chamber sequence is a symbolic discretization of history.",
+    "A genuine binding must select an M2 or M5 worldvolume and a compactification rather than identify visual chambers with dimensions."
+  ],
+  "mechanism": "The bridge records the exact stopping boundary. Dimensional bookkeeping permits a four-plus-seven ansatz, and established M-theory examples provide M2/M5 worldvolumes, but the images supply no map from braid strands or chambers to coordinates, cycles, fluxes or brane charges.",
+  "confusion_guard": "This is the unresolved 11D boundary, not the Aureum bridge. The Aureum bridge is m = h f / c^2 and is recorded separately. Neither equation nor this boundary derives a wormhole or promotes the imagery beyond STOP/SYM.",
+  "stop_reason": "The proposed braid has no declared map to a named 11D background, M2/M5 embedding or reduced 4D observable. The smallest next observation is an explicit field configuration and dimensional-reduction calculation.",
+  "version": "0.1.0"
+}

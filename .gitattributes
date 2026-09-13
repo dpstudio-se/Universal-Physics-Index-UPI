@@ -1,0 +1,5 @@
+# Keep pinned evidence bytes exact; shell scripts must execute on Linux.
+examples/feedback/sources/** -text -whitespace
+examples/feedback/canonical_baseline.json -text -whitespace
+examples/feedback/claim_coverage.json -text -whitespace
+*.sh text eol=lf

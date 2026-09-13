@@ -145,3 +145,11 @@ quarantine/
 screenshots/
 *.tmp
 examples/dual_observer_lorentz.py
+
+# Local worktrees and machine-bound validation outputs
+.worktrees/
+examples/feedback/runs/
+examples/feedback/test_receipt.json
+examples/feedback/atlas_review_result.json
+examples/feedback/canonical_comparison.json
+examples/feedback/claim_analysis_result.json
