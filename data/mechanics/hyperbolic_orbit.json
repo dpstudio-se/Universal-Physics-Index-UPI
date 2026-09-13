@@ -1,0 +1,79 @@
+{
+  "title": "Hyperbolic orbital mechanics and unbound two-body trajectories",
+  "version": "0.1.0",
+  "status": "EST",
+  "information_layer": "ACADEMIC",
+  "address": "UPI<physics,2,celestial_mechanics,hyperbolic_orbit>",
+  "tags": [
+    "celestial mechanics",
+    "orbital mechanics",
+    "two-body problem",
+    "conic sections",
+    "hyperbolic orbit",
+    "specific orbital energy",
+    "escape speed",
+    "interstellar objects"
+  ],
+  "description": "Established Newtonian two-body relations for an unbound hyperbolic trajectory. The node provides the physics layer used to classify interstellar-object trajectories and to derive semimajor axis, specific orbital energy, asymptotic speed, periapsis speed, and orbital geometry from a declared orbital solution.",
+  "definitions": [
+    "mu is the standard gravitational parameter G(M1+M2), in m^3/s^2.",
+    "r is the instantaneous separation between the two bodies.",
+    "v is the relative speed.",
+    "epsilon is specific orbital energy per unit reduced mass.",
+    "a is the conic semimajor-axis parameter; a is negative for a hyperbolic orbit.",
+    "e is eccentricity.",
+    "q is periapsis distance.",
+    "v_infinity is asymptotic relative speed as r approaches infinity."
+  ],
+  "equations": [
+    "epsilon = v^2/2 - mu/r",
+    "epsilon = -mu/(2a)",
+    "v_infinity = sqrt(2 epsilon) for epsilon > 0",
+    "e = sqrt(1 + 2 epsilon h^2/mu^2)",
+    "q = a(1-e) for the signed hyperbolic semimajor-axis convention",
+    "a = q/(1-e) for e > 1",
+    "v_p = sqrt(mu(2/q + 1/a))",
+    "h = r v_t",
+    "v_escape = sqrt(2 mu/r)"
+  ],
+  "classification_rules": [
+    "e < 1 corresponds to an elliptic bound conic in the ideal two-body model.",
+    "e = 1 corresponds to a parabolic boundary trajectory.",
+    "e > 1 corresponds to a hyperbolic unbound trajectory.",
+    "epsilon < 0 corresponds to a bound two-body orbit.",
+    "epsilon = 0 is the parabolic boundary.",
+    "epsilon > 0 corresponds to an unbound two-body trajectory."
+  ],
+  "mechanism": "A body approaching a gravitating mass converts gravitational potential energy into kinetic energy. In the ideal conservative two-body problem, the body decelerates after periapsis and returns asymptotically to its incoming speed at infinity. The central gravity changes velocity direction and local speed but does not by itself convert an unbound trajectory into a bound one without an additional energy-changing interaction.",
+  "assumptions": [
+    "Newtonian point-mass or two-body approximation unless a higher-order model is explicitly declared.",
+    "The adopted gravitational parameter and reference frame are declared with the orbital solution.",
+    "External perturbations are negligible or separately modelled.",
+    "Numerical orbital parameters are versioned and bound to their source ephemeris or astrometric solution."
+  ],
+  "predictions": [
+    "For epsilon > 0 the trajectory is unbound in the conservative two-body model.",
+    "The signed semimajor-axis parameter is negative for a hyperbola.",
+    "For a fixed mu and q, periapsis speed follows v_p = sqrt(mu(2/q + 1/a)).",
+    "As r tends to infinity, the speed approaches v_infinity when the model is conservative.",
+    "Changing the reference frame changes reported velocity and some orbital elements; the physical classification must therefore state its reference frame."
+  ],
+  "falsification_conditions": [
+    "A reproducible violation of the stated two-body energy relation after frame, parameter, and uncertainty checks would falsify the adopted two-body model for the tested interval.",
+    "A claimed hyperbolic classification without e > 1 or epsilon > 0 in the declared model is invalid.",
+    "If significant non-gravitational acceleration is measured, a purely gravitational propagation is insufficient and must be augmented with an explicit force model."
+  ],
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Standard Newtonian two-body orbital mechanics.",
+      "confidence": 0.99
+    }
+  ],
+  "upi_bridges": [
+    "UPI<physics,2,classical_mechanics,helical_linear_rotational_coupling>",
+    "UPI<physics,2,celestial_mechanics,3i_atlas_case>",
+    "UPI<astronomy,2,observational_astronomy,3i_atlas>"
+  ],
+  "status_guard": "Orbital classification is physics. Claims about origin, artificial construction, or exact source star are separate hypotheses and must not be promoted from orbital geometry alone."
+}
