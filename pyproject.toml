@@ -58,7 +58,7 @@ package-dir = {"" = "src"}
 where = ["src"]
 
 [tool.setuptools.package-data]
-upi = ["py.typed", "schemas/*.json", "contribute/static/*"]
+upi = ["py.typed", "schemas/*.json", "contribute/static/*", "cip_linux.sh"]
 
 [tool.pytest.ini_options]
 minversion = "7.0"

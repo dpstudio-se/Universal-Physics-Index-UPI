@@ -116,7 +116,7 @@ def navier_stokes_residual(
         raise ValueError("density must be finite and positive")
     if not math.isfinite(viscosity) or viscosity < 0:
         raise ValueError("viscosity must be finite and non-negative")
-    return tuple(
+    residual = tuple(
         dt_velocity[i]
         + convective[i]
         + pressure_gradient[i] / density
@@ -124,6 +124,7 @@ def navier_stokes_residual(
         - force[i]
         for i in range(3)
     )
+    return residual[0], residual[1], residual[2]
 
 
 def select_mode(step: int, cycle: tuple[NavierMode, ...] | None = None) -> NavierMode:
