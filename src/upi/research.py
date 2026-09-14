@@ -108,7 +108,7 @@ def build_research_report(session: dict[str, Any]) -> dict[str, Any]:
             adjacency[edge["source"]].add(edge["target"])
             adjacency[edge["target"]].add(edge["source"])
 
-    closed_subchains: list[list[str]] = []
+    connected_subchains: list[list[str]] = []
     visited: set[str] = set()
     for start in sorted(connected_passed):
         if start in visited:
@@ -123,7 +123,7 @@ def build_research_report(session: dict[str, Any]) -> dict[str, Any]:
             component.append(current)
             stack.extend(sorted(adjacency[current] - visited))
         if len(component) >= 2:
-            closed_subchains.append(sorted(component))
+            connected_subchains.append(sorted(component))
 
     open_threads = []
     for result in results:
@@ -155,6 +155,7 @@ def build_research_report(session: dict[str, Any]) -> dict[str, Any]:
             "validated_records_are_candidates_only": True,
             "unconnected_material_remains_open": True,
             "closed_loop_is_not_required": True,
+            "closure_is_evidence_only": True,
             "status_promotion_is_disabled": True,
         },
         "items": results,
@@ -162,7 +163,8 @@ def build_research_report(session: dict[str, Any]) -> dict[str, Any]:
         "shadow": {
             "validated_candidate_ids": sorted(passed_ids),
             "connected_validated_ids": sorted(connected_passed),
-            "closed_subchains": closed_subchains,
+            "connected_subchains": connected_subchains,
+            "closed_loops": [],
             "open_threads": open_threads,
         },
         "confusion_guard": (
@@ -188,7 +190,8 @@ def render_research_markdown(report: dict[str, Any]) -> str:
         "Promotion: " + str(report["promotion"]),
         "Items: " + str(len(report["items"])),
         "Validated candidates: " + str(len(shadow["validated_candidate_ids"])),
-        "Closed subchains: " + str(len(shadow["closed_subchains"])),
+        "Connected subchains: " + str(len(shadow["connected_subchains"])),
+        "Closed loops: " + str(len(shadow["closed_loops"])),
         "Open threads: " + str(len(shadow["open_threads"])),
         "",
         "## Principle",
