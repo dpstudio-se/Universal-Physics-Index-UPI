@@ -1,0 +1,17 @@
+{
+  "source": "UPI<mechanics,1,navier_stokes,psi27d_regularity>",
+  "target": "UPI<mechanics,1,fluid,reduced_rigid_rotation>",
+  "relation": "CANDIDATE_BRIDGE",
+  "equations": [
+    "omega = curl(u)",
+    "Psi27D = candidate functional of the declared flow and mapping"
+  ],
+  "assumptions": [
+    "The reduced rigid-rotation field is a control only.",
+    "No implication of Navier-Stokes regularity follows from this bridge without a proved mapping and bound."
+  ],
+  "mechanism": "Use the analytic rigid-rotation field as a controlled baseline for testing whether a future Psi27D construction produces a nontrivial invariant or bound.",
+  "status": "HYP",
+  "confusion_guard": "Control-field compatibility is not evidence that Psi27D exists or controls general 3D Navier-Stokes solutions.",
+  "version": "0.1.0"
+}
