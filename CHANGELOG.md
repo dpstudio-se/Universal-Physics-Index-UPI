@@ -47,6 +47,7 @@ Software contract freeze for the gathering and validation layers.
 
 ### Added
 
+- TF1766 frequency bridge: `1.766 Hz` is mapped through the existing frequency physics (`T = 1/f`, `E = hf`, `m = hf/c²`) and a separate declared Spiral Flow inverse-frequency time transform `t(f) = 10.8 Gyr × 0.1 Hz / f`; the physical resonance claim remains `HYP` and the model time mapping is `DER`.
 - TF1766/X0 resilience primitives: append-only checkpoint backtracking, an 8 Hz host-driven
   control clock, Trip-Trap-Trull overload states, and double verification over time before
   reconnect.

@@ -226,6 +226,7 @@ def binding_snapshot(repo: Path) -> dict[str, Any]:
         "tests",
         "data",
         "docs",
+        "prompts",
         "projects/resonancefs/src",
         "projects/resonancefs/tests",
     ):

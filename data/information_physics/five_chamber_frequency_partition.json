@@ -1,0 +1,80 @@
+{
+  "address": "UPI<symbolic,1,spiral_flow,five_chamber_frequency_partition>",
+  "title": "Five-chamber frequency partition and 72 degree labels",
+  "description": "Computable symbolic coordinate model. Interval boundaries are left closed and right open, except C5 includes 8 Hz. Phase labels are independent of oscillator phase.",
+  "status": "SYM",
+  "version": "0.1.0",
+  "quantities": [
+    {
+      "name": "reference_0_1",
+      "value": 0.1,
+      "unit": "Hz",
+      "reference": "Declared model reference"
+    },
+    {
+      "name": "reference_0_5",
+      "value": 0.5,
+      "unit": "Hz",
+      "reference": "Declared model reference"
+    },
+    {
+      "name": "reference_1_766",
+      "value": 1.766,
+      "unit": "Hz",
+      "reference": "Declared model reference"
+    },
+    {
+      "name": "reference_2",
+      "value": 2,
+      "unit": "Hz",
+      "reference": "Declared model reference"
+    },
+    {
+      "name": "reference_5",
+      "value": 5,
+      "unit": "Hz",
+      "reference": "Declared model reference"
+    },
+    {
+      "name": "reference_7",
+      "value": 7,
+      "unit": "Hz",
+      "reference": "Declared model reference"
+    },
+    {
+      "name": "reference_7_834125",
+      "value": 7.834125,
+      "unit": "Hz",
+      "reference": "Declared model reference"
+    },
+    {
+      "name": "reference_8",
+      "value": 8,
+      "unit": "Hz",
+      "reference": "Declared model reference"
+    }
+  ],
+  "equations": [
+    "phi_n = n * 72 degrees, n = 0..4",
+    "delta_f = 8 - 7.834125 = 0.165875 Hz"
+  ],
+  "definitions": [
+    "C1=[0.1,0.5), C2=[0.5,2), C3=[2,5), C4=[5,7), C5=[7,8] Hz",
+    "7.834125 Hz is distinct from the existing 7.834 Hz memory reference.",
+    "The 8 Hz reference reuses UPI<BASE,0,REFERENCE,N_8HZ>."
+  ],
+  "assumptions": [
+    "These references are configurable model coordinates, not universal constants."
+  ],
+  "mechanism": "Interval lookup and a fivefold phase partition, not a causal coupling.",
+  "primary_sources": [
+    "data/examples/eight_hz.json",
+    "data/examples/dna_minne_7.834.json",
+    "src/upi/physics.py: frequency_chamber"
+  ],
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false,
+  "falsification_conditions": [
+    "An endpoint belongs to zero or multiple declared chambers."
+  ]
+}

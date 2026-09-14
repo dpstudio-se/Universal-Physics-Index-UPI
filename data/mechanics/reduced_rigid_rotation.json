@@ -1,0 +1,30 @@
+{
+  "address": "UPI<mechanics,1,fluid,reduced_rigid_rotation>",
+  "title": "Reduced steady rigid-rotation velocity and vorticity field",
+  "description": "Conditional analytic field for a fluid with explicitly prescribed constant angular velocity. Not a general Navier-Stokes solver or an inferred TF1766 coupling.",
+  "status": "DER",
+  "version": "0.1.0",
+  "equations": [
+    "Omega = 2*pi*f",
+    "v = (-Omega*y, Omega*x, 0)",
+    "curl(v) = (0, 0, 2*Omega)",
+    "div(v) = 0",
+    "p - p0 = rho*Omega^2*(x^2+y^2)/2"
+  ],
+  "assumptions": [
+    "REDUCED MODEL: steady incompressible Newtonian fluid in rigid rotation.",
+    "The caller prescribes Omega, positive uniform density and coordinates inside a cylinder with declared radius R.",
+    "The wall rotates at Omega R; no axial flow; no body forcing; radial pressure balances centripetal acceleration."
+  ],
+  "mechanism": "A prescribed rotating boundary and pressure gradient support the declared steady field. No universal frequency mechanism is asserted.",
+  "primary_sources": [
+    "src/upi/physics.py: reduced_rotation",
+    "tests/test_dna.py: test_reduced_rotation_derivatives_and_pressure_balance"
+  ],
+  "falsification_conditions": [
+    "Finite-difference curl disagrees with 2 Omega in the tested numerical domain.",
+    "Radial pressure acceleration does not balance convective acceleration."
+  ],
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false
+}

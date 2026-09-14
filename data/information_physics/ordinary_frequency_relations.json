@@ -1,0 +1,27 @@
+{
+  "address": "UPI<information_physics,1,frequency,ordinary_frequency_relations>",
+  "title": "Ordinary frequency, period and phase definitions",
+  "description": "Typed definitions for ordinary frequency; phase requires elapsed physical time and a phase origin.",
+  "status": "DER",
+  "version": "0.1.0",
+  "equations": [
+    "T = 1/f",
+    "omega = 2*pi*f",
+    "phase = 2*pi*f*t + phase0"
+  ],
+  "assumptions": [
+    "f is a declared ordinary frequency, not an angular frequency.",
+    "f is finite and positive; physical time is in seconds and phase in radians.",
+    "Phase is unwrapped with an explicit time origin."
+  ],
+  "mechanism": "Definition of period, angular frequency and phase for a constant-frequency oscillator.",
+  "primary_sources": [
+    "SI Brochure, ninth edition: hertz and radian",
+    "src/upi/physics.py: period_from_frequency, angular_frequency, phase_from_frequency"
+  ],
+  "falsification_conditions": [
+    "T*f differs from one or inverse phase fails in the declared floating-point domain."
+  ],
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false
+}

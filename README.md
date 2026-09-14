@@ -28,24 +28,6 @@ In project terminology, **DNA** means the canonical Git records and **RNA** mean
 a view or application built from those records. Reviewed records on `main` are
 authoritative; a local draft or an external display does not automatically update them.
 
-## Research mode
-
-UPI also provides a permissive research surface for ideas whose destination is
-not known yet. Research sessions can contain partial equations, analogies,
-candidate mechanisms and disconnected branches without requiring the entire
-proposal to validate.
-
-    upi research examples/research/session-8200.json --format markdown
-
-The research pass validates any embedded UPI records, maps the validated subset
-in a shadow report, and keeps unresolved or disconnected material as open
-threads. It does not promote records or write directly to canonical data/.
-
-A connected subchain is not automatically a closed physical loop. Closure must
-have its own test. See docs/RESEARCH_METHODS.md and
-docs/COLLABORATIVE_DISCOVERY.md.
-
-
 ## Quick start
 
 Run these commands from a repository checkout with **Python 3.10 or newer**:
@@ -271,3 +253,12 @@ dist/                       Generated packages; not committed
 ## License and citation
 
 MIT — see [LICENSE](LICENSE). Citation metadata is available in [CITATION.cff](CITATION.cff).
+
+## Research and typed DNA execution
+
+`upi dna-derive 1.766 --time 0.25` reads the catalog and emits typed calculation candidates.
+`upi dna-dynamic examples/dynamics/frequency-series.json` verifies sampled frequency
+dynamics and emits dynamic candidates. See [dynamic controls](docs/DYNAMIC_SPIRAL_FLOW.md).
+`upi research examples/research/session-8200.json` maps partial and open research.
+See [DNA execution and its bounds](docs/DNA_EXECUTION.md) and the
+[research operating prompts](prompts/upi-research-master.md). These commands do not promote records.
