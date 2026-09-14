@@ -54,7 +54,7 @@ def test_research_mode_is_non_blocking_and_preserves_open_branches():
     assert report["policy"]["exploration_is_non_blocking"] is True
     assert report["policy"]["closed_loop_is_not_required"] is True
     assert set(report["shadow"]["validated_candidate_ids"]) == {"frequency", "mass"}
-    assert report["shadow"]["closed_subchains"] == [["frequency", "mass"]]
+    assert report["shadow"]["connected_subchains"] == [["frequency", "mass"]]
     assert any(item["id"] == "open-vortex" for item in report["shadow"]["open_threads"])
 
 
