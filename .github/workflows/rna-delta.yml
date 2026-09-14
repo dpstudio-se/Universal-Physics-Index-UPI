@@ -107,7 +107,7 @@ jobs:
           path: rna-delta.md
 
       - name: Comment on RNA UI inbox
-        uses: actions/github-script@v7
+        uses: actions/github-script@v9
         env:
           DELTA_REPORT: rna-delta.md
         with:
