@@ -41,7 +41,7 @@
     }
   ],
   "information_layer": "ACADEMIC",
-  "verification_type": "experimental_observation",
+  "verification_type": "mathematical_check",
   "claims_experimental_verification": false,
   "causal_claim": false,
   "confusion_guard": "Numerical relation to TF1766 is not evidence that nature contains a universal 1.766 Hz resonance.",
@@ -52,6 +52,6 @@
     "resonance",
     "spiral-flow"
   ],
-  "version": "0.1.0",
+  "version": "0.1.1",
   "source_status": "personal_note"
 }

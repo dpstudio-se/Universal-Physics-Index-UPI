@@ -79,6 +79,10 @@
     "time-mapping",
     "model"
   ],
-  "version": "0.1.0",
-  "source_status": "personal_note"
+  "version": "0.2.0",
+  "source_status": "personal_note",
+  "primary_sources": [
+    "src/upi/physics.py: spiral_time_from_frequency",
+    "data/information_physics/frequency_mass_equivalent.json"
+  ]
 }

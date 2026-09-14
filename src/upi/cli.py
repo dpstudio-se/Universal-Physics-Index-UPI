@@ -300,6 +300,20 @@ def merge_check_cmd(args):
         print(rendered)
 
 
+def dna_derive_cmd(args):
+    """Emit a reviewable batch and trace; never insert or promote it."""
+    from .dna import DNAReader, Value, frequency_relations
+
+    reader = DNAReader(args.data_root, frequency_relations())
+    report = reader.derive({"f": Value(args.frequency, "Hz"),
+                            "f_ref": Value(0.1, "Hz"), "t_ref": Value(10.8, "Gyr"),
+                            "t": Value(args.time, "s"), "phase0": Value(args.phase0, "rad")})
+    report["candidates"] = reader.candidate_nodes(report)
+    print_json(report)
+    if report["state"] != "PASS":
+        sys.exit(1)
+
+
 def main():
     """Main CLI entry point."""
     import argparse
@@ -311,6 +325,13 @@ def main():
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
 
     subparsers = parser.add_subparsers(dest="command", help="Command to run")
+
+    dna = subparsers.add_parser("dna-derive", help="Derive typed frequency candidates from DNA")
+    dna.add_argument("frequency", type=float)
+    dna.add_argument("--data-root", type=Path, default=Path("data"))
+    dna.add_argument("--time", type=float, required=True, help="Physical elapsed seconds")
+    dna.add_argument("--phase0", type=float, default=0.0, help="Declared phase origin in radians")
+    dna.set_defaults(func=dna_derive_cmd)
 
     # frequency-to-mass
     fm = subparsers.add_parser("frequency-to-mass", help="Convert frequency to mass")

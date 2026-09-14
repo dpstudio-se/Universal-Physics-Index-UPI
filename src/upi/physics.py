@@ -131,7 +131,73 @@ def spiral_time_from_frequency(
         raise ValueError("reference_frequency_hz must be finite and positive")
     if not math.isfinite(reference_time_gyr) or reference_time_gyr <= 0:
         raise ValueError("reference_time_gyr must be finite and positive")
-    return reference_time_gyr * reference_frequency_hz / frequency_hz
+    result = reference_time_gyr * (reference_frequency_hz / frequency_hz)
+    return _positive_finite(result, "model time (floating-point range)")
+
+
+def _positive_finite(value: float, name: str) -> float:
+    if isinstance(value, bool) or not math.isfinite(value) or value <= 0:
+        raise ValueError(f"{name} must be finite and positive")
+    return value
+
+
+def period_from_frequency(frequency_hz: float) -> float:
+    """Physical period in seconds; never the Spiral Flow model coordinate."""
+    return _positive_finite(1 / _positive_finite(frequency_hz, "frequency"), "period")
+
+
+def angular_frequency(frequency_hz: float) -> float:
+    """Ordinary frequency Hz to angular frequency rad/s."""
+    return _positive_finite(math.tau * _positive_finite(frequency_hz, "frequency"), "omega")
+
+
+def phase_from_frequency(frequency_hz: float, time_s: float, phase0_rad: float = 0) -> float:
+    """Unwrapped phase; an absolute phase requires a declared time origin."""
+    if not math.isfinite(time_s) or not math.isfinite(phase0_rad):
+        raise ValueError("time and phase origin must be finite")
+    result = angular_frequency(frequency_hz) * time_s + phase0_rad
+    if not math.isfinite(result):
+        raise ValueError("phase exceeds floating-point range")
+    return result
+
+
+def frequency_chamber(frequency_hz: float) -> dict[str, float | int | str]:
+    """SYM partition: left-closed/right-open, except the final endpoint 8 Hz."""
+    _positive_finite(frequency_hz, "frequency")
+    edges = (0.1, 0.5, 2.0, 5.0, 7.0, 8.0)
+    for index, (lower, upper) in enumerate(zip(edges, edges[1:], strict=False)):
+        if lower <= frequency_hz < upper or (index == 4 and frequency_hz == upper):
+            return {"chamber": f"C{index + 1}", "index": index,
+                    "lower_hz": lower, "upper_hz": upper,
+                    "phase_deg": index * (360 / 5), "status": "SYM"}
+    raise ValueError("frequency outside declared chamber domain [0.1, 8] Hz")
+
+
+def reduced_rotation(
+    frequency_hz: float, x_m: float, y_m: float, density_kg_m3: float
+) -> dict[str, float | str]:
+    """REDUCED MODEL: steady rigid rotation v=(-Omega*y, Omega*x, 0).
+
+    Caller explicitly prescribes fluid angular speed Omega=2*pi*f. A cylinder
+    of declared radius R must impose rotating-wall velocity Omega*R; pressure
+    p-p0=rho*Omega**2*r**2/2 balances centripetal acceleration. Uniform density,
+    incompressible Newtonian fluid, steady state, no axial flow or body forcing.
+    This analytic local field is not a PDE solver or a TF1766 coupling mechanism.
+    """
+    omega = angular_frequency(frequency_hz)
+    _positive_finite(density_kg_m3, "density")
+    if not math.isfinite(x_m) or not math.isfinite(y_m):
+        raise ValueError("coordinates must be finite")
+    result: dict[str, float | str] = {
+        "model": "REDUCED MODEL", "status": "DER",
+        "vx_m_s": -omega * y_m, "vy_m_s": omega * x_m,
+        "vorticity_z_s_inverse": 2 * omega, "divergence_s_inverse": 0.0,
+        "pressure_above_axis_pa": density_kg_m3 * omega**2 * (x_m**2 + y_m**2) / 2,
+        "ax_m_s2": -omega**2 * x_m, "ay_m_s2": -omega**2 * y_m,
+    }
+    if any(not math.isfinite(v) for v in result.values() if isinstance(v, float)):
+        raise ValueError("rotation exceeds floating-point range")
+    return result
 
 
 def normalize_value(value: float, reference: float) -> float:
