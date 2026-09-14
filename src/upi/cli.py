@@ -16,6 +16,7 @@ from . import (
     validate_node_json,
 )
 from .debug import generate_debug_report, render_debug_markdown
+from .research import load_research_session, build_research_report, render_research_markdown
 from .models import Address
 from .schema_resources import schema_path
 from .triage import compare_report, load_json
@@ -97,6 +98,36 @@ def normalize_cmd(args):
         "equation": "Z = z / z_ref"
     }
     print_json(result)
+
+
+
+def research_cmd(args):
+    """Run permissive research mode and emit a shadow map."""
+    path = Path(args.file)
+    if not path.is_file():
+        print(f"Error: File not found: {path}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        session = load_research_session(path)
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid JSON: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    if session.get("format") != "upi-research-session":
+        print("Error: expected format=upi-research-session", file=sys.stderr)
+        sys.exit(1)
+
+    report = build_research_report(session)
+    rendered = (
+        render_research_markdown(report)
+        if args.format == "markdown"
+        else json.dumps(report, indent=2)
+    )
+    if args.output:
+        Path(args.output).write_text(rendered + "\n", encoding="utf-8")
+    else:
+        print(rendered)
 
 
 def validate_cmd(args):
@@ -374,6 +405,16 @@ def main():
     addr.add_argument("--torus", help="Torus (for creation)")
     addr.add_argument("--node", help="Node identifier (for creation)")
     addr.set_defaults(func=address_cmd)
+
+
+    research = subparsers.add_parser(
+        "research",
+        help="Explore a research session without requiring scientific closure",
+    )
+    research.add_argument("file", help="UPI research-session JSON file")
+    research.add_argument("--output", help="Write the shadow report to a file")
+    research.add_argument("--format", choices=("json", "markdown"), default="json")
+    research.set_defaults(func=research_cmd)
 
     # debug-index
     debug = subparsers.add_parser(

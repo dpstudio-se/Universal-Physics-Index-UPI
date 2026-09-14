@@ -253,3 +253,10 @@ dist/                       Generated packages; not committed
 ## License and citation
 
 MIT — see [LICENSE](LICENSE). Citation metadata is available in [CITATION.cff](CITATION.cff).
+
+## Research and typed DNA execution
+
+`upi dna-derive 1.766 --time 0.25` reads the catalog and emits typed calculation candidates.
+`upi research examples/research/session-8200.json` maps partial and open research.
+See [DNA execution and its bounds](docs/DNA_EXECUTION.md) and the
+[research operating prompts](prompts/upi-research-master.md). These commands do not promote records.
