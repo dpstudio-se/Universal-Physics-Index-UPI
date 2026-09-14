@@ -1,0 +1,148 @@
+{
+  "address": "UPI<cosmology,1,dark_sector,72_frequency_spiral>",
+  "title": "72-frequency spiral dark-sector candidate",
+  "description": "Testable research hypothesis: a 72-phase cyclic structure, coupled to a continuous local frequency field, may generate an effective gravitating dark-sector density profile. The 72 geometry is derived as 360/72 = 5 degrees per phase step; the physical dark-sector interpretation is not established.",
+  "status": "HYP",
+  "quantities": [
+    {
+      "name": "phase_step",
+      "value": 5.0,
+      "unit": "deg",
+      "reference": "360 deg / 72"
+    },
+    {
+      "name": "reference_frequency",
+      "value": 7.834125,
+      "unit": "Hz",
+      "reference": "declared research coordinate; not assumed universal"
+    },
+    {
+      "name": "8Hz_offset_from_7.834125",
+      "value": 2.117339205080335,
+      "unit": "%",
+      "reference": "(8 - 7.834125) / 7.834125"
+    },
+    {
+      "name": "period_at_7.834125",
+      "value": 0.1276466740063504,
+      "unit": "s",
+      "reference": "1/f"
+    },
+    {
+      "name": "72_phase_interval_at_7.834125",
+      "value": 0.0017728704723104223,
+      "unit": "s",
+      "reference": "1/(72*f)"
+    },
+    {
+      "name": "mass_equivalent_of_one_frequency_quantum",
+      "value": 5.775706559691424e-50,
+      "unit": "kg",
+      "reference": "h*f/c^2; derived energy-mass equivalent only"
+    }
+  ],
+  "definitions": [
+    "The 72-motor is a phase discretization with Delta theta = 2*pi/72.",
+    "A double helix is represented as two coupled 72-phase branches; 144 is the combined phase count.",
+    "Two 144-step cycles give 288 phase steps, leaving 72 degrees of a 360-degree cycle as the declared bridge segment.",
+    "The bridge is a geometric bookkeeping relation until a dynamical operator is specified.",
+    "The continuous field is Phi(r,t) = A(r,t) exp(i*theta(r,t)), with theta_t = 2*pi*f(r,t).",
+    "A dark-sector interpretation requires a positive gravitating energy density and must reproduce observations without inserting the observed dark-matter density as an input."
+  ],
+  "equations": [
+    "Delta theta = 2*pi/72",
+    "theta(t) = 2*pi*f*t",
+    "Phi(r,t) = A(r,t)*exp(i*theta(r,t))",
+    "E = h*f",
+    "m_eq = h*f/c^2",
+    "nabla^2 Phi_g = 4*pi*G*(rho_b + rho_Phi)",
+    "v_c^2(r) = G*M(<r)/r",
+    "M(<r) = 4*pi*integral_0^r [(rho_b(r') + rho_Phi(r')) r'^2 dr']"
+  ],
+  "assumptions": [
+    "General relativity/Newtonian gravity is used as the reference gravitational framework in the tested regime.",
+    "The 72 structure is a model coordinate, not an established physical constant.",
+    "7.834125 Hz and 8 Hz are candidate reference frequencies, not universal constants.",
+    "The frequency field must have a fully specified energy-momentum tensor before it can be treated as a physical gravitating component.",
+    "The observed baryonic mass distribution is supplied independently of the candidate model.",
+    "No target dark-matter density, halo mass, or rotation curve is inserted as a fitted output.",
+    "Any free parameters must be declared globally before held-out galaxy testing."
+  ],
+  "mechanism": "Construct a continuous frequency/phase field with a 72-fold cyclic phase operator. Derive its energy density from an explicit field Lagrangian or stress-energy tensor, then add that density to the reference baryonic gravitational source. The candidate survives only if one globally declared parameter set predicts galaxy rotation curves and other observables without per-galaxy tuning and without violating independent cosmological constraints.",
+  "predictions": [
+    "If the candidate is physically viable, a globally fixed 72-phase model must generate a reproducible radial effective density profile across a held-out SPARC galaxy sample.",
+    "The predicted rotation curves must improve substantially over baryons-only Newtonian gravity and be quantitatively comparable to established dark-matter halo benchmarks.",
+    "The same parameters must be usable for gravitational-lensing and cosmological-structure tests rather than being fitted separately to each observable.",
+    "Changing the phase discretization away from 72 must provide a measurable degradation if 72 is physically privileged; otherwise 72 is only a convenient representation.",
+    "The 7.834125-to-8 Hz relation may be tested as a reference-frequency normalization, but a numerical match alone is not evidence for a dark-sector mechanism."
+  ],
+  "falsification_conditions": [
+    "The model requires a different fitted parameter set for each galaxy.",
+    "The model cannot produce a positive, conserved stress-energy source from an explicit physical field model.",
+    "A 72-phase model performs no better than an equivalent arbitrary-N phase model under a preregistered held-out comparison.",
+    "The model fails the SPARC rotation-curve benchmark while baryons-only and reference halo models are evaluated on the same galaxies.",
+    "The model matches rotation curves only after inserting the observed dark-matter density or an equivalent target quantity.",
+    "The same parameter set fails independent lensing, CMB, BBN, or structure-growth constraints.",
+    "The claimed effect disappears under blinded frequency-band controls or neighboring phase counts."
+  ],
+  "information_layer": "ACADEMIC",
+  "reference_frame": "SI units; galaxy rest-frame observables; radial coordinate in physical kpc",
+  "normalization_method": "72 phase states per 2*pi cycle; frequency is separately normalized in Hz and never treated as a universal constant.",
+  "normalization_claim": "The only exact geometric normalization is 360/72 = 5 degrees per phase step. The 7.834125 and 8 Hz values are research coordinates.",
+  "null_model": "Standard baryons-only Newtonian prediction using the same observed baryonic inputs, plus established dark-matter halo models as reference comparators.",
+  "control_condition": "Blind comparison of N=48, 60, 72, 84, 96 phase discretizations and a continuous-phase control, with identical fitting policy and held-out galaxies.",
+  "statistical_method": "Predeclare RMSE or log-acceleration residuals, uncertainty propagation, held-out galaxy split, and parameter-count penalty before revealing observed velocities.",
+  "confounders": [
+    "stellar mass-to-light ratio",
+    "gas and bulge mass-model uncertainties",
+    "distance and inclination uncertainties",
+    "beam smearing and non-circular motions",
+    "galaxy selection effects",
+    "choice of interpolation or field potential",
+    "hidden per-galaxy tuning"
+  ],
+  "replication_rule": "Independent implementation must reproduce the 72-phase calculations and the full benchmark from the declared inputs without access to the first implementation's fitted parameters.",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "SI definitions of h and c; m_eq = h*f/c^2 at f = 7.834125 Hz",
+      "confidence": 1.0,
+      "notes": "Confirms arithmetic only. It does not establish a dark-matter particle or field."
+    },
+    {
+      "type": "dataset",
+      "source": "SPARC: Spitzer Photometry and Accurate Rotation Curves, 175 disk galaxies; Lelli, McGaugh & Schombert 2016",
+      "confidence": 1.0,
+      "notes": "External benchmark dataset for rotation-curve testing."
+    },
+    {
+      "type": "observation",
+      "source": "Planck 2018 cosmological-parameter constraints",
+      "confidence": 1.0,
+      "notes": "Independent cosmological constraints for later background/structure testing; not evidence for the 72 mechanism."
+    }
+  ],
+  "primary_sources": [
+    "SPARC database: https://astroweb.case.edu/SPARC/",
+    "Lelli, McGaugh & Schombert 2016, AJ 152, 157",
+    "Planck Collaboration 2018, arXiv:1807.06209"
+  ],
+  "verification_type": "simulation",
+  "claims_experimental_verification": false,
+  "causal_claim": true,
+  "causal_test_method": "Derive the field stress-energy tensor first, freeze global parameters, then run a blind held-out rotation-curve prediction and independent lensing/structure checks.",
+  "confusion_guard": "72 phase states are a mathematical construction, not established evidence for dark matter. m = h*f/c^2 is the mass equivalent of an energy quantum and is not photon rest mass or a dark-matter identification. A successful software or simulation closure is not experimental verification.",
+  "tags": [
+    "72-motor",
+    "spiral",
+    "frequency-field",
+    "dark-sector",
+    "dark-matter",
+    "SPARC",
+    "rotation-curves",
+    "falsifiable",
+    "HYP"
+  ],
+  "version": "0.1.0",
+  "source_status": "dataset"
+}
