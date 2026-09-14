@@ -1,27 +1,13 @@
 {
   "address": "UPI<mechanics,1,navier_stokes,psi27d_regularity>",
   "title": "Psi27D topological-invariant hypothesis for 3D Navier-Stokes regularity",
-  "description": "Research hypothesis: an explicitly defined topological/geometric invariant on a declared manifold Sigma_1766 embedded in R^27 may provide a verifiable bound or control relation for vorticity or velocity-gradient growth in 3D incompressible Navier-Stokes flow.",
+  "description": "Falsifiable research hypothesis: an explicitly defined topological/geometric invariant on a declared manifold Sigma_1766 embedded in R^27 may provide a verifiable bound or control relation for vorticity or velocity-gradient growth in 3D incompressible Navier-Stokes flow.",
   "status": "HYP",
   "information_layer": "ACADEMIC",
-  "verification_type": "research",
+  "verification_type": "mathematical_check",
   "claims_experimental_verification": false,
   "causal_claim": false,
-  "system_boundary": "3D incompressible Newtonian Navier-Stokes flow with explicitly declared initial conditions, boundary conditions, viscosity and forcing, plus a separately defined candidate manifold/invariant mapping.",
-  "variables": [
-    {"name": "u", "meaning": "velocity field", "unit": "m/s"},
-    {"name": "omega", "meaning": "vorticity curl(u)", "unit": "1/s"},
-    {"name": "grad_u", "meaning": "velocity-gradient tensor", "unit": "1/s"},
-    {"name": "nu", "meaning": "kinematic viscosity", "unit": "m^2/s"},
-    {"name": "Psi27D", "meaning": "candidate topological/geometric invariant", "unit": "TBD"}
-  ],
-  "candidate_mapping": {
-    "target": "Sigma_1766 subset R^27",
-    "source_structure": "E8-related data may be used as an input structure only after an explicit map is defined.",
-    "required_map": "P: E8_data -> Sigma_1766 subset R^27",
-    "status": "UNDEFINED"
-  },
-  "equations_to_test": [
+  "equations": [
     "partial_t u + (u dot grad)u = -grad(p) + nu Delta u + F",
     "div(u) = 0",
     "omega = curl(u)",
@@ -30,58 +16,50 @@
     "candidate continuation relation: bounded Psi27D -> integral_0^T ||omega(t)||_infinity dt < infinity"
   ],
   "assumptions": [
-    "The 27-dimensional manifold must be explicitly defined rather than inferred from the label alone.",
-    "Any E8-to-R^27 relation must be an explicit mathematical construction, not a visual analogy.",
-    "The candidate invariant must be dimensionally well-defined.",
-    "A bounded numerical trajectory does not constitute a proof of global regularity.",
-    "UPI's reduced rigid-vortex field is a control model and is not a substitute for a general 3D Navier-Stokes solver."
+    "Sigma_1766 must be explicitly defined rather than inferred from its label.",
+    "Any E8-to-R^27 relation must be an explicit mathematical construction.",
+    "Psi27D must be dimensionally well-defined and invariant under the transformations claimed.",
+    "A bounded numerical trajectory is not a proof of global regularity.",
+    "UPI reduced rigid rotation is a control model, not a general 3D Navier-Stokes solver."
   ],
   "null_model": "Standard 3D incompressible Navier-Stokes evolution without the proposed Psi27D constraint or invariant.",
-  "controls": [
-    "Analytic rigid rotation control",
-    "Known smooth benchmark flows",
-    "Manufactured forcing with independently known solution where available",
-    "Perturbed initial conditions",
-    "Different resolutions and time steps",
-    "Ablation with the Psi27D term/invariant disabled"
+  "control_condition": "Compare null model, analytic smooth controls, manufactured solutions where available, resolution/time-step refinement, perturbations and Psi27D ablation.",
+  "confounders": [
+    "Numerical discretization error",
+    "Time-step dependence",
+    "Resolution dependence",
+    "Coordinate dependence of the proposed invariant",
+    "Overfitting of a candidate invariant to the control dataset"
   ],
-  "test_method": [
-    "Define Sigma_1766 and the E8-to-manifold map formally.",
-    "Perform dimensional and mathematical consistency checks.",
-    "Compute Psi27D along independently generated Navier-Stokes trajectories.",
-    "Compare Psi27D against ||omega||_infinity, ||grad u||_infinity and the BKM-relevant vorticity integral.",
-    "Run resolution, timestep and perturbation convergence tests.",
-    "Attempt adversarial counterexamples and ablation tests.",
-    "Require independent reproduction before any scientific promotion."
-  ],
+  "statistical_method": "Predeclare metrics and compare Psi27D against ||omega||_infinity, ||grad u||_infinity and integral_0^T ||omega(t)||_infinity dt across independent trajectories.",
+  "replication_rule": "Require independent reproduction on held-out trajectories before any status promotion.",
+  "test_method": "Define Sigma_1766 and the E8-to-manifold map; verify dimensions and invariance; compute Psi27D on independent Navier-Stokes trajectories; test quantitative bounds; run convergence, perturbation, null-model and ablation tests; actively search for counterexamples.",
   "predictions": [
-    "If the hypothesis is useful, Psi27D should show reproducible bounded/invariant behavior across declared regular-flow controls.",
-    "A nontrivial quantitative relationship should emerge between Psi27D and vorticity/gradient growth that survives resolution and timestep refinement.",
-    "The proposed control should outperform or add information beyond the null model rather than merely re-encoding existing diagnostics."
+    "If useful, Psi27D should exhibit reproducible bounded/invariant behavior across declared regular-flow controls.",
+    "A nontrivial quantitative relation between Psi27D and vorticity or gradient growth should survive resolution and time-step refinement.",
+    "The candidate control should add predictive information beyond standard diagnostics."
   ],
   "falsification_conditions": [
-    "No well-defined invariant can be constructed from the proposed mapping.",
-    "The candidate quantity is dimensionally inconsistent or coordinate-dependent when invariance is required.",
-    "Psi27D fails to remain bounded/invariant under controlled regular flows.",
-    "Any apparent correlation disappears under resolution, timestep, perturbation or null-model controls.",
-    "A counterexample exhibits bounded Psi27D while the relevant regularity-control quantity diverges.",
-    "The proposed relation reduces algebraically to an already-known diagnostic without adding a new bound."
+    "No well-defined invariant can be constructed.",
+    "Dimensional consistency or claimed invariance fails.",
+    "Correlations disappear under controls or refinement.",
+    "A counterexample breaks the proposed bound.",
+    "The candidate reduces to an existing diagnostic without adding a new bound."
   ],
   "evidence": [
     {
-      "type": "research_design",
-      "source": "UPI hypothesis-design and dynamic-spiral-flow framework",
+      "type": "other",
+      "source": "UPI research-design record",
       "confidence": 1,
-      "notes": "Defines a falsifiable research program only; no mathematical proof or experimental verification is claimed."
+      "notes": "Research design only. No proof or experimental verification is claimed."
     }
   ],
-  "related_upi_records": [
-    "data/hypotheses/tf1766_frequency_resonance.json",
-    "data/open-problems/tf1766_flow_coupling_stop.json",
-    "data/mechanics/reduced_rigid_rotation.json"
+  "primary_sources": [
+    "UPI:data/mechanics/reduced_rigid_rotation.json",
+    "UPI:src/upi/spiral_flow.py"
   ],
-  "related_dynamic_engine": "src/upi/spiral_flow.py",
-  "status_guard": "Do not promote to EST from software tests or numerical simulations alone.",
+  "causal_test_method": "Not applicable to the current non-causal hypothesis; the required test is mathematical/numerical falsification.",
+  "confusion_guard": "Do not interpret the visual spiral, E8 analogy, frequency references or numerical PASS as evidence of a Navier-Stokes regularity theorem.",
   "tags": [
     "PSI27D",
     "Navier-Stokes",
@@ -93,6 +71,6 @@
     "research",
     "HYP"
   ],
-  "version": "0.1.0",
-  "source_status": "research_hypothesis"
+  "version": "0.1.1",
+  "source_status": "personal_note"
 }
