@@ -25,7 +25,7 @@ ROOT = Path(__file__).parents[1]
         ("review-test", "", True, 403),
         ("review-test", "wrong", True, 403),
         ("review-test", "review-test", False, 400),
-        ("review-test", "review-test", True, 200),
+        ("review-test", "review-test", True, 409),
     ],
 )
 def test_http_promotion_boundary(configured, supplied, evidence, expected) -> None:

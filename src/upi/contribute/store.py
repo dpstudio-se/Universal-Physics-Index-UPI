@@ -187,6 +187,41 @@ class ContributionStore:
         row = self._fetchone("SELECT COALESCE(MAX(id), 0) AS max_id FROM events", ())
         return int(row["max_id"]) if row else 0
 
+    def promote_reviewed(
+        self, address: str, payload: dict[str, Any], *, expected_hash: str, audit: dict[str, Any]
+    ) -> Contribution:
+        """Atomically compare source hash, update target, and persist the review decision."""
+        body = json.dumps(payload, ensure_ascii=False)
+        digest = content_hash(payload)
+        title = str(payload["title"])
+        with self._lock:
+            connection: Any = self._pg if self.kind == "postgres" else self._sqlite_conn
+            assert connection is not None
+            transaction = connection.transaction() if self.kind == "postgres" else connection
+            with transaction:
+                sql = "UPDATE contributions SET status = ?, title = ?, payload = ?, content_hash = ? WHERE address = ? AND content_hash = ? RETURNING created_at"
+                params = (payload["status"], title, body, digest, address, expected_hash)
+                row = connection.execute(
+                    self._pg_sql(sql) if self.kind == "postgres" else sql, params
+                ).fetchone()
+                if row is None:
+                    raise ValueError("candidate changed")
+                sql = "INSERT INTO events (kind, address, payload, created_at) VALUES (?, ?, ?, ?)"
+                event = {**audit, "kind": "promotion", "address": address}
+                connection.execute(
+                    self._pg_sql(sql) if self.kind == "postgres" else sql,
+                    ("promotion", address, json.dumps(event), utcnow()),
+                )
+        return Contribution(
+            address,
+            "node",
+            str(payload["status"]),
+            title,
+            json.loads(body),
+            digest,
+            row["created_at"],
+        )
+
     def _execute(self, sql: str, params: tuple[Any, ...]) -> None:
         with self._lock:
             if self.kind == "postgres":
