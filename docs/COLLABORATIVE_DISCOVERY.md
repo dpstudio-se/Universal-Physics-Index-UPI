@@ -229,3 +229,62 @@ The governing maxim is:
 This is collaborative intelligence in operational form: the human does not hand the agent a finished
 theory, and the agent does not replace the human with a verdict. Together they construct a map that
 can survive contact with algebra, code, prior evidence and eventually observation.
+
+
+## Research mode: open exploration, shadow ledger
+
+Research mode is the permissive discovery surface for ideas whose destination is
+not known yet. It is intentionally separate from canonical scientific promotion.
+
+The research packet may contain a complete intuition, partial equations,
+cross-domain analogies, proposed functions, links that are not yet justified,
+and unresolved branches. The mode does not require the whole packet to validate
+before exploration can continue.
+
+Its shadow pass does four things:
+
+1. validates embedded UPI node/bridge records using the normal evidence guards;
+2. exposes the validated subset as candidates without promoting status;
+3. maps validated connections into connected subchains; and
+4. preserves every disconnected, incomplete, or unresolved item as an open thread.
+
+A closed loop is therefore an output, not a prerequisite.
+
+research input
+      |
+      v
+  permissive map
+      |
+      +----> validated candidate ----> shadow graph
+      |
+      +----> incomplete/disconnected -> OPEN THREAD
+      |
+      +----> contradiction/error ----> OPEN + validation finding
+      |
+      v
+  optional closed subchain
+      |
+      v
+  human review / canonical merge
+
+This keeps the discovery gear moving without weakening ledger gear. A software
+validation result is still only a software result. It cannot promote a physical
+claim to EST.
+
+### Research-mode invariants
+
+- exploration is non-blocking;
+- no automatic promotion to EST;
+- unknown material is preserved rather than silently dropped;
+- disconnected branches stay open;
+- a partial result can be useful without becoming a completed theory;
+- separate ideas remain separate until an explicit link is supplied;
+- successful mirrors and shared functions are evidence for investigation, not
+  proof of a shared physical mechanism.
+
+CLI:
+
+    upi research examples/research/session.json --format markdown
+
+The output is a shadow report. Canonical data/ is unchanged until the normal
+human review and merge path is used.

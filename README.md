@@ -28,6 +28,24 @@ In project terminology, **DNA** means the canonical Git records and **RNA** mean
 a view or application built from those records. Reviewed records on `main` are
 authoritative; a local draft or an external display does not automatically update them.
 
+## Research mode
+
+UPI also provides a permissive research surface for ideas whose destination is
+not known yet. Research sessions can contain partial equations, analogies,
+candidate mechanisms and disconnected branches without requiring the entire
+proposal to validate.
+
+    upi research examples/research/session-8200.json --format markdown
+
+The research pass validates any embedded UPI records, maps the validated subset
+in a shadow report, and keeps unresolved or disconnected material as open
+threads. It does not promote records or write directly to canonical data/.
+
+A connected subchain is not automatically a closed physical loop. Closure must
+have its own test. See docs/RESEARCH_METHODS.md and
+docs/COLLABORATIVE_DISCOVERY.md.
+
+
 ## Quick start
 
 Run these commands from a repository checkout with **Python 3.10 or newer**:
