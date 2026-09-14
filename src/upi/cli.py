@@ -16,8 +16,8 @@ from . import (
     validate_node_json,
 )
 from .debug import generate_debug_report, render_debug_markdown
-from .research import load_research_session, build_research_report, render_research_markdown
 from .models import Address
+from .research import build_research_report, load_research_session, render_research_markdown
 from .schema_resources import schema_path
 from .triage import compare_report, load_json
 
