@@ -52,7 +52,7 @@ from .physics import (
     relativistic_total_frequency,
     signal_match,
 )
-from .resilience import (
+from .spiral_flow import (\n    DynamicPoint,\n    FrequencyState,\n    NavierMode,\n    dynamic_reference_points,\n    frequency_state,\n    integrate_phase,\n    navier_stokes_residual,\n    rigid_vortex_curl,\n    rigid_vortex_velocity,\n    select_mode,\n)\nfrom .resilience import (
     CONTROL_CLOCK_HZ,
     TF1766_ANCHOR_ID,
     RecoveryChain,
