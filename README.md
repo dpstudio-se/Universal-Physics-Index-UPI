@@ -77,6 +77,24 @@ A change is true here when a map **closes**: encode then decode, boost then inve
 
 ---
 
+
+## Research mode
+
+UPI also provides a permissive research surface for ideas whose destination is
+not known yet. Research sessions can contain partial equations, analogies,
+candidate mechanisms and disconnected branches without requiring the entire
+proposal to validate.
+
+    upi research examples/research/session-8200.json --format markdown
+
+The research pass validates any embedded UPI records, maps the validated subset
+in a shadow report, and keeps unresolved or disconnected material as open
+threads. It does not promote records or write directly to canonical data/.
+
+A connected subchain is not automatically a closed physical loop. Closure must
+have its own test. See docs/RESEARCH_METHODS.md and
+docs/COLLABORATIVE_DISCOVERY.md.
+
 ## Example: mass equivalent of a frequency quantum
 
 Node: [`data/information_physics/frequency_mass_equivalent.json`](data/information_physics/frequency_mass_equivalent.json)
