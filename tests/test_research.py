@@ -86,13 +86,49 @@ def test_research_mode_keeps_invalid_candidate_open():
 
 
 def test_research_markdown_exposes_open_threads():
-    report = build_research_report({
-        "format": "upi-research-session",
-        "version": "0.1.0",
-        "session_id": "md",
-        "items": [{"id": "x", "title": "Open"}],
-    })
+    report = build_research_report(
+        {
+            "format": "upi-research-session",
+            "version": "0.1.0",
+            "session_id": "md",
+            "items": [{"id": "x", "title": "Open"}],
+        }
+    )
     rendered = render_research_markdown(report)
     assert "# UPI Research Mode" in rendered
     assert "Open threads" in rendered
     assert "x" in rendered
+
+
+def test_shadow_preserves_original_and_rejects_duplicate_identity():
+    session = {
+        "format": "upi-research-session",
+        "version": "0.1.0",
+        "items": [
+            {"id": "same", "record": valid_node("UPI<physics,1,test,a>", "A")},
+            {"id": "same", "record": valid_node("UPI<physics,1,test,b>", "B")},
+            {"id": "raw", "record": "not an object", "unknown_equation": "x = ?"},
+        ],
+    }
+    report = build_research_report(session)
+    assert report["input_snapshot"] == session
+    assert report["shadow"]["validated_candidate_ids"] == []
+    session["items"].clear()
+    assert len(report["input_snapshot"]["items"]) == 3
+
+
+def test_unvalidated_link_does_not_close_a_valid_node():
+    report = build_research_report(
+        {
+            "items": [
+                {
+                    "id": "valid",
+                    "links": ["open"],
+                    "record": valid_node("UPI<physics,1,test,valid>", "Valid"),
+                },
+                {"id": "open"},
+            ]
+        }
+    )
+    assert report["shadow"]["connected_validated_ids"] == []
+    assert {n["id"] for n in report["shadow"]["open_threads"]} == {"valid", "open"}

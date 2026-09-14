@@ -61,6 +61,15 @@ def _hash(raw: bytes) -> str:
     return hashlib.sha256(raw).hexdigest()
 
 
+def _unique_object(pairs):
+    result = {}
+    for key, value in pairs:
+        if key in result:
+            raise ValueError("Duplicate JSON key: " + key)
+        result[key] = value
+    return result
+
+
 class DNAReader:
     def __init__(self, root: Path, relations: tuple[Relation, ...] = ()):
         self.root = root
@@ -76,7 +85,7 @@ class DNAReader:
             try:
                 raw = path.read_bytes()
                 entry["sha256"] = _hash(raw)
-                record = json.loads(raw)
+                record = json.loads(raw, object_pairs_hook=_unique_object)
                 if not isinstance(record, dict):
                     raise ValueError("Expected object")
                 entry.update(
@@ -153,6 +162,7 @@ class DNAReader:
                         if values[name].status in {"STOP", "ERR"}:
                             raise ValueError(f"Input {name} is blocked")
                     scalar = {name: values[name].value for name, _ in relation.inputs}
+                    row["input_values"] = {name: vars(values[name]) for name, _ in relation.inputs}
                     result = relation.forward(scalar)
                     if not math.isfinite(result):
                         raise ValueError("Output exceeds floating-point range")
@@ -180,6 +190,7 @@ class DNAReader:
                         inverse=inverse,
                         source=self.sources[relation.address],
                         assumption=relation.assumption,
+                        assumptions=record.get("assumptions", []),
                     )
                 except (ValueError, ArithmeticError) as exc:
                     row.update(
@@ -206,7 +217,7 @@ class DNAReader:
             "verification_type": "software_test",
             "promotion": "BLOCKED",
             "claims_experimental_verification": False,
-            "state": "STOP" if any(t["state"] != "PASS" for t in trace) else "PASS",
+            "state": "STOP" if not trace or any(t["state"] != "PASS" for t in trace) else "PASS",
             "values": {n: vars(v) for n, v in values.items()},
             "trace": trace,
             "inventory": self.inventory,
@@ -217,9 +228,10 @@ class DNAReader:
     def candidate_nodes(self, report: dict[str, Any]) -> list[dict[str, Any]]:
         """Existing node schema, one calculation claim per node; no canonical writes."""
         result = []
+        run_hash = _hash(json.dumps(report, sort_keys=True, allow_nan=False).encode())
         for index, step in enumerate(report["trace"]):
             node: dict[str, Any] = {
-                "address": f"UPI<information_physics,1,rna_result,step_{index}>",
+                "address": f"UPI<information_physics,1,rna_result,step_{index}_{run_hash[:16]}>",
                 "title": "RNA result: " + step["address"],
                 "description": "Conditional computation from declared inputs and a pinned DNA record.",
                 "status": step["status"],
@@ -227,7 +239,7 @@ class DNAReader:
                 "verification_type": "software_test",
                 "claims_experimental_verification": False,
                 "primary_sources": [step["address"]],
-                "assumptions": [step.get("assumption", "Named dependency remains unresolved")],
+                "assumptions": step.get("assumptions", ["Named dependency remains unresolved"]),
                 "falsification_conditions": ["Inverse, units or source binding fails"],
                 "evidence": [{"type": "calculation", "source": json.dumps(step, sort_keys=True)}],
             }

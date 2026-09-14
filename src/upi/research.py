@@ -9,6 +9,7 @@ material explicitly open.
 from __future__ import annotations
 
 import json
+from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
@@ -18,6 +19,8 @@ from .validation import validate_bridge_json, validate_node_json
 
 def _record_validation(record: dict[str, Any]) -> tuple[str, list[str]]:
     """Validate an embedded UPI record without promoting it."""
+    if not isinstance(record, dict):
+        return "OPEN", ["Research record is not an object."]
     record_type = record.get("record_type")
     payload = record.get("payload")
     if record_type not in {"node", "bridge"} or not isinstance(payload, dict):
@@ -39,34 +42,48 @@ def build_research_report(session: dict[str, Any]) -> dict[str, Any]:
     by_id: dict[str, dict[str, Any]] = {}
     results: list[dict[str, Any]] = []
     passed_ids: set[str] = set()
+    duplicates: set[str] = set()
 
     for index, item in enumerate(items):
         if not isinstance(item, dict):
-            results.append({
-                "id": f"item-{index}",
-                "state": "OPEN",
-                "reason": "Research item is not an object.",
-                "errors": ["invalid_item"],
-            })
+            results.append(
+                {
+                    "id": f"item-{index}",
+                    "state": "OPEN",
+                    "reason": "Research item is not an object.",
+                    "errors": ["invalid_item"],
+                }
+            )
             continue
 
         item_id = str(item.get("id") or f"item-{index}")
+        if item_id in by_id:
+            duplicates.add(item_id)
         by_id[item_id] = item
         state, errors = _record_validation(item.get("record", {}))
-        results.append({
-            "id": item_id,
-            "state": state,
-            "title": item.get("title"),
-            "kind": item.get("kind", "claim"),
-            "links": item.get("links", []),
-            "function": item.get("function"),
-            "errors": errors,
-        })
+        results.append(
+            {
+                "id": item_id,
+                "state": state,
+                "title": item.get("title"),
+                "kind": item.get("kind", "claim"),
+                "links": item.get("links", []),
+                "function": item.get("function"),
+                "errors": errors,
+            }
+        )
         if state == "PASS":
             passed_ids.add(item_id)
 
+    passed_ids -= duplicates
+    for result in results:
+        if result["id"] in duplicates:
+            result.update(
+                state="OPEN", errors=["Duplicate item id; resolve identity before mapping."]
+            )
+
     edges: list[dict[str, Any]] = []
-    degree: dict[str, int] = {item_id: 0 for item_id in by_id}
+    degree: dict[str, int] = dict.fromkeys(by_id, 0)
 
     for result in results:
         source = result["id"]
@@ -76,30 +93,36 @@ def build_research_report(session: dict[str, Any]) -> dict[str, Any]:
         for target in links:
             target_id = str(target)
             if target_id not in by_id:
-                edges.append({
-                    "source": source,
-                    "target": target_id,
-                    "state": "OPEN",
-                    "reason": "Target is not present in this research session.",
-                })
+                edges.append(
+                    {
+                        "source": source,
+                        "target": target_id,
+                        "state": "OPEN",
+                        "reason": "Target is not present in this research session.",
+                    }
+                )
                 continue
             edge_state = "PASS" if source in passed_ids and target_id in passed_ids else "OPEN"
-            edges.append({
-                "source": source,
-                "target": target_id,
-                "state": edge_state,
-                "reason": (
-                    "Both endpoints contain records that pass UPI validation."
-                    if edge_state == "PASS"
-                    else "Connection remains open until both endpoints validate."
-                ),
-            })
+            edges.append(
+                {
+                    "source": source,
+                    "target": target_id,
+                    "state": edge_state,
+                    "reason": (
+                        "Both endpoints contain records that pass UPI validation."
+                        if edge_state == "PASS"
+                        else "Connection remains open until both endpoints validate."
+                    ),
+                }
+            )
             degree[source] += 1
             degree[target_id] += 1
 
     connected_passed = {
-        item_id for item_id, count in degree.items()
-        if item_id in passed_ids and count > 0
+        endpoint
+        for edge in edges
+        if edge["state"] == "PASS"
+        for endpoint in (edge["source"], edge["target"])
     }
 
     adjacency: dict[str, set[str]] = {item_id: set() for item_id in by_id}
@@ -149,6 +172,7 @@ def build_research_report(session: dict[str, Any]) -> dict[str, Any]:
             "intent": session.get("intent"),
             "source": session.get("source"),
         },
+        "input_snapshot": deepcopy(session),
         "policy": {
             "exploration_is_non_blocking": True,
             "unknown_material_is_preserved": True,
@@ -177,7 +201,15 @@ def build_research_report(session: dict[str, Any]) -> dict[str, Any]:
 
 def load_research_session(path: Path) -> dict[str, Any]:
     """Load a JSON research session as untrusted data."""
-    return json.loads(path.read_text(encoding="utf-8"))
+    from .validation import validate_json_schema
+
+    session = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(session, dict):
+        raise ValueError("Research session must be an object")
+    ok, errors = validate_json_schema(session, schema_path("research-session"))
+    if not ok:
+        raise ValueError("Invalid research envelope: " + "; ".join(errors))
+    return session
 
 
 def render_research_markdown(report: dict[str, Any]) -> str:

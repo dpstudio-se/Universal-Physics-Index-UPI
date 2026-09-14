@@ -152,6 +152,21 @@ def test_chamber_and_numeric_range_boundaries():
         phase_from_frequency(1e307, 1e307)
 
 
+def test_unregistered_and_duplicate_json_stay_open(tmp_path):
+    (tmp_path / "ambiguous.json").write_text('{"status":"EST","status":"HYP"}')
+    reader = DNAReader(tmp_path)
+    report = reader.derive({"f": Value(8, "Hz")})
+    assert report["state"] == "STOP"
+    assert "Duplicate JSON key" in report["inventory"][0]["reason"]
+
+
+def test_candidates_preserve_quantum_scope():
+    reader = DNAReader(ROOT / "data", frequency_relations())
+    candidates = reader.candidate_nodes(reader.derive(inputs(8)))
+    energy = next(n for n in candidates if n.get("quantities", [{}])[0].get("name") == "E")
+    assert any("quantum" in assumption for assumption in energy["assumptions"])
+
+
 def test_reduced_rotation_derivatives_and_pressure_balance():
     f, x, y, rho = 1.766, 0.2, 0.3, 1000
     field = reduced_rotation(f, x, y, rho)
