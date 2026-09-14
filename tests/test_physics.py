@@ -6,6 +6,7 @@ from upi.physics import (
     index8_from_frequency,
     mass_from_frequency,
     normalize_signal,
+    spiral_time_from_frequency,
 )
 
 
@@ -42,3 +43,21 @@ def test_zero_frequency_follows_current_positive_input_contract() -> None:
 def test_dimensional_relation_numerically() -> None:
     # h [J s] * f [s^-1] / c^2 [m^2 s^-2] has dimension kg.
     assert mass_from_frequency(1.0) == pytest.approx(6.62607015e-34 / 299792458.0**2)
+
+
+
+def test_spiral_flow_tf1766_time_mapping() -> None:
+    # Model relation: t(f) = 10.8 Gyr * 0.1 Hz / f.
+    assert spiral_time_from_frequency(1.766) == pytest.approx(0.6115515289)
+
+
+def test_spiral_flow_time_is_not_period() -> None:
+    # The model time coordinate and physical period are distinct quantities.
+    assert spiral_time_from_frequency(1.766) != pytest.approx(1.0 / 1.766)
+
+
+def test_spiral_flow_rejects_invalid_inputs() -> None:
+    with pytest.raises(ValueError):
+        spiral_time_from_frequency(0.0)
+    with pytest.raises(ValueError):
+        spiral_time_from_frequency(1.766, reference_frequency_hz=0.0)
