@@ -93,7 +93,7 @@ def main():
         for result in suite["results"]:
             result.update(binding_sha256=binding_id, verification_type="software_test")
         receipt["suites"].append(suite)
-        print(f'{name}: {len(raw["collected"])} collected; exit {completed.returncode}', flush=True)
+        print(f"{name}: {len(raw['collected'])} collected; exit {completed.returncode}", flush=True)
     command = ["node", "--test", "--test-reporter=tap", "tests/test_lab_math.cjs"]
     completed = subprocess.run(
         command, cwd=repo, capture_output=True, text=True, encoding="utf-8", errors="replace"
@@ -128,7 +128,7 @@ def main():
         }
     )
     for name, cwd, args in [
-        ("ruff", repo, ["ruff", "check", "src", "tests", "examples/feedback"]),
+        ("ruff", repo, ["ruff", "check", "src", "tests", "examples/feedback", "examples/dynamics"]),
         ("mypy", repo, ["mypy", "src/upi", "--ignore-missing-imports"]),
         ("resonance_ruff", repo / "projects/resonancefs", ["ruff", "check", "src", "tests"]),
         ("resonance_mypy", repo / "projects/resonancefs", ["mypy", "src"]),
@@ -183,7 +183,7 @@ def main():
         json.dumps(claim_analysis(repo), indent=2) + "\n", encoding="utf-8"
     )
     print(
-        f'Test receipt: {receipt["state"]}; feedback: {report["decision"]}/{report["promotion_gate"]}',
+        f"Test receipt: {receipt['state']}; feedback: {report['decision']}/{report['promotion_gate']}",
         flush=True,
     )
     return 0 if passed else 1

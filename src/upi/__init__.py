@@ -52,7 +52,7 @@ from .physics import (
     relativistic_total_frequency,
     signal_match,
 )
-from .spiral_flow import (\n    DynamicPoint,\n    FrequencyState,\n    NavierMode,\n    dynamic_reference_points,\n    frequency_state,\n    integrate_phase,\n    navier_stokes_residual,\n    rigid_vortex_curl,\n    rigid_vortex_velocity,\n    select_mode,\n)\nfrom .resilience import (
+from .resilience import (
     CONTROL_CLOCK_HZ,
     TF1766_ANCHOR_ID,
     RecoveryChain,
@@ -72,6 +72,18 @@ from .runtime import (
     get_active_profiles,
     get_runtime_loader,
     register_profile,
+)
+from .spiral_flow import (
+    DynamicPoint,
+    FrequencyState,
+    NavierMode,
+    dynamic_reference_points,
+    frequency_state,
+    integrate_phase,
+    navier_stokes_residual,
+    rigid_vortex_curl,
+    rigid_vortex_velocity,
+    select_mode,
 )
 from .triage import compare_report, finding_key
 from .validation import (
@@ -99,6 +111,16 @@ from .workflow import (
 )
 
 __all__ = [
+    "DynamicPoint",
+    "FrequencyState",
+    "NavierMode",
+    "dynamic_reference_points",
+    "frequency_state",
+    "integrate_phase",
+    "navier_stokes_residual",
+    "rigid_vortex_curl",
+    "rigid_vortex_velocity",
+    "select_mode",
     # Version
     "__version__",
     # Constants

@@ -71,6 +71,94 @@ def _unique_object(pairs):
 
 
 class DNAReader:
+    def analyze_dynamic(self, payload: dict[str, Any]) -> dict[str, Any]:
+        """Analyze new sampled input using the existing spiral-flow engine.
+
+        Frequencies are supplied or explicitly estimated from crossings, never
+        selected from the reference catalog. The result is a proposal, not a write.
+        """
+        from .spiral_flow import (
+            DetectionPolicy,
+            NavierMode,
+            estimate_crossing_frequency,
+            run_dynamic_series,
+        )
+
+        if payload.get("format") != "upi-dynamic-series" or not payload.get("source"):
+            raise ValueError("Require format=upi-dynamic-series and a declared source")
+        times = payload["times_s"]
+        estimate = None
+        if payload.get("input_kind") == "frequency_series":
+            frequencies = payload["frequencies_hz"]
+        elif payload.get("input_kind") == "single_component_crossings":
+            estimate = estimate_crossing_frequency(
+                times, payload["amplitudes"], crossing_level=payload["crossing_level"]
+            )
+            times, frequencies = estimate["times_s"], estimate["frequencies_hz"]
+        else:
+            raise ValueError(
+                "STOP: declare frequency_series or the single_component_crossings model"
+            )
+        control = payload["control"]
+        report = run_dynamic_series(
+            times,
+            frequencies,
+            initial_positions=tuple(tuple(p) for p in control["initial_positions"]),
+            phase0_rad=control["phase0_rad"],
+            density=control["density_kg_m3"],
+            viscosity=control["kinematic_viscosity_m2_s"],
+            force_mode=control["force_mode"],
+            residual_tolerance=control["residual_tolerance_m_s2"],
+            detection=DetectionPolicy(**payload["detection"]),
+            modes=tuple(NavierMode(mode) for mode in payload.get("modes", list(NavierMode))),
+            response_amplitudes=payload.get("response_amplitudes"),
+        )
+        input_hash = _hash(json.dumps(payload, sort_keys=True, allow_nan=False).encode())
+        report.update(
+            input_sha256=input_hash,
+            input_source=payload["source"],
+            input_snapshot=payload,
+            frequency_estimation=estimate,
+            dna_inventory=self.inventory,
+            dna_sources=self.sources,
+            code_sha256={
+                name: _hash(Path(__file__).with_name(name).read_bytes())
+                for name in ("dna.py", "spiral_flow.py", "physics.py", "constants.py")
+            },
+        )
+        candidates = []
+        for index, feature in enumerate(report["dynamic_nodes"]):
+            node = {
+                "address": f"UPI<information_physics,1,dynamic_signal,{input_hash[:16]}_{index}>",
+                "title": "Dynamic sample feature: " + feature["kind"],
+                "description": "Algorithmic feature in the supplied series, not an established resonance.",
+                "status": "DER",
+                "version": "0.1.0",
+                "tags": ["DYNAMIC", feature["kind"]],
+                "quantities": [
+                    {"name": "time", "value": feature["t"], "unit": "s"},
+                    {"name": "frequency", "value": feature["f"], "unit": "Hz"},
+                ],
+                "assumptions": [
+                    "Sampling and explicitly supplied detection thresholds define the feature"
+                ],
+                "primary_sources": [payload["source"], "sha256:" + input_hash],
+                "evidence": [
+                    {"type": "calculation", "source": json.dumps(feature, sort_keys=True)}
+                ],
+                "falsification_conditions": [
+                    "Recomputation from the same samples fails the feature criterion"
+                ],
+                "verification_type": "software_test",
+                "claims_experimental_verification": False,
+            }
+            ok, errors = validate_node_json(node, schema_path("node"))
+            if not ok:
+                raise ValueError("Invalid dynamic candidate: " + "; ".join(errors))
+            candidates.append(node)
+        report["candidates"] = candidates
+        return report
+
     def __init__(self, root: Path, relations: tuple[Relation, ...] = ()):
         self.root = root
         self.relations = relations

@@ -257,6 +257,8 @@ MIT — see [LICENSE](LICENSE). Citation metadata is available in [CITATION.cff]
 ## Research and typed DNA execution
 
 `upi dna-derive 1.766 --time 0.25` reads the catalog and emits typed calculation candidates.
+`upi dna-dynamic examples/dynamics/frequency-series.json` verifies sampled frequency
+dynamics and emits dynamic candidates. See [dynamic controls](docs/DYNAMIC_SPIRAL_FLOW.md).
 `upi research examples/research/session-8200.json` maps partial and open research.
 See [DNA execution and its bounds](docs/DNA_EXECUTION.md) and the
 [research operating prompts](prompts/upi-research-master.md). These commands do not promote records.

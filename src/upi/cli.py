@@ -332,6 +332,22 @@ def merge_check_cmd(args):
         print(rendered)
 
 
+def dna_dynamic_cmd(args):
+    """Export dataset and dynamic candidates; source data never writes canonical DNA."""
+    from .dna import DNAReader, _unique_object
+
+    payload = json.loads(Path(args.file).read_bytes(), object_pairs_hook=_unique_object)
+    report = DNAReader(args.data_root).analyze_dynamic(payload)
+    rendered = json.dumps(report, indent=2, allow_nan=False)
+    if args.output:
+        with Path(args.output).open("x", encoding="utf-8") as stream:
+            stream.write(rendered + "\n")
+    else:
+        print(rendered)
+    if report["state"] != "PASS":
+        sys.exit(1)
+
+
 def dna_derive_cmd(args):
     """Emit a reviewable batch and trace; never insert or promote it."""
     from .dna import DNAReader, Value, frequency_relations
@@ -357,6 +373,12 @@ def main():
     parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
 
     subparsers = parser.add_subparsers(dest="command", help="Command to run")
+
+    dynamic = subparsers.add_parser("dna-dynamic", help="Analyze a sampled dynamic frequency signal")
+    dynamic.add_argument("file", type=Path)
+    dynamic.add_argument("--data-root", type=Path, default=Path("data"))
+    dynamic.add_argument("--output", type=Path, help="New dataset file; existing files are not overwritten")
+    dynamic.set_defaults(func=dna_dynamic_cmd)
 
     dna = subparsers.add_parser("dna-derive", help="Derive typed frequency candidates from DNA")
     dna.add_argument("frequency", type=float)
