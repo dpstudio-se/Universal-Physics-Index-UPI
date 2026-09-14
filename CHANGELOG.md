@@ -15,6 +15,19 @@ Software contract freeze for the gathering and validation layers.
 
 ## Unreleased
 
+### Model laboratory v1
+
+- Refresh and verify the web-host ZIP on every update; exclude unrelated output
+  files and avoid installing SFTP dependencies for local builds.
+
+- Added a static `/upi/` build, pinned-key SFTP updater with verified uploads and
+  atomic entry-point replacement, plus local settings persistence and JSON import.
+
+- Added a responsive Swedish `/lab` UI with frequency–mass round trips,
+  conditional 27D to 4D reduction, Golay correction bounds and local JSON export.
+- Documented assumptions, model status, missing mechanisms and failure controls.
+- Added HTTP delivery tests and dependency-free JavaScript calculation tests to CI.
+
 ### Fixed
 
 - Integrated current canonical graph fixes with local recovery and ResonanceFS work.

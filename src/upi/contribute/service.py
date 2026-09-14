@@ -4,14 +4,20 @@ from __future__ import annotations
 
 import hmac
 import json
+import secrets
+import threading
+import time
+from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
 from upi.evidence_lens import status_through_lens
+from upi.feedback import review_node
 from upi.schema_resources import schema_path
 from upi.validation import validate_bridge_json, validate_json_schema, validate_node_json
 
-from .store import Contribution, ContributionStore
+from .promotion import REQUIRED_PROMOTION_CHECKS, PromotionPolicy
+from .store import Contribution, ContributionStore, content_hash
 
 DNA_MINNE_ADDRESS = "UPI<symbolic,1,memory,dna_minne_7.834>"
 
@@ -68,8 +74,13 @@ class ContributionError(ValueError):
 class ContributionService:
     """Validate, persist, and list live index records."""
 
-    def __init__(self, store: ContributionStore):
+    def __init__(
+        self, store: ContributionStore, *, promotion_policy: PromotionPolicy | None = None
+    ):
         self.store = store
+        self.promotion_policy = promotion_policy
+        self._promotion_lock = threading.Lock()
+        self._promotion_reviews: dict[str, dict[str, Any]] = {}
 
     def seed(self) -> Contribution:
         """Insert dna_minne_7.834 when the live index is empty of that address."""
@@ -262,15 +273,21 @@ class ContributionService:
         self.store.update_payload(old_address, old_payload)
         return stored
 
-    def promote(self, address: str, token: str, expected_token: str) -> Contribution:
-        """Maintainer-only EST promotion. Token mismatch is rejection, not science."""
+    @staticmethod
+    def _authorize_review(token: str, expected_token: str) -> None:
         if not expected_token or not hmac.compare_digest(
             token.encode("utf-8"), expected_token.encode("utf-8")
         ):
             raise ContributionError(["review token rejected"], status_code=403)
+
+    def _promotion_target(self, address: str) -> tuple[Contribution, dict[str, Any]]:
         item = self.store.get(address)
         if item is None:
             raise ContributionError([f"not found: {address}"], status_code=404)
+        if item.record_type != "node" or item.status == "EST":
+            raise ContributionError(
+                ["promotion requires a non-EST node candidate"], status_code=409
+            )
         payload = {
             **item.payload,
             "status": "EST",
@@ -278,7 +295,138 @@ class ContributionService:
         }
         if not payload.get("evidence") and not payload.get("primary_sources"):
             raise ContributionError(["EST promotion requires evidence or primary_sources"])
-        return self.store.update_payload(address, payload)
+        return item, payload
+
+    def _review_promotion(self, payload: dict[str, Any], intent: str) -> dict[str, Any]:
+        policy = self.promotion_policy
+        if policy is None or not policy.version.strip():
+            raise ContributionError(
+                [
+                    "STOP: promotion policy is unavailable; configure server-owned physics, canonical, "
+                    "software_tests and status_promotion checks before requesting review."
+                ],
+                status_code=409,
+            )
+        try:
+            inputs = policy.prepare(deepcopy(payload))
+            report = review_node(
+                payload,
+                human_intent=intent,
+                expected=inputs.expected,
+                evidence=inputs.evidence,
+                derive_from_evidence=inputs.derive_from_evidence,
+                checks=inputs.checks,
+                required_checks=REQUIRED_PROMOTION_CHECKS,
+                absolute_tolerance=inputs.absolute_tolerance,
+            ).as_dict()
+        except Exception as exc:
+            raise ContributionError(
+                [
+                    f"STOP: promotion review could not execute ({type(exc).__name__}); repair the policy and rerun."
+                ],
+                status_code=409,
+            ) from None
+        return {"policy_version": policy.version, "report": report}
+
+    def prepare_promotion(
+        self, address: str, token: str, expected_token: str, *, human_intent: str
+    ) -> dict[str, Any]:
+        """Execute feedback and return a server-issued, short-lived review receipt."""
+        self._authorize_review(token, expected_token)
+        if not isinstance(human_intent, str) or not human_intent.strip():
+            raise ContributionError(["human_intent is required"])
+        with self._promotion_lock:
+            item, payload = self._promotion_target(address)
+            review = self._review_promotion(payload, human_intent)
+            now = time.monotonic()
+            self._promotion_reviews = {
+                key: value
+                for key, value in self._promotion_reviews.items()
+                if value["expires"] > now
+            }
+            review_id = None
+            if review["report"]["promotion_gate"] == "AWAITING_HUMAN_REVIEW":
+                review_id = secrets.token_urlsafe(32)
+                # Bound memory; eviction safely requires a new review.
+                if len(self._promotion_reviews) >= 256:
+                    self._promotion_reviews.pop(next(iter(self._promotion_reviews)))
+                self._promotion_reviews[review_id] = {
+                    "address": address,
+                    "source_hash": item.content_hash,
+                    "review_hash": content_hash(review),
+                    "intent": human_intent,
+                    "expires": now + 900,
+                }
+            return {
+                **deepcopy(review),
+                "review_id": review_id,
+                "expires_in_seconds": 900 if review_id else 0,
+            }
+
+    def promote(
+        self,
+        address: str,
+        token: str,
+        expected_token: str,
+        *,
+        review_id: str = "",
+        human_decision: str = "",
+    ) -> Contribution:
+        """Require an explicit decision on a server-reviewed, unchanged target."""
+        self._authorize_review(token, expected_token)
+        with self._promotion_lock:
+            item, payload = self._promotion_target(address)
+            receipt = self._promotion_reviews.get(review_id)
+            if human_decision != "approve" or receipt is None:
+                raise ContributionError(
+                    [
+                        "STOP: request feedback review first, then supply its review_id and human_decision=approve after human review."
+                    ],
+                    status_code=409,
+                )
+            if (
+                receipt["expires"] <= time.monotonic()
+                or receipt["address"] != address
+                or receipt["source_hash"] != item.content_hash
+            ):
+                self._promotion_reviews.pop(review_id, None)
+                raise ContributionError(
+                    ["STOP: review is expired or candidate changed; request a new review."],
+                    status_code=409,
+                )
+            review = self._review_promotion(payload, receipt["intent"])
+            if (
+                review["report"]["promotion_gate"] != "AWAITING_HUMAN_REVIEW"
+                or content_hash(review) != receipt["review_hash"]
+            ):
+                self._promotion_reviews.pop(review_id, None)
+                raise ContributionError(
+                    ["STOP: evidence, policy or checks changed; request a new review."],
+                    status_code=409,
+                )
+            try:
+                stored = self.store.promote_reviewed(
+                    address,
+                    payload,
+                    expected_hash=item.content_hash,
+                    audit={
+                        "review_id": review_id,
+                        "human_decision": human_decision,
+                        "review_hash": receipt["review_hash"],
+                        "policy_version": review["policy_version"],
+                        "source_hash": item.content_hash,
+                        "target_hash": content_hash(payload),
+                        "reviewer": "authenticated_review_token_holder",
+                        "verification_type": "software_test",
+                    },
+                )
+            except ValueError:
+                raise ContributionError(
+                    ["STOP: candidate changed during review; request a new review."],
+                    status_code=409,
+                ) from None
+            self._promotion_reviews.pop(review_id, None)
+            return stored
 
 
 def _precheck(payload: dict[str, Any], *, allow_est: bool) -> list[str]:

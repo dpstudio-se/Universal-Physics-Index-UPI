@@ -4,10 +4,9 @@ info:
   version: "1.0.0"
   description: Public contribution and review API. software_test only.
 paths:
-  /api/promote:
+  /api/promotion-review:
     post:
-      summary: Promote a live record to EST using the shared maintainer token
-      description: Requires evidence or primary_sources. Does not write canonical Git data.
+      summary: Run server-owned feedback checks before a human promotion decision
       security:
         - ReviewToken: []
       requestBody:
@@ -16,10 +15,44 @@ paths:
           application/json:
             schema:
               type: object
-              required: [address]
+              required: [address, human_intent]
+              properties:
+                address: {type: string}
+                human_intent: {type: string, minLength: 1}
+      responses:
+        "200":
+          description: Feedback report; review_id is null on STOP, otherwise valid for 900 seconds
+        "400":
+          description: Invalid intent or missing evidence
+        "403":
+          description: Review token missing, incorrect, or disabled
+        "404":
+          description: Record not found
+        "409":
+          description: Policy unavailable, review execution failed, or record is not a non-EST node
+        "429":
+          description: POST rate limit exceeded
+  /api/promote:
+    post:
+      summary: Approve a server-reviewed live node for EST promotion
+      description: Requires explicit approval of an unexpired server-issued review. Feedback checks rerun and candidate, evidence, and versioned policy must remain unchanged. Does not write canonical Git data.
+      security:
+        - ReviewToken: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [address, review_id, human_decision]
               properties:
                 address:
                   type: string
+                review_id:
+                  type: string
+                human_decision:
+                  type: string
+                  enum: [approve]
       responses:
         "200":
           description: Promoted live record
@@ -29,6 +62,8 @@ paths:
           description: Review token missing, incorrect, or disabled on the server
         "404":
           description: Record not found
+        "409":
+          description: Review absent, expired, changed, blocked, or explicit human approval missing
         "429":
           description: POST rate limit exceeded
   /api/health:
