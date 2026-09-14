@@ -1,0 +1,72 @@
+{
+  "address": "UPI<open_problems,1,symbolic_cosmology,aureum_braid_chambers>",
+  "title": "Aureum braid chamber cosmology",
+  "description": "A symbolic chamber-and-braid picture of cosmic history. Its spiral, braided tube, repeated chambers and lens metaphor can be parameterized mathematically, but the supplied images do not define a spacetime metric, stress-energy tensor, compact seven-manifold or M2/M5 worldvolume and therefore do not establish a wormhole or an eleven-dimensional brane cosmology.",
+  "status": "STOP",
+  "tags": ["aureum-braid", "wormhole", "chamber-cosmology", "golden-ratio", "11d", "symbolic"],
+  "definitions": [
+    "Energy-mass function equivalence: Planck gives e = h f, Einstein gives e = m c^2, T€@X™ names m = h f / c^2 information mass, and the T€@X™ return-loop verifier is f = m c^2 / h. Uppercase E is only the conventional symbol for energy and is not a different or favored quantity.",
+    "The chamber index n labels successive regions in the image; it is not a spacetime dimension.",
+    "A golden recursion may be defined by R_(n+1) = R_n + R_(n-1), giving R_(n+1)/R_n -> phi for positive initial data.",
+    "A braid requires strands and an explicit braid-group word; a wormhole requires a Lorentzian metric with nontrivial causal or spatial connectivity.",
+    "An 11D brane binding requires a named eleven-dimensional background and an M2 or M5 embedding with a three- or six-dimensional worldvolume."
+  ],
+  "equations": [
+    "phi = (1 + sqrt(5)) / 2",
+    "R_(n+1) = R_n + R_(n-1)",
+    "lim_(n->infinity) R_(n+1) / R_n = phi",
+    "D_bulk = 11",
+    "dim(worldvolume_M2) = 3",
+    "dim(worldvolume_M5) = 6",
+    "M_11 = X_4 x Y_7",
+    "G_MN + Lambda g_MN = 8 pi G_11 T_MN",
+    "nabla_M T^MN = 0"
+  ],
+  "assumptions": [
+    "The images are treated as a symbolic proposal rather than an observation.",
+    "The golden recursion is a chosen chamber-label model, not a consequence of Einstein's equations.",
+    "X_4 x Y_7 is only a dimensionally consistent ansatz; Y_7, fluxes, sources and boundary conditions remain unspecified.",
+    "The relation m = h f / c^2 is an energy mass-equivalent and supplies no wormhole throat or brane charge.",
+    "A decreasing local density does not by itself prove conservation of a global total energy in an expanding cosmology."
+  ],
+  "mechanism": "The Aureum lens first composes Planck and Einstein: f -> E = h f -> m = E/c^2, hence m = h f/c^2, with the algebraic return f = m c^2/h. That bridge is closed for the same declared energy referent. The Fibonacci recurrence separately produces symbolic golden-ratio chamber scaling. Continuing from the mass equivalent to an 11D brane would require fields (g_MN, C_3), flux quantization, an M2/M5 embedding, dimensional reduction to an effective four-dimensional metric, and a solution of the field equations; the images do not supply those maps.",
+  "predictions": [
+    "If chamber radii follow the declared recursion, measured diagram radii should satisfy R_(n+1) - R_n - R_(n-1) = 0 within a preregistered graphical tolerance.",
+    "A physical 11D completion must reduce to a four-dimensional metric whose expansion history and perturbations agree with declared observations using one fixed parameter set.",
+    "A wormhole interpretation must exhibit a throat and causal structure in the derived four-dimensional metric rather than only a braided drawing."
+  ],
+  "falsification_conditions": [
+    "Reject golden-ratio scaling if preregistered chamber measurements do not approach phi beyond the declared uncertainty.",
+    "Reject the 11D binding if no named Y_7, flux configuration and M2/M5 embedding solve the stated equations and reduce to the claimed four-dimensional geometry.",
+    "Reject the wormhole label if the candidate metric has no throat or has ordinary simply connected cosmological topology.",
+    "Reject global-energy-conservation wording unless a conserved charge and the symmetry or boundary conditions that define it are supplied."
+  ],
+  "primary_sources": [
+    "Cremmer, Julia, Scherk (1978), Supergravity theory in eleven dimensions",
+    "Witten (1995), String theory dynamics in various dimensions",
+    "Maldacena (1997), The large N limit of superconformal field theories and supergravity",
+    "Aharony, Bergman, Jafferis, Maldacena (2008), N=6 superconformal Chern-Simons-matter theories, M2-branes and their gravity duals",
+    "User-provided Aureum Braid Wormhole and chamber-shell concept images (2026-09-03)"
+  ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "User-provided concept images",
+      "date": "2026-09-03",
+      "confidence": 0.1,
+      "notes": "Evidence for the proposed symbolism only; not evidence for a wormhole, cosmic topology or brane realization."
+    },
+    {
+      "type": "calculation",
+      "source": "Fibonacci recurrence and eleven-dimensional dimension count",
+      "confidence": 1.0,
+      "notes": "Establishes the stated algebraic limits and dimensional bookkeeping only."
+    }
+  ],
+  "information_layer": "PUBLIC",
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false,
+  "confusion_guard": "A shell resembles a spiral and a braid resembles a tube, but visual form does not establish topology, a wormhole metric, an M-brane embedding or a new cosmology. Eleven dimensions are not eleven visible chambers, and m = h f / c^2 does not generate a gravitational throat.",
+  "stop_reason": "The m = h f/c^2 bridge closes algebraically, but no map continues from that mass equivalent to an explicit 11D metric, compact seven-manifold, flux, brane embedding, four-dimensional reduction or observational fit. The smallest next observation is one complete candidate ansatz (g_MN, C_3, Y_7 and M2/M5 embedding) with field-equation residuals and its reduced 4D metric.",
+  "version": "0.1.0"
+}
