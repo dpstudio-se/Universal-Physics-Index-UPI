@@ -73,6 +73,18 @@ from .runtime import (
     get_runtime_loader,
     register_profile,
 )
+from .spiral_flow import (
+    DynamicPoint,
+    FrequencyState,
+    NavierMode,
+    dynamic_reference_points,
+    frequency_state,
+    integrate_phase,
+    navier_stokes_residual,
+    rigid_vortex_curl,
+    rigid_vortex_velocity,
+    select_mode,
+)
 from .triage import compare_report, finding_key
 from .validation import (
     validate_bridge_consistency,
@@ -99,6 +111,16 @@ from .workflow import (
 )
 
 __all__ = [
+    "DynamicPoint",
+    "FrequencyState",
+    "NavierMode",
+    "dynamic_reference_points",
+    "frequency_state",
+    "integrate_phase",
+    "navier_stokes_residual",
+    "rigid_vortex_curl",
+    "rigid_vortex_velocity",
+    "select_mode",
     # Version
     "__version__",
     # Constants
