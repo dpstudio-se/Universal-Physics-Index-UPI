@@ -7,19 +7,19 @@
   "input_trust": "untrusted",
   "source_paths_redacted": true,
   "summary": {
-    "files_scanned": 94,
-    "records_classified": 91,
+    "files_scanned": 102,
+    "records_classified": 98,
     "findings": 36,
     "status_counts": {
-      "DER": 22,
+      "DER": 27,
       "EST": 36,
       "HYP": 12,
-      "STOP": 10,
+      "STOP": 12,
       "SYM": 11
     },
     "record_type_counts": {
-      "bridge": 36,
-      "node": 54,
+      "bridge": 40,
+      "node": 57,
       "theory": 1
     }
   },
@@ -564,19 +564,19 @@
         }
       },
       {
-        "identity_hash": "365228a2c8176acec9955ad15279818687a4a79710a0a6ca5b95c348d69e1d86",
-        "path": "path:fea3fa6ddd2b03ad",
-        "path_hash": "fea3fa6ddd2b03ade1089fe7d0bc7bac8daa36a060ec3e53d957bc83790a8501",
+        "identity_hash": "4bc061733d2bd1e6ec811d97c2582ac880c82244f684fbdcdb8c0c0d04ed5859",
+        "path": "path:9f24cb51a6b2d38e",
+        "path_hash": "9f24cb51a6b2d38effd29a0f17a6d0cc0be9af8be91edd09e65f755404614194",
         "record_type": "bridge",
-        "status": "SYM",
+        "status": "STOP",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 0,
+        "evidence_count": 0,
+        "equation_count": 4,
         "id": "record:7",
         "layer": "record"
       },
@@ -591,24 +591,19 @@
         }
       },
       {
-        "id": "evidence:7",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "03ba7d915e39b8f078076240b1fd64a2dd8c776618b4a570b713632a76a7fa91",
-        "path": "path:9530a7c55a88776c",
-        "path_hash": "9530a7c55a88776c951953d649bcc62f3103c425be884c1f7e3f95d568a7f0cb",
+        "identity_hash": "e8390339867ebc0ace412358a1f30eb270427467c3ff7a4762bb4a58f2100b83",
+        "path": "path:f1c125f21d916311",
+        "path_hash": "f1c125f21d916311247a8c8393daeb2456f503526fdcfa0e9f606084688c87d7",
         "record_type": "bridge",
-        "status": "SYM",
+        "status": "DER",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 0,
-        "equation_count": 1,
+        "evidence_count": 2,
+        "equation_count": 6,
         "id": "record:8",
         "layer": "record"
       },
@@ -623,11 +618,16 @@
         }
       },
       {
-        "identity_hash": "622702efe000557b7e4f253fb3960a72af7ace6e984bf0286e10ed8964749bb2",
-        "path": "path:39ee32ac96276167",
-        "path_hash": "39ee32ac96276167b9cd8cc4346240ca99d3e8133318c1167f79b6ada55266be",
+        "id": "evidence:8",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "365228a2c8176acec9955ad15279818687a4a79710a0a6ca5b95c348d69e1d86",
+        "path": "path:fea3fa6ddd2b03ad",
+        "path_hash": "fea3fa6ddd2b03ade1089fe7d0bc7bac8daa36a060ec3e53d957bc83790a8501",
         "record_type": "bridge",
-        "status": "DER",
+        "status": "SYM",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -655,11 +655,11 @@
         "count": 1
       },
       {
-        "identity_hash": "60c994645783f61a7ffdd326d4e4c2f3f60991c9b46185753aa471d108d9f4ef",
-        "path": "path:c24477829b46b35b",
-        "path_hash": "c24477829b46b35b3b963efaa434cf679619e59fd2f6efd8d91124d2fa4e6b9a",
+        "identity_hash": "03ba7d915e39b8f078076240b1fd64a2dd8c776618b4a570b713632a76a7fa91",
+        "path": "path:9530a7c55a88776c",
+        "path_hash": "9530a7c55a88776c951953d649bcc62f3103c425be884c1f7e3f95d568a7f0cb",
         "record_type": "bridge",
-        "status": "DER",
+        "status": "SYM",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -667,7 +667,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 0,
-        "equation_count": 2,
+        "equation_count": 1,
         "id": "record:10",
         "layer": "record"
       },
@@ -682,19 +682,19 @@
         }
       },
       {
-        "identity_hash": "e42f2b5fa069467f568c411c817fac92d154fbbd2aac9ad34c395b2270ffa675",
-        "path": "path:c042443184af8386",
-        "path_hash": "c042443184af83868a44b6db000bd2ef05b3cea178f78ace62af81e6156376c7",
+        "identity_hash": "622702efe000557b7e4f253fb3960a72af7ace6e984bf0286e10ed8964749bb2",
+        "path": "path:39ee32ac96276167",
+        "path_hash": "39ee32ac96276167b9cd8cc4346240ca99d3e8133318c1167f79b6ada55266be",
         "record_type": "bridge",
-        "status": "EST",
+        "status": "DER",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 0,
-        "equation_count": 2,
+        "evidence_count": 1,
+        "equation_count": 0,
         "id": "record:11",
         "layer": "record"
       },
@@ -709,9 +709,14 @@
         }
       },
       {
-        "identity_hash": "65e327158c9964bd141b06903bc708c9454f850c25d8bf942ae4f857d3ae31ff",
-        "path": "path:24b7480ecdc71f4b",
-        "path_hash": "24b7480ecdc71f4b785f622b49b88c3096f5e310704f1870d374a1dd7d39f5ec",
+        "id": "evidence:11",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "60c994645783f61a7ffdd326d4e4c2f3f60991c9b46185753aa471d108d9f4ef",
+        "path": "path:c24477829b46b35b",
+        "path_hash": "c24477829b46b35b3b963efaa434cf679619e59fd2f6efd8d91124d2fa4e6b9a",
         "record_type": "bridge",
         "status": "DER",
         "scale": {
@@ -736,9 +741,9 @@
         }
       },
       {
-        "identity_hash": "375ec05b941f02939bfff4e6dc33507cd84da178381e0ce57f678eac1e9b73be",
-        "path": "path:329776a42b8f5917",
-        "path_hash": "329776a42b8f5917c854ce66efeb5be412594950f1c5cac15e4d48f2ea7eb291",
+        "identity_hash": "e42f2b5fa069467f568c411c817fac92d154fbbd2aac9ad34c395b2270ffa675",
+        "path": "path:c042443184af8386",
+        "path_hash": "c042443184af83868a44b6db000bd2ef05b3cea178f78ace62af81e6156376c7",
         "record_type": "bridge",
         "status": "EST",
         "scale": {
@@ -763,6 +768,60 @@
         }
       },
       {
+        "identity_hash": "65e327158c9964bd141b06903bc708c9454f850c25d8bf942ae4f857d3ae31ff",
+        "path": "path:24b7480ecdc71f4b",
+        "path_hash": "24b7480ecdc71f4b785f622b49b88c3096f5e310704f1870d374a1dd7d39f5ec",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:14",
+        "layer": "record"
+      },
+      {
+        "id": "scale:14",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "375ec05b941f02939bfff4e6dc33507cd84da178381e0ce57f678eac1e9b73be",
+        "path": "path:329776a42b8f5917",
+        "path_hash": "329776a42b8f5917c854ce66efeb5be412594950f1c5cac15e4d48f2ea7eb291",
+        "record_type": "bridge",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:15",
+        "layer": "record"
+      },
+      {
+        "id": "scale:15",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
         "identity_hash": "b5b65aff88f938f782428925d8374613b9a418adba2502e0a3989f9de796861a",
         "path": "path:dc93823c0adb05c5",
         "path_hash": "dc93823c0adb05c5b2b90d3456b4554f901635fcd32d94f4a6dce483dcec9187",
@@ -776,11 +835,11 @@
         },
         "evidence_count": 0,
         "equation_count": 3,
-        "id": "record:14",
+        "id": "record:16",
         "layer": "record"
       },
       {
-        "id": "scale:14",
+        "id": "scale:16",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -803,11 +862,11 @@
         },
         "evidence_count": 0,
         "equation_count": 1,
-        "id": "record:15",
+        "id": "record:17",
         "layer": "record"
       },
       {
-        "id": "scale:15",
+        "id": "scale:17",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -830,11 +889,11 @@
         },
         "evidence_count": 0,
         "equation_count": 1,
-        "id": "record:16",
+        "id": "record:18",
         "layer": "record"
       },
       {
-        "id": "scale:16",
+        "id": "scale:18",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -857,11 +916,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:17",
+        "id": "record:19",
         "layer": "record"
       },
       {
-        "id": "scale:17",
+        "id": "scale:19",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -884,11 +943,11 @@
         },
         "evidence_count": 0,
         "equation_count": 3,
-        "id": "record:18",
+        "id": "record:20",
         "layer": "record"
       },
       {
-        "id": "scale:18",
+        "id": "scale:20",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -911,11 +970,11 @@
         },
         "evidence_count": 0,
         "equation_count": 1,
-        "id": "record:19",
+        "id": "record:21",
         "layer": "record"
       },
       {
-        "id": "scale:19",
+        "id": "scale:21",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -938,11 +997,11 @@
         },
         "evidence_count": 0,
         "equation_count": 1,
-        "id": "record:20",
+        "id": "record:22",
         "layer": "record"
       },
       {
-        "id": "scale:20",
+        "id": "scale:22",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -965,11 +1024,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:21",
+        "id": "record:23",
         "layer": "record"
       },
       {
-        "id": "scale:21",
+        "id": "scale:23",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -992,11 +1051,11 @@
         },
         "evidence_count": 1,
         "equation_count": 1,
-        "id": "record:22",
+        "id": "record:24",
         "layer": "record"
       },
       {
-        "id": "scale:22",
+        "id": "scale:24",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1006,7 +1065,7 @@
         }
       },
       {
-        "id": "evidence:22",
+        "id": "evidence:24",
         "layer": "evidence",
         "count": 1
       },
@@ -1024,11 +1083,11 @@
         },
         "evidence_count": 1,
         "equation_count": 3,
-        "id": "record:23",
+        "id": "record:25",
         "layer": "record"
       },
       {
-        "id": "scale:23",
+        "id": "scale:25",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1038,7 +1097,7 @@
         }
       },
       {
-        "id": "evidence:23",
+        "id": "evidence:25",
         "layer": "evidence",
         "count": 1
       },
@@ -1056,11 +1115,11 @@
         },
         "evidence_count": 0,
         "equation_count": 1,
-        "id": "record:24",
+        "id": "record:26",
         "layer": "record"
       },
       {
-        "id": "scale:24",
+        "id": "scale:26",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1083,11 +1142,11 @@
         },
         "evidence_count": 0,
         "equation_count": 1,
-        "id": "record:25",
+        "id": "record:27",
         "layer": "record"
       },
       {
-        "id": "scale:25",
+        "id": "scale:27",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1110,11 +1169,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:26",
+        "id": "record:28",
         "layer": "record"
       },
       {
-        "id": "scale:26",
+        "id": "scale:28",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1137,11 +1196,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:27",
+        "id": "record:29",
         "layer": "record"
       },
       {
-        "id": "scale:27",
+        "id": "scale:29",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1164,11 +1223,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:28",
+        "id": "record:30",
         "layer": "record"
       },
       {
-        "id": "scale:28",
+        "id": "scale:30",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1191,11 +1250,11 @@
         },
         "evidence_count": 0,
         "equation_count": 1,
-        "id": "record:29",
+        "id": "record:31",
         "layer": "record"
       },
       {
-        "id": "scale:29",
+        "id": "scale:31",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1218,11 +1277,11 @@
         },
         "evidence_count": 0,
         "equation_count": 1,
-        "id": "record:30",
+        "id": "record:32",
         "layer": "record"
       },
       {
-        "id": "scale:30",
+        "id": "scale:32",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1245,11 +1304,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:31",
+        "id": "record:33",
         "layer": "record"
       },
       {
-        "id": "scale:31",
+        "id": "scale:33",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1257,6 +1316,70 @@
           "time_scale_declared": false,
           "length_scale_declared": false
         }
+      },
+      {
+        "identity_hash": "18ffeec14e31d6a1aa10bf5799a804b111bb375eacafb66b4bb73ed51f8ae0ba",
+        "path": "path:918418fd90fd8805",
+        "path_hash": "918418fd90fd88051fbfadfcafc8e5460ecdfdbb0cea5849470e6634a7ee7243",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 1,
+        "id": "record:34",
+        "layer": "record"
+      },
+      {
+        "id": "scale:34",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:34",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "710c6024448dd21c80093f21f22708b3854cf113a813f6e5bbef022acc7f3439",
+        "path": "path:eb3cb3dfbbf1d2dc",
+        "path_hash": "eb3cb3dfbbf1d2dcbbbc02ef6ce4b27874af8e8f5d41428332f36f8a7f610b14",
+        "record_type": "bridge",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:35",
+        "layer": "record"
+      },
+      {
+        "id": "scale:35",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:35",
+        "layer": "evidence",
+        "count": 1
       },
       {
         "identity_hash": "349aefeb27029b8e1d72e44cfd03b221ba6cc19cab400cf2e0e5d787b3fad8a9",
@@ -1272,11 +1395,11 @@
         },
         "evidence_count": 0,
         "equation_count": 3,
-        "id": "record:32",
+        "id": "record:36",
         "layer": "record"
       },
       {
-        "id": "scale:32",
+        "id": "scale:36",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1299,11 +1422,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:33",
+        "id": "record:37",
         "layer": "record"
       },
       {
-        "id": "scale:33",
+        "id": "scale:37",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1326,11 +1449,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:34",
+        "id": "record:38",
         "layer": "record"
       },
       {
-        "id": "scale:34",
+        "id": "scale:38",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1353,11 +1476,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:35",
+        "id": "record:39",
         "layer": "record"
       },
       {
-        "id": "scale:35",
+        "id": "scale:39",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1380,11 +1503,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:36",
+        "id": "record:40",
         "layer": "record"
       },
       {
-        "id": "scale:36",
+        "id": "scale:40",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1407,11 +1530,11 @@
         },
         "evidence_count": 1,
         "equation_count": 3,
-        "id": "record:37",
+        "id": "record:41",
         "layer": "record"
       },
       {
-        "id": "scale:37",
+        "id": "scale:41",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1421,7 +1544,7 @@
         }
       },
       {
-        "id": "evidence:37",
+        "id": "evidence:41",
         "layer": "evidence",
         "count": 1
       },
@@ -1439,11 +1562,11 @@
         },
         "evidence_count": 2,
         "equation_count": 3,
-        "id": "record:38",
+        "id": "record:42",
         "layer": "record"
       },
       {
-        "id": "scale:38",
+        "id": "scale:42",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1453,7 +1576,7 @@
         }
       },
       {
-        "id": "evidence:38",
+        "id": "evidence:42",
         "layer": "evidence",
         "count": 2
       },
@@ -1471,11 +1594,11 @@
         },
         "evidence_count": 2,
         "equation_count": 3,
-        "id": "record:39",
+        "id": "record:43",
         "layer": "record"
       },
       {
-        "id": "scale:39",
+        "id": "scale:43",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1485,7 +1608,7 @@
         }
       },
       {
-        "id": "evidence:39",
+        "id": "evidence:43",
         "layer": "evidence",
         "count": 2
       },
@@ -1503,129 +1626,6 @@
         },
         "evidence_count": 1,
         "equation_count": 5,
-        "id": "record:40",
-        "layer": "record"
-      },
-      {
-        "id": "scale:40",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:40",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "1498ae25ca5e53e1f649cede16c2e75ea20504b40bf79d2bcc86a01ea6610368",
-        "path": "path:38a79c4bb365b1f4",
-        "path_hash": "38a79c4bb365b1f48d342fd81b7bcae073c5ecebc96ea324b64dd5220df56dc6",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 1,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 0,
-        "equation_count": 2,
-        "id": "record:41",
-        "layer": "record"
-      },
-      {
-        "id": "scale:41",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 1,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "identity_hash": "a904ff83c2e7c13a53448bfdbff0be4dc05d7dd696a13de8e015d68398e28ebe",
-        "path": "path:f05fba9f9828ce06",
-        "path_hash": "f05fba9f9828ce06aca32f5a0e4abeecf229ef49e505dd577aa7629d5ce98201",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 1,
-        "equation_count": 3,
-        "id": "record:42",
-        "layer": "record"
-      },
-      {
-        "id": "scale:42",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:42",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "9d6658bac3507f2b5b733d441ab86dac6af1d92d9c4a561d644cfbc8a5550782",
-        "path": "path:2b019515bd3f1aee",
-        "path_hash": "2b019515bd3f1aee3e8aa5e278bd3de9a0365470afdd940e9f79c157f95036e9",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 1,
-        "equation_count": 2,
-        "id": "record:43",
-        "layer": "record"
-      },
-      {
-        "id": "scale:43",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:43",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "6f00d3553cdde7412a0f98826af5e0433533ae37e11a6882bf90c81cfebf7823",
-        "path": "path:5b6e4f5d2046f712",
-        "path_hash": "5b6e4f5d2046f7126c480daed1aa5d60d1c8dd2e758850bce3bd226363335203",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 1,
-        "equation_count": 3,
         "id": "record:44",
         "layer": "record"
       },
@@ -1645,19 +1645,19 @@
         "count": 1
       },
       {
-        "identity_hash": "5606affd4b68465913e605f4f0984514a984729bf984fb20dc9b8713203db0b5",
-        "path": "path:661eaa46b6296b2f",
-        "path_hash": "661eaa46b6296b2fbe625b9a641597fddf283be7a3d3479c64f6f6f239b10401",
+        "identity_hash": "1498ae25ca5e53e1f649cede16c2e75ea20504b40bf79d2bcc86a01ea6610368",
+        "path": "path:38a79c4bb365b1f4",
+        "path_hash": "38a79c4bb365b1f48d342fd81b7bcae073c5ecebc96ea324b64dd5220df56dc6",
         "record_type": "node",
         "status": "EST",
         "scale": {
           "scope_declared": false,
-          "unit_count": 0,
+          "unit_count": 1,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 3,
+        "evidence_count": 0,
+        "equation_count": 2,
         "id": "record:45",
         "layer": "record"
       },
@@ -1666,20 +1666,15 @@
         "layer": "scale",
         "value": {
           "scope_declared": false,
-          "unit_count": 0,
+          "unit_count": 1,
           "time_scale_declared": false,
           "length_scale_declared": false
         }
       },
       {
-        "id": "evidence:45",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "ea45ab41c87c4bd93798b13ef46d81e7cf7347fccaebc38d29f4b45093b06bcc",
-        "path": "path:758d9da09bbb7aae",
-        "path_hash": "758d9da09bbb7aaeb89b137bed5d635d87c2fe31d9c8b79b0b4271e01188636f",
+        "identity_hash": "a904ff83c2e7c13a53448bfdbff0be4dc05d7dd696a13de8e015d68398e28ebe",
+        "path": "path:f05fba9f9828ce06",
+        "path_hash": "f05fba9f9828ce06aca32f5a0e4abeecf229ef49e505dd577aa7629d5ce98201",
         "record_type": "node",
         "status": "EST",
         "scale": {
@@ -1709,9 +1704,9 @@
         "count": 1
       },
       {
-        "identity_hash": "73f48b9dd2c020f3990676ba4f2116acb94fe1f6c7f9f5da37575b494b476b03",
-        "path": "path:25d6ed4434293302",
-        "path_hash": "25d6ed4434293302685ee7fa5b4e85859c00b7922b6a85ce539de61dd4d0e231",
+        "identity_hash": "9d6658bac3507f2b5b733d441ab86dac6af1d92d9c4a561d644cfbc8a5550782",
+        "path": "path:2b019515bd3f1aee",
+        "path_hash": "2b019515bd3f1aee3e8aa5e278bd3de9a0365470afdd940e9f79c157f95036e9",
         "record_type": "node",
         "status": "EST",
         "scale": {
@@ -1741,9 +1736,9 @@
         "count": 1
       },
       {
-        "identity_hash": "726c374bdeccc2c2b54c4912f0cbf692ff6c07e044d0f955b76af7722b62ed0d",
-        "path": "path:d9e8e6f93faf426d",
-        "path_hash": "d9e8e6f93faf426d44b2d2b8224d3f09e1889e4e41e38eed82968a4a07235128",
+        "identity_hash": "6f00d3553cdde7412a0f98826af5e0433533ae37e11a6882bf90c81cfebf7823",
+        "path": "path:5b6e4f5d2046f712",
+        "path_hash": "5b6e4f5d2046f7126c480daed1aa5d60d1c8dd2e758850bce3bd226363335203",
         "record_type": "node",
         "status": "EST",
         "scale": {
@@ -1753,7 +1748,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 1,
-        "equation_count": 4,
+        "equation_count": 3,
         "id": "record:48",
         "layer": "record"
       },
@@ -1773,9 +1768,9 @@
         "count": 1
       },
       {
-        "identity_hash": "2546a9b8f13ea71c58bdab8948d315b3e026b142622e49ee33a0ceed139e5261",
-        "path": "path:c709e0163c04a031",
-        "path_hash": "c709e0163c04a03195b40a37d35b99280fc63756aa3f8d1a50cb32b853c75332",
+        "identity_hash": "5606affd4b68465913e605f4f0984514a984729bf984fb20dc9b8713203db0b5",
+        "path": "path:661eaa46b6296b2f",
+        "path_hash": "661eaa46b6296b2fbe625b9a641597fddf283be7a3d3479c64f6f6f239b10401",
         "record_type": "node",
         "status": "EST",
         "scale": {
@@ -1805,9 +1800,9 @@
         "count": 1
       },
       {
-        "identity_hash": "ce65afb4fd7dea289be1bbe522d9fd220d6ddbe38d616514986ee5b52ca3bf76",
-        "path": "path:fc56fa07b0934261",
-        "path_hash": "fc56fa07b0934261f8066e73d81f7df3c1f4c3c66aee8d556cfce1f79080f477",
+        "identity_hash": "ea45ab41c87c4bd93798b13ef46d81e7cf7347fccaebc38d29f4b45093b06bcc",
+        "path": "path:758d9da09bbb7aae",
+        "path_hash": "758d9da09bbb7aaeb89b137bed5d635d87c2fe31d9c8b79b0b4271e01188636f",
         "record_type": "node",
         "status": "EST",
         "scale": {
@@ -1817,7 +1812,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 1,
-        "equation_count": 2,
+        "equation_count": 3,
         "id": "record:50",
         "layer": "record"
       },
@@ -1837,9 +1832,9 @@
         "count": 1
       },
       {
-        "identity_hash": "83966cc28fe7a50193a91b5ed77fab2ae7174629bc512e3d9b06ad72941ed97f",
-        "path": "path:350dafda741ad556",
-        "path_hash": "350dafda741ad556ba09ba7bc9f55b5038bdce6d5f90a59fa68bfd29e3891868",
+        "identity_hash": "73f48b9dd2c020f3990676ba4f2116acb94fe1f6c7f9f5da37575b494b476b03",
+        "path": "path:25d6ed4434293302",
+        "path_hash": "25d6ed4434293302685ee7fa5b4e85859c00b7922b6a85ce539de61dd4d0e231",
         "record_type": "node",
         "status": "EST",
         "scale": {
@@ -1869,9 +1864,9 @@
         "count": 1
       },
       {
-        "identity_hash": "e92a4b2cbdfb602c0c57933da56a35be084cb8edcc4111fea1aa7be9f7f0f75b",
-        "path": "path:77874809aa07ff45",
-        "path_hash": "77874809aa07ff451dd22a6d4889f2ec833a5aa1e17e165844b1a2e1622bb083",
+        "identity_hash": "726c374bdeccc2c2b54c4912f0cbf692ff6c07e044d0f955b76af7722b62ed0d",
+        "path": "path:d9e8e6f93faf426d",
+        "path_hash": "d9e8e6f93faf426d44b2d2b8224d3f09e1889e4e41e38eed82968a4a07235128",
         "record_type": "node",
         "status": "EST",
         "scale": {
@@ -1881,7 +1876,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 1,
-        "equation_count": 3,
+        "equation_count": 4,
         "id": "record:52",
         "layer": "record"
       },
@@ -1901,6 +1896,134 @@
         "count": 1
       },
       {
+        "identity_hash": "2546a9b8f13ea71c58bdab8948d315b3e026b142622e49ee33a0ceed139e5261",
+        "path": "path:c709e0163c04a031",
+        "path_hash": "c709e0163c04a03195b40a37d35b99280fc63756aa3f8d1a50cb32b853c75332",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:53",
+        "layer": "record"
+      },
+      {
+        "id": "scale:53",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:53",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "ce65afb4fd7dea289be1bbe522d9fd220d6ddbe38d616514986ee5b52ca3bf76",
+        "path": "path:fc56fa07b0934261",
+        "path_hash": "fc56fa07b0934261f8066e73d81f7df3c1f4c3c66aee8d556cfce1f79080f477",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:54",
+        "layer": "record"
+      },
+      {
+        "id": "scale:54",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:54",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "83966cc28fe7a50193a91b5ed77fab2ae7174629bc512e3d9b06ad72941ed97f",
+        "path": "path:350dafda741ad556",
+        "path_hash": "350dafda741ad556ba09ba7bc9f55b5038bdce6d5f90a59fa68bfd29e3891868",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:55",
+        "layer": "record"
+      },
+      {
+        "id": "scale:55",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:55",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "e92a4b2cbdfb602c0c57933da56a35be084cb8edcc4111fea1aa7be9f7f0f75b",
+        "path": "path:77874809aa07ff45",
+        "path_hash": "77874809aa07ff451dd22a6d4889f2ec833a5aa1e17e165844b1a2e1622bb083",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:56",
+        "layer": "record"
+      },
+      {
+        "id": "scale:56",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:56",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
         "identity_hash": "bd6fb3e2a250b79e4ddd1ac32088c4d20f69ea14460c26b4bd2af7f488985df7",
         "path": "path:a7d913bcbc8663c0",
         "path_hash": "a7d913bcbc8663c0debca908ce9ae33b24cbb94fa38fe04322d0408a7b9242c8",
@@ -1914,11 +2037,11 @@
         },
         "evidence_count": 0,
         "equation_count": 0,
-        "id": "record:53",
+        "id": "record:57",
         "layer": "record"
       },
       {
-        "id": "scale:53",
+        "id": "scale:57",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1941,11 +2064,11 @@
         },
         "evidence_count": 0,
         "equation_count": 0,
-        "id": "record:54",
+        "id": "record:58",
         "layer": "record"
       },
       {
-        "id": "scale:54",
+        "id": "scale:58",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1968,11 +2091,11 @@
         },
         "evidence_count": 1,
         "equation_count": 2,
-        "id": "record:55",
+        "id": "record:59",
         "layer": "record"
       },
       {
-        "id": "scale:55",
+        "id": "scale:59",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -1982,7 +2105,7 @@
         }
       },
       {
-        "id": "evidence:55",
+        "id": "evidence:59",
         "layer": "evidence",
         "count": 1
       },
@@ -2000,11 +2123,11 @@
         },
         "evidence_count": 3,
         "equation_count": 9,
-        "id": "record:56",
+        "id": "record:60",
         "layer": "record"
       },
       {
-        "id": "scale:56",
+        "id": "scale:60",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2014,7 +2137,7 @@
         }
       },
       {
-        "id": "evidence:56",
+        "id": "evidence:60",
         "layer": "evidence",
         "count": 3
       },
@@ -2032,11 +2155,11 @@
         },
         "evidence_count": 1,
         "equation_count": 0,
-        "id": "record:57",
+        "id": "record:61",
         "layer": "record"
       },
       {
-        "id": "scale:57",
+        "id": "scale:61",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2046,7 +2169,7 @@
         }
       },
       {
-        "id": "evidence:57",
+        "id": "evidence:61",
         "layer": "evidence",
         "count": 1
       },
@@ -2064,11 +2187,11 @@
         },
         "evidence_count": 1,
         "equation_count": 1,
-        "id": "record:58",
+        "id": "record:62",
         "layer": "record"
       },
       {
-        "id": "scale:58",
+        "id": "scale:62",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2078,7 +2201,7 @@
         }
       },
       {
-        "id": "evidence:58",
+        "id": "evidence:62",
         "layer": "evidence",
         "count": 1
       },
@@ -2096,11 +2219,11 @@
         },
         "evidence_count": 0,
         "equation_count": 0,
-        "id": "record:59",
+        "id": "record:63",
         "layer": "record"
       },
       {
-        "id": "scale:59",
+        "id": "scale:63",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2123,124 +2246,6 @@
         },
         "evidence_count": 1,
         "equation_count": 0,
-        "id": "record:60",
-        "layer": "record"
-      },
-      {
-        "id": "scale:60",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:60",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "5ea98f566ad95b0dda4b69d8dce8604832c516ebf1c083b0df1fa069d072d8c6",
-        "path": "path:bd5de5f47561ce33",
-        "path_hash": "bd5de5f47561ce33613f8a9f112eb63e6cdb29e27b7141882884a3ed8e2d0843",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 0,
-        "equation_count": 0,
-        "id": "record:61",
-        "layer": "record"
-      },
-      {
-        "id": "scale:61",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "identity_hash": "fa468e7568060d2e159adc412f6418789a3df259566268119ea94cd7d6e0e7d4",
-        "path": "path:45ea575dfd57673f",
-        "path_hash": "45ea575dfd57673fd0e3a6e52bbd0076e3f7540884b78e27808685ec0c240299",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 2,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 1,
-        "equation_count": 2,
-        "id": "record:62",
-        "layer": "record"
-      },
-      {
-        "id": "scale:62",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 2,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:62",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "4e97ba6d1f4fefb454205b91b7027bf0599d1d0299180196edfcd312525b0334",
-        "path": "path:76aabe9cdad435d4",
-        "path_hash": "76aabe9cdad435d4c8029f22c705306f2dc052052509694c2b15a39eeada3883",
-        "record_type": "node",
-        "status": "SYM",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 0,
-        "equation_count": 2,
-        "id": "record:63",
-        "layer": "record"
-      },
-      {
-        "id": "scale:63",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "identity_hash": "90a607152a1814c07d662e60cda9beb1abd65901e8d449461d121482a13052cf",
-        "path": "path:29ef4184484d4a0e",
-        "path_hash": "29ef4184484d4a0e4f8e2cc13b48a486190171e8d17ea63aa3d35e25f837cf32",
-        "record_type": "node",
-        "status": "SYM",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 0,
-        "equation_count": 0,
         "id": "record:64",
         "layer": "record"
       },
@@ -2255,11 +2260,16 @@
         }
       },
       {
-        "identity_hash": "755e6fd8e5592c7d2122903cae7eb902f0f86782e15f07ec8afcd23169d72a2f",
-        "path": "path:90dade09744eb913",
-        "path_hash": "90dade09744eb913ca32c9343d27c118d4a1485f3365aea076bcb015828e62e3",
+        "id": "evidence:64",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "5ea98f566ad95b0dda4b69d8dce8604832c516ebf1c083b0df1fa069d072d8c6",
+        "path": "path:bd5de5f47561ce33",
+        "path_hash": "bd5de5f47561ce33613f8a9f112eb63e6cdb29e27b7141882884a3ed8e2d0843",
         "record_type": "node",
-        "status": "SYM",
+        "status": "EST",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -2282,6 +2292,119 @@
         }
       },
       {
+        "identity_hash": "fa468e7568060d2e159adc412f6418789a3df259566268119ea94cd7d6e0e7d4",
+        "path": "path:45ea575dfd57673f",
+        "path_hash": "45ea575dfd57673fd0e3a6e52bbd0076e3f7540884b78e27808685ec0c240299",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 2,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:66",
+        "layer": "record"
+      },
+      {
+        "id": "scale:66",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 2,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:66",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "4e97ba6d1f4fefb454205b91b7027bf0599d1d0299180196edfcd312525b0334",
+        "path": "path:76aabe9cdad435d4",
+        "path_hash": "76aabe9cdad435d4c8029f22c705306f2dc052052509694c2b15a39eeada3883",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 2,
+        "id": "record:67",
+        "layer": "record"
+      },
+      {
+        "id": "scale:67",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "90a607152a1814c07d662e60cda9beb1abd65901e8d449461d121482a13052cf",
+        "path": "path:29ef4184484d4a0e",
+        "path_hash": "29ef4184484d4a0e4f8e2cc13b48a486190171e8d17ea63aa3d35e25f837cf32",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 0,
+        "id": "record:68",
+        "layer": "record"
+      },
+      {
+        "id": "scale:68",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "identity_hash": "755e6fd8e5592c7d2122903cae7eb902f0f86782e15f07ec8afcd23169d72a2f",
+        "path": "path:90dade09744eb913",
+        "path_hash": "90dade09744eb913ca32c9343d27c118d4a1485f3365aea076bcb015828e62e3",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 0,
+        "equation_count": 0,
+        "id": "record:69",
+        "layer": "record"
+      },
+      {
+        "id": "scale:69",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
         "identity_hash": "782e4f9f179c3074c06d3341082ca2b1d6ac75e7ee1ee555a89dcdf39e6065a8",
         "path": "path:b49ed0ef8b45c56e",
         "path_hash": "b49ed0ef8b45c56e260798030b80d55abdee3b94b6268d7340d93cbf41622c21",
@@ -2295,11 +2418,11 @@
         },
         "evidence_count": 3,
         "equation_count": 15,
-        "id": "record:66",
+        "id": "record:70",
         "layer": "record"
       },
       {
-        "id": "scale:66",
+        "id": "scale:70",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2309,7 +2432,7 @@
         }
       },
       {
-        "id": "evidence:66",
+        "id": "evidence:70",
         "layer": "evidence",
         "count": 3
       },
@@ -2327,11 +2450,11 @@
         },
         "evidence_count": 1,
         "equation_count": 12,
-        "id": "record:67",
+        "id": "record:71",
         "layer": "record"
       },
       {
-        "id": "scale:67",
+        "id": "scale:71",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2341,7 +2464,7 @@
         }
       },
       {
-        "id": "evidence:67",
+        "id": "evidence:71",
         "layer": "evidence",
         "count": 1
       },
@@ -2359,11 +2482,11 @@
         },
         "evidence_count": 3,
         "equation_count": 3,
-        "id": "record:68",
+        "id": "record:72",
         "layer": "record"
       },
       {
-        "id": "scale:68",
+        "id": "scale:72",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2373,7 +2496,7 @@
         }
       },
       {
-        "id": "evidence:68",
+        "id": "evidence:72",
         "layer": "evidence",
         "count": 3
       },
@@ -2391,11 +2514,11 @@
         },
         "evidence_count": 1,
         "equation_count": 4,
-        "id": "record:69",
+        "id": "record:73",
         "layer": "record"
       },
       {
-        "id": "scale:69",
+        "id": "scale:73",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2405,7 +2528,7 @@
         }
       },
       {
-        "id": "evidence:69",
+        "id": "evidence:73",
         "layer": "evidence",
         "count": 1
       },
@@ -2423,11 +2546,11 @@
         },
         "evidence_count": 2,
         "equation_count": 3,
-        "id": "record:70",
+        "id": "record:74",
         "layer": "record"
       },
       {
-        "id": "scale:70",
+        "id": "scale:74",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2437,7 +2560,7 @@
         }
       },
       {
-        "id": "evidence:70",
+        "id": "evidence:74",
         "layer": "evidence",
         "count": 2
       },
@@ -2455,11 +2578,11 @@
         },
         "evidence_count": 1,
         "equation_count": 2,
-        "id": "record:71",
+        "id": "record:75",
         "layer": "record"
       },
       {
-        "id": "scale:71",
+        "id": "scale:75",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2469,7 +2592,7 @@
         }
       },
       {
-        "id": "evidence:71",
+        "id": "evidence:75",
         "layer": "evidence",
         "count": 1
       },
@@ -2487,11 +2610,11 @@
         },
         "evidence_count": 2,
         "equation_count": 5,
-        "id": "record:72",
+        "id": "record:76",
         "layer": "record"
       },
       {
-        "id": "scale:72",
+        "id": "scale:76",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2501,9 +2624,73 @@
         }
       },
       {
-        "id": "evidence:72",
+        "id": "evidence:76",
         "layer": "evidence",
         "count": 2
+      },
+      {
+        "identity_hash": "4a7e2a062909deb59ed49aeb1e145354cb54ec2ea18af36c7405de4b20a8e9a4",
+        "path": "path:788863bfb6fd9152",
+        "path_hash": "788863bfb6fd91521f1bd9f8a902ab88254f187a6c066692665d8d552e657a13",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:77",
+        "layer": "record"
+      },
+      {
+        "id": "scale:77",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:77",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "6f820fc0a3cb5db817baf4eaa22eaa141dd6272baee7f4cc4c17e6e11b296ddc",
+        "path": "path:b3553a37138ff912",
+        "path_hash": "b3553a37138ff9121cfb7d5cc9d569e69ec3ab7fa804f04754e2285878870be9",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 3,
+        "equation_count": 3,
+        "id": "record:78",
+        "layer": "record"
+      },
+      {
+        "id": "scale:78",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:78",
+        "layer": "evidence",
+        "count": 3
       },
       {
         "identity_hash": "ef24c9f98c7573679ed46d5e8f6ee8249b129900c81fc0f76b2f05eb1626e5ea",
@@ -2519,11 +2706,11 @@
         },
         "evidence_count": 3,
         "equation_count": 29,
-        "id": "record:73",
+        "id": "record:79",
         "layer": "record"
       },
       {
-        "id": "scale:73",
+        "id": "scale:79",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2533,9 +2720,41 @@
         }
       },
       {
-        "id": "evidence:73",
+        "id": "evidence:79",
         "layer": "evidence",
         "count": 3
+      },
+      {
+        "identity_hash": "b5f7cd3afc126b38277b323cf01104307fe9ca5f0097eeca4d116b02a6b36b98",
+        "path": "path:32d970ae5f2830ec",
+        "path_hash": "32d970ae5f2830ecc0fb74f269467d5f50ca0b56792948e6b8e611780a8d28d7",
+        "record_type": "node",
+        "status": "STOP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 2,
+        "equation_count": 9,
+        "id": "record:80",
+        "layer": "record"
+      },
+      {
+        "id": "scale:80",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:80",
+        "layer": "evidence",
+        "count": 2
       },
       {
         "identity_hash": "96a9ba6092956b808029d59a6f6746dd679dcf2d4253838ffca24e5d64c0a92f",
@@ -2551,11 +2770,11 @@
         },
         "evidence_count": 0,
         "equation_count": 0,
-        "id": "record:74",
+        "id": "record:81",
         "layer": "record"
       },
       {
-        "id": "scale:74",
+        "id": "scale:81",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2578,11 +2797,11 @@
         },
         "evidence_count": 0,
         "equation_count": 2,
-        "id": "record:75",
+        "id": "record:82",
         "layer": "record"
       },
       {
-        "id": "scale:75",
+        "id": "scale:82",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2605,11 +2824,11 @@
         },
         "evidence_count": 0,
         "equation_count": 3,
-        "id": "record:76",
+        "id": "record:83",
         "layer": "record"
       },
       {
-        "id": "scale:76",
+        "id": "scale:83",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -2632,230 +2851,6 @@
         },
         "evidence_count": 2,
         "equation_count": 5,
-        "id": "record:77",
-        "layer": "record"
-      },
-      {
-        "id": "scale:77",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:77",
-        "layer": "evidence",
-        "count": 2
-      },
-      {
-        "identity_hash": "3ccf70f573239411f07ba466da085d3ac3695ab637167e2d3e2f15baf8279f00",
-        "path": "path:2528d0bc9eeda1b0",
-        "path_hash": "2528d0bc9eeda1b01b8d0fe62908fb27d1e006ab7ae5bf3634c922fc2a869423",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 1,
-        "equation_count": 7,
-        "id": "record:78",
-        "layer": "record"
-      },
-      {
-        "id": "scale:78",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:78",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "ca8324b739075d77c3e95f4e6b54513f8085a226c2f24ca594297e31174e9fbd",
-        "path": "path:7c57706665747c3f",
-        "path_hash": "7c57706665747c3f62e41d9b5bf4f9c5999e90005ac291e64dd83148a02a9df7",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 1,
-        "equation_count": 5,
-        "id": "record:79",
-        "layer": "record"
-      },
-      {
-        "id": "scale:79",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:79",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "dadb57e19ae2fe3880903d58098c7add6c27ecb8dc3234c1bf4228f880658f40",
-        "path": "path:d7320ff79ab5ba71",
-        "path_hash": "d7320ff79ab5ba71e280e5638656b6d107e5c82e04c7e4d17c567b5351c618e8",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 1,
-        "equation_count": 5,
-        "id": "record:80",
-        "layer": "record"
-      },
-      {
-        "id": "scale:80",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:80",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "389b0d7b779bf076d7e6805404265b0bd5c92c35735243aabf513fe140a92b27",
-        "path": "path:216053aebc852219",
-        "path_hash": "216053aebc8522195bc4427061f9a2fa90197e54f599e71e80e5b679fc80133c",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 2,
-        "equation_count": 5,
-        "id": "record:81",
-        "layer": "record"
-      },
-      {
-        "id": "scale:81",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:81",
-        "layer": "evidence",
-        "count": 2
-      },
-      {
-        "identity_hash": "48880b46367fb359bccd6d7068bbba668a958d83dd4a4606ffe3f845a87260cc",
-        "path": "path:54c85276bbdb6241",
-        "path_hash": "54c85276bbdb624147636552fc636bd8640737d4ac7b8ba96a5eae7de4314916",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 1,
-        "equation_count": 5,
-        "id": "record:82",
-        "layer": "record"
-      },
-      {
-        "id": "scale:82",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:82",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "c5d970cf745228cc1db5b7735601a1f376d1e50185149e261c8e7df50b180a9f",
-        "path": "path:064e6ba150d367db",
-        "path_hash": "064e6ba150d367db36de948f6e5d05e76edc51f6088d07f07725d6a5ea59580c",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 1,
-        "equation_count": 4,
-        "id": "record:83",
-        "layer": "record"
-      },
-      {
-        "id": "scale:83",
-        "layer": "scale",
-        "value": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        }
-      },
-      {
-        "id": "evidence:83",
-        "layer": "evidence",
-        "count": 1
-      },
-      {
-        "identity_hash": "db1104382a412e1d07409d52c58381f1b6da338048da1de0ee6cb7ace9e751f5",
-        "path": "path:336ecc83934ecf68",
-        "path_hash": "336ecc83934ecf68e2a916fc3d0b30991a3c968050330b1fbdbd1a518902a128",
-        "record_type": "node",
-        "status": "EST",
-        "scale": {
-          "scope_declared": false,
-          "unit_count": 0,
-          "time_scale_declared": false,
-          "length_scale_declared": false
-        },
-        "evidence_count": 2,
-        "equation_count": 2,
         "id": "record:84",
         "layer": "record"
       },
@@ -2875,11 +2870,11 @@
         "count": 2
       },
       {
-        "identity_hash": "6eff53bd7a2b3e2370f0250248cbf6221bb9cfdfcb11cc2e75c81c66be56755a",
-        "path": "path:6e54dee2907fdc7c",
-        "path_hash": "6e54dee2907fdc7ca6c9681f7ff868e5f11e504d466201bd46512a55474cfba6",
+        "identity_hash": "3ccf70f573239411f07ba466da085d3ac3695ab637167e2d3e2f15baf8279f00",
+        "path": "path:2528d0bc9eeda1b0",
+        "path_hash": "2528d0bc9eeda1b01b8d0fe62908fb27d1e006ab7ae5bf3634c922fc2a869423",
         "record_type": "node",
-        "status": "DER",
+        "status": "EST",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -2887,7 +2882,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 1,
-        "equation_count": 2,
+        "equation_count": 7,
         "id": "record:85",
         "layer": "record"
       },
@@ -2907,11 +2902,11 @@
         "count": 1
       },
       {
-        "identity_hash": "df32909ff0f24c5f597870483396924694fe3e3e2e8e3fe50ccd99b609985515",
-        "path": "path:b812721795dab836",
-        "path_hash": "b812721795dab836f11ba92f4a0e6d92928a9da088149f7e216a133876f91826",
+        "identity_hash": "ca8324b739075d77c3e95f4e6b54513f8085a226c2f24ca594297e31174e9fbd",
+        "path": "path:7c57706665747c3f",
+        "path_hash": "7c57706665747c3f62e41d9b5bf4f9c5999e90005ac291e64dd83148a02a9df7",
         "record_type": "node",
-        "status": "HYP",
+        "status": "EST",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -2919,7 +2914,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 1,
-        "equation_count": 3,
+        "equation_count": 5,
         "id": "record:86",
         "layer": "record"
       },
@@ -2939,11 +2934,11 @@
         "count": 1
       },
       {
-        "identity_hash": "fd47bd9c5c9c99e1c4429f4a7a12f6e66f589e87bb054c7768287b6e9dbc45bb",
-        "path": "path:c5ed917f1fecac66",
-        "path_hash": "c5ed917f1fecac6605e875f104f3c61f0acf96a3a45cd2bb2418b7746ab66794",
+        "identity_hash": "dadb57e19ae2fe3880903d58098c7add6c27ecb8dc3234c1bf4228f880658f40",
+        "path": "path:d7320ff79ab5ba71",
+        "path_hash": "d7320ff79ab5ba71e280e5638656b6d107e5c82e04c7e4d17c567b5351c618e8",
         "record_type": "node",
-        "status": "STOP",
+        "status": "EST",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
@@ -2951,7 +2946,7 @@
           "length_scale_declared": false
         },
         "evidence_count": 1,
-        "equation_count": 2,
+        "equation_count": 5,
         "id": "record:87",
         "layer": "record"
       },
@@ -2971,19 +2966,19 @@
         "count": 1
       },
       {
-        "identity_hash": "a8b506d1c170a87b0197deabc50689d8f8c5a8d5062c31463d42437b4e8c9e5f",
-        "path": "path:9472c18a13345549",
-        "path_hash": "9472c18a13345549ad48b2076883fd2e0463c461005abac1121f354e6af9e358",
+        "identity_hash": "389b0d7b779bf076d7e6805404265b0bd5c92c35735243aabf513fe140a92b27",
+        "path": "path:216053aebc852219",
+        "path_hash": "216053aebc8522195bc4427061f9a2fa90197e54f599e71e80e5b679fc80133c",
         "record_type": "node",
-        "status": "SYM",
+        "status": "EST",
         "scale": {
           "scope_declared": false,
           "unit_count": 0,
           "time_scale_declared": false,
           "length_scale_declared": false
         },
-        "evidence_count": 1,
-        "equation_count": 3,
+        "evidence_count": 2,
+        "equation_count": 5,
         "id": "record:88",
         "layer": "record"
       },
@@ -2999,6 +2994,230 @@
       },
       {
         "id": "evidence:88",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "48880b46367fb359bccd6d7068bbba668a958d83dd4a4606ffe3f845a87260cc",
+        "path": "path:54c85276bbdb6241",
+        "path_hash": "54c85276bbdb624147636552fc636bd8640737d4ac7b8ba96a5eae7de4314916",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 5,
+        "id": "record:89",
+        "layer": "record"
+      },
+      {
+        "id": "scale:89",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:89",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "c5d970cf745228cc1db5b7735601a1f376d1e50185149e261c8e7df50b180a9f",
+        "path": "path:064e6ba150d367db",
+        "path_hash": "064e6ba150d367db36de948f6e5d05e76edc51f6088d07f07725d6a5ea59580c",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 4,
+        "id": "record:90",
+        "layer": "record"
+      },
+      {
+        "id": "scale:90",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:90",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "db1104382a412e1d07409d52c58381f1b6da338048da1de0ee6cb7ace9e751f5",
+        "path": "path:336ecc83934ecf68",
+        "path_hash": "336ecc83934ecf68e2a916fc3d0b30991a3c968050330b1fbdbd1a518902a128",
+        "record_type": "node",
+        "status": "EST",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 2,
+        "equation_count": 2,
+        "id": "record:91",
+        "layer": "record"
+      },
+      {
+        "id": "scale:91",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:91",
+        "layer": "evidence",
+        "count": 2
+      },
+      {
+        "identity_hash": "6eff53bd7a2b3e2370f0250248cbf6221bb9cfdfcb11cc2e75c81c66be56755a",
+        "path": "path:6e54dee2907fdc7c",
+        "path_hash": "6e54dee2907fdc7ca6c9681f7ff868e5f11e504d466201bd46512a55474cfba6",
+        "record_type": "node",
+        "status": "DER",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:92",
+        "layer": "record"
+      },
+      {
+        "id": "scale:92",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:92",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "df32909ff0f24c5f597870483396924694fe3e3e2e8e3fe50ccd99b609985515",
+        "path": "path:b812721795dab836",
+        "path_hash": "b812721795dab836f11ba92f4a0e6d92928a9da088149f7e216a133876f91826",
+        "record_type": "node",
+        "status": "HYP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:93",
+        "layer": "record"
+      },
+      {
+        "id": "scale:93",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:93",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "fd47bd9c5c9c99e1c4429f4a7a12f6e66f589e87bb054c7768287b6e9dbc45bb",
+        "path": "path:c5ed917f1fecac66",
+        "path_hash": "c5ed917f1fecac6605e875f104f3c61f0acf96a3a45cd2bb2418b7746ab66794",
+        "record_type": "node",
+        "status": "STOP",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 2,
+        "id": "record:94",
+        "layer": "record"
+      },
+      {
+        "id": "scale:94",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:94",
+        "layer": "evidence",
+        "count": 1
+      },
+      {
+        "identity_hash": "a8b506d1c170a87b0197deabc50689d8f8c5a8d5062c31463d42437b4e8c9e5f",
+        "path": "path:9472c18a13345549",
+        "path_hash": "9472c18a13345549ad48b2076883fd2e0463c461005abac1121f354e6af9e358",
+        "record_type": "node",
+        "status": "SYM",
+        "scale": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        },
+        "evidence_count": 1,
+        "equation_count": 3,
+        "id": "record:95",
+        "layer": "record"
+      },
+      {
+        "id": "scale:95",
+        "layer": "scale",
+        "value": {
+          "scope_declared": false,
+          "unit_count": 0,
+          "time_scale_declared": false,
+          "length_scale_declared": false
+        }
+      },
+      {
+        "id": "evidence:95",
         "layer": "evidence",
         "count": 1
       },
@@ -3016,11 +3235,11 @@
         },
         "evidence_count": 1,
         "equation_count": 5,
-        "id": "record:89",
+        "id": "record:96",
         "layer": "record"
       },
       {
-        "id": "scale:89",
+        "id": "scale:96",
         "layer": "scale",
         "value": {
           "scope_declared": true,
@@ -3030,7 +3249,7 @@
         }
       },
       {
-        "id": "evidence:89",
+        "id": "evidence:96",
         "layer": "evidence",
         "count": 1
       },
@@ -3048,11 +3267,11 @@
         },
         "evidence_count": 1,
         "equation_count": 3,
-        "id": "record:90",
+        "id": "record:97",
         "layer": "record"
       },
       {
-        "id": "scale:90",
+        "id": "scale:97",
         "layer": "scale",
         "value": {
           "scope_declared": false,
@@ -3062,7 +3281,7 @@
         }
       },
       {
-        "id": "evidence:90",
+        "id": "evidence:97",
         "layer": "evidence",
         "count": 1
       },
@@ -3690,14 +3909,14 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:7",
-        "target": "evidence:7",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:8",
         "target": "scale:8",
         "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:8",
+        "target": "evidence:8",
+        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:9",
@@ -3718,6 +3937,11 @@
         "source": "record:11",
         "target": "scale:11",
         "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:11",
+        "target": "evidence:11",
+        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:12",
@@ -3775,19 +3999,9 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:22",
-        "target": "evidence:22",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:23",
         "target": "scale:23",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:23",
-        "target": "evidence:23",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:24",
@@ -3795,9 +4009,19 @@
         "relation": "MEASURED_BY"
       },
       {
+        "source": "record:24",
+        "target": "evidence:24",
+        "relation": "DERIVED_FROM"
+      },
+      {
         "source": "record:25",
         "target": "scale:25",
         "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:25",
+        "target": "evidence:25",
+        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:26",
@@ -3845,9 +4069,19 @@
         "relation": "MEASURED_BY"
       },
       {
+        "source": "record:34",
+        "target": "evidence:34",
+        "relation": "DERIVED_FROM"
+      },
+      {
         "source": "record:35",
         "target": "scale:35",
         "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:35",
+        "target": "evidence:35",
+        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:36",
@@ -3860,19 +4094,9 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:37",
-        "target": "evidence:37",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:38",
         "target": "scale:38",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:38",
-        "target": "evidence:38",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:39",
@@ -3880,24 +4104,19 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:39",
-        "target": "evidence:39",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:40",
         "target": "scale:40",
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:40",
-        "target": "evidence:40",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:41",
         "target": "scale:41",
         "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:41",
+        "target": "evidence:41",
+        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:42",
@@ -3933,11 +4152,6 @@
         "source": "record:45",
         "target": "scale:45",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:45",
-        "target": "evidence:45",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:46",
@@ -4015,9 +4229,19 @@
         "relation": "MEASURED_BY"
       },
       {
+        "source": "record:53",
+        "target": "evidence:53",
+        "relation": "DERIVED_FROM"
+      },
+      {
         "source": "record:54",
         "target": "scale:54",
         "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:54",
+        "target": "evidence:54",
+        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:55",
@@ -4045,24 +4269,19 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:57",
-        "target": "evidence:57",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:58",
         "target": "scale:58",
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:58",
-        "target": "evidence:58",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:59",
         "target": "scale:59",
         "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:59",
+        "target": "evidence:59",
+        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:60",
@@ -4078,6 +4297,11 @@
         "source": "record:61",
         "target": "scale:61",
         "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:61",
+        "target": "evidence:61",
+        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:62",
@@ -4100,6 +4324,11 @@
         "relation": "MEASURED_BY"
       },
       {
+        "source": "record:64",
+        "target": "evidence:64",
+        "relation": "DERIVED_FROM"
+      },
+      {
         "source": "record:65",
         "target": "scale:65",
         "relation": "MEASURED_BY"
@@ -4120,29 +4349,14 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:67",
-        "target": "evidence:67",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:68",
         "target": "scale:68",
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:68",
-        "target": "evidence:68",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:69",
         "target": "scale:69",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:69",
-        "target": "evidence:69",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:70",
@@ -4190,14 +4404,29 @@
         "relation": "MEASURED_BY"
       },
       {
+        "source": "record:74",
+        "target": "evidence:74",
+        "relation": "DERIVED_FROM"
+      },
+      {
         "source": "record:75",
         "target": "scale:75",
         "relation": "MEASURED_BY"
       },
       {
+        "source": "record:75",
+        "target": "evidence:75",
+        "relation": "DERIVED_FROM"
+      },
+      {
         "source": "record:76",
         "target": "scale:76",
         "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:76",
+        "target": "evidence:76",
+        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:77",
@@ -4245,29 +4474,14 @@
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:81",
-        "target": "evidence:81",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:82",
         "target": "scale:82",
         "relation": "MEASURED_BY"
       },
       {
-        "source": "record:82",
-        "target": "evidence:82",
-        "relation": "DERIVED_FROM"
-      },
-      {
         "source": "record:83",
         "target": "scale:83",
         "relation": "MEASURED_BY"
-      },
-      {
-        "source": "record:83",
-        "target": "evidence:83",
-        "relation": "DERIVED_FROM"
       },
       {
         "source": "record:84",
@@ -4337,6 +4551,76 @@
       {
         "source": "record:90",
         "target": "evidence:90",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:91",
+        "target": "scale:91",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:91",
+        "target": "evidence:91",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:92",
+        "target": "scale:92",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:92",
+        "target": "evidence:92",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:93",
+        "target": "scale:93",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:93",
+        "target": "evidence:93",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:94",
+        "target": "scale:94",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:94",
+        "target": "evidence:94",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:95",
+        "target": "scale:95",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:95",
+        "target": "evidence:95",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:96",
+        "target": "scale:96",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:96",
+        "target": "evidence:96",
+        "relation": "DERIVED_FROM"
+      },
+      {
+        "source": "record:97",
+        "target": "scale:97",
+        "relation": "MEASURED_BY"
+      },
+      {
+        "source": "record:97",
+        "target": "evidence:97",
         "relation": "DERIVED_FROM"
       },
       {

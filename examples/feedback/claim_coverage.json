@@ -1,0 +1,1094 @@
+{
+  "format": "upi-atlas-claims-v1",
+  "original_sha256": "e2af2d3f16967e1584dcae840e87cd524c06f3617dc9bb4aed25af6fbefeeea6",
+  "sources": {
+    "original": {
+      "path": "sources/3i_atlas_upi_case.json",
+      "url": "https://github.com/dpstudio-se/Universal-Physics-Index-UPI/blob/2aa811bf9594a8b4aae06287fa800e65c7f4aa57/data/examples/3i_atlas_upi_case.json",
+      "version": "2aa811bf9594a8b4aae06287fa800e65c7f4aa57",
+      "sha256": "e2af2d3f16967e1584dcae840e87cd524c06f3617dc9bb4aed25af6fbefeeea6"
+    },
+    "jpl": {
+      "path": "sources/jpl_3i_atlas_sbdb.json",
+      "url": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3I&full-prec=true&cov=mat",
+      "version": "orbit 54; solution date 2026-02-19 09:10:47",
+      "sha256": "f67ef2e8c4691a437597b32ea324a8b45a6f4cb1b0dee54b7da281daca66ab29"
+    },
+    "hubble": {
+      "path": "sources/nasa_hubble_3i.html",
+      "url": "https://science.nasa.gov/asset/hubble/comet-3i-atlas/",
+      "version": "release 2025-08-07; page updated 2025-08-17; retrieved 2026-09-13",
+      "sha256": "07388c3b84484a8c91dff1857c3a6b139d117efd90c2e0570d21afd4015859d8"
+    },
+    "nasa": {
+      "path": "sources/nasa_3i_overview.html",
+      "url": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+      "version": "retrieved 2026-09-13",
+      "sha256": "3560e3c43e0d6eb2b84c9accea5f9a2b67109c241cc3655de1a545a27197e2f0"
+    },
+    "canonical": {
+      "path": "canonical_baseline.json",
+      "url": "https://github.com/dpstudio-se/Universal-Physics-Index-UPI/tree/b2663cb0d9296cb616865d93d549a44159867601/data",
+      "version": "b2663cb0d9296cb616865d93d549a44159867601",
+      "sha256": "075b413e2837e95976781d132a852a3ea72d3f78a3288108de55af47202f2d66"
+    }
+  },
+  "claims": [
+    {
+      "id": "claim-001",
+      "source_paths": [
+        "/title"
+      ],
+      "original_values": {
+        "/title": "3I/ATLAS orbital and cometary physics case"
+      },
+      "status": "EST",
+      "role": "metadata",
+      "scope": "EST establishes only what the original file records; metadata and links do not establish the physical claims.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-002",
+      "source_paths": [
+        "/version"
+      ],
+      "original_values": {
+        "/version": "0.1.0"
+      },
+      "status": "EST",
+      "role": "metadata",
+      "scope": "EST establishes only what the original file records; metadata and links do not establish the physical claims.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-003",
+      "source_paths": [
+        "/information_layer"
+      ],
+      "original_values": {
+        "/information_layer": "ACADEMIC"
+      },
+      "status": "EST",
+      "role": "metadata",
+      "scope": "EST establishes only what the original file records; metadata and links do not establish the physical claims.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-004",
+      "source_paths": [
+        "/address"
+      ],
+      "original_values": {
+        "/address": "UPI<physics,2,celestial_mechanics,3i_atlas_case>"
+      },
+      "status": "EST",
+      "role": "metadata",
+      "scope": "EST establishes only what the original file records; metadata and links do not establish the physical claims.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-005",
+      "source_paths": [
+        "/tags/0",
+        "/tags/1",
+        "/tags/2",
+        "/tags/3",
+        "/tags/4",
+        "/tags/5",
+        "/tags/6",
+        "/tags/7",
+        "/tags/8",
+        "/tags/9"
+      ],
+      "original_values": {
+        "/tags/0": "3I/ATLAS",
+        "/tags/1": "interstellar object",
+        "/tags/2": "interstellar comet",
+        "/tags/3": "celestial mechanics",
+        "/tags/4": "orbital mechanics",
+        "/tags/5": "hyperbolic orbit",
+        "/tags/6": "specific orbital energy",
+        "/tags/7": "cometary physics",
+        "/tags/8": "observational astronomy",
+        "/tags/9": "Odin's Eye"
+      },
+      "status": "EST",
+      "role": "metadata",
+      "scope": "EST establishes only what the original file records; metadata and links do not establish the physical claims.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-006",
+      "source_paths": [
+        "/purpose"
+      ],
+      "original_values": {
+        "/purpose": "Versioned UPI test case separating observations, mathematical derivations, physical models, open questions, and unsupported interpretations for interstellar comet 3I/ATLAS."
+      },
+      "status": "EST",
+      "role": "metadata",
+      "scope": "EST establishes only what the original file records; metadata and links do not establish the physical claims.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-007",
+      "source_paths": [
+        "/primary_sources/0",
+        "/primary_sources/1",
+        "/primary_sources/2"
+      ],
+      "original_values": {
+        "/primary_sources/0": "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+        "/primary_sources/1": "https://science.nasa.gov/asset/hubble/comet-3i-atlas/",
+        "/primary_sources/2": "https://doi.org/10.48377/mpec/2026-d56"
+      },
+      "status": "EST",
+      "role": "metadata",
+      "scope": "EST establishes only what the original file records; metadata and links do not establish the physical claims.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-008",
+      "source_paths": [
+        "/status"
+      ],
+      "original_values": {
+        "/status": "EST"
+      },
+      "status": "ERR",
+      "role": "classification",
+      "scope": "The original blanket EST label cannot cover unresolved and mixed-status branches.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Blanket status exceeds demonstrated claim-level support.",
+      "next_action": "Keep the candidate STOP; retain separate claim statuses.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-009",
+      "source_paths": [
+        "/status_model/DER",
+        "/status_model/ERR",
+        "/status_model/EST",
+        "/status_model/HYP",
+        "/status_model/STOP",
+        "/status_model/SYM"
+      ],
+      "original_values": {
+        "/status_model/EST": "Observed or established within the declared scientific domain and supported by provenance.",
+        "/status_model/DER": "Mathematically derived from explicit assumptions or measured orbital parameters.",
+        "/status_model/HYP": "Falsifiable but currently unverified interpretation.",
+        "/status_model/STOP": "Unresolved boundary, missing mechanism, or claim requiring future evidence.",
+        "/status_model/ERR": "Invalid, dimensionally inconsistent, rejected, or unsupported promotion.",
+        "/status_model/SYM": "Conceptual or symbolic mapping only."
+      },
+      "status": "SYM",
+      "role": "policy",
+      "scope": "Declared status vocabulary; conventions do not supply evidence.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-010",
+      "source_paths": [
+        "/observations/0/basis",
+        "/observations/0/claim",
+        "/observations/0/id",
+        "/observations/0/status"
+      ],
+      "original_values": {
+        "/observations/0/id": "obs-interstellar",
+        "/observations/0/claim": "3I/ATLAS follows an unbound hyperbolic trajectory through the Solar System.",
+        "/observations/0/status": "EST",
+        "/observations/0/basis": "Observed astrometry and orbital determination."
+      },
+      "status": "EST",
+      "role": "scientific",
+      "scope": "Published JPL fit and NASA identify a hyperbolic interstellar comet; no exact birth star follows.",
+      "evidence": [
+        "jpl",
+        "nasa"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-011",
+      "source_paths": [
+        "/observations/1/basis",
+        "/observations/1/claim",
+        "/observations/1/id",
+        "/observations/1/status"
+      ],
+      "original_values": {
+        "/observations/1/id": "obs-coma",
+        "/observations/1/claim": "3I/ATLAS exhibits a coma and dust/gas activity consistent with cometary behavior.",
+        "/observations/1/status": "EST",
+        "/observations/1/basis": "Multi-instrument observations."
+      },
+      "status": "EST",
+      "role": "scientific",
+      "scope": "NASA reports gas/dust coma; Hubble documents dust in program 17830, WFC3/UVIS F350LP, 2025-07-21.",
+      "evidence": [
+        "hubble",
+        "nasa"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-012",
+      "source_paths": [
+        "/observations/2/basis",
+        "/observations/2/claim",
+        "/observations/2/id",
+        "/observations/2/status"
+      ],
+      "original_values": {
+        "/observations/2/id": "obs-hubble",
+        "/observations/2/claim": "Hubble observations resolve the object as an active cometary body with a coma rather than directly resolving an artificial spacecraft structure.",
+        "/observations/2/status": "EST",
+        "/observations/2/basis": "Hubble observations and published analysis."
+      },
+      "status": "STOP",
+      "role": "scientific",
+      "scope": "Hubble supports a resolved dust coma. The compound statement about directly resolving a body and excluding spacecraft structure is broader than that image evidence.",
+      "evidence": [
+        "hubble"
+      ],
+      "blocks_case": true,
+      "stop_reason": "No resolution-limited structural exclusion analysis is bound to this claim.",
+      "next_action": "Supply calibrated imaging, PSF/resolution limits and an explicit structural-discrimination analysis; split the supported coma statement.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-013",
+      "source_paths": [
+        "/orbital_parameters/eccentricity/interpretation",
+        "/orbital_parameters/eccentricity/status",
+        "/orbital_parameters/eccentricity/value_approx"
+      ],
+      "original_values": {
+        "/orbital_parameters/eccentricity/value_approx": 6.14,
+        "/orbital_parameters/eccentricity/status": "EST",
+        "/orbital_parameters/eccentricity/interpretation": "Strongly hyperbolic."
+      },
+      "status": "STOP",
+      "role": "scientific",
+      "scope": "Legacy approximate value lacks its own epoch/solution binding; current JPL solution 54 is separate and must not retroactively authenticate it.",
+      "evidence": [
+        "original",
+        "jpl"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Original numerical provenance/epoch is absent.",
+      "next_action": "Identify the original fitted solution, or explicitly supersede this numerical claim with the separately bound solution 54 candidate.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-014",
+      "source_paths": [
+        "/orbital_parameters/perihelion_distance_AU/status",
+        "/orbital_parameters/perihelion_distance_AU/value_approx"
+      ],
+      "original_values": {
+        "/orbital_parameters/perihelion_distance_AU/value_approx": 1.3565,
+        "/orbital_parameters/perihelion_distance_AU/status": "EST"
+      },
+      "status": "STOP",
+      "role": "scientific",
+      "scope": "Legacy approximate value lacks its own epoch/solution binding; current JPL solution 54 is separate and must not retroactively authenticate it.",
+      "evidence": [
+        "original",
+        "jpl"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Original numerical provenance/epoch is absent.",
+      "next_action": "Identify the original fitted solution, or explicitly supersede this numerical claim with the separately bound solution 54 candidate.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-015",
+      "source_paths": [
+        "/orbital_parameters/inclination_deg/interpretation",
+        "/orbital_parameters/inclination_deg/status",
+        "/orbital_parameters/inclination_deg/value_approx"
+      ],
+      "original_values": {
+        "/orbital_parameters/inclination_deg/value_approx": 175.11,
+        "/orbital_parameters/inclination_deg/status": "EST",
+        "/orbital_parameters/inclination_deg/interpretation": "Retrograde geometry, approximately 4.89 degrees from 180 degrees."
+      },
+      "status": "STOP",
+      "role": "scientific",
+      "scope": "Legacy approximate value lacks its own epoch/solution binding; current JPL solution 54 is separate and must not retroactively authenticate it.",
+      "evidence": [
+        "original",
+        "jpl"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Original numerical provenance/epoch is absent.",
+      "next_action": "Identify the original fitted solution, or explicitly supersede this numerical claim with the separately bound solution 54 candidate.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-016",
+      "source_paths": [
+        "/orbital_parameters/semimajor_axis_AU/equation",
+        "/orbital_parameters/semimajor_axis_AU/status",
+        "/orbital_parameters/semimajor_axis_AU/value_approx"
+      ],
+      "original_values": {
+        "/orbital_parameters/semimajor_axis_AU/value_approx": -0.264,
+        "/orbital_parameters/semimajor_axis_AU/status": "DER",
+        "/orbital_parameters/semimajor_axis_AU/equation": "a = q/(1-e)"
+      },
+      "status": "DER",
+      "role": "scientific",
+      "scope": "q/(1-e) using the declared approximate e=6.14, q=1.3565 gives -0.26391 AU, rounded -0.264. Conditional algebra, not independent observation.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-017",
+      "source_paths": [
+        "/orbital_parameters/specific_orbital_energy/equation",
+        "/orbital_parameters/specific_orbital_energy/sign",
+        "/orbital_parameters/specific_orbital_energy/status"
+      ],
+      "original_values": {
+        "/orbital_parameters/specific_orbital_energy/sign": "positive",
+        "/orbital_parameters/specific_orbital_energy/status": "DER",
+        "/orbital_parameters/specific_orbital_energy/equation": "epsilon = v^2/2 - mu/r"
+      },
+      "status": "DER",
+      "role": "scientific",
+      "scope": "Positive osculating energy for signed a<0 with mu>0, in the Newtonian conic domain. Does not imply conserved energy along the fitted nongravitational orbit.",
+      "evidence": [
+        "jpl",
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-018",
+      "source_paths": [
+        "/orbital_parameters/asymptotic_speed_km_s/note",
+        "/orbital_parameters/asymptotic_speed_km_s/status",
+        "/orbital_parameters/asymptotic_speed_km_s/value_approx"
+      ],
+      "original_values": {
+        "/orbital_parameters/asymptotic_speed_km_s/value_approx": "58-60",
+        "/orbital_parameters/asymptotic_speed_km_s/status": "EST/DER",
+        "/orbital_parameters/asymptotic_speed_km_s/note": "Value depends on the adopted orbital solution and epoch."
+      },
+      "status": "STOP",
+      "role": "scientific",
+      "scope": "The original 58-60 km/s and mixed EST/DER label are not a version-bound asymptotic velocity solution.",
+      "evidence": [
+        "original",
+        "jpl"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Missing adopted mu, frame, epoch and full-model/asymptotic propagation provenance.",
+      "next_action": "Bind a full-force incoming/outgoing solution or explicitly restrict the calculation to an osculating two-body equivalent.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-019",
+      "source_paths": [
+        "/derivations/0/equation",
+        "/derivations/0/id",
+        "/derivations/0/meaning",
+        "/derivations/0/status"
+      ],
+      "original_values": {
+        "/derivations/0/id": "der-hyperbolic-energy",
+        "/derivations/0/status": "DER",
+        "/derivations/0/equation": "e > 1 => epsilon > 0",
+        "/derivations/0/meaning": "The Solar System cannot gravitationally bind the object in the two-body approximation."
+      },
+      "status": "DER",
+      "role": "scientific",
+      "scope": "e>1 implies positive specific energy for a nondegenerate Newtonian conic with mu>0. No capture in a conservative two-body model; no full Solar System capture theorem is asserted.",
+      "evidence": [
+        "original",
+        "jpl"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-020",
+      "source_paths": [
+        "/derivations/1/equation",
+        "/derivations/1/id",
+        "/derivations/1/meaning",
+        "/derivations/1/status"
+      ],
+      "original_values": {
+        "/derivations/1/id": "der-negative-semimajor-axis",
+        "/derivations/1/status": "DER",
+        "/derivations/1/equation": "a = q/(1-e)",
+        "/derivations/1/meaning": "A negative semimajor axis is the standard conic-section parameter for a hyperbolic orbit."
+      },
+      "status": "DER",
+      "role": "scientific",
+      "scope": "Signed a is negative when q>0 and e>1; the inverse q=a(1-e) closes in the same domain.",
+      "evidence": [
+        "original",
+        "jpl"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-021",
+      "source_paths": [
+        "/cometary_physics/status"
+      ],
+      "original_values": {
+        "/cometary_physics/status": "EST"
+      },
+      "status": "ERR",
+      "role": "classification",
+      "scope": "A blanket EST label does not validate every object-specific causal link or quantitative model.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "The complete object-specific mechanism is not evidenced by the orbital fit.",
+      "next_action": "Classify and source each causal link separately.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-022",
+      "source_paths": [
+        "/cometary_physics/mechanism_chain/0"
+      ],
+      "original_values": {
+        "/cometary_physics/mechanism_chain/0": "solar radiation"
+      },
+      "status": "HYP",
+      "role": "scientific",
+      "scope": "Component of a proposed object-specific causal chain; known generic comet mechanisms do not validate every link for this object.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Object-specific thermal, spectroscopic or dynamical linkage is not bound here.",
+      "next_action": "Supply time-resolved photometry/spectra and a quantified thermal/outflow/dust model for this link.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-023",
+      "source_paths": [
+        "/cometary_physics/mechanism_chain/1"
+      ],
+      "original_values": {
+        "/cometary_physics/mechanism_chain/1": "surface heating"
+      },
+      "status": "HYP",
+      "role": "scientific",
+      "scope": "Component of a proposed object-specific causal chain; known generic comet mechanisms do not validate every link for this object.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Object-specific thermal, spectroscopic or dynamical linkage is not bound here.",
+      "next_action": "Supply time-resolved photometry/spectra and a quantified thermal/outflow/dust model for this link.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-024",
+      "source_paths": [
+        "/cometary_physics/mechanism_chain/2"
+      ],
+      "original_values": {
+        "/cometary_physics/mechanism_chain/2": "volatile sublimation"
+      },
+      "status": "HYP",
+      "role": "scientific",
+      "scope": "Component of a proposed object-specific causal chain; known generic comet mechanisms do not validate every link for this object.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Object-specific thermal, spectroscopic or dynamical linkage is not bound here.",
+      "next_action": "Supply time-resolved photometry/spectra and a quantified thermal/outflow/dust model for this link.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-025",
+      "source_paths": [
+        "/cometary_physics/mechanism_chain/3"
+      ],
+      "original_values": {
+        "/cometary_physics/mechanism_chain/3": "gas outflow"
+      },
+      "status": "HYP",
+      "role": "scientific",
+      "scope": "Component of a proposed object-specific causal chain; known generic comet mechanisms do not validate every link for this object.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Object-specific thermal, spectroscopic or dynamical linkage is not bound here.",
+      "next_action": "Supply time-resolved photometry/spectra and a quantified thermal/outflow/dust model for this link.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-026",
+      "source_paths": [
+        "/cometary_physics/mechanism_chain/4"
+      ],
+      "original_values": {
+        "/cometary_physics/mechanism_chain/4": "dust transport"
+      },
+      "status": "HYP",
+      "role": "scientific",
+      "scope": "Component of a proposed object-specific causal chain; known generic comet mechanisms do not validate every link for this object.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Object-specific thermal, spectroscopic or dynamical linkage is not bound here.",
+      "next_action": "Supply time-resolved photometry/spectra and a quantified thermal/outflow/dust model for this link.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-027",
+      "source_paths": [
+        "/cometary_physics/mechanism_chain/5"
+      ],
+      "original_values": {
+        "/cometary_physics/mechanism_chain/5": "solar-radiation interaction"
+      },
+      "status": "HYP",
+      "role": "scientific",
+      "scope": "Component of a proposed object-specific causal chain; known generic comet mechanisms do not validate every link for this object.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Object-specific thermal, spectroscopic or dynamical linkage is not bound here.",
+      "next_action": "Supply time-resolved photometry/spectra and a quantified thermal/outflow/dust model for this link.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-028",
+      "source_paths": [
+        "/cometary_physics/mechanism_chain/6"
+      ],
+      "original_values": {
+        "/cometary_physics/mechanism_chain/6": "coma/tail morphology"
+      },
+      "status": "HYP",
+      "role": "scientific",
+      "scope": "Component of a proposed object-specific causal chain; known generic comet mechanisms do not validate every link for this object.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Object-specific thermal, spectroscopic or dynamical linkage is not bound here.",
+      "next_action": "Supply time-resolved photometry/spectra and a quantified thermal/outflow/dust model for this link.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-029",
+      "source_paths": [
+        "/cometary_physics/object_specific_quantitative_models/note",
+        "/cometary_physics/object_specific_quantitative_models/status"
+      ],
+      "original_values": {
+        "/cometary_physics/object_specific_quantitative_models/status": "DER",
+        "/cometary_physics/object_specific_quantitative_models/note": "Mass-loss rates, volatile ratios, and detailed morphology require explicit model assumptions and observation provenance."
+      },
+      "status": "STOP",
+      "role": "scientific",
+      "scope": "Model requirements are stated but actual rates, ratios and morphology fits are absent.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "No parameterized model or source-linked fit supplied.",
+      "next_action": "Provide the specified quantitative model, observations, uncertainties and comparison.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-030",
+      "source_paths": [
+        "/observation_visualization_guard/real_observation/evidence_type",
+        "/observation_visualization_guard/real_observation/status"
+      ],
+      "original_values": {
+        "/observation_visualization_guard/real_observation/status": "EST",
+        "/observation_visualization_guard/real_observation/evidence_type": "instrumental observation"
+      },
+      "status": "ERR",
+      "role": "policy",
+      "scope": "Instrumental origin alone is insufficient to classify every interpretation EST; calibration and claim provenance remain necessary.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Automatic observation-to-EST rule is too broad.",
+      "next_action": "Apply EST only to scoped, calibrated observation claims; keep interpretations separate.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-031",
+      "source_paths": [
+        "/observation_visualization_guard/artist_rendering/evidence_weight",
+        "/observation_visualization_guard/artist_rendering/rule",
+        "/observation_visualization_guard/artist_rendering/status"
+      ],
+      "original_values": {
+        "/observation_visualization_guard/artist_rendering/status": "SYM",
+        "/observation_visualization_guard/artist_rendering/evidence_weight": 0,
+        "/observation_visualization_guard/artist_rendering/rule": "Artist renderings must not be indexed as observational evidence."
+      },
+      "status": "SYM",
+      "role": "policy",
+      "scope": "Rendering is symbolic; assigned observational evidence weight zero is a declared policy, not a measured physical quantity.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-032",
+      "source_paths": [
+        "/odin_eye/function",
+        "/odin_eye/guard",
+        "/odin_eye/pipeline/0",
+        "/odin_eye/pipeline/1",
+        "/odin_eye/pipeline/2",
+        "/odin_eye/pipeline/3",
+        "/odin_eye/pipeline/4",
+        "/odin_eye/pipeline/5",
+        "/odin_eye/status"
+      ],
+      "original_values": {
+        "/odin_eye/status": "SYM",
+        "/odin_eye/function": "A provenance and reasoning filter that separates observation, derivation, hypothesis, unresolved boundary, and unsupported interpretation.",
+        "/odin_eye/pipeline/0": "raw signal",
+        "/odin_eye/pipeline/1": "observation",
+        "/odin_eye/pipeline/2": "measurement",
+        "/odin_eye/pipeline/3": "derivation",
+        "/odin_eye/pipeline/4": "hypothesis",
+        "/odin_eye/pipeline/5": "review/promotion",
+        "/odin_eye/guard": "Visual similarity, repeated numbers, simulation shape, or narrative appeal cannot promote a claim."
+      },
+      "status": "SYM",
+      "role": "symbolic",
+      "scope": "Odin eye is a proposed audit metaphor/pipeline; it supplies no observational authority.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-033",
+      "source_paths": [
+        "/hypotheses_and_stopping_points/0/claim",
+        "/hypotheses_and_stopping_points/0/status"
+      ],
+      "original_values": {
+        "/hypotheses_and_stopping_points/0/claim": "Exact stellar source system of 3I/ATLAS.",
+        "/hypotheses_and_stopping_points/0/status": "STOP"
+      },
+      "status": "STOP",
+      "role": "scientific",
+      "scope": "Exact source star unresolved.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "No stellar encounter reconstruction with uncertainty is bound.",
+      "next_action": "Provide stellar phase-space data and a full-force backward integration with propagated uncertainties.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-034",
+      "source_paths": [
+        "/hypotheses_and_stopping_points/1/claim",
+        "/hypotheses_and_stopping_points/1/note",
+        "/hypotheses_and_stopping_points/1/status"
+      ],
+      "original_values": {
+        "/hypotheses_and_stopping_points/1/claim": "Artificial spacecraft interpretation.",
+        "/hypotheses_and_stopping_points/1/status": "STOP",
+        "/hypotheses_and_stopping_points/1/note": "No current observation in this case requires promotion from natural cometary physics to an artificial-object explanation."
+      },
+      "status": "HYP",
+      "role": "scientific",
+      "scope": "Artificial-object proposal remains an unverified hypothesis; orbital shape does not establish it.",
+      "evidence": [
+        "original",
+        "hubble"
+      ],
+      "blocks_case": true,
+      "stop_reason": "No discriminating positive evidence for artificial origin is supplied.",
+      "next_action": "Specify a falsifiable artificial-origin prediction and acquire observations discriminating it from cometary models.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-035",
+      "source_paths": [
+        "/hypotheses_and_stopping_points/2/claim",
+        "/hypotheses_and_stopping_points/2/note",
+        "/hypotheses_and_stopping_points/2/status"
+      ],
+      "original_values": {
+        "/hypotheses_and_stopping_points/2/claim": "Detailed formation age and galactic origin.",
+        "/hypotheses_and_stopping_points/2/status": "HYP/STOP",
+        "/hypotheses_and_stopping_points/2/note": "Requires explicit population-model assumptions and provenance."
+      },
+      "status": "STOP",
+      "role": "scientific",
+      "scope": "Detailed age and galactic formation origin require independent population/composition/dynamical inference.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "No versioned age/origin inference with assumptions and uncertainty is supplied.",
+      "next_action": "Bind a primary model analysis and its uncertainties; do not infer age from eccentricity.",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-036",
+      "source_paths": [
+        "/upi_bridges/0"
+      ],
+      "original_values": {
+        "/upi_bridges/0": "UPI<physics,2,classical_mechanics,helical_linear_rotational_coupling>"
+      },
+      "status": "SYM",
+      "role": "reference",
+      "scope": "Address pointer only; no bridge mechanism or physical equivalence is established by linking.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-037",
+      "source_paths": [
+        "/upi_bridges/1"
+      ],
+      "original_values": {
+        "/upi_bridges/1": "UPI<physics,2,celestial_mechanics,hyperbolic_orbit>"
+      },
+      "status": "SYM",
+      "role": "reference",
+      "scope": "Address pointer only; no bridge mechanism or physical equivalence is established by linking.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-038",
+      "source_paths": [
+        "/upi_bridges/2"
+      ],
+      "original_values": {
+        "/upi_bridges/2": "UPI<physics,2,cometary_physics,solar_driven_activity>"
+      },
+      "status": "SYM",
+      "role": "reference",
+      "scope": "Address pointer only; no bridge mechanism or physical equivalence is established by linking.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-039",
+      "source_paths": [
+        "/upi_bridges/3"
+      ],
+      "original_values": {
+        "/upi_bridges/3": "UPI<astronomy,2,observational_astronomy,3i_atlas>"
+      },
+      "status": "SYM",
+      "role": "reference",
+      "scope": "Address pointer only; no bridge mechanism or physical equivalence is established by linking.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-040",
+      "source_paths": [
+        "/compatibility_note"
+      ],
+      "original_values": {
+        "/compatibility_note": "The existing UPI helical_linear_rotational_coupling node explicitly guards against treating phase, topology, or rotation as an energy source. This case therefore uses orbital mechanics and cometary physics as independent established domains and only bridges them where measurable quantities and declared mechanisms exist."
+      },
+      "status": "DER",
+      "role": "scientific",
+      "scope": "The frozen baseline helical node forbids phase-created energy. That guard supports separation, not an established coupling to this orbit.",
+      "evidence": [
+        "original",
+        "canonical"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-041",
+      "source_paths": [
+        "/falsification_and_review/0",
+        "/falsification_and_review/1",
+        "/falsification_and_review/2",
+        "/falsification_and_review/3",
+        "/falsification_and_review/4"
+      ],
+      "original_values": {
+        "/falsification_and_review/0": "Replace approximate orbital parameters with the latest versioned ephemeris solution when imported.",
+        "/falsification_and_review/1": "Bind every numerical orbital parameter to an explicit observation/orbit-solution source.",
+        "/falsification_and_review/2": "Keep natural-comet and artificial-object interpretations as separate hypotheses.",
+        "/falsification_and_review/3": "Do not promote an anomaly solely from morphology or an artist rendering.",
+        "/falsification_and_review/4": "Record non-gravitational acceleration separately if a validated orbit solution establishes it and provide the fitted model and uncertainty."
+      },
+      "status": "SYM",
+      "role": "policy",
+      "scope": "Declared review instructions, not evidence that checks were performed.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": false,
+      "stop_reason": "",
+      "next_action": "",
+      "falsification_condition": "Reassess if the cited source, declared domain, source identity or explicit derivation does not support this exact scoped statement."
+    },
+    {
+      "id": "claim-042",
+      "source_paths": [
+        "/orbital_parameters/asymptotic_speed_km_s/status"
+      ],
+      "original_values": {
+        "/orbital_parameters/asymptotic_speed_km_s/status": "EST/DER"
+      },
+      "status": "ERR",
+      "role": "classification",
+      "scope": "A combined string is not one UPI status; classify the underlying subclaims separately.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Original status label is outside the UPI enum.",
+      "next_action": "Replace the mixed label in a reviewed candidate with separate typed claim records; preserve the archived original.",
+      "falsification_condition": "Reassess if the repository status enum explicitly permits the combined label."
+    },
+    {
+      "id": "claim-043",
+      "source_paths": [
+        "/hypotheses_and_stopping_points/2/status"
+      ],
+      "original_values": {
+        "/hypotheses_and_stopping_points/2/status": "HYP/STOP"
+      },
+      "status": "ERR",
+      "role": "classification",
+      "scope": "A combined string is not one UPI status; classify the underlying subclaims separately.",
+      "evidence": [
+        "original"
+      ],
+      "blocks_case": true,
+      "stop_reason": "Original status label is outside the UPI enum.",
+      "next_action": "Replace the mixed label in a reviewed candidate with separate typed claim records; preserve the archived original.",
+      "falsification_condition": "Reassess if the repository status enum explicitly permits the combined label."
+    }
+  ],
+  "coverage_rule": "Every original scalar leaf is mapped. Metadata EST refers only to the file contents. Scientific statuses apply only to each declared scope. No status is promoted in the original or candidate.",
+  "non_gravitational": {
+    "source": "jpl",
+    "status": "EST",
+    "scope": "JPL reports estimated fit parameters; JPL kind EST means estimated, not UPI established.",
+    "parameters": [
+      {
+        "kind": "EST",
+        "sigma": "1.22E-9",
+        "name": "A1",
+        "value": "5.320206310958365E-8",
+        "units": "au/d^2",
+        "title": "non-grav. radial accel.",
+        "desc": "non-gravitational radial acceleration parameter",
+        "n": 1
+      },
+      {
+        "sigma": "2.139E-9",
+        "kind": "EST",
+        "name": "A2",
+        "value": "1.148166024648843E-8",
+        "units": "au/d^2",
+        "desc": "non-gravitational transverse acceleration parameter",
+        "title": "non-grav. transverse accel.",
+        "n": 2
+      },
+      {
+        "name": "A3",
+        "kind": "EST",
+        "sigma": "1.776E-10",
+        "n": 3,
+        "title": "non-grav. normal accel.",
+        "desc": "non-gravitational normal acceleration parameter",
+        "units": "au/d^2",
+        "value": "-6.854491622221589E-9"
+      },
+      {
+        "kind": "SET",
+        "sigma": null,
+        "name": "ALN",
+        "value": "1.",
+        "units": null,
+        "title": "normalizing factor",
+        "desc": "normalizing factor [default 0.1112620426]",
+        "n": 0
+      },
+      {
+        "name": "DT",
+        "kind": "EST",
+        "sigma": "1.426",
+        "n": 4,
+        "title": "non-grav. perihelion offset",
+        "desc": "non-gravitational perihelion-maximum offset",
+        "units": "d",
+        "value": "9.478815477761261"
+      },
+      {
+        "value": "0.",
+        "units": null,
+        "desc": "non-grav. model constant, exponent k [default 4.6142]",
+        "title": "non-grav. model exp. k",
+        "n": 0,
+        "sigma": null,
+        "kind": "SET",
+        "name": "NK"
+      },
+      {
+        "desc": "non-grav. model constant, exponent m [default 2.15]",
+        "title": "non-grav. model exp. m",
+        "n": 0,
+        "value": "2.",
+        "units": null,
+        "name": "NM",
+        "sigma": null,
+        "kind": "SET"
+      },
+      {
+        "desc": "non-grav. model constant, exponent n [default 5.093]",
+        "title": "non-grav. model exp. n",
+        "n": 0,
+        "value": "0.",
+        "units": null,
+        "name": "NN",
+        "sigma": null,
+        "kind": "SET"
+      },
+      {
+        "title": "normalizing distance",
+        "desc": "normalizing distance, au [default 2.808 au]",
+        "n": 0,
+        "value": "1.",
+        "units": "au",
+        "name": "R0",
+        "kind": "SET",
+        "sigma": null
+      }
+    ],
+    "long_term_propagation_status": "STOP",
+    "stop_reason": "No full-force trajectory propagation and residual validation is implemented in this orbital identity audit.",
+    "next_action": "Use the fitted activity law, A1/A2/A3/DT, planetary perturbations and covariance in a versioned propagator; compare residuals to held-out astrometry.",
+    "two_body_sufficient": false
+  }
+}
