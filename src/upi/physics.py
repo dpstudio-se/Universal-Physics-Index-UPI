@@ -107,6 +107,33 @@ def index8_from_frequency(frequency_hz: float) -> float:
     return frequency_hz / N8_DENOMINATOR
 
 
+def spiral_time_from_frequency(
+    frequency_hz: float,
+    reference_frequency_hz: float = 0.1,
+    reference_time_gyr: float = 10.8,
+) -> float:
+    """Map frequency to the Spiral Flow model's inverse-frequency time coordinate.
+
+    This is a model transformation, not the physical period T = 1/f and not an
+    established cosmological law. It implements t(f) = t_ref * f_ref / f.
+
+    Args:
+        frequency_hz: Frequency in Hertz.
+        reference_frequency_hz: Model reference frequency in Hertz.
+        reference_time_gyr: Model time assigned to the reference frequency, in Gyr.
+
+    Returns:
+        Model time coordinate in Gyr.
+    """
+    if not math.isfinite(frequency_hz) or frequency_hz <= 0:
+        raise ValueError("frequency_hz must be finite and positive")
+    if not math.isfinite(reference_frequency_hz) or reference_frequency_hz <= 0:
+        raise ValueError("reference_frequency_hz must be finite and positive")
+    if not math.isfinite(reference_time_gyr) or reference_time_gyr <= 0:
+        raise ValueError("reference_time_gyr must be finite and positive")
+    return reference_time_gyr * reference_frequency_hz / frequency_hz
+
+
 def normalize_value(value: float, reference: float) -> float:
     """Return Z = value/reference for finite values and a non-zero reference."""
     finite_value = _finite_nonnegative(value, "value")
