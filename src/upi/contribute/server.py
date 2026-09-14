@@ -117,6 +117,9 @@ def make_handler(app: ContributionApp):
             if path == "/":
                 self._static("index.html", "text/html; charset=utf-8")
                 return
+            if path in {"/lab", "/lab/"}:
+                self._static("lab.html", "text/html; charset=utf-8")
+                return
             if path.startswith("/static/"):
                 self._static(path.removeprefix("/static/"))
                 return
@@ -189,15 +192,26 @@ def make_handler(app: ContributionApp):
                 self._json(429, {"errors": ["rate limit"]})
                 return
             parsed = urlparse(self.path)
-            if parsed.path == "/api/promote":
+            if parsed.path in {"/api/promotion-review", "/api/promote"}:
                 payload = self._read_json(MAX_READ)
                 if payload is None:
                     return
                 try:
+                    if parsed.path == "/api/promotion-review":
+                        review = app.service.prepare_promotion(
+                            str(payload.get("address") or ""),
+                            str(self.headers.get("X-UPI-Review-Token") or ""),
+                            app.review_token,
+                            human_intent=payload.get("human_intent", ""),
+                        )
+                        self._json(200, review)
+                        return
                     stored = app.service.promote(
                         str(payload.get("address") or ""),
                         str(self.headers.get("X-UPI-Review-Token") or ""),
                         app.review_token,
+                        review_id=str(payload.get("review_id") or ""),
+                        human_decision=str(payload.get("human_decision") or ""),
                     )
                 except ContributionError as exc:
                     self._json(exc.status_code, {"errors": exc.errors})

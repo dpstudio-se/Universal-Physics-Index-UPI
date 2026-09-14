@@ -69,3 +69,74 @@ only through the provenance and observations attached to its links. Conversely, 
 not require a new experiment at every algebraic step: an exact composition may inherit existing
 evidence within the same declared domain. See
 [`docs/COLLABORATIVE_DISCOVERY.md`](docs/COLLABORATIVE_DISCOVERY.md).
+
+## Bidirectional verification: Astra, UPI and evidence
+
+Use a bidirectional verification loop for substantive proposals, including code, physics nodes,
+derivations, schemas, tests, documentation and refactors. Astra denotes the implementing agent;
+UPI denotes the repository's knowledge, classifications and validation rules, not an inherently
+independent agent or an infallible source. The purpose is to expose disagreement before an error
+becomes canonical, never to force consensus.
+
+### Proposal and mirror review
+
+1. Record the proposal's evidence, assumptions, expected behavior, affected UPI nodes and tests,
+   claim statuses and falsification conditions. Mark inapplicable checks with a reason.
+2. From the implementation perspective, derive result A: what should satisfy the user's request?
+3. From the evidence and UPI perspective, separately derive or validate result B: what do the
+   sources, mathematical relations and repository constraints require? Do not construct B solely
+   by copying A or reversing its assumptions. Record shared inputs and dependencies; a second
+   pass by the same agent is a self-review, not independent corroboration.
+4. Check applicable schema compatibility, canonical knowledge, duplicate concepts, conflicting
+   equations, units and dimensions, conservation laws, status classification, provenance,
+   existing tests, repository invariants, bridge consistency and falsification conditions.
+   Actively seek counterexamples and reasons the proposal could fail. Existing canonical entries
+   may themselves be wrong; resolve conflicts against evidence rather than rank or agreement.
+5. Compare A and B within declared types, units, domains and numerical tolerances. Record the
+   comparison as agreement, disagreement or incomplete; do not silently widen tolerances to pass.
+
+### Decision and error escape
+
+- `ACCEPT` requires a complete comparison, agreement within the declared criteria, passing required
+  checks, valid provenance and no violated applicable invariant. It means the proposal passed
+  review within its stated scope; it does not automatically promote scientific status or publish
+  canonical knowledge. Preserve the human review for promotion described in
+  `docs/COLLABORATIVE_DISCOVERY.md`.
+- On disagreement, select neither side automatically. Classify the specific disputed claims
+  using `EST`, `DER`, `HYP`, `STOP`, `ERR` or `SYM`, investigate, revise and rerun affected checks.
+  These are claim statuses, separate from the comparison and acceptance decisions.
+- Missing required evidence, contradictory evidence, dimensional inconsistency, broken invariants,
+  failed required tests, schema violations, unsupported status promotion or unexplained numerical
+  discrepancies block canonical promotion of the affected claim. Incomplete or unresolved checks
+  require `STOP`, a concrete `stop_reason` and the smallest next observation needed to proceed.
+  Continue productive discovery and unaffected work; never force consensus to exit the loop.
+
+Agreement between Astra and UPI is not evidence by itself. Repeating a shared assumption does not
+increase its support. Acceptance must trace to verifiable sources, explicit derivations and
+applicable checks. Label software tests `verification_type: software_test`; they establish only
+the tested software behavior, not experimental verification or physical equivalence. An exact
+derivation may inherit existing evidence within its declared domain without a new experiment at
+every algebraic step.
+
+```text
+DISCOVER -> ASTRA ANALYSIS -> UPI CLASSIFICATION -> IMPLEMENTATION
+  -> SOFTWARE TEST / APPLICABLE CHECKS -> UPI VALIDATION -> MIRROR COMPARISON
+  -> agreement + evidence + invariants: AUDIT -> ACCEPT -> promotion review
+  -> disagreement: INVESTIGATE -> REVISE -> repeat affected checks / STOP
+  -> incomplete: STOP on affected claim + next observation
+```
+
+For a concise review record, use:
+
+```text
+Proposal and scope:
+A (implementation expectation):
+B (evidence / UPI requirement):
+Evidence, assumptions and shared dependencies:
+Checks and results (software tests: verification_type: software_test):
+Comparison: agree / disagree / incomplete
+Claim statuses and falsification conditions:
+Decision: ACCEPT / REVISE / STOP
+Canonical promotion: eligible for review / blocked; reason:
+Next observation or affected checks to rerun:
+```
