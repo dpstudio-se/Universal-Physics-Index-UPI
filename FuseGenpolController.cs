@@ -1,0 +1,68 @@
+using System;
+
+namespace UPI.Core.Fuse
+{
+    public class FuseGenpolController
+    {
+        public double Frequency { get; set; }
+        public double Genpol { get; set; }
+        public bool RsymZero { get; set; }
+        public bool RnsZero { get; set; }
+
+        public string Mode { get; private set; }
+        public bool Enabled { get; private set; }
+        public string Direction { get; private set; }
+
+        public int PhaseIndex { get; set; }
+        public int PhaseDeg => PhaseIndex * 72;
+
+        public bool Allowed { get; private set; }
+        public string Reason { get; private set; }
+
+        public void Update()
+        {
+            // GENPOL LOCK
+            if (Math.Abs(Genpol - 0.136) > 0.000001)
+            {
+                Enabled = false;
+                Direction = null;
+                Allowed = false;
+                Reason = "GENPOL_LOCK";
+                return;
+            }
+
+            // FREQUENCY → MODE
+            if (Math.Abs(Frequency - 7.834) < 0.001)
+            {
+                Mode = "analog";
+            }
+            else
+            {
+                Mode = "digital";
+            }
+
+            // MODE → ON/OFF
+            Enabled = Mode == "digital";
+
+            // FREQUENCY → DIRECTION
+            Direction = Mode == "analog" ? "-" : "+";
+
+            // TF1766 MIRROR + RSYM
+            if (Enabled && !RsymZero)
+            {
+                Allowed = false;
+                Reason = "RSYM_BREAK";
+                return;
+            }
+
+            // PHASE WRAP
+            if (PhaseDeg == 360)
+            {
+                PhaseIndex = 0;
+            }
+
+            Allowed = true;
+            Reason = "OK";
+        }
+    }
+}
