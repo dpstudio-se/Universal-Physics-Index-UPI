@@ -1,4 +1,15 @@
-from upi.tf1766_axis import DEFAULT_AXIS, MirrorOperator, TFAxis, mirror_involution_holds
+from upi.tf1766_axis import (
+    ANALOG,
+    DEFAULT_AXIS,
+    DIGITAL,
+    FORWARD,
+    MirrorOperator,
+    REVERSE,
+    RNAFuse,
+    RNAMotorState,
+    TFAxis,
+    mirror_involution_holds,
+)
 
 
 def test_default_axis_is_ordered_and_current_is_unique() -> None:
@@ -40,16 +51,6 @@ def test_current_law_is_selected_by_status_not_origin_year() -> None:
     assert current.year == 2026
     assert current.source_type == "current_consolidated_law"
 
-from upi.tf1766_axis import (
-    ANALOG,
-    DIGITAL,
-    FORWARD,
-    OFF,
-    REVERSE,
-    RNAFuse,
-    RNAMotorState,
-)
-
 
 def test_rna_motor_switch_and_direction() -> None:
     state = RNAMotorState(enabled=True, direction=FORWARD, mode=ANALOG)
@@ -58,7 +59,7 @@ def test_rna_motor_switch_and_direction() -> None:
     state = state.switch(direction=REVERSE, mode=DIGITAL)
     assert state.signed_omega == -1
     assert state.mode == DIGITAL
-    assert state.step().phase_deg == 0.0
+    assert state.step().phase_deg == 288.0
 
 
 def test_rna_motor_off_freezes_phase() -> None:
@@ -67,9 +68,38 @@ def test_rna_motor_off_freezes_phase() -> None:
     assert state.step().phase_index == 3
 
 
+def test_rna_fuse_configure_analog_7834() -> None:
+    fuse = RNAFuse(MirrorOperator(TFAxis(DEFAULT_AXIS)))
+    state = fuse.configure(mode=ANALOG, freq=7.834, genpol=0.136)
+    assert state.enabled is False
+    assert state.direction == REVERSE
+    assert state.phase_deg == 0.0
+
+
+def test_rna_fuse_configure_digital_82000() -> None:
+    fuse = RNAFuse(MirrorOperator(TFAxis(DEFAULT_AXIS)))
+    state = fuse.configure(mode=DIGITAL, freq=82000.0, genpol=0.136)
+    assert state.enabled is True
+    assert state.direction == FORWARD
+
+
+def test_rna_fuse_genpol_mismatch_disables_and_clears_direction() -> None:
+    fuse = RNAFuse(MirrorOperator(TFAxis(DEFAULT_AXIS)))
+    state = fuse.configure(mode=DIGITAL, freq=82000.0, genpol=0.137)
+    assert state.enabled is False
+    assert state.direction is None
+
+
+def test_rna_fuse_unknown_frequency_stops_digital_mode() -> None:
+    fuse = RNAFuse(MirrorOperator(TFAxis(DEFAULT_AXIS)))
+    state = fuse.configure(mode=DIGITAL, freq=1000.0, genpol=0.136)
+    assert state.enabled is False
+    assert state.direction is None
+
+
 def test_rna_fuse_shadow_stops_nonzero_residual() -> None:
     fuse = RNAFuse(MirrorOperator(TFAxis(DEFAULT_AXIS)))
-    fuse.set_motor(enabled=True, direction=FORWARD, mode=DIGITAL)
+    fuse.configure(mode=DIGITAL, freq=82000.0, genpol=0.136)
     assert fuse.gate(rsym_zero=False) is False
     assert fuse.shadow_log[-1].reason == "shadow_stop_nonzero_rsym"
 
