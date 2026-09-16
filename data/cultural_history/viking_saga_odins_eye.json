@@ -1,0 +1,47 @@
+{
+  "id": "UPI<CULTURE,VIKING_SAGA,ODINS_EYE,SHADOW_FREQUENCY>",
+  "title": "Viking Sagas: Odin's Eye Three-Perspective and Shadow-Layer Analysis",
+  "domain": "cultural_history",
+  "generation": "v1",
+  "torus": "ODINS_EYE",
+  "node": "VIKING_SAGA_SHADOW_FREQUENCY",
+  "status": "HYP",
+  "evidence_status": "STOP",
+  "tags": [
+    "Viking Age",
+    "Norse sagas",
+    "Odin's Eye",
+    "shadow layer",
+    "narrative analysis",
+    "frequency analysis"
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "status": "EST",
+      "claim": "Saga texts can be analysed as surviving narrative sources with explicit textual content."
+    },
+    {
+      "id": "C2",
+      "status": "DER",
+      "claim": "Explicit, deep-structure and shadow observations can be represented as separate analytical layers."
+    },
+    {
+      "id": "C3",
+      "status": "HYP",
+      "claim": "Recurring temporal structures in saga events may be testable with time-series and spectral methods."
+    },
+    {
+      "id": "C4",
+      "status": "SYM",
+      "claim": "7.83 Hz and 8 Hz may be retained as separate configurable physical reference frequencies, not as established Viking frequencies."
+    },
+    {
+      "id": "C5",
+      "status": "STOP",
+      "claim": "A corpus-wide Viking-saga frequency result requires a declared corpus, source provenance and null-model testing."
+    }
+  ],
+  "method_ref": "docs/VIKING_SAGA_ODINS_EYE.md",
+  "provenance": "Research-method record prepared for UPI; no unsupported historical or physical causal claim is asserted."
+}
