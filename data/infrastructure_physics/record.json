@@ -1,0 +1,11 @@
+{
+  "owner": "named-human",
+  "status": "waiting",
+  "artifact": "artifacts/record.json",
+  "failure_reason": "no-workflow-canvas-finish-line",
+  "retry_count": 0,
+  "policy_id": "ask-before-send",
+  "pending_writes": [],
+  "omitted": [],
+  "redactions": []
+}

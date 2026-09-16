@@ -1,0 +1,9 @@
+{
+  "gate": "PHI_1765",
+  "verdict": "PASS",
+  "transcript_only_facts": [],
+  "durable_artifacts": ["artifacts/record.json", "artifacts/gates_packet.json"],
+  "destructive_retry": false,
+  "empty_routine_heartbeat": "N/A",
+  "note": "Produced facts survive closed laptop; no shadow state in chat only."
+}
