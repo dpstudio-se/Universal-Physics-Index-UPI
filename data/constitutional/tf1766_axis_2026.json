@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.0.0",
+  "address": "UPI<constitutional,1,TF1766_AXIS,2026>",
+  "title": "UPI TF1766→2026 Constitutional Axis",
+  "status": "SYM",
+  "verification_type": "mathematical_check",
+  "purpose": "Versioned model for tracing a constitutional principle across historical nodes while evaluating a norm against the law applicable at the relevant date.",
+  "time_axis": [
+    {"label": "TF1766", "year": 1766, "status": "HIST"},
+    {"label": "RF1809", "year": 1809, "status": "HIST"},
+    {"label": "TF1949_RF1949", "year": 1949, "status": "HIST"},
+    {"label": "RF1974", "year": 1974, "status": "HIST"},
+    {"label": "TF_YGL1992", "year": 1992, "status": "HIST"},
+    {"label": "KU21_1993_94", "year": 1994, "status": "EST_SOURCE"},
+    {"label": "CURRENT", "year": 2026, "status": "EST_CURRENT"}
+  ],
+  "current_law_rule": "Use the latest legally effective consolidated text for the relevant date; older versions remain historical and must not be substituted for current law.",
+  "norm_transform": {
+    "symbol": "M",
+    "mapping": "M(Ψ)→σ'",
+    "required_inputs": ["exact_provision", "exact_obligation", "actor", "relevant_time", "action", "publication_timing", "medium"]
+  },
+  "mirror_operator": {
+    "symbol": "J",
+    "definition": "J(ψ_i)=ψ_(6-i)",
+    "property": "J²=I"
+  },
+  "loop_operator": {
+    "symbol": "Φ1766",
+    "definition": "J·M·J·M"
+  },
+  "symmetry_condition": "J·M·J=M⁻¹",
+  "symmetry_residual": "R_sym=(J·M·J·M−I)Ψ",
+  "norm_residual": "R_NS=NS'−NS",
+  "legal_test_guard": "A non-zero mathematical residual is a flag for legal-source review; it is not itself a legal conclusion.",
+  "classification_guards": {
+    "HIST": "Historical text/version, not applicable current law unless the question is historical.",
+    "EST_CURRENT": "Current legally effective text for the specified date.",
+    "EST_SOURCE": "Relevant continuing source material such as preparatory works; not itself statutory text.",
+    "HYP": "Unverified proposition that must be tested against exact sources.",
+    "SYM": "Formal/model representation, not a claim that the model is itself law."
+  },
+  "legal_scope_guard": "The model does not infer that an EU rule is censorship. It tests the exact provision, obligation, actor, time, action, publication timing, medium, applicable TF/YGL text, RF provisions, and relevant source material.",
+  "notes": [
+    "TF 1949:105 and RF 1974:152 remain the SFS identities of the constitutions, but their original enactment texts are historical versions; current consolidated text is selected by effective date.",
+    "KU21 is retained as relevant constitutional preparatory/source material rather than as statutory text.",
+    "TF1766 is the historical anchor of the model, not current law."
+  ]
+}
