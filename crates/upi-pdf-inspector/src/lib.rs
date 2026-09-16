@@ -1,3 +1,6 @@
+mod constitutional_scope;
+pub use constitutional_scope::{ConstitutionalScope, ScopeStatus};
+
 use lopdf::Document;
 use serde::{Deserialize, Serialize};
 use std::{collections::HashSet, path::Path};
