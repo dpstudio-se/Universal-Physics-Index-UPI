@@ -96,7 +96,7 @@ from .validation import (
     validate_scientific_boundaries,
     validate_status_enum,
 )
-from .workflow import (
+from .tf1766_axis import (\n    ANALOG, DIGITAL, FORWARD, REVERSE, ON, OFF,\n    RNAMotorState, ShadowEvent, RNAFuse,\n    ConstitutionalNode, TFAxis, MirrorOperator, NormTransform, MirrorResult,\n    DEFAULT_AXIS, mirror_involution_holds,\n)\nfrom .workflow import (
     WorkflowState,
     validate_handoff,
     validate_ledger_entry,
