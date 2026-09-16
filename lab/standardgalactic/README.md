@@ -1,0 +1,1 @@
+﻿# Standardgalactic lab module
