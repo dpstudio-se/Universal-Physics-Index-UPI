@@ -2,14 +2,14 @@
 
 This module is a formal/model layer. It does not itself determine legal liability,
 constitutionality, or whether a concrete EU measure constitutes censorship.
-It provides version-aware nodes, a temporal mirror, and a reversible-loop test.
+It provides version-aware nodes, a temporal mirror, a reversible-loop test,
+and a technical RNA/72-degree control fuse.
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass
 from typing import Iterable
-
 
 HIST = "HIST"
 EST_CURRENT = "EST_CURRENT"
@@ -126,19 +126,12 @@ class MirrorResult:
 
 
 def apply_loop(vector: tuple[object, ...], transform: tuple[object, ...], mirror: MirrorOperator) -> tuple[object, ...]:
-    """Apply J M J M using a concrete finite vector representation.
-
-    ``transform`` is represented as a same-length output vector. This is a
-    computational test representation, not a legal interpretation of M.
-    """
+    """Apply the declared finite J-M-J-M representation."""
     if len(vector) != len(transform):
         raise ValueError("vector and transform must have equal length")
     sigma1 = transform
     sigma2 = mirror(sigma1)
     sigma3 = mirror(sigma2)
-    # J M J M is represented by reapplying the declared transformed state and
-    # mirrors; callers should use the explicit residual if a different M model
-    # is required.
     return mirror(sigma3)
 
 
@@ -146,7 +139,7 @@ def compute_residual(
     original: tuple[object, ...],
     transformed_round_trip: tuple[object, ...],
 ) -> tuple[object, ...]:
-    """Compute the componentwise symbolic residual ΦΨ−Ψ."""
+    """Compute the componentwise symbolic residual Phi(Psi)-Psi."""
     if len(original) != len(transformed_round_trip):
         raise ValueError("residual operands must have equal length")
     residual: list[object] = []
@@ -167,4 +160,206 @@ def mirror_involution_holds(axis: TFAxis) -> bool:
         if mirror.square(basis) != basis:
             return False
     return True
-\nPHASE_STEP_DEG = 72.0\nPHASE_COUNT = 5\nPHASE_CLOSURE_INDEX = 5\n\nANALOG = "analog"\nDIGITAL = "digital"\nON = "ON"\nOFF = "OFF"\nFORWARD = 1\nREVERSE = -1\n\n@dataclass(frozen=True)\nclass RNAMotorState:\n    """Pure technical 72-degree control state; never a legal norm."""\n    enabled: bool = False\n    direction: int = FORWARD\n    mode: str = ANALOG\n    phase_index: int = 0\n\n    def __post_init__(self) -> None:\n        if self.direction not in (FORWARD, REVERSE):\n            raise ValueError("direction must be +1 or -1")\n        if self.mode not in (ANALOG, DIGITAL):\n            raise ValueError("mode must be 'analog' or 'digital'")\n        if not 0 <= self.phase_index <= PHASE_CLOSURE_INDEX:\n            raise ValueError("phase_index must be in 0..5")\n\n    @property\n    def phase_deg(self) -> float:\n        return self.phase_index * PHASE_STEP_DEG\n\n    @property\n    def signed_omega(self) -> int:\n        """R_RNA: omega -> +/- omega; OFF gives zero."""\n        return 0 if not self.enabled else self.direction\n\n    def step(self, count: int = 1) -> "RNAMotorState":\n        """Advance by 72-degree steps; 360-degree closure maps to phase 0."""\n        if count < 0:\n            return self.step(-count)\n        if not self.enabled:\n            return self\n        phase = (self.phase_index + self.direction * count) % PHASE_COUNT\n        return RNAMotorState(self.enabled, self.direction, self.mode, phase)\n\n    def switch(self, *, enabled: bool | None = None, direction: int | None = None, mode: str | None = None) -> "RNAMotorState":\n        return RNAMotorState(self.enabled if enabled is None else enabled, self.direction if direction is None else direction, self.mode if mode is None else mode, self.phase_index)\n\n@dataclass(frozen=True)\nclass ShadowEvent:\n    enabled: bool\n    direction: int\n    phase_index: int\n    phase_deg: float\n    rsym_zero: bool\n    rns_zero: bool\n    allowed: bool\n    reason: str\n\nclass RNAFuse:\n    """Fuse the technical 72-degree motor to the TF1766 mirror gate."""\n    def __init__(self, mirror: MirrorOperator) -> None:\n        self.mirror = mirror\n        self.motor = RNAMotorState()\n        self.shadow_log: list[ShadowEvent] = []\n\n    def set_motor(self, *, enabled: bool, direction: int = FORWARD, mode: str = ANALOG) -> RNAMotorState:\n        self.motor = self.motor.switch(enabled=enabled, direction=direction, mode=mode)\n        return self.motor\n\n    def rotate(self, steps: int = 1) -> RNAMotorState:\n        self.motor = self.motor.step(steps)\n        return self.motor\n\n    def gate(self, *, rsym_zero: bool, rns_zero: bool = True) -> bool:\n        """ON requires mirror closure; OFF freezes; direction never bypasses the gate."""\n        if not self.motor.enabled:\n            allowed, reason = True, "motor_off_freeze"\n        elif not rsym_zero:\n            allowed, reason = False, "shadow_stop_nonzero_rsym"\n        else:\n            allowed, reason = True, "mirror_closed"\n        self.shadow_log.append(ShadowEvent(self.motor.enabled, self.motor.direction, self.motor.phase_index, self.motor.phase_deg, rsym_zero, rns_zero, allowed, reason))\n        return allowed\n\n    def apply(self, vector: tuple[object, ...], transform: tuple[object, ...], *, rsym_zero: bool, rns_zero: bool = True) -> tuple[object, ...]:\n        if not self.gate(rsym_zero=rsym_zero, rns_zero=rns_zero):\n            return vector\n        if not self.motor.enabled:\n            return vector\n        return apply_loop(vector, transform, self.mirror)\n
+
+
+PHASE_STEP_DEG = 72.0
+PHASE_COUNT = 5
+ANALOG = "analog"
+DIGITAL = "digital"
+ON = "ON"
+OFF = "OFF"
+FORWARD = 1
+REVERSE = -1
+
+
+@dataclass(frozen=True)
+class RNAMotorState:
+    """Pure technical 72-degree control state; never a legal norm."""
+
+    enabled: bool = False
+    direction: int | None = FORWARD
+    mode: str = ANALOG
+    phase_index: int = 0
+    frequency_hz: float | None = None
+    genpol: float | None = None
+
+    def __post_init__(self) -> None:
+        if self.enabled and self.direction not in (FORWARD, REVERSE):
+            raise ValueError("enabled motor direction must be +1 or -1")
+        if not self.enabled and self.direction not in (FORWARD, REVERSE, None):
+            raise ValueError("disabled motor direction must be +1, -1, or None")
+        if self.mode not in (ANALOG, DIGITAL):
+            raise ValueError("mode must be 'analog' or 'digital'")
+        if not 0 <= self.phase_index < PHASE_COUNT:
+            raise ValueError("phase_index must be in 0..4")
+
+    @property
+    def phase_deg(self) -> float:
+        return self.phase_index * PHASE_STEP_DEG
+
+    @property
+    def signed_omega(self) -> int:
+        """R_RNA: omega -> +/- omega; OFF gives zero."""
+        if not self.enabled or self.direction is None:
+            return 0
+        return self.direction
+
+    def step(self, count: int = 1) -> "RNAMotorState":
+        """Advance by 72-degree steps; OFF is a hard freeze."""
+        if count < 0:
+            return self.step(-count)
+        if not self.enabled or self.direction is None:
+            return self
+        phase = (self.phase_index + self.direction * count) % PHASE_COUNT
+        return RNAMotorState(
+            enabled=self.enabled,
+            direction=self.direction,
+            mode=self.mode,
+            phase_index=phase,
+            frequency_hz=self.frequency_hz,
+            genpol=self.genpol,
+        )
+
+    def switch(
+        self,
+        *,
+        enabled: bool | None = None,
+        direction: int | None = None,
+        mode: str | None = None,
+        frequency_hz: float | None = None,
+        genpol: float | None = None,
+    ) -> "RNAMotorState":
+        return RNAMotorState(
+            enabled=self.enabled if enabled is None else enabled,
+            direction=self.direction if direction is None else direction,
+            mode=self.mode if mode is None else mode,
+            phase_index=self.phase_index,
+            frequency_hz=self.frequency_hz if frequency_hz is None else frequency_hz,
+            genpol=self.genpol if genpol is None else genpol,
+        )
+
+
+@dataclass(frozen=True)
+class ShadowEvent:
+    enabled: bool
+    direction: int | None
+    phase_index: int
+    phase_deg: float
+    frequency_hz: float | None
+    genpol: float | None
+    rsym_zero: bool
+    rns_zero: bool
+    allowed: bool
+    reason: str
+
+
+class RNAFuse:
+    """Technical ON/OFF, direction, frequency and genpol fuse."""
+
+    def __init__(
+        self,
+        mirror: MirrorOperator,
+        *,
+        analog_frequency_hz: float = 7.834,
+        digital_frequency_threshold_hz: float = 82000.0,
+        genpol_reference: float = 0.136,
+        genpol_tolerance: float = 1e-12,
+        frequency_tolerance_hz: float = 1e-9,
+    ) -> None:
+        self.mirror = mirror
+        self.analog_frequency_hz = analog_frequency_hz
+        self.digital_frequency_threshold_hz = digital_frequency_threshold_hz
+        self.genpol_reference = genpol_reference
+        self.genpol_tolerance = genpol_tolerance
+        self.frequency_tolerance_hz = frequency_tolerance_hz
+        self.motor = RNAMotorState(enabled=False, direction=None)
+        self.shadow_log: list[ShadowEvent] = []
+
+    def configure(self, *, mode: str, freq: float, genpol: float) -> RNAMotorState:
+        """Derive ON/OFF from mode, direction from frequency, with genpol hard gate."""
+        if mode not in (ANALOG, DIGITAL):
+            raise ValueError("mode must be 'analog' or 'digital'")
+
+        if abs(genpol - self.genpol_reference) > self.genpol_tolerance:
+            self.motor = RNAMotorState(
+                enabled=False,
+                direction=None,
+                mode=mode,
+                phase_index=self.motor.phase_index,
+                frequency_hz=freq,
+                genpol=genpol,
+            )
+            return self.motor
+
+        enabled = mode == DIGITAL
+        if abs(freq - self.analog_frequency_hz) <= self.frequency_tolerance_hz:
+            direction: int | None = REVERSE
+        elif freq >= self.digital_frequency_threshold_hz:
+            direction = FORWARD
+        else:
+            direction = None
+
+        if enabled and direction is None:
+            enabled = False
+
+        self.motor = RNAMotorState(
+            enabled=enabled,
+            direction=direction,
+            mode=mode,
+            phase_index=self.motor.phase_index,
+            frequency_hz=freq,
+            genpol=genpol,
+        )
+        return self.motor
+
+    def set_motor(
+        self,
+        *,
+        enabled: bool,
+        direction: int | None = None,
+        mode: str = ANALOG,
+    ) -> RNAMotorState:
+        self.motor = self.motor.switch(enabled=enabled, direction=direction, mode=mode)
+        return self.motor
+
+    def rotate(self, steps: int = 1) -> RNAMotorState:
+        self.motor = self.motor.step(steps)
+        return self.motor
+
+    def gate(self, *, rsym_zero: bool, rns_zero: bool = True) -> bool:
+        """Run the shadow gate; ON requires mirror closure, OFF freezes."""
+        if not self.motor.enabled:
+            allowed, reason = True, "motor_off_freeze"
+        elif not rsym_zero:
+            allowed, reason = False, "shadow_stop_nonzero_rsym"
+        else:
+            allowed, reason = True, "mirror_closed"
+        self.shadow_log.append(
+            ShadowEvent(
+                self.motor.enabled,
+                self.motor.direction,
+                self.motor.phase_index,
+                self.motor.phase_deg,
+                self.motor.frequency_hz,
+                self.motor.genpol,
+                rsym_zero,
+                rns_zero,
+                allowed,
+                reason,
+            )
+        )
+        return allowed
+
+    def apply(
+        self,
+        vector: tuple[object, ...],
+        transform: tuple[object, ...],
+        *,
+        rsym_zero: bool,
+        rns_zero: bool = True,
+    ) -> tuple[object, ...]:
+        if not self.gate(rsym_zero=rsym_zero, rns_zero=rns_zero):
+            return vector
+        if not self.motor.enabled:
+            return vector
+        return apply_loop(vector, transform, self.mirror)
