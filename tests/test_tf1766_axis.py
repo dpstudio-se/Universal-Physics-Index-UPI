@@ -39,3 +39,51 @@ def test_current_law_is_selected_by_status_not_origin_year() -> None:
     current = axis.current()
     assert current.year == 2026
     assert current.source_type == "current_consolidated_law"
+
+from upi.tf1766_axis import (
+    ANALOG,
+    DIGITAL,
+    FORWARD,
+    OFF,
+    REVERSE,
+    RNAFuse,
+    RNAMotorState,
+)
+
+
+def test_rna_motor_switch_and_direction() -> None:
+    state = RNAMotorState(enabled=True, direction=FORWARD, mode=ANALOG)
+    assert state.signed_omega == 1
+    assert state.step().phase_deg == 72.0
+    state = state.switch(direction=REVERSE, mode=DIGITAL)
+    assert state.signed_omega == -1
+    assert state.mode == DIGITAL
+    assert state.step().phase_deg == 0.0
+
+
+def test_rna_motor_off_freezes_phase() -> None:
+    state = RNAMotorState(enabled=False, direction=FORWARD, phase_index=3)
+    assert state.signed_omega == 0
+    assert state.step().phase_index == 3
+
+
+def test_rna_fuse_shadow_stops_nonzero_residual() -> None:
+    fuse = RNAFuse(MirrorOperator(TFAxis(DEFAULT_AXIS)))
+    fuse.set_motor(enabled=True, direction=FORWARD, mode=DIGITAL)
+    assert fuse.gate(rsym_zero=False) is False
+    assert fuse.shadow_log[-1].reason == "shadow_stop_nonzero_rsym"
+
+
+def test_rna_fuse_allows_closed_loop_in_both_directions() -> None:
+    fuse = RNAFuse(MirrorOperator(TFAxis(DEFAULT_AXIS)))
+    fuse.set_motor(enabled=True, direction=FORWARD)
+    assert fuse.gate(rsym_zero=True) is True
+    fuse.set_motor(enabled=True, direction=REVERSE)
+    assert fuse.gate(rsym_zero=True) is True
+
+
+def test_rna_fuse_off_is_safe_freeze() -> None:
+    fuse = RNAFuse(MirrorOperator(TFAxis(DEFAULT_AXIS)))
+    fuse.set_motor(enabled=False)
+    assert fuse.gate(rsym_zero=False) is True
+    assert fuse.shadow_log[-1].reason == "motor_off_freeze"
