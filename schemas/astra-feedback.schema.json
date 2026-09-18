@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Astra UPI Feedback Packet",
+  "description": "Machine-readable handoff between Astra and the UPI repository feedback loop. Validation is software validation, not scientific proof.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "protocol",
+    "base_sha",
+    "proposal_sha256",
+    "comparison",
+    "decision",
+    "promotion_gate",
+    "verification_type",
+    "claims_experimental_verification",
+    "claims"
+  ],
+  "properties": {
+    "protocol": {
+      "const": "ASTRA-UPI-LOOP-v1"
+    },
+    "base_sha": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "proposal_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "comparison": {
+      "enum": ["AGREE", "CONFLICT", "UNKNOWN"]
+    },
+    "decision": {
+      "enum": ["VERIFY", "REVISE", "STOP", "DEFER"]
+    },
+    "promotion_gate": {
+      "enum": ["AWAITING_HUMAN_REVIEW", "BLOCKED"]
+    },
+    "verification_type": {
+      "const": "software_test"
+    },
+    "claims_experimental_verification": {
+      "const": false
+    },
+    "claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "status", "statement", "falsification_condition"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "enum": ["EST", "DER", "HYP", "STOP", "ERR", "SYM"]
+          },
+          "statement": {
+            "type": "string",
+            "minLength": 1
+          },
+          "falsification_condition": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "checks": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "outcome", "detail"],
+        "properties": {
+          "name": { "type": "string", "minLength": 1 },
+          "outcome": { "enum": ["PASS", "FAIL", "UNKNOWN"] },
+          "detail": { "type": "string", "minLength": 1 }
+        }
+      }
+    },
+    "next_observation": {
+      "type": "string"
+    },
+    "proposed_paths": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "notes": {
+      "type": "string"
+    }
+  }
+}
