@@ -83,3 +83,7 @@ See `ECHO_SWARM_EXTENSION.md` for the ECHO temporal-correlation layer and SWARM 
 ## Regional frequency / flow map
 
 See `OVIK_UMEA_ROTATING_FLOW_FREQUENCY_MAP.md` for the Örnsköldsvik → Högakustenbron → Umeå multiscale model covering hydrodynamics, geological/geophysical properties, mechanical length scales, electromagnetic wavelengths/antenna scales, SWARM synchronization and falsification controls.
+
+## Full regional layer map
+
+`REGIONAL_SWARM_DATA_LAYERS.md` defines the complete 29-layer ingestion/analysis stack for the Örnsköldsvik–Högakustenbron–Umeå corridor, including terrain, hydrology, geology, sediment, magnetics, gravity, conductivity, radioactivity, minerals, infrastructure, radio/antenna, fiber, grid, vibration, meteorology, marine, historical imagery, cultural heritage, wavelength, SWARM/ECHO, null models, source discrimination, 7.834125 Hz testing, drift and provenance.
