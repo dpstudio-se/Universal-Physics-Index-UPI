@@ -85,6 +85,7 @@ from .spiral_flow import (
     rigid_vortex_velocity,
     select_mode,
 )
+from .self_patch_loop import LoopDecision, LoopStage, LoopTrace, PatchProposal, PatchResult, SelfPatchLoop
 from .triage import compare_report, finding_key
 from .validation import (
     validate_bridge_consistency,
@@ -186,6 +187,7 @@ __all__ = [
     "render_debug_markdown",
     "compare_report",
     "finding_key",
+    "LoopStage", "PatchProposal", "PatchResult", "LoopDecision", "LoopTrace", "SelfPatchLoop",
     # Declarative workflows
     "WorkflowState",
     "validate_task",
