@@ -344,3 +344,67 @@ Preserve:
 - transformation used
 
 Never collapse an artistic alias, cultural symbol, mathematical representation and physical mechanism into one node merely because they look alike.
+
+
+## 12. FORMULA <-> NAME registry
+
+This section makes the mathematical names explicit so that formulas can be indexed as named UPI objects.
+
+| Name | Formula / mathematical form | Domain | Status |
+|---|---|---|---|
+| Euler identity | e^(i*pi)+1=0 | complex mathematics | EST |
+| Pythagorean theorem | a^2+b^2=c^2 | Euclidean geometry | EST |
+| Newton gravitation | F=G*m1*m2/r^2 | classical mechanics | EST within domain |
+| Archimedes buoyancy | F_b=rho*g*V | fluid statics | EST under standard assumptions |
+| Eigenvalue equation | A*x=lambda*x | linear algebra | EST |
+| Riemann zeta | zeta(s)=sum 1/n^s, Re(s)>1 | analysis / number theory | EST definition in convergence domain |
+| Gaussian PDF | p(x)=1/(sigma*sqrt(2*pi))*exp(-(x-mu)^2/(2*sigma^2)) | probability/statistics | EST |
+| Fourier series | x(t)=a0+sum[a_n cos(n*omega0*t)+b_n sin(n*omega0*t)] | signal analysis | EST |
+| Image Fourier partial sum | y_6(x)=sum[k=0..6] 2/(2k+1) sin((2k+1)x) | harmonic reconstruction | EST mathematical construction |
+| Sonoluminescence bubble model | R*Rddot+(3/2)*Rdot^2=(P_B-P_inf-2*sigma/R-4*mu*Rdot/R)/rho | nonlinear bubble dynamics | EST model class; details depend on regime |
+| Wave relation | lambda=v/f | wave physics | EST |
+| Angular frequency | omega=2*pi*f | oscillations/waves | EST |
+| Energy-frequency relation | E=h*f | quantum physics | EST |
+| Mass-energy relation | E=m*c^2 | relativity | EST |
+| Equivalent mass from photon energy | m_eq=E/c^2=h*f/c^2 | energy-equivalent quantity | DER from established relations |
+| Generic wave field | psi(r,t)=sum A_n(t) exp(i(k_n·r-omega_n*t)) | field/wave modelling | DER/model representation |
+| Beat frequency | f_beat=|f1-f2| | interference/beating | EST |
+| Two-frequency superposition | cos(2*pi*f1*t)+cos(2*pi*f2*t)=2*cos(2*pi*(f1-f2)t/2)*cos(2*pi*(f1+f2)t/2) | wave mathematics | EST |
+| Entropy balance | dS_system/dt=Sdot_in-Sdot_out+Sdot_gen | thermodynamics | EST |
+| Internal entropy production | Sdot_gen >= 0 | thermodynamics | EST |
+| Energy balance | dU/dt=P_in-P_out+P_internal | thermodynamic bookkeeping | EST/model-dependent partition |
+| Fixed-cavity scaling | f_n proportional to 1/R_eff | idealized modal scaling | DER/HYP when applied to a specific Earth cavity |
+| Normalized radius | r=R/R0 | dimensionless modelling | DER |
+| Normalized frequency | fhat=f/f0 | dimensionless modelling | DER |
+
+### Named-structure links
+
+EULER_IDENTITY --HAS_FORM--> e^(i*pi)+1=0
+PYTHAGORAS --HAS_FORM--> a^2+b^2=c^2
+NEWTON --HAS_FORM--> F=G*m1*m2/r^2
+ARCHIMEDES --HAS_FORM--> F_b=rho*g*V
+VON_NEUMANN --HAS_FORM--> A*x=lambda*x
+RIEMANN --HAS_FORM--> zeta(s)
+GAUSS --HAS_FORM--> GAUSSIAN_PDF
+FOURIER --HAS_FORM--> HARMONIC_SERIES
+EPICYCLE --REPRESENTS--> HARMONIC_COMPONENT
+SONOLUMINESCENCE --MODELLED_BY--> BUBBLE_RADIAL_DYNAMICS
+WAVE --HAS_RELATION--> lambda=v/f
+QUANTUM_ENERGY --HAS_RELATION--> E=h*f
+MASS_ENERGY --HAS_RELATION--> E=m*c^2
+THERMODYNAMIC_SYSTEM --HAS_BALANCE--> dS/dt=Sdot_in-Sdot_out+Sdot_gen
+
+### Formula-name control
+
+A formula is indexed with:
+FORMULA_NAME
+-> SYMBOLS
+-> UNITS
+-> DOMAIN
+-> ASSUMPTIONS
+-> DERIVATION
+-> EVIDENCE
+-> STATUS
+
+Important:
+A formula can be mathematically valid while an application of that formula to a particular physical system remains HYP or STOP because geometry, parameters, boundary conditions or measurements are missing.
