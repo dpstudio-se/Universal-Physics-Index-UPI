@@ -107,3 +107,133 @@ STOP: any claim requiring independent measurements or a physical mechanism that 
 RNA/workload -> physics engine -> Ω1766 trace/verify -> mirror -> delta -> Z (DNA UPDATE) -> versioned DNA candidate.
 
 Every completed loop should create a durable audit checkpoint. Checkpointing must not silently promote a hypothesis to EST.
+
+
+## Extended closed-system radius/time coupling (2026-09-19)
+
+This extension formalizes the requested test of an effective Earth resonant cavity whose characteristic scale changes with time. It does **not** assert that the physical radius of Earth measurably expands/contracts by the values below.
+
+### Effective-radius model
+
+Let R_eff(t) denote an effective characteristic cavity scale. For a fixed mode family, fixed effective wave speed and unchanged boundary parameters, a first-order scaling model is
+
+f_n(t) ∝ 1 / R_eff(t)
+
+therefore
+
+(1/f_n) df_n/dt = -(1/R_eff) dR_eff/dt
+
+and, for R_eff(t) = R_0 (1 + epsilon),
+
+f_n(epsilon) = f_0 / (1 + epsilon).
+
+Using f_0 = 7.834125 Hz as a numerical reference:
+
+- epsilon = -0.01 -> f ≈ 7.9132576 Hz
+- epsilon = +0.01 -> f ≈ 7.7565594 Hz
+
+The 7.834125 Hz -> 8 Hz shift corresponds, in this simplified fixed-parameter scaling only, to
+
+R_eff/R_0 = 7.834125 / 8 = 0.979265625
+
+so Delta R_eff/R_0 ≈ -2.0734375%.
+
+For R_0 = 6371 km, this gives a model-equivalent Delta R_eff ≈ -132.05 km. This is **not** evidence that Earth physically shrinks by 132 km; it is a parameter-equivalence calculation for the simplified cavity model.
+
+### Wavelength control
+
+Always declare wave type and propagation speed before converting frequency to wavelength:
+
+lambda = v/f.
+
+Vacuum-equivalent EM comparison:
+
+lambda_7.834125 = c/7.834125 ≈ 38,267.51 km
+lambda_8 = c/8 ≈ 37,474.06 km
+
+These are comparison values only. Schumann resonances are cavity modes and must not be treated as free-space waves.
+
+### Closed-system energy/entropy bookkeeping
+
+For an ideal isolated total system:
+
+dE_total/dt = 0
+
+while internal reservoirs may exchange energy:
+
+E_matter <-> E_field <-> E_thermal <-> E_mechanical.
+
+For thermodynamics:
+
+dU/dt = P_in - P_out + P_internal
+
+and
+
+dS_system/dt = Sdot_in - Sdot_out + Sdot_gen,
+with Sdot_gen >= 0.
+
+The Earth system is more accurately treated as approximately closed with respect to matter but open with respect to energy. Therefore a literal globally closed Earth energy balance is an idealization, not a measured boundary condition.
+
+### Time-dependent mode model
+
+A more realistic research model is
+
+f_n(t) = F_n(R_Earth, h_ion(t), sigma_ion(t), epsilon, mu, boundary_conditions, mode).
+
+The proposed causal test chain is:
+
+R_eff(t) / cavity geometry
+-> mode frequency f_n(t)
+-> field energy P_n(t)
+-> coupling/transport/dissipation
+-> entropy production Sdot_gen(t)
+-> updated state X(t+dt).
+
+A frequency drift alone does not determine entropy production. Dissipation and energy transfer must be measured or explicitly modelled.
+
+### 8 Hz / 7.834125 Hz interference
+
+For two equal-amplitude components:
+
+x(t) = A cos(2π 8 t) + A cos(2π 7.834125 t)
+
+= 2A cos(2π 0.0829375 t) cos(2π 7.9170625 t).
+
+Difference frequency:
+
+Delta f = 0.165875 Hz
+
+Beat period:
+
+T_beat = 1/Delta f ≈ 6.028636 s.
+
+This is valid interference mathematics. It is not, by itself, evidence for an entropy minimum, a biological lock, or a causal 8 Hz Earth mechanism.
+
+### Ω1766 research gate
+
+Before promoting any Earth-size/frequency relationship:
+
+OBSERVED:
+- independently measured resonance time series
+- cavity/environmental parameters
+- geometry and uncertainty
+
+DERIVED:
+- frequency drift, mode scaling, beat periods, dimensional checks
+
+HYP:
+- a specific R_eff(t) relation explains a measured f_n(t)
+- any coupling between frequency drift and entropy production
+
+STOP:
+- missing mode geometry
+- missing independent measurements
+- claim that numerical proximity alone proves physical coupling
+
+The governing bridge remains:
+
+geometry -> modes -> energy transfer -> entropy accounting -> verification
+
+and never:
+
+numerical similarity -> causal law.
