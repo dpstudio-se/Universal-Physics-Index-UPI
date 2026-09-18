@@ -87,3 +87,10 @@ See `OVIK_UMEA_ROTATING_FLOW_FREQUENCY_MAP.md` for the Örnsköldsvik → Högak
 ## Full regional layer map
 
 `REGIONAL_SWARM_DATA_LAYERS.md` defines the complete 29-layer ingestion/analysis stack for the Örnsköldsvik–Högakustenbron–Umeå corridor, including terrain, hydrology, geology, sediment, magnetics, gravity, conductivity, radioactivity, minerals, infrastructure, radio/antenna, fiber, grid, vibration, meteorology, marine, historical imagery, cultural heritage, wavelength, SWARM/ECHO, null models, source discrimination, 7.834125 Hz testing, drift and provenance.
+
+
+## Core selector / mirror-loop lock
+
+The Ω1766 research layer follows the canonical T€@X™ core selector and session guard defined in `docs/TEAX_TW_CANONICAL_LOOP.md`. Core routing is kept separate from physical claims: session timing is a software control, while frequency hypotheses remain subject to measurement, dimensional checks, null models, reproducible geometry, phase/coherence and independent repetition.
+
+**Mirror loop:** `SELECT CORE → SESSION GUARD → TAG VERIFY → OBSERVE → DERIVE → MIRROR → COMPARE → Δ → VERIFY → GUARD → LOOP/LOCK`.
