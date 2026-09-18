@@ -219,6 +219,7 @@ class DNAReader:
                     "equation": relation.equation,
                     "inputs": dict(relation.inputs),
                     "output": relation.output,
+                    "inverse_input": relation.inverse_input,
                     "verification_type": "software_test",
                     "status": "STOP",
                 }
