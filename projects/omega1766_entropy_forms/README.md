@@ -75,3 +75,7 @@ Computational closure is not physical validation.
 ## Companion
 
 omega1766_entropy_form.svg is a lightweight vector visualization of the model for version control and future automated rendering.
+
+## Extension
+
+See `ECHO_SWARM_EXTENSION.md` for the ECHO temporal-correlation layer and SWARM distributed-coupling layer, including equations, residual controls, entropy bookkeeping, and a test plan.
