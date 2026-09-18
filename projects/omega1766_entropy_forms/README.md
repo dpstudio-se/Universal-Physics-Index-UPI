@@ -79,3 +79,7 @@ omega1766_entropy_form.svg is a lightweight vector visualization of the model fo
 ## Extension
 
 See `ECHO_SWARM_EXTENSION.md` for the ECHO temporal-correlation layer and SWARM distributed-coupling layer, including equations, residual controls, entropy bookkeeping, and a test plan.
+
+## Regional frequency / flow map
+
+See `OVIK_UMEA_ROTATING_FLOW_FREQUENCY_MAP.md` for the Örnsköldsvik → Högakustenbron → Umeå multiscale model covering hydrodynamics, geological/geophysical properties, mechanical length scales, electromagnetic wavelengths/antenna scales, SWARM synchronization and falsification controls.
