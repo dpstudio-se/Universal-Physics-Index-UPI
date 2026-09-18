@@ -41,6 +41,10 @@ jobs:
       - name: Run Python tests
         run: python -m pytest tests -q
 
+
+      - name: Test T€@X core selector and session lock
+        run: python -m pytest tests/test_teax_session.py -q
+
       - name: Lint
         if: matrix.python-version == '3.13'
         run: ruff check src tests
