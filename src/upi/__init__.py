@@ -85,7 +85,7 @@ from .spiral_flow import (
     rigid_vortex_velocity,
     select_mode,
 )
-from .triage import compare_report, finding_key
+from .teax_session import (CoreId, CoreSelector, Session, SessionGuard, SessionState, SessionStatus, TeaxTagVerifier, UNSIGNED_SESSION_SECONDS, TEAX_SESSION_SECONDS)\nfrom .triage import compare_report, finding_key
 from .validation import (
     validate_bridge_consistency,
     validate_bridge_json,
@@ -184,7 +184,7 @@ __all__ = [
     "UPIGraph",
     "generate_debug_report",
     "render_debug_markdown",
-    "compare_report",
+    "CoreId", "CoreSelector", "Session", "SessionGuard", "SessionState", "SessionStatus",\n    "TeaxTagVerifier", "UNSIGNED_SESSION_SECONDS", "TEAX_SESSION_SECONDS",\n    "compare_report",
     "finding_key",
     # Declarative workflows
     "WorkflowState",
