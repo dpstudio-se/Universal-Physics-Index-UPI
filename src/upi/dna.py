@@ -300,7 +300,7 @@ class DNAReader:
                 }
             )
         registered = {r.address for r in self.relations}
-        return {
+        result = {
             "operation": "upi_dna_derivation",
             "verification_type": "software_test",
             "promotion": "BLOCKED",
@@ -312,6 +312,11 @@ class DNAReader:
             "open_records": [r for r in self.inventory if r.get("address") not in registered],
             "validation_code_sha256": _hash(Path(__file__).read_bytes()),
         }
+        # Persist the completed mirror verification as an audit checkpoint.
+        # This records every loop outcome but never promotes canonical DNA.
+        from .mirror_checkpoint import save_mirror_checkpoint
+        save_mirror_checkpoint(self.root, result)
+        return result
 
     def candidate_nodes(self, report: dict[str, Any]) -> list[dict[str, Any]]:
         """Existing node schema, one calculation claim per node; no canonical writes."""
