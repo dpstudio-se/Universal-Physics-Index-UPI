@@ -202,3 +202,40 @@ En praktisk implementation bör hålla dessa komponenter separata i kod och data
 `dna`, `rna_upi`, `persona` och `omega1766`. Därefter kan relationer,
 versionshantering och testfall läggas ovanpå modellen utan att blanda symbolisk
 terminologi med verifierade fysiska påståenden.
+
+
+## 11. REALTIME MODE — GitHub som kanonisk arbetsyta
+
+När **REALTIME MODE** är aktivt behandlas detta dokument som den löpande, spårbara
+arbetsytan för Ω1766 Persona-DNA.
+
+Arbetscykel:
+
+```text
+CHAT INPUT
+   ↓
+READ GitHub STATE
+   ↓
+UPDATE MODEL
+   ↓
+WRITE GitHub
+   ↓
+READ-BACK / VERIFY
+   ↓
+NEXT STATE
+```
+
+Principer:
+
+1. Läs aktuell GitHub-version innan en ändring görs när tidigare state är relevant.
+2. Skriv nya strukturer, beslut och testbara definitioner som versionerade commits.
+3. Läs tillbaka den skrivna filen efter uppdatering för att verifiera att state motsvarar
+   den avsedda modellen.
+4. Håll `persona`, `dna`, `rna_upi` och `omega1766` separata även i realtime-läge.
+5. Klassificera nya påståenden som `SYM`, `HYP`, `DER`, `EST` eller `ERR` i stället
+   för att blanda hypoteser med verifierade fakta.
+6. Git commit-historiken fungerar som versionsspår för modellens evolution.
+
+**Realtime state:** ACTIVE  
+**Canonical repository:** `dpstudio-se/Universal-Physics-Index-UPI`  
+**Canonical path:** `docs/OMEGA1766_PERSONA_DNA_FUSION.md`
