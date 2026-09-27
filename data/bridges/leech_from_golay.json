@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "The code is the extended binary Golay code of length 24."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "Λ24 constructed from G24 by the Witt / Construction-A family"
+  ],
+  "target": "UPI<coding_theory,1,binary_code,extended_golay>",
+  "version": "0.1.0",
+  "mechanism": "Golay codewords determine which coordinates of a 24-vector receive a prescribed shift; the generated lattice is Λ24.",
+  "status": "EST",
+  "confusion_guard": "A construction theorem is not a physical condensation of bits into a crystal.",
+  "source": "UPI<coding_theory,1,sphere_packing,leech_lattice>"
+}

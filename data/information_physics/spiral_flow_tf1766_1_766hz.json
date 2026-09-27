@@ -1,0 +1,88 @@
+{
+  "address": "UPI<information_physics,1,spiral_flow,tf1766_1_766hz>",
+  "title": "TF1766 1.766 Hz frequency and Spiral Flow time mapping",
+  "description": "Model record for the proposed TF1766 ↔ 1.766 Hz mapping. The frequency is evaluated with established frequency relations; the inverse-frequency cosmic-time coordinate is a Spiral Flow model transformation.",
+  "status": "DER",
+  "quantities": [
+    {
+      "name": "frequency",
+      "value": 1.766,
+      "unit": "Hz",
+      "reference": "Spiral Flow model input"
+    },
+    {
+      "name": "physical_period",
+      "value": 0.5662514156285391,
+      "unit": "s",
+      "reference": "T = 1/f"
+    },
+    {
+      "name": "angular_frequency",
+      "value": 11.09610525247915,
+      "unit": "rad/s",
+      "reference": "ω = 2πf"
+    },
+    {
+      "name": "quantum_energy",
+      "value": 1.17016398849e-33,
+      "unit": "J",
+      "reference": "E = hf"
+    },
+    {
+      "name": "energy_mass_equivalent",
+      "value": 1.3019830273853243e-50,
+      "unit": "kg",
+      "reference": "m = hf/c²"
+    },
+    {
+      "name": "spiral_time_coordinate",
+      "value": 0.6115515288788222,
+      "unit": "Gyr",
+      "reference": "t(f) = 10.8 Gyr × 0.1 Hz / f"
+    }
+  ],
+  "definitions": [
+    "Physical period is T = 1/f and is not the Spiral Flow cosmic-time coordinate.",
+    "The Spiral Flow time coordinate is defined here as t(f) = t_ref × f_ref / f with f_ref = 0.1 Hz and t_ref = 10.8 Gyr.",
+    "The TF1766 ↔ 1.766 Hz identification is a model input and is not asserted here as an established physical law."
+  ],
+  "equations": [
+    "T = 1/f",
+    "ω = 2πf",
+    "E = hf",
+    "m = hf/c²",
+    "t(f) = t_ref × f_ref / f"
+  ],
+  "assumptions": [
+    "SI frequency is measured in Hertz.",
+    "Planck–Einstein E = hf applies to the energy quantum being evaluated.",
+    "m = E/c² is interpreted as an energy-equivalent inertial mass, not photon rest mass.",
+    "The Spiral Flow time relation is a declared model transformation, not an established cosmological law."
+  ],
+  "mechanism": "The established frequency relations compute period, angular frequency, energy and energy-equivalent mass. The Spiral Flow coordinate is a separate inverse-frequency transform using the declared reference pair (0.1 Hz, 10.8 Gyr).",
+  "predictions": [
+    "At f = 1.766 Hz the model coordinate is approximately 0.61155 Gyr (611.55 Myr)."
+  ],
+  "falsification_conditions": [
+    "A calculation using different declared reference values does not reproduce the stated model coordinate.",
+    "The proposed physical TF1766 frequency association is unsupported by the required observational or mechanistic evidence; such failure leaves the model mapping unverified rather than changing established frequency physics."
+  ],
+  "information_layer": "ACADEMIC",
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Do not equate 0.56625 s with 611.55 Myr. The first is the physical period 1/f; the second is a separate model coordinate.",
+  "tags": [
+    "TF1766",
+    "1.766Hz",
+    "frequency",
+    "spiral-flow",
+    "time-mapping",
+    "model"
+  ],
+  "version": "0.2.0",
+  "source_status": "personal_note",
+  "primary_sources": [
+    "src/upi/physics.py: spiral_time_from_frequency",
+    "data/information_physics/frequency_mass_equivalent.json"
+  ]
+}

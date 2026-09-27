@@ -1,0 +1,37 @@
+{
+  "source": "UPI<open_problems,1,symbolic_cosmology,aureum_braid_chambers>",
+  "target": "UPI<information_physics,1,inertia,frequency_mass_equivalent>",
+  "relation": "DERIVED_FROM",
+  "status": "DER",
+  "equations": [
+    "e = h f",
+    "e = m c^2",
+    "e = m c^2 = h f",
+    "m = e / c^2",
+    "m = h f / c^2",
+    "f = m c^2 / h"
+  ],
+  "assumptions": [
+    "f is the frequency of the physical energy quantum being represented.",
+    "Lowercase e denotes energy in joules; uppercase E is only the more common typographic convention for the same quantity.",
+    "m denotes the inertial mass equivalent of energy h f, not photon invariant mass and not the mass of a chamber, braid or arbitrary oscillator.",
+    "The inverse f = m c^2 / h returns the input frequency only when the same h and c and the same energy referent are retained."
+  ],
+  "mechanism": "Energy-mass function equivalence: Planck maps frequency to energy, e = h f, and Einstein writes the same energy as e = m c^2. Equating the two energy functions gives m c^2 = h f and therefore m = h f/c^2. T€@X™ names the frequency-encoded interpretation 'information mass' and specifies the return-loop verifier f = m c^2/h. The round trip recovers f when the same h, c and physical energy referent are retained; it does not by itself connect the result to a wormhole or an 11D brane.",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "UPI<information_physics,1,inertia,frequency_mass_equivalent>",
+      "confidence": 1.0,
+      "notes": "Supports the Planck-Einstein composition and its algebraic inverse only."
+    },
+    {
+      "type": "other",
+      "source": "T€@X™ (2026), information-mass derivation and return-loop specification",
+      "confidence": 0.2,
+      "notes": "Records provenance for naming m = h f/c^2 information mass and for selecting f = m c^2/h as the return verifier; it is not experimental confirmation."
+    }
+  ],
+  "confusion_guard": "Letter case does not change the physics: e and the conventional E may both denote energy when explicitly defined. In SI the dimensionally valid chain is e = m c^2 = h f, followed by m = h f/c^2; e = m = h f/c^2 would equate joules with kilograms. This is not a photon rest mass, a source of extra mass, a wormhole metric or a map to eleven dimensions.",
+  "version": "0.1.0"
+}

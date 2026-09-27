@@ -1,0 +1,18 @@
+{
+  "gate": "OMEGA_1766",
+  "observability": "PASS",
+  "write": "CLEAR",
+  "verdict": "PASS",
+  "defects": [],
+  "write_holds": [],
+  "exposed": {
+    "owner": "named-human",
+    "status": "waiting",
+    "artifact": "artifacts/record.json",
+    "failure_reason": "no-workflow-canvas-finish-line",
+    "retry_count": 0,
+    "policy_id": "ask-before-send"
+  },
+  "redactions": [],
+  "exit_code": 0
+}

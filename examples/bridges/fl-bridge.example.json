@@ -1,0 +1,15 @@
+{
+  "bridge_id":"fl-bridge-example-001",
+  "source_id":"example-source",
+  "source_hash":"sha256:example",
+  "input_state":{"x":"declared input"},
+  "output_state":{"y":"primary output","y_mirror":"independent mirror output"},
+  "assumptions":["example assumptions are explicitly declared"],
+  "quantities":{"delta":"y-y_mirror","epsilon":"relative norm delta"},
+  "equations":["Delta = y - y_mirror","epsilon = ||Delta|| / max(||y||, ||y_mirror||, epsilon0)"],
+  "provenance":["source:example-source"],
+  "evidence_class":"SYM",
+  "uncertainty":{"status":"declared","value":"example only"},
+  "mirror_reference":"independent-mirror-example",
+  "next_pointer":"next-observation:example-002"
+}

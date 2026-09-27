@@ -1,0 +1,8 @@
+{
+  "gate": "OMEGA_1765",
+  "verdict": "PASS",
+  "hidden_gates": "none",
+  "policy_rows_cited": ["ask-before-send"],
+  "unnamed_safety": [],
+  "note": "No DENY/ASK/STOP/REDACT without a named, owner-reversible policy row."
+}

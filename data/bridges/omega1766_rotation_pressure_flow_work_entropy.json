@@ -1,0 +1,94 @@
+{
+  "address": "UPI<fluid_mechanics,1,omega1766,rotation_pressure_flow_work_entropy>",
+  "title": "Omega1766 mapping: rotation -> pressure -> flow -> work -> entropy",
+  "version": "0.1.0",
+  "status": "DER",
+  "information_layer": "ACADEMIC",
+  "source_record": "UPI:docs/research/OMEGA1766_ROTATION_PRESSURE_FLOW_WORK_ENTROPY_2026-09-20.md",
+  "framework": "Omega1766 = T o B o R",
+  "mapping": [
+    {
+      "stage": "T",
+      "name": "Transport",
+      "physics": ["velocity field", "mass transport", "momentum transport", "energy transport"],
+      "equations": ["u = velocity field", "Q = mdot/rho"]
+    },
+    {
+      "stage": "B",
+      "name": "Boundary / Bridge",
+      "physics": ["pressure gradient", "valve restriction", "geometry", "interface conditions"],
+      "equations": ["dp/dr = rho omega^2 r", "mdot = Cd Av sqrt(2 rho Delta_p_loss)"]
+    },
+    {
+      "stage": "R",
+      "name": "Response",
+      "physics": ["flow response", "mechanical work", "shaft power", "entropy generation"],
+      "equations": ["P_h = Delta_p_loss Q", "P_shaft = eta Delta_p_loss Q", "P = tau omega", "Sdot_gen approx mdot Delta_p_loss/(rho T)"]
+    }
+  ],
+  "navier_stokes_bridge": {
+    "core": "partial_t u + (u dot grad)u = -grad(p) + nu Delta u + f",
+    "constraint": "div(u) = 0",
+    "vorticity": "omega = curl(u)",
+    "rotation_control_case": "u = (-omega y, omega x, 0)",
+    "derived_checks": [
+      "div(u) = 0",
+      "Delta u = 0",
+      "(u dot grad)u = -omega^2 r e_r",
+      "dp/dr = rho omega^2 r balances the steady solid-body rotation"
+    ],
+    "boundary": "Solid-body rotation is an exact special/control case, not the general 3D solution."
+  },
+  "energy_entropy_separation": {
+    "conservative_pressure": "dp/dr = rho omega^2 r",
+    "irreversible_pressure_loss": "Delta_p_loss",
+    "rule": "Do not identify centrifugal pressure gradient with dissipative pressure loss.",
+    "entropy": "Sdot_gen >= 0 for irreversible processes under the declared thermodynamic assumptions."
+  },
+  "upi_relations": [
+    "fluid_mechanics -> navier_stokes",
+    "navier_stokes -> rigid_rotation_control",
+    "rigid_rotation_control -> pressure_field",
+    "pressure_field -> valve_flow",
+    "valve_flow -> hydraulic_power",
+    "hydraulic_power -> mechanical_work",
+    "pressure_loss -> entropy_generation",
+    "Omega1766 -> transport_boundary_response loop",
+    "Omega1766 -> PSI27D/NS research hypothesis"
+  ],
+  "research_extension": {
+    "target_chain": "u -> grad(u) -> vorticity -> vortex stretching -> pressure -> energy/dissipation -> entropy generation",
+    "hypothesis_link": "A future Psi27D/Omega1766 control must demonstrate a mathematically closed quantitative relation to vorticity or velocity-gradient growth.",
+    "status": "HYP",
+    "do_not_claim": [
+      "Omega1766 is a new physical law",
+      "entropy generation alone proves Navier-Stokes regularity",
+      "the mechanical control case solves general 3D Navier-Stokes"
+    ]
+  },
+  "verification": {
+    "tests": [
+      "dimensional consistency",
+      "NS residual for rigid rotation",
+      "pressure-gradient derivation",
+      "mass-flow/pressure-loss relation",
+      "power balance",
+      "entropy-generation sign",
+      "parameter and boundary-condition sensitivity"
+    ],
+    "promotion_rule": "Independent reproduction required before promotion."
+  },
+  "tags": [
+    "Omega1766",
+    "fluid_mechanics",
+    "Navier-Stokes",
+    "rotation",
+    "pressure",
+    "flow",
+    "work",
+    "entropy",
+    "thermodynamics",
+    "PSI27D",
+    "DER"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"UPI FL Bridge",
+  "type":"object",
+  "required":["bridge_id","source_id","source_hash","input_state","output_state","assumptions","quantities","equations","provenance","evidence_class","uncertainty","mirror_reference","next_pointer"],
+  "properties":{
+    "bridge_id":{"type":"string"},
+    "source_id":{"type":"string"},
+    "source_hash":{"type":"string"},
+    "input_state":{"type":"object"},
+    "output_state":{"type":"object"},
+    "assumptions":{"type":"array","items":{"type":"string"}},
+    "quantities":{"type":"object"},
+    "equations":{"type":"array","items":{"type":"string"}},
+    "provenance":{"type":"array","items":{"type":"string"}},
+    "evidence_class":{"type":"string","enum":["EST","DER","HYP","STOP","ERR","SYM","IMG","AI","AMB"]},
+    "uncertainty":{"type":"object"},
+    "mirror_reference":{"type":"string"},
+    "next_pointer":{"type":"string"}
+  },
+  "additionalProperties":false
+}

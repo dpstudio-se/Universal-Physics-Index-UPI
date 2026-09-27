@@ -1,0 +1,38 @@
+{
+  "address": "UPI<open-problems,1,loop,compactification_27_11>",
+  "title": "27D to 11D compactification loop is not uniquely invertible",
+  "description": "The product ansatz M27 = M11 x K16 is a Kaluza-Klein form, not a derivation from E8 (dimension 8) or from m = hf/c^2. Integrating out K16 yields an effective 11D action. Reconstructing K16 from a Laplace spectrum {lambda_n} is not unique: isospectral manifolds exist. Setting lambda_n = f_n^2 and m_n = h f_n / c^2 assigns masses to modes; it does not return the same metric.",
+  "status": "STOP",
+  "stop_reason": "decompact(compact(M27)) = M27 holds only if K16 is named again on the way back. Close this STOP only with a uniqueness theorem that reconstructs the metric of K16 from the named spectrum, or drop the 27D factor as arithmetic (11+16) without geometry.",
+  "definitions": [
+    "Compactification here: integrate a 16-dimensional fibre to obtain an effective 11D action.",
+    "Spectral reconstruction: recover a Riemannian metric from Laplace eigenvalues.",
+    "27 is not the dimension of E8 and is not forced by 11D supergravity."
+  ],
+  "equations": [
+    "M27 := M11 x K16  (ansatz)",
+    "Delta_K psi_n = -lambda_n psi_n",
+    "m_n = h f_n / c^2 does not invert the fibre metric"
+  ],
+  "assumptions": [
+    "11D is used as the M-theory dimension (HYP frame), not as an established spacetime.",
+    "Isospectral non-isometric manifolds exist in dimension >= 16 as in lower-dimensional examples."
+  ],
+  "mechanism": "Keep 11D as a symbolic frame. Do not hydrate a closed 27 <-> 11 loop in the catalog until uniqueness is proved.",
+  "falsification_conditions": [
+    "A theorem that the named {f_n} determines K16 up to isometry.",
+    "A derivation of 16 and 27 from E8 or from m = hf/c^2 without adding them by hand."
+  ],
+  "confusion_guard": "11 + 16 = 27 is arithmetic. E8 lives in 8 dimensions. A picture of two glowing manifolds is not a compactification proof.",
+  "primary_sources": [
+    "Milnor, Eigenvalues of the Laplace operator on certain manifolds",
+    "Orlik-Witten, 11D supergravity / M-theory reviews"
+  ],
+  "predictions": [
+    "Different fibres can share a spectrum and disagree on metric.",
+    "Mode masses from m = hf/c^2 will not select one K16."
+  ],
+  "tags": ["open-problem", "compactification", "27d", "11d", "loop", "STOP", "TEAX"],
+  "verification_type": "mathematical_check",
+  "version": "0.1.0"
+}

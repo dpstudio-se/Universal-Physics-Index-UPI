@@ -1,0 +1,41 @@
+{
+  "address": "UPI<infrastructure_physics,1,optical_measurement,sunet_alm_otdr_monitoring>",
+  "title": "SUNET ALM and OTDR fibre monitoring map",
+  "description": "A UPI map of SUNET's description of Advanced Link Monitoring and Optical Time Domain Reflectometry for locating disturbances or breaks along optical fibre.",
+  "status": "DER",
+  "definitions": [
+    "OTDR infers distance along a fibre from the round-trip delay of backscattered or reflected optical signals.",
+    "ALM denotes continuous link monitoring in the cited SUNET infrastructure context."
+  ],
+  "equations": [
+    "distance = v_g delta_t / 2",
+    "v_g = c0 / n_g"
+  ],
+  "assumptions": [
+    "The measured delay is a round trip, giving the factor one half.",
+    "The group index and instrument calibration are known for quantitative localization.",
+    "The public SUNET article establishes reported operational use, not independent instrument calibration."
+  ],
+  "evidence": [
+    {
+      "type": "observation",
+      "source": "https://web-wp.sunet.se/vi-installerar-alm-pa-samtliga-delstrackor-i-sunets-nat/",
+      "date": "2023-12-01",
+      "confidence": 0.75,
+      "notes": "SUNET reports continuous measurements and remote localization of fibre disturbances; exact publication date and direct-payload hash remain to be independently recaptured."
+    }
+  ],
+  "primary_sources": [
+    "SUNET: Vi installerar ALM p? samtliga delstr?ckor i Sunets n?t"
+  ],
+  "falsification_conditions": [
+    "A controlled link test in which calibrated round-trip delay does not track reflector or break distance within declared uncertainty falsifies the quantitative localization model.",
+    "The SUNET-specific deployment claim is falsified if an authoritative revision or inventory shows ALM was not deployed as described."
+  ],
+  "information_layer": "PUBLIC",
+  "verification_type": "none",
+  "claims_experimental_verification": false,
+  "confusion_guard": "A public operational report is not a calibration certificate. OTDR localization measures optical path delay and scattering/reflection; it does not directly inspect every physical cause of a fault.",
+  "tags": ["sunet", "alm", "otdr", "fibre-monitoring", "time-of-flight"],
+  "version": "0.1.0"
+}

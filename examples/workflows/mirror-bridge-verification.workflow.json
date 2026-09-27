@@ -1,0 +1,43 @@
+{
+  "workflow_id": "mirror-bridge-verification-v1",
+  "version": "0.1.0",
+  "status": "SYM",
+  "roles": [
+    {"role_id": "manager", "agent_class": "manager", "default_deny": true, "capabilities": ["task:lease", "task:route", "ledger:write"]},
+    {"role_id": "primary", "agent_class": "specialist", "default_deny": true, "capabilities": ["evidence:read", "derivation:write"]},
+    {"role_id": "mirror", "agent_class": "verifier", "default_deny": true, "capabilities": ["evidence:read", "mirror:derive", "finding:write"]},
+    {"role_id": "bridge", "agent_class": "transport", "default_deny": true, "capabilities": ["handoff:write", "artifact:read"]},
+    {"role_id": "reviewer", "agent_class": "reviewer", "default_deny": true, "capabilities": ["report:read", "decision:record"]}
+  ],
+  "states": ["QUEUED", "LEASED", "RUNNING", "SUCCEEDED", "FAILED", "TIMED_OUT", "QUARANTINED", "CANCELLED"],
+  "transitions": [
+    {"from": "QUEUED", "to": "LEASED", "condition": "manager creates a typed task and idempotency key"},
+    {"from": "LEASED", "to": "RUNNING", "condition": "primary receives immutable proposal hash"},
+    {"from": "RUNNING", "to": "SUCCEEDED", "condition": "mirror agrees and required checks pass", "independent_review": true},
+    {"from": "RUNNING", "to": "FAILED", "condition": "mirror conflict, unknown evidence, or required check failure"},
+    {"from": "FAILED", "to": "QUEUED", "condition": "bounded retry remains and next observation is defined"},
+    {"from": "RUNNING", "to": "QUARANTINED", "condition": "untrusted input or policy trip wire", "independent_review": true},
+    {"from": "LEASED", "to": "TIMED_OUT", "condition": "lease expires without heartbeat"}
+  ],
+  "invariants": [
+    "primary and mirror do not share the expected answer",
+    "mirror receives evidence-only inputs",
+    "bridge transfers typed provenance and state, not hidden source assumptions",
+    "conflict and unknown never become success",
+    "source records are not mutated by verification",
+    "durable report and next pointer survive the run",
+    "software verification is not experimental verification"
+  ],
+  "governance": {
+    "owner": "manager",
+    "state_model": "ledger-backed QUEUED-LEASED-RUNNING-terminal",
+    "durable_artifact": "mirror-bridge-verification-report.json",
+    "evidence_required": true,
+    "retry_policy": {"max_attempts": 2, "on_exhausted": "escalate"},
+    "approval_boundary": {
+      "requires_approval_when": "mirror conflict, unknown required check, provenance failure, or any proposed scientific-status promotion",
+      "approver": "human-maintainer"
+    }
+  },
+  "confusion_guard": "A mirror agreement establishes scoped software consistency only; a typed bridge does not establish physical identity between domains."
+}

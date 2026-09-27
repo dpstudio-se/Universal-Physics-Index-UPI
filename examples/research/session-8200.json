@@ -1,0 +1,79 @@
+{
+  "format": "upi-research-session",
+  "version": "0.1.0",
+  "session_id": "dna-minne-8200",
+  "intent": "Explore whether repeated functional structures across frequency, rotation, wave coupling and logarithmic scale can be mapped without forcing a closed loop.",
+  "source": "research session",
+  "items": [
+    {
+      "id": "frequency-7834",
+      "title": "7.834 Hz reference",
+      "kind": "frequency",
+      "function": "reference frequency",
+      "record": {
+        "record_type": "node",
+        "payload": {
+          "address": "UPI<information_physics,1,frequency,reference_7834>",
+          "title": "7.834 Hz reference",
+          "description": "Configurable research reference; not a universal constant.",
+          "status": "DER",
+          "quantities": [{"name": "frequency", "value": 7.834, "unit": "Hz"}],
+          "evidence": [{"type": "calculation", "source": "research-session arithmetic"}]
+        }
+      },
+      "links": ["frequency-8hz"]
+    },
+    {
+      "id": "frequency-8hz",
+      "title": "8 Hz reference",
+      "kind": "frequency",
+      "function": "carrier/reference frequency",
+      "record": {
+        "record_type": "node",
+        "payload": {
+          "address": "UPI<information_physics,1,frequency,reference_8hz>",
+          "title": "8 Hz reference",
+          "description": "Configurable research reference; not a universal constant.",
+          "status": "DER",
+          "quantities": [{"name": "frequency", "value": 8.0, "unit": "Hz"}],
+          "evidence": [{"type": "calculation", "source": "research-session arithmetic"}]
+        }
+      },
+      "links": ["frequency-7834"]
+    },
+    {
+      "id": "frequency-mass",
+      "title": "Frequency to energy-equivalent mass",
+      "kind": "bridge",
+      "function": "f -> E -> m",
+      "record": {
+        "record_type": "node",
+        "payload": {
+          "address": "UPI<information_physics,1,inertia,research_frequency_mass>",
+          "title": "Frequency energy-equivalent mass",
+          "description": "Research use of E = h f and E = m c^2 under declared assumptions.",
+          "status": "DER",
+          "equations": ["E = h*f", "E = m*c^2", "m = h*f/c^2"],
+          "evidence": [{"type": "calculation", "source": "established relations composed under compatible assumptions"}]
+        }
+      },
+      "links": ["frequency-8hz"]
+    },
+    {
+      "id": "log-spiral",
+      "title": "Logarithmic spiral candidate",
+      "kind": "geometry",
+      "function": "r(theta) = r0 exp(k theta)",
+      "links": [],
+      "notes": "Use the diagram's logarithmic 10^0 ... 10^15 LY scale as a measurement coordinate. Keep the geometric fit open until measured."
+    },
+    {
+      "id": "vortex-rotation",
+      "title": "Vortex/rotation functional analogy",
+      "kind": "analogy",
+      "function": "rotation -> coupling -> feedback",
+      "links": [],
+      "notes": "Open branch. Do not equate motor, vortex, antenna, camshaft, crankshaft or rotor solely from shared visual/function form."
+    }
+  ]
+}

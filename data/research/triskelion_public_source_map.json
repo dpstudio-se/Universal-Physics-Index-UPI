@@ -1,0 +1,149 @@
+{
+  "address": "UPI<research,1,triskelion,triskelion_public_source_map>",
+  "title": "Triskelion / Triskelion coil public-source map",
+  "description": "Evidence-separated UPI map of the user-provided public Facebook image and the associated Ascension Tools Triskelion product/source material. The map separates historical symbol evidence, device construction, testable electromagnetic physics, and symbolic frequency hypotheses.",
+  "status": "DER",
+  "source_layers": {
+    "user_provided_image": {
+      "status": "EST",
+      "description": "The supplied screenshot visibly names the post 'The Mystery Behind the Ancient Triskelion' and shows a circular object containing three spiral coils and mixed mineral/material fragments. The screenshot is evidence for what the post displayed, not independent evidence for the claims made in the post."
+    },
+    "creator_source": {
+      "status": "EST",
+      "description": "Ascension Tools identifies the item as 'Triskelion Harmonizer – Portable Pocket Orgonite', describes a handcrafted triskelion coil, and lists dimensions of approximately 5 cm x 1.8 cm.",
+      "url": "https://ascensiontools.co/product/triskelion-flower-of-life-portable-pocket-orgonite/"
+    },
+    "materials_claimed_by_creator": {
+      "status": "EST",
+      "description": "The creator states that pocket OG products contain quartz, amethyst, selenite, rose quartz, pyrite, black tourmaline, citrine, green aventurine and carnelian, with variations for larger pieces.",
+      "url": "https://ascensiontools.co/product/triskelion-flower-of-life-portable-pocket-orgonite/"
+    },
+    "orgone_mechanism": {
+      "status": "HYP",
+      "description": "The creator describes an orgone mechanism involving resin, metal particles and crystalline structures. This is recorded as the creator's claim, not as established physics.",
+      "url": "https://ascensiontools.co/product/triskelion-flower-of-life-portable-pocket-orgonite/"
+    },
+    "historical_symbol": {
+      "status": "EST",
+      "description": "Triskelion/triskele forms are historically documented in multiple cultures. A Sicilian archaeological example is dated to approximately 650–600 BCE. A modern secondary source also discusses a Norse 'Triskelion/Odin's Horns' motif, but that identification should not be generalized to every three-spiral symbol.",
+      "sources": [
+        "https://etc.worldhistory.org/2016/05/03/sicily-culture-and-conquest/",
+        "https://www.worldhistory.org/article/1309/norse-viking-symbols--meanings/"
+      ]
+    }
+  },
+  "geometry": {
+    "symmetry_order": 3,
+    "ideal_angular_separation_deg": 120,
+    "rotation_group": "C3",
+    "loop_condition": "theta + 360 degrees = theta",
+    "interpretation": "A three-arm rotational pattern naturally supports a three-phase geometric analysis. This is geometry, not evidence of a 3 Hz or 23.502375 Hz physical oscillation."
+  },
+  "physics_tests": {
+    "electromagnetic_resonance": {
+      "status": "DER",
+      "equation": "f0 = 1/(2*pi*sqrt(L*C))",
+      "required_measurements": [
+        "coil inductance L",
+        "effective capacitance C",
+        "series/parallel topology",
+        "resistance and losses",
+        "frequency response or impedance spectrum"
+      ],
+      "note": "The existence of a visible coil does not establish a resonance frequency. A real resonance must be measured or calculated from measured electrical parameters."
+    },
+    "inductive_reactance": {
+      "status": "EST",
+      "equation": "XL = 2*pi*f*L",
+      "source": "https://www.electronics-tutorials.ws/accircuits/ac-inductance.html"
+    }
+  },
+  "frequency_hypotheses": {
+    "reference_7_834125_hz": {
+      "status": "SYM",
+      "value_hz": 7.834125,
+      "third_harmonic_hz": 23.502375,
+      "free_space_wavelength_m": 38267510.1558885,
+      "note": "Using 7.834125 Hz as a reference and multiplying by the triskelion symmetry order 3 is a model operation, not a measured resonance."
+    },
+    "reference_8_hz": {
+      "status": "SYM",
+      "value_hz": 8,
+      "third_harmonic_hz": 24,
+      "free_space_wavelength_m": 37474057.25,
+      "note": "8 Hz is retained as a configurable symbolic reference, not a universal constant."
+    },
+    "radio_reference_1420_mhz": {
+      "status": "SYM",
+      "value_hz": 1420000000,
+      "wavelength_m": 0.21112144929577464,
+      "note": "1420 MHz is the neutral-hydrogen 21-cm spectral line and can be used as a separate astronomical reference. No causal connection to this object is established by the image."
+    }
+  },
+  "mirror_loop_test": {
+    "status": "HYP",
+    "forward": "theta -> theta+120 -> theta+240 -> theta+360",
+    "mirror": "theta -> -theta",
+    "closure": "The ideal threefold geometry closes after three 120-degree rotations. A physical field or signal loop is not demonstrated by geometric closure.",
+    "next_measurement": "Digitize the coil geometry and measure its electrical impedance across a swept frequency range."
+  },
+  "classification_guard": {
+    "EST": [
+      "visible threefold geometry in supplied image",
+      "creator's stated product construction and dimensions",
+      "historical existence of triskelion forms",
+      "standard LC resonance relation"
+    ],
+    "DER": [
+      "C3 geometric representation",
+      "third-harmonic arithmetic from a selected reference frequency",
+      "proposed impedance-test workflow"
+    ],
+    "HYP": [
+      "the object has a meaningful physical resonance near 7.834125 Hz or 23.502375 Hz",
+      "the object couples to a 1420 MHz signal",
+      "orgone-energy mechanism produces a measurable physical field"
+    ],
+    "SYM": [
+      "7.834125 -> 23.502375 as a symbolic threefold frequency mapping",
+      "Triskelion -> Odin's Eye -> mirror/return loop"
+    ],
+    "STOP": [
+      "Any claim that the image alone proves a physical frequency",
+      "Any claim that the object generates or transforms 7.834125 Hz without measurement",
+      "Any claim connecting the object to 1420 MHz without an RF measurement"
+    ]
+  },
+  "experimental_protocol": [
+    "Measure each coil's DC resistance and inductance.",
+    "Measure mutual coupling between the three coils.",
+    "Measure parasitic and external capacitance.",
+    "Sweep impedance from below 1 Hz through the highest practically relevant frequency.",
+    "Record amplitude and phase.",
+    "Repeat with and without the mineral/resin body.",
+    "Blind the analyst to the target frequencies before identifying peaks.",
+    "Compare observed peaks against 7.834125 Hz, 8 Hz, 23.502375 Hz, 24 Hz and unrelated control frequencies.",
+    "Use an independent instrument and repeat the measurement."
+  ],
+  "tags": [
+    "triskelion",
+    "C3",
+    "threefold-symmetry",
+    "coil",
+    "orgonite",
+    "resonance",
+    "7.834125Hz",
+    "8Hz",
+    "1420MHz",
+    "mirror",
+    "loop",
+    "Odin's-Eye",
+    "EST",
+    "DER",
+    "HYP",
+    "SYM",
+    "STOP"
+  ],
+  "verification_type": "research_map",
+  "version": "0.1.0"
+}

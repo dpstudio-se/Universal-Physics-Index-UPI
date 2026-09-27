@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "UPI MetaRadar Measurement Record",
+  "type": "object",
+  "required": ["observation_id","timestamp_utc","instrument_id","rssi"],
+  "properties": {
+    "observation_id": {"type":"string"},
+    "timestamp_utc": {"type":"string","format":"date-time"},
+    "instrument_id": {"type":"string"},
+    "instrument_model": {"type":["string","null"]},
+    "android_version": {"type":["string","null"]},
+    "scanner_version": {"type":["string","null"]},
+    "rssi": {"type":"number"},
+    "tx_power": {"type":["number","null"]},
+    "estimated_distance_m": {"type":["number","null"],"minimum":0},
+    "advertising_interval_ms": {"type":["number","null"],"minimum":0},
+    "scan_interval_ms": {"type":["number","null"],"minimum":0},
+    "scan_window_ms": {"type":["number","null"],"minimum":0},
+    "packet_detected": {"type":"boolean"},
+    "packet_metadata": {"type":["object","null"]},
+    "manufacturer_metadata": {"type":["object","null"]},
+    "service_metadata": {"type":["object","null"]},
+    "geometry": {"type":["object","null"]},
+    "environment": {"type":["object","null"]},
+    "raw_data_hash": {"type":["string","null"]}
+  }
+}

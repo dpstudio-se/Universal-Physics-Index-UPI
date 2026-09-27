@@ -1,0 +1,38 @@
+{
+  "address": "UPI<open-problems,1,loop,e8_forced_inverse>",
+  "title": "E8 self-duality does not supply a forced inverse for an arbitrary map",
+  "description": "Self-duality L_E8* isomorphic to L_E8 is established. It does not imply that every linear map Phi into E8 has a coordinate-free inverse Psi = Phi* with Psi o Phi = id. The Moore-Penrose inverse B = (A^T A)^{-1} A^T exists for full column rank and is independent of the lattice being unimodular. The extra claim ||Phi(v)|| = (h/c^2) f(v) is not forced by m = hf/c^2.",
+  "status": "STOP",
+  "stop_reason": "A*A = I holds only if A is already an isometry on the chosen subset. Self-duality of E8 does not select A. Close this STOP only with an explicit Weyl element or lattice automorphism that inverts the named map without a rank or subset choice.",
+  "definitions": [
+    "E8 self-duality: the even unimodular lattice equals its dual.",
+    "Forced inverse: Psi o Phi = id on a named domain with no extra rank or coordinate choice.",
+    "Moore-Penrose inverse: the least-squares inverse of a full-column-rank matrix."
+  ],
+  "equations": [
+    "L_E8* congruent L_E8",
+    "B = (A^T A)^{-1} A^T",
+    "A* A = I only if A is an isometry on the named subset"
+  ],
+  "assumptions": [
+    "E8 is the unique even unimodular lattice in dimension 8.",
+    "m = hf/c^2 converts a named energy quantum, not an arbitrary embedding into R^8."
+  ],
+  "mechanism": "Keep the lattice EST. Park the loop claim until the map is a named automorphism, not a pseudoinverse dressed as duality.",
+  "falsification_conditions": [
+    "A named A in W(E8) or Aut(L_E8) with A^{-1} = A* on a predeclared domain.",
+    "A derivation that m = hf/c^2 selects that A uniquely."
+  ],
+  "confusion_guard": "Self-dual lattice is not the same as invertible embedding. Do not treat a generated loop diagram as a proof.",
+  "primary_sources": [
+    "Conway & Sloane, Sphere Packings, Lattices and Groups",
+    "Bourbaki, Lie Groups and Lie Algebras, Ch. VI"
+  ],
+  "predictions": [
+    "Any even unimodular lattice in dimension 8 remains isometric to E8.",
+    "Pseudoinverse loops will keep requiring a rank hypothesis."
+  ],
+  "tags": ["open-problem", "e8", "loop", "STOP", "self-dual", "TEAX"],
+  "verification_type": "mathematical_check",
+  "version": "0.1.0"
+}

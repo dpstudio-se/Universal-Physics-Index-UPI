@@ -1,0 +1,56 @@
+{
+  "skill_id": "index-triage",
+  "version": "0.1.1",
+  "status": "SYM",
+  "objective": "Produce a durable, redacted UPI index triage report from data/ without mutating records.",
+  "activation": {
+    "when": [
+      "recurring index health check",
+      "before merge of data/ or schema changes",
+      "user asks for index triage or debug-index"
+    ],
+    "not_when": [
+      "experimental physics claims need laboratory evidence",
+      "source records must be rewritten in place"
+    ]
+  },
+  "steps": [
+    "Manager opens a ledger row with task_id, owner, deadline and idempotency key.",
+    "Scanner runs a read-only debug-index over the declared root and writes the report artifact.",
+    "Independent verifier checks finding codes, redaction, and that no source file changed.",
+    "Manager decides advance, retry or escalate from evidence only.",
+    "If EST or ERR findings remain, stop at the approval boundary."
+  ],
+  "examples": [
+    "upi debug-index data --inspect --output index-triage-report.json",
+    "pytest tests/ -q"
+  ],
+  "anti_patterns": [
+    "Manager performing the scan instead of routing it",
+    "Treating scanner and verifier as the same worker",
+    "Mutating data/ to make the report green",
+    "Calling a software test experimental verification"
+  ],
+  "acceptance_tests": [
+    {
+      "id": "AT-1",
+      "criterion": "Workflow, skill, routine, ledger and handoff examples validate against their schemas.",
+      "verification_type": "software_test"
+    },
+    {
+      "id": "AT-2",
+      "criterion": "debug-index report sets verification_type to software_test and redacts source values.",
+      "verification_type": "software_test"
+    },
+    {
+      "id": "AT-3",
+      "criterion": "Scanner has no write capability on data/.",
+      "verification_type": "software_test"
+    }
+  ],
+  "changelog": [
+    {"version": "0.1.1", "change": "Three identical baselines recorded; weekly routine compares reports to known-findings.json."},
+    {"version": "0.1.0", "change": "Initial index-triage skill for the first governed workflow."}
+  ],
+  "confusion_guard": "This skill is an operational procedure for software validation, not a scientific experiment."
+}

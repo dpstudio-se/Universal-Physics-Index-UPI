@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "The gravitational side is asymptotically AdS."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "bulk = AdS_{d+1} (plus compact space)"
+  ],
+  "target": "UPI<gravity,1,spacetime,anti_de_sitter>",
+  "version": "0.1.0",
+  "mechanism": "Without a conformal boundary of AdS type, the GKP–Witten dictionary is not the one Maldacena wrote.",
+  "status": "HYP",
+  "confusion_guard": "AdS geometry is EST. The duality using it is HYP.",
+  "source": "UPI<theories,1,holography,ads_cft>"
+}

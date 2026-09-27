@@ -1,0 +1,74 @@
+{
+  "address": "UPI<physics,2,celestial_mechanics,3i_atlas_case>",
+  "title": "3I/ATLAS: review of JPL solution 54",
+  "description": "Unpromoted orbital projection of the original 3I/ATLAS case. Numerical elements and formal uncertainties are bound to a pinned JPL orbit solution. Broader cometary and origin claims remain in the archived original and are not validated by this projection.",
+  "status": "STOP",
+  "stop_reason": "Supporting dependencies are absent from the selected committed canonical baseline, and original claim-level evidence gaps remain. See claim_coverage.json and canonical_comparison.json for exact next actions. Do not promote.",
+  "version": "0.2.1",
+  "information_layer": "ACADEMIC",
+  "source_status": "dataset",
+  "reference_frame": "heliocentric IAU76/80 ecliptic J2000",
+  "quantities": [
+    {
+      "name": "eccentricity",
+      "value": 6.141351449317625,
+      "unit": "1",
+      "uncertainty": 2.469e-05,
+      "reference": "JPL solution 54; https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3I&full-prec=true&cov=mat; orbit.elements[e]; SHA256 f67ef2e8c4691a437597b32ea324a8b45a6f4cb1b0dee54b7da281daca66ab29"
+    },
+    {
+      "name": "perihelion_distance",
+      "value": 1.356481057231181,
+      "unit": "AU",
+      "uncertainty": 3.7743e-06,
+      "reference": "JPL solution 54; https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3I&full-prec=true&cov=mat; orbit.elements[q]; SHA256 f67ef2e8c4691a437597b32ea324a8b45a6f4cb1b0dee54b7da281daca66ab29"
+    },
+    {
+      "name": "semimajor_axis",
+      "value": -0.2638374502507929,
+      "unit": "AU",
+      "uncertainty": 6.9616e-07,
+      "reference": "JPL solution 54; https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3I&full-prec=true&cov=mat; orbit.elements[a]; SHA256 f67ef2e8c4691a437597b32ea324a8b45a6f4cb1b0dee54b7da281daca66ab29"
+    },
+    {
+      "name": "inclination",
+      "value": 175.1164570850441,
+      "unit": "deg",
+      "uncertainty": 1.9023e-05,
+      "reference": "JPL solution 54; https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3I&full-prec=true&cov=mat; orbit.elements[i]; SHA256 f67ef2e8c4691a437597b32ea324a8b45a6f4cb1b0dee54b7da281daca66ab29"
+    }
+  ],
+  "definitions": [
+    "Osculating epoch: JD 2461090.5 TDB.",
+    "JPL orbit solution 54, solution date 2026-02-19 09:10:47 as returned by the source.",
+    "formal 1-sigma element uncertainties; full covariance at its declared TDB epoch"
+  ],
+  "equations": [
+    "a = q/(1-e)",
+    "sigma_a^2 = (da/de)^2 C_ee + (da/dq)^2 C_qq + 2 (da/de)(da/dq) C_eq"
+  ],
+  "assumptions": [
+    "The signed semimajor axis relation applies to osculating elements at the declared epoch.",
+    "The source model includes fitted nongravitational A1, A2, A3 and DT parameters; a conservative two-body propagation is not asserted.",
+    "Formal fitted uncertainties are not a bound on every systematic model error."
+  ],
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3I&full-prec=true&cov=mat",
+      "date": "2026-09-13",
+      "notes": "Published JPL orbit determination. Response metadata and covariance are preserved in the adjacent source manifest and raw snapshot."
+    }
+  ],
+  "primary_sources": [
+    "https://ssd-api.jpl.nasa.gov/sbdb.api?sstr=3I&full-prec=true&cov=mat",
+    "https://ssd-api.jpl.nasa.gov/doc/sbdb.html"
+  ],
+  "falsification_conditions": [
+    "STOP if object identity, solution id, epoch, frame, units, uncertainty or digest does not match the pinned source.",
+    "FAIL if the semimajor-axis identity or covariance-based uncertainty is inconsistent within declared numerical rounding tolerances."
+  ],
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Passing this orbital audit cannot promote cometary morphology, origin or artificial-object claims, and cannot establish force-free propagation."
+}

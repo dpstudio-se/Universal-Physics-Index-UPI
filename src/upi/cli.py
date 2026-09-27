@@ -1,0 +1,643 @@
+"""Command-line interface for UPI."""
+
+import json
+import sys
+from pathlib import Path
+
+from . import (
+    __version__,
+    energy_from_frequency,
+    frequency_from_mass,
+    index8_from_frequency,
+    index8_from_mass,
+    mass_from_frequency,
+    signal_match,
+    validate_bridge_json,
+    validate_node_json,
+)
+from .debug import generate_debug_report, render_debug_markdown
+from .models import Address
+from .research import build_research_report, load_research_session, render_research_markdown
+from .schema_resources import schema_path
+from .triage import compare_report, load_json
+
+
+def print_json(data):
+    """Print data as pretty JSON."""
+    print(json.dumps(data, indent=2))
+
+
+def frequency_to_mass(args):
+    """Convert frequency to mass."""
+    frequency_hz = float(args.frequency)
+    mass_kg = mass_from_frequency(frequency_hz)
+    result = {
+        "operation": "frequency_to_mass",
+        "input_frequency_hz": frequency_hz,
+        "output_mass_kg": mass_kg,
+        "equation": "m = h*f / c^2",
+        "interpretation": (
+            "Energy-equivalence calculation for the declared frequency; "
+            "this is not the mass of an arbitrary oscillating object."
+        ),
+    }
+    print_json(result)
+
+
+def mass_to_frequency(args):
+    """Convert mass to frequency."""
+    mass_kg = float(args.mass)
+    frequency_hz = frequency_from_mass(mass_kg)
+    result = {
+        "operation": "mass_to_frequency",
+        "input_mass_kg": mass_kg,
+        "output_frequency_hz": frequency_hz,
+        "equation": "f = m*c^2 / h",
+    }
+    print_json(result)
+
+
+def index8_cmd(args):
+    """Calculate 8 Hz index."""
+    if args.frequency:
+        n8 = index8_from_frequency(float(args.frequency))
+        result = {
+            "operation": "index8_from_frequency",
+            "input_frequency_hz": float(args.frequency),
+            "output_n8": n8,
+            "equation": "N8 = f / (8 Hz)",
+        }
+    elif args.mass:
+        n8 = index8_from_mass(float(args.mass))
+        result = {
+            "operation": "index8_from_mass",
+            "input_mass_kg": float(args.mass),
+            "output_n8": n8,
+            "equation": "N8 = m*c^2 / (8*h)",
+        }
+    else:
+        print("Error: --frequency or --mass required", file=sys.stderr)
+        sys.exit(1)
+    print_json(result)
+
+
+def normalize_cmd(args):
+    """Normalize signal."""
+    observed = float(args.observed)
+    reference = float(args.reference)
+    result_obj = signal_match(
+        observed, reference, epsilon=float(args.epsilon) if args.epsilon else 1e-10
+    )
+
+    result = {
+        "operation": "normalize_signal",
+        "observed": observed,
+        "reference": reference,
+        "normalized_value": result_obj.normalized_value,
+        "matches": result_obj.matches,
+        "error": result_obj.error,
+        "epsilon": result_obj.epsilon,
+        "equation": "Z = z / z_ref",
+    }
+    print_json(result)
+
+
+def research_cmd(args):
+    """Run permissive research mode and emit a shadow map."""
+    path = Path(args.file)
+    if not path.is_file():
+        print(f"Error: File not found: {path}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        session = load_research_session(path)
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid JSON: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    if session.get("format") != "upi-research-session":
+        print("Error: expected format=upi-research-session", file=sys.stderr)
+        sys.exit(1)
+
+    report = build_research_report(session)
+    rendered = (
+        render_research_markdown(report)
+        if args.format == "markdown"
+        else json.dumps(report, indent=2)
+    )
+    if args.output:
+        with Path(args.output).open("x", encoding="utf-8") as stream:
+            stream.write(rendered + "\n")
+    else:
+        print(rendered)
+
+
+def validate_cmd(args):
+    """Validate a JSON file against schema."""
+    file_path = Path(args.file)
+
+    if not file_path.exists():
+        print(f"Error: File not found: {file_path}", file=sys.stderr)
+        sys.exit(1)
+
+    try:
+        with open(file_path) as f:
+            data = json.load(f)
+    except json.JSONDecodeError as e:
+        print(f"Error: Invalid JSON: {e}", file=sys.stderr)
+        sys.exit(1)
+
+    # Try to determine if it's a node or bridge based on content
+    is_node = "address" in data and "status" in data and "title" in data
+    is_bridge = "source" in data and "target" in data and "relation" in data
+
+    if is_node:
+        node_schema_path = schema_path("node")
+        is_valid, errors = validate_node_json(data, node_schema_path)
+        obj_type = "node"
+    elif is_bridge:
+        bridge_schema_path = schema_path("bridge")
+        is_valid, errors = validate_bridge_json(data, bridge_schema_path)
+        obj_type = "bridge"
+    else:
+        print("Error: Cannot determine if object is node or bridge", file=sys.stderr)
+        sys.exit(1)
+
+    result = {
+        "file": str(file_path),
+        "type": obj_type,
+        "valid": is_valid,
+        "errors": errors if not is_valid else [],
+    }
+    print_json(result)
+
+    if not is_valid:
+        sys.exit(1)
+
+
+def energy_from_freq_cmd(args):
+    """Calculate energy from frequency."""
+    frequency_hz = float(args.frequency)
+    energy_j = energy_from_frequency(frequency_hz)
+    result = {
+        "operation": "energy_from_frequency",
+        "input_frequency_hz": frequency_hz,
+        "output_energy_j": energy_j,
+        "equation": "E = h*f",
+    }
+    print_json(result)
+
+
+def address_cmd(args):
+    """Parse or create a UPI address."""
+    if args.parse:
+        try:
+            addr = Address.from_string(args.parse)
+            result = {
+                "address_string": args.parse,
+                "domain": addr.domain,
+                "generation": addr.generation,
+                "torus": addr.torus,
+                "node": addr.node,
+            }
+        except ValueError as e:
+            print(f"Error: {e}", file=sys.stderr)
+            sys.exit(1)
+    else:
+        addr = Address(args.domain, int(args.generation), args.torus, args.node)
+        result = {
+            "address_string": str(addr),
+            "domain": addr.domain,
+            "generation": addr.generation,
+            "torus": addr.torus,
+            "node": addr.node,
+        }
+    print_json(result)
+
+
+def debug_index_cmd(args):
+    """Generate an automated UPI error report and exploded map."""
+    root = Path(args.path)
+    if not root.exists():
+        print(f"Error: Path not found: {root}", file=sys.stderr)
+        sys.exit(1)
+
+    report = generate_debug_report(root, inspect=args.inspect)
+    rendered = (
+        render_debug_markdown(report) if args.format == "markdown" else json.dumps(report, indent=2)
+    )
+    if args.output:
+        Path(args.output).write_text(rendered + "\n", encoding="utf-8")
+    else:
+        print(rendered)
+
+    if args.strict and report["findings"]:
+        sys.exit(1)
+
+
+def triage_cmd(args):
+    """Run index triage against a known-finding catalog."""
+    root = Path(args.path)
+    known_path = Path(args.known)
+    if not root.exists():
+        print(f"Error: Path not found: {root}", file=sys.stderr)
+        sys.exit(1)
+    if not known_path.exists():
+        print(f"Error: Known-finding catalog not found: {known_path}", file=sys.stderr)
+        sys.exit(1)
+
+    report = generate_debug_report(root, inspect=args.inspect)
+    catalog = load_json(known_path)
+    result = compare_report(report, catalog)
+    result["report"] = report
+    rendered = json.dumps(result, indent=2)
+    if args.output:
+        Path(args.output).write_text(rendered + "\n", encoding="utf-8")
+    else:
+        print(rendered)
+    if result["approval_required"]:
+        sys.exit(1)
+
+
+def serve_cmd(args):
+    """Start the contribution UI."""
+    from .contribute.server import serve
+
+    serve(host=args.host, port=args.port, database=args.database, data_root=Path(args.data_root))
+
+
+def ingest_cmd(args):
+    """Check or insert a contribution batch file."""
+    import os
+
+    from .contribute.service import ContributionService
+    from .contribute.store import ContributionStore
+
+    if args.check == args.insert:
+        print("Error: pass exactly one of --check or --insert", file=sys.stderr)
+        sys.exit(1)
+    path = Path(args.file)
+    if not path.is_file():
+        print(f"Error: File not found: {path}", file=sys.stderr)
+        sys.exit(1)
+    batch = json.loads(path.read_text(encoding="utf-8"))
+    database = args.database or os.environ.get("UPI_DATABASE_URL") or "sqlite:///upi.db"
+    store = ContributionStore(database)
+    service = ContributionService(store)
+    service.seed()
+    try:
+        report = service.check_batch(batch) if args.check else service.insert_batch(batch)
+    finally:
+        store.close()
+    print_json(report)
+    if not report["ok"]:
+        sys.exit(1)
+
+
+def graph_cmd(args):
+    """Print canonical graph stats."""
+    from .index import export_graph, load_graph
+
+    graph = load_graph(Path(args.path))
+    print_json(export_graph(graph))
+
+
+def registry_cmd(args):
+    """Print the hypothesis registry."""
+    from .index import hypothesis_registry
+
+    print_json(
+        {"hypotheses": hypothesis_registry(Path(args.path)), "verification_type": "software_test"}
+    )
+
+
+def merge_check_cmd(args):
+    """Check live contributions against the canonical tree."""
+    import os
+
+    from .contribute.service import ContributionService
+    from .contribute.store import ContributionStore
+    from .merge import merge_from_live
+
+    database = args.database or os.environ.get("UPI_DATABASE_URL") or "sqlite:///upi.db"
+    store = ContributionStore(database)
+    service = ContributionService(store)
+    try:
+        pack = merge_from_live(service, Path(args.data_root))
+    finally:
+        store.close()
+    rendered = json.dumps(pack, indent=2)
+    if args.output:
+        Path(args.output).write_text(rendered + "\n", encoding="utf-8")
+    else:
+        print(rendered)
+
+
+def dna_memory_write_cmd(args):
+    """Append one validated DNA memory event to .dna_minne."""
+    from .dna_memory import DNAWriter
+
+    payload = json.loads(Path(args.payload).read_text(encoding="utf-8")) if args.payload else json.loads(args.json)
+    event = DNAWriter(args.root).write(payload, source=args.source, status=args.status, provenance=args.provenance)
+    print_json(event.__dict__)
+
+
+def dna_memory_read_cmd(args):
+    """Read and verify DNA memory without mutating it."""
+    from .dna_memory import DNAReader
+
+    reader = DNAReader(args.root)
+    rows = reader.read(args.limit)
+    print_json({"count": len(rows), "events": [row.__dict__ for row in rows]})
+
+
+def dna_memory_watch_cmd(args):
+    """Stream newly appended DNA memory events in real time."""
+    from .dna_memory import DNAReader
+
+    for event in DNAReader(args.root).stream(args.poll):
+        print_json(event.__dict__)
+        sys.stdout.flush()
+
+
+def dna_dynamic_cmd(args):
+    """Export dataset and dynamic candidates; source data never writes canonical DNA."""
+    from .dna import DNAReader, _unique_object
+
+    payload = json.loads(Path(args.file).read_bytes(), object_pairs_hook=_unique_object)
+    report = DNAReader(args.data_root).analyze_dynamic(payload)
+    rendered = json.dumps(report, indent=2, allow_nan=False)
+    if args.output:
+        with Path(args.output).open("x", encoding="utf-8") as stream:
+            stream.write(rendered + "\n")
+    else:
+        print(rendered)
+    if report["state"] != "PASS":
+        sys.exit(1)
+
+
+def dna_derive_cmd(args):
+    """Emit a reviewable batch and trace; never insert or promote it."""
+    from .dna import DNAReader, Value, frequency_relations
+
+    reader = DNAReader(args.data_root, frequency_relations())
+    report = reader.derive(
+        {
+            "f": Value(args.frequency, "Hz"),
+            "f_ref": Value(0.1, "Hz"),
+            "t_ref": Value(10.8, "Gyr"),
+            "t": Value(args.time, "s"),
+            "phase0": Value(args.phase0, "rad"),
+        }
+    )
+    report["candidates"] = reader.candidate_nodes(report)
+    print_json(report)
+    if report["state"] != "PASS":
+        sys.exit(1)
+
+
+def self_test_cmd(args):
+    """Run UPI checks from the inside out and fail closed on the first broken layer."""
+    import os
+    import subprocess
+
+    root = Path(args.path).resolve()
+    if not (root / "pyproject.toml").is_file():
+        print(f"Error: UPI repository root not found: {root}", file=sys.stderr)
+        sys.exit(1)
+
+    checks = []
+
+    def run(name, command):
+        print(f"[SELF-TEST] {name}: {' '.join(command)}", file=sys.stderr)
+        proc = subprocess.run(command, cwd=root, env=os.environ.copy())
+        checks.append({"name": name, "returncode": proc.returncode})
+        if proc.returncode != 0:
+            print(f"[SELF-TEST] STOP: {name} failed", file=sys.stderr)
+            return False
+        print(f"[SELF-TEST] PASS: {name}", file=sys.stderr)
+        return True
+
+    # Inside -> out: syntax/audit, schema contracts, unit tests, static checks, package build.
+    if not run("system-audit", [sys.executable, "tools/upi_system_audit.py"]):
+        sys.exit(1)
+    if not run("pytest", [sys.executable, "-m", "pytest", "tests", "-q"]):
+        sys.exit(1)
+    if not run("ruff", [sys.executable, "-m", "ruff", "check", "src", "tests", "tools"]):
+        sys.exit(1)
+    if not run("mypy", [sys.executable, "-m", "mypy", "src/upi", "--ignore-missing-imports"]):
+        sys.exit(1)
+
+    if args.build:
+        if not run("package-build", [sys.executable, "-m", "build"]):
+            sys.exit(1)
+
+    print_json(
+        {
+            "command": "self-test",
+            "status": "PASS",
+            "direction": "inside-out",
+            "checks": checks,
+            "scientific_promotion": "NONE",
+        }
+    )
+
+
+def main():
+    """Main CLI entry point."""
+    import argparse
+
+    parser = argparse.ArgumentParser(prog="upi", description="Universal Physics Index CLI")
+    parser.add_argument("--version", action="version", version=f"%(prog)s {__version__}")
+
+    subparsers = parser.add_subparsers(dest="command", help="Command to run")
+
+    mem_write = subparsers.add_parser("dna-memory-write", help="Append a live DNA memory event")
+    mem_write.add_argument("--root", default=".dna_minne")
+    mem_write.add_argument("--json", help="JSON object payload")
+    mem_write.add_argument("--payload", help="Path to JSON object payload")
+    mem_write.add_argument("--source", default="UPI")
+    mem_write.add_argument("--status", choices=("EST","DER","TEST","HYP","STOP","ERR","SYM"), default="DER")
+    mem_write.add_argument("--provenance", default="runtime")
+    mem_write.set_defaults(func=dna_memory_write_cmd)
+
+    mem_read = subparsers.add_parser("dna-memory-read", help="Read verified DNA memory")
+    mem_read.add_argument("--root", default=".dna_minne")
+    mem_read.add_argument("--limit", type=int)
+    mem_read.set_defaults(func=dna_memory_read_cmd)
+
+    mem_watch = subparsers.add_parser("dna-memory-watch", help="Stream DNA memory in real time")
+    mem_watch.add_argument("--root", default=".dna_minne")
+    mem_watch.add_argument("--poll", type=float, default=0.25)
+    mem_watch.set_defaults(func=dna_memory_watch_cmd)
+
+    dynamic = subparsers.add_parser(
+        "dna-dynamic", help="Analyze a sampled dynamic frequency signal"
+    )
+    dynamic.add_argument("file", type=Path)
+    dynamic.add_argument("--data-root", type=Path, default=Path("data"))
+    dynamic.add_argument(
+        "--output", type=Path, help="New dataset file; existing files are not overwritten"
+    )
+    dynamic.set_defaults(func=dna_dynamic_cmd)
+
+    dna = subparsers.add_parser("dna-derive", help="Derive typed frequency candidates from DNA")
+    dna.add_argument("frequency", type=float)
+    dna.add_argument("--data-root", type=Path, default=Path("data"))
+    dna.add_argument("--time", type=float, required=True, help="Physical elapsed seconds")
+    dna.add_argument("--phase0", type=float, default=0.0, help="Declared phase origin in radians")
+    dna.set_defaults(func=dna_derive_cmd)
+
+    # frequency-to-mass
+    fm = subparsers.add_parser("frequency-to-mass", help="Convert frequency to mass")
+    fm.add_argument("frequency", type=float, help="Frequency in Hertz")
+    fm.set_defaults(func=frequency_to_mass)
+
+    # mass-to-frequency
+    mf = subparsers.add_parser("mass-to-frequency", help="Convert mass to frequency")
+    mf.add_argument("mass", type=float, help="Mass in kilograms")
+    mf.set_defaults(func=mass_to_frequency)
+
+    # index8
+    i8 = subparsers.add_parser("index8", help="Calculate 8 Hz dimensionless index")
+    i8.add_argument("--frequency", type=float, help="Frequency in Hertz")
+    i8.add_argument("--mass", type=float, help="Mass in kilograms")
+    i8.set_defaults(func=index8_cmd)
+
+    # energy-from-frequency
+    ef = subparsers.add_parser("energy-from-frequency", help="Calculate energy from frequency")
+    ef.add_argument("frequency", type=float, help="Frequency in Hertz")
+    ef.set_defaults(func=energy_from_freq_cmd)
+
+    # normalize
+    norm = subparsers.add_parser("normalize", help="Normalize signal Z = z / z_ref")
+    norm.add_argument("--observed", type=float, required=True, help="Observed signal")
+    norm.add_argument("--reference", type=float, required=True, help="Reference signal")
+    norm.add_argument("--epsilon", type=float, help="Match tolerance")
+    norm.set_defaults(func=normalize_cmd)
+
+    # validate
+    val = subparsers.add_parser("validate", help="Validate JSON against schema")
+    val.add_argument("file", help="JSON file to validate")
+    val.set_defaults(func=validate_cmd)
+
+    # address
+    addr = subparsers.add_parser("address", help="Parse or create UPI address")
+    addr.add_argument("--parse", help="Parse UPI address string")
+    addr.add_argument("--domain", help="Domain (for creation)")
+    addr.add_argument("--generation", type=int, help="Generation (for creation)")
+    addr.add_argument("--torus", help="Torus (for creation)")
+    addr.add_argument("--node", help="Node identifier (for creation)")
+    addr.set_defaults(func=address_cmd)
+
+    research = subparsers.add_parser(
+        "research",
+        help="Explore a research session without requiring scientific closure",
+    )
+    research.add_argument("file", help="UPI research-session JSON file")
+    research.add_argument("--output", help="Write the shadow report to a file")
+    research.add_argument("--format", choices=("json", "markdown"), default="json")
+    research.set_defaults(func=research_cmd)
+
+    # debug-index
+    debug = subparsers.add_parser(
+        "debug-index",
+        help="Generate a UPI error report and exploded physics/code map",
+    )
+    debug.add_argument("path", nargs="?", default="data", help="Directory of UPI JSON records")
+    debug.add_argument("--output", help="Write the report to a file")
+    debug.add_argument("--format", choices=("json", "markdown"), default="json")
+    debug.add_argument(
+        "--inspect",
+        action="store_true",
+        help="Find hidden paths, conflicting identities, and mirrored records",
+    )
+    debug.add_argument(
+        "--strict",
+        action="store_true",
+        help="Exit non-zero when the report contains findings",
+    )
+    debug.set_defaults(func=debug_index_cmd)
+
+    triage = subparsers.add_parser(
+        "triage",
+        help="Compare a debug-index report to a known-finding catalog",
+    )
+    triage.add_argument("path", nargs="?", default="data", help="Directory of UPI JSON records")
+    triage.add_argument(
+        "--known",
+        default="examples/ledger/baselines/known-findings.json",
+        help="Known-finding catalog",
+    )
+    triage.add_argument("--output", help="Write the triage result to a file")
+    triage.add_argument(
+        "--inspect",
+        action="store_true",
+        help="Enable the read-only consistency inspector",
+    )
+    triage.set_defaults(func=triage_cmd)
+
+    serve_parser = subparsers.add_parser(
+        "serve",
+        help="Run the public contribution UI and live index API",
+    )
+    serve_parser.add_argument("--host", default="127.0.0.1")
+    serve_parser.add_argument("--port", type=int, default=8080)
+    serve_parser.add_argument(
+        "--database",
+        default=None,
+        help="sqlite:///upi.db or postgresql://user:pass@host:5432/upi (also UPI_DATABASE_URL)",
+    )
+    serve_parser.add_argument("--data-root", default="data")
+    serve_parser.set_defaults(func=serve_cmd)
+
+    ingest_parser = subparsers.add_parser(
+        "ingest",
+        help="Check or insert a remote LLM upi-batch.json file",
+    )
+    ingest_parser.add_argument("file", help="Path to upi-contribution-batch JSON")
+    ingest_parser.add_argument("--check", action="store_true", help="Validate only")
+    ingest_parser.add_argument("--insert", action="store_true", help="Insert records that pass")
+    ingest_parser.add_argument(
+        "--database",
+        default=None,
+        help="sqlite:///upi.db or postgresql://... (also UPI_DATABASE_URL)",
+    )
+    ingest_parser.set_defaults(func=ingest_cmd)
+
+    graph_parser = subparsers.add_parser("graph", help="Load canonical graph from data/")
+    graph_parser.add_argument("path", nargs="?", default="data")
+    graph_parser.set_defaults(func=graph_cmd)
+
+    self_test = subparsers.add_parser("self-test", help="Run UPI checks from the inside out")
+    self_test.add_argument("path", nargs="?", default=".")
+    self_test.add_argument("--build", action="store_true")
+    self_test.set_defaults(func=self_test_cmd)
+
+    registry_parser = subparsers.add_parser("hypotheses", help="List HYP records")
+    registry_parser.add_argument("path", nargs="?", default="data")
+    registry_parser.set_defaults(func=registry_cmd)
+
+    merge_parser = subparsers.add_parser(
+        "merge-check", help="Build a canonical merge pack from live DB"
+    )
+    merge_parser.add_argument("--database", default=None)
+    merge_parser.add_argument("--data-root", default="data")
+    merge_parser.add_argument("--output", help="Write merge pack JSON")
+    merge_parser.set_defaults(func=merge_check_cmd)
+
+    args = parser.parse_args()
+
+    if not hasattr(args, "func"):
+        parser.print_help()
+        sys.exit(1)
+
+    try:
+        args.func(args)
+    except Exception as e:
+        print(f"Error: {e}", file=sys.stderr)
+        sys.exit(1)
+
+
+if __name__ == "__main__":
+    main()

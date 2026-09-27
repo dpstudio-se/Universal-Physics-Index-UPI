@@ -1,0 +1,17 @@
+{
+  "address": "UPI<mechanics,1,fluid,tf1766_flow_coupling_stop>",
+  "title": "Missing physical TF1766-to-flow coupling",
+  "description": "Keep the proposed frequency-to-spiral-flow connection visible without identifying model coordinates with a physical drive.",
+  "status": "STOP",
+  "version": "0.1.0",
+  "stop_reason": "No system-specific drive, geometry, measured transfer function or initial/boundary conditions supplied. Next observation: identify the apparatus, drive and observable, then compare a preregistered spectrum with controls.",
+  "assumptions": [
+    "A verified frequency calculation does not supply a fluid forcing mechanism."
+  ],
+  "primary_sources": [
+    "data/hypotheses/tf1766_frequency_resonance.json",
+    "data/mechanics/reduced_rigid_rotation.json"
+  ],
+  "verification_type": "none",
+  "claims_experimental_verification": false
+}

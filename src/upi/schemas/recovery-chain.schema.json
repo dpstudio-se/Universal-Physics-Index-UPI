@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UPI TF1766 Recovery Chain",
+  "type": "object",
+  "required": [
+    "format",
+    "version",
+    "status",
+    "verification_type",
+    "anchor_checkpoint_hash",
+    "active_checkpoint_hash",
+    "checkpoints",
+    "confusion_guard"
+  ],
+  "properties": {
+    "format": {"const": "upi-recovery-chain"},
+    "version": {"const": "1.0.0"},
+    "status": {"const": "SYM"},
+    "verification_type": {"const": "software_test"},
+    "anchor_checkpoint_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "active_checkpoint_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "checkpoints": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "checkpoint_id",
+          "anchor_id",
+          "sequence",
+          "state",
+          "state_hash",
+          "previous_checkpoint_hash",
+          "recorded_at",
+          "control_clock_hz",
+          "checkpoint_hash"
+        ],
+        "properties": {
+          "checkpoint_id": {"type": "string", "minLength": 1},
+          "anchor_id": {"const": "TF1766"},
+          "sequence": {"type": "integer", "minimum": 0},
+          "state": {"type": "object"},
+          "state_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+          "previous_checkpoint_hash": {
+            "anyOf": [
+              {"type": "null"},
+              {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+            ]
+          },
+          "recorded_at": {"type": "string", "format": "date-time"},
+          "control_clock_hz": {"type": "number", "exclusiveMinimum": 0},
+          "checkpoint_hash": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "confusion_guard": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

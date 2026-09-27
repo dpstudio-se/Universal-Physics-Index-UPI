@@ -1,0 +1,46 @@
+{
+  "tags": [
+    "cft",
+    "conformal",
+    "virasoro",
+    "qft"
+  ],
+  "title": "Conformal field theory",
+  "version": "0.1.0",
+  "claims_experimental_verification": true,
+  "confusion_guard": "A CFT is a field theory. AdS/CFT identifies a specific CFT with a specific bulk; the identification is the conjecture.",
+  "definitions": [
+    "A CFT is a QFT with vanishing beta functions and a conserved, traceless stress tensor.",
+    "In 2d, the central charge c appears in the Virasoro algebra.",
+    "Primary operators are labelled by conformal dimensions Δ."
+  ],
+  "mechanism": "Scale invariance plus unitarity (in d>2, with extra assumptions) upgrades to conformal invariance. Correlation functions are constrained by the conformal group.",
+  "verification_type": "experimental_observation",
+  "address": "UPI<quantum_field,1,symmetry,conformal_field_theory>",
+  "assumptions": [
+    "Unitary (or specified non-unitary) QFT in d dimensions.",
+    "The holographic examples are typically strongly coupled and at large N."
+  ],
+  "falsification_conditions": [
+    "A claimed CFT whose correlators violate conformal Ward identities after accounting for anomalies."
+  ],
+  "primary_sources": [
+    "Belavin, Polyakov, Zamolodchikov (1984)",
+    "Di Francesco, Mathieu, Sénéchal, Conformal Field Theory"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "experiment",
+      "source": "Critical phenomena, 2d statistical mechanics, and lattice CFT checks",
+      "confidence": 0.99,
+      "notes": "CFTs exist as physical theories of critical points. That does not make a given CFT the dual of a given bulk."
+    }
+  ],
+  "equations": [
+    "T^μ_μ = 0",
+    "[L_m, L_n] = (m-n) L_{m+n} + (c/12) (m^3 - m) δ_{m+n,0}"
+  ],
+  "status": "EST",
+  "description": "A quantum field theory invariant under conformal transformations (and, in the holographic setting, typically a large-N gauge theory). In two dimensions the symmetry algebra is Virasoro."
+}

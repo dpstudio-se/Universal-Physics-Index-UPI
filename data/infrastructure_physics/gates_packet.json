@@ -1,0 +1,94 @@
+{
+  "schema_version": "1.0.0",
+  "record_type": "gates_packet",
+  "address": "UPI<infrastructure_physics,1,audit,gates_packet_omega_phi>",
+  "title": "OMEGA/PHI gates packet — VR-ASI-CO session audit",
+  "description": "Composite audit of four gates run against the produced session artifacts. No workflow canvas, no promotion, no fabricated evidence.",
+  "status": "DER",
+  "verification_type": "software_test",
+  "claims_experimental_verification": false,
+  "information_layer": "ACADEMIC",
+  "source_status": "personal_note",
+  "version": "0.1.0",
+  "created_at": "2026-09-16T12:00:00Z",
+  "tags": ["OMEGA_1766", "OMEGA_1765", "PHI_1765", "PHI_1766", "TF1766", "audit", "gates", "VR-ASI-CO"],
+  "confusion_guard": "Four PASS here means the claims actually made hold. It is NOT team-done, NOT production-ready, NOT canvas-exists. Status remains waiting.",
+  "gates": {
+    "OMEGA_1766": {
+      "verdict": "PASS",
+      "observability": "PASS",
+      "write": "CLEAR",
+      "defects": [],
+      "write_holds": [],
+      "artifact": "artifacts/omega_1766_result.json",
+      "note": "evaluate(record.json) exit 0; self-test 12 passed; missing-artifact demo exit 1"
+    },
+    "OMEGA_1765": {
+      "verdict": "PASS",
+      "hidden_gates": "none",
+      "artifact": "artifacts/omega_1765_audit.json",
+      "note": "no unnamed DENY/ASK/STOP; named write-holds only (send/publish/pay/delete/access-change)"
+    },
+    "PHI_1765": {
+      "verdict": "PASS",
+      "artifact": "artifacts/phi_1765_audit.json",
+      "note": "produced facts durable on disk (record.json, gates_packet); no transcript-only shadow state"
+    },
+    "PHI_1766": {
+      "verdict": "PASS",
+      "completion_basis": "artifact+check",
+      "completion_basis_team_done": "CLAIM_REJECT",
+      "evidence_level": 4,
+      "rejected_advances": ["done", "verified", "production-ready", "canvas-exists"],
+      "artifact": "artifacts/phi_1766_audit.json",
+      "note": "no done under evidence_level<2; moving claims carry pointers"
+    }
+  },
+  "composite": {
+    "verdict": "PASS",
+    "defects": [],
+    "write_holds": [],
+    "rejected_advances": ["done", "verified", "production-ready", "canvas-exists"]
+  },
+  "session_state": {
+    "owner": "named-human",
+    "status": "waiting",
+    "failure_reason": "no-workflow-canvas-finish-line",
+    "retry_count": 0,
+    "policy_id": "ask-before-send",
+    "artifact": "artifacts/record.json"
+  },
+  "artifacts": [
+    "artifacts/record.json",
+    "artifacts/omega_1766_result.json",
+    "artifacts/omega_1765_audit.json",
+    "artifacts/phi_1765_audit.json",
+    "artifacts/phi_1766_audit.json",
+    "artifacts/gates_packet.json"
+  ],
+  "not_run": ["omega_1765.py", "phi_1765.py", "phi_1766.py"],
+  "not_fabricated": ["workflow-canvas", "Routine", "promotion", "team-done"],
+  "primary_sources": [
+    "omega_1766.py evaluate()",
+    "pytest test_omega_1766.py (12 passed)",
+    "schemas/node.schema.json",
+    "schemas/handoff.schema.json",
+    "schemas/ledger-entry.schema.json",
+    "docs/STATUS_MODEL.md",
+    "docs/AUDIT_AND_PROVENANCE.md"
+  ],
+  "assumptions": [
+    "The four gates are the complete audit set required for this session's produced claims.",
+    "Spec-only gates (no CLI) are logged as not_run, never silently passed.",
+    "UPI status DER is appropriate: derived from explicit gate definitions and run outputs."
+  ],
+  "falsification_conditions": [
+    "A re-run of omega_1766.py record.json returns non-zero exit or non-empty defects.",
+    "Any gate verdict changes without a corresponding artifact update.",
+    "Status is advanced to done without evidence_level >= 2 and a named check."
+  ],
+  "predictions": [
+    "Re-running the packet reproduces composite PASS with empty defects.",
+    "Adding a finish line + canvas + check raises PHI_1766 completion_basis from CLAIM_REJECT to artifact+check."
+  ]
+}

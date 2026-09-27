@@ -1,0 +1,28 @@
+{
+  "entry_id": "ledger-index-triage-baseline-campaign",
+  "task_id": "task-index-triage-baseline-1",
+  "workflow_id": "index-triage-v1",
+  "owner": "manager",
+  "state": "SUCCEEDED",
+  "artifact": {
+    "kind": "report",
+    "ref": "examples/ledger/baselines/baseline-1.json",
+    "content_hash": "733aff76a4d707fff1d2d1f13b6a6fdd4a3e4dc7711c4fe0c4d135a18c33c271"
+  },
+  "evidence": [
+    {
+      "kind": "hash",
+      "ref": "examples/ledger/baselines/runs.json"
+    },
+    {
+      "kind": "test",
+      "ref": "tests/test_triage.py"
+    }
+  ],
+  "decision": "advance",
+  "deadline_at": "2026-09-03T23:59:59Z",
+  "next_owner": "verifier",
+  "verification_type": "software_test",
+  "status": "SYM",
+  "notes": "Three identical read-only baselines completed for the current data set. Cataloged findings remain unresolved."
+}

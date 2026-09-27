@@ -1,0 +1,1486 @@
+[
+  {
+    "id": "1789945479343-9hsljw",
+    "question": "Why: Add CI coverage for T€@X session lock?",
+    "answer": "(Auto-drafted from commit 90a74cb on 2026-09-19.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T23:56:05.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "90a74cb63ad3daa44a11a86b1363aa6e1886ae58"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479343-gxyeby",
+    "question": "Why: Implement T€@X core selector tag verifier and session lock?",
+    "answer": "(Auto-drafted from commit 0a73ad0 on 2026-09-19.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T23:55:55.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "0a73ad01da6e8efa94a2564184b2e7cd7bddfa41"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479343-7ocixy",
+    "question": "Why: Add T€@X core selector and mirror-loop session guard?",
+    "answer": "(Auto-drafted from commit df05633 on 2026-09-19.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T23:52:55.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "df05633fd3014a18fdf257ce7aa5b1fcb553ab53"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479343-1mwv63",
+    "question": "Why: Add bidirectional mirror verification for QHO Fourier cavity?",
+    "answer": "(Auto-drafted from commit 0bd30a0 on 2026-09-19.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T22:50:47.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "0bd30a0078ab5a84bd70b7a2ba279ba94ad379df"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479343-rzmx3w",
+    "question": "Why: Add explicit formula and name registry?",
+    "answer": "(Auto-drafted from commit e005083 on 2026-09-19.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T22:48:21.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "e0050836724c15dbbe7dbb91e8875871e95990be"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479343-tpde84",
+    "question": "Why: Add Omega1766 image physics map batch 2?",
+    "answer": "(Auto-drafted from commit b5cf2bd on 2026-09-19.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T22:46:49.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "b5cf2bdd9fa417ee422c362ab862351ba5f6b9c8"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479343-5m18qo",
+    "question": "Why: Add Ω1766 image claim map and verification intake?",
+    "answer": "(Auto-drafted from commit 4f55686 on 2026-09-19.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T22:40:50.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "4f5568609127a613ece5d36948bf157e2ff7e4c1"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479343-m0lpfd",
+    "question": "Why: Add Ω1766 evidence map for uploaded research images?",
+    "answer": "(Auto-drafted from commit da7b3a2 on 2026-09-19.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T22:38:36.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "da7b3a238c750824429183212b68968c920628c1"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479343-qu3hiy",
+    "question": "Why: Add Ω1766 frequency intermodulation physics map (234/432/440 Hz)?",
+    "answer": "(Auto-drafted from commit a203c03 on 2026-09-19.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T22:37:39.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "a203c0370509a4f292a1542f73d24a062288c359"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479343-lwpikn",
+    "question": "Why: Add full regional SWARM data-layer map?",
+    "answer": "(Auto-drafted from commit 63e2780 on 2026-09-18.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T20:08:45.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "63e2780fc378ba9db32274e52501b8a2f3118dc9"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-kkeqyt",
+    "question": "Why: Add Övik-Högakustenbron-Umeå frequency and flow map model?",
+    "answer": "(Auto-drafted from commit 75e6319 on 2026-09-18.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T20:07:00.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "75e6319ed60cc207255a13710b0fe7a6e31f93ed"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-uhw61n",
+    "question": "Why: Add Echo and Swarm analysis layer to Omega1766 atlas?",
+    "answer": "(Auto-drafted from commit 22038fd on 2026-09-18.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T19:12:37.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "22038fd22ce23d4b0c67652a55e4809ac3f2389c"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-2ydftq",
+    "question": "Why: Add Omega1766 entropy-form vector visualization?",
+    "answer": "(Auto-drafted from commit cf10bd4 on 2026-09-18.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T19:10:45.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "cf10bd410c1b1cb4ad697e1c69bb49de43af23c7"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-k6ynk9",
+    "question": "Why: Add Omega1766 entropy-form visual atlas README?",
+    "answer": "(Auto-drafted from commit aef19e1 on 2026-09-18.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T19:10:33.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "aef19e13e76e4ab83484c4d927e7b7e469e87cd8"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-7pwqoj",
+    "question": "Why: Add corrected Omega1766 Earth time-space-wave-entropy model?",
+    "answer": "(Auto-drafted from commit d49350b on 2026-09-18.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T19:05:39.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "d49350bbbc4a56d5ff00daab6e8bfe0824d923d7"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-3fi7f4",
+    "question": "Why: Add automatic mirror-loop checkpoint storage?",
+    "answer": "(Auto-drafted from commit f8afaa7 on 2026-09-18.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-18T18:58:46.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "f8afaa707a1a925d15d3b576b150a940cf1bfee1"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-l64sbc",
+    "question": "Why: Add OMEGA/PHI gates audit packet (DER) under data/infrastructure_physics?",
+    "answer": "(Auto-drafted from commit 0efd88a on 2026-09-17.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T22:09:56.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "0efd88a7edc4f1f44085c4f7277487b3cbb6cac6"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-eom6iy",
+    "question": "Why: Add UPI evidence spiral state for Viking Odin's Eye frequency audit?",
+    "answer": "(Auto-drafted from commit c795cde on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T11:35:20.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "c795cdee8b584c8185a4fbc8eb11ba1a336cdd1d"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-q89ur4",
+    "question": "Why: Integrate TF1766 audit into Copilot PR mirror tool?",
+    "answer": "(Auto-drafted from commit 44b8e20 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T11:24:35.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "44b8e20c49f9fca5a6193ea305c2baec7c207382"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-by9qqm",
+    "question": "Why: Add Copilot instructions for UPI PR mirror audit?",
+    "answer": "(Auto-drafted from commit 1cb6267 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T11:21:10.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "1cb62670c52627da866236da6f9274b514335bb1"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-9i6tx8",
+    "question": "Why: Add Copilot UPI pull request mirror-loop audit tool?",
+    "answer": "(Auto-drafted from commit a9cc144 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T11:21:02.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "a9cc144fba0c93382eee5763e487a5991ad2f2a9"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-v351w6",
+    "question": "Why: Add canonical mirror-loop validation node?",
+    "answer": "(Auto-drafted from commit cedc7be on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T11:19:21.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "cedc7be58d3ab9d9ef86f66e29666454ee1c3006"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-p2pg57",
+    "question": "Why: Add mirror-loop validation protocol and evidence ladder?",
+    "answer": "(Auto-drafted from commit b2d215c on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T11:19:17.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "b2d215c4b297e5e46848afbda5dfc7ac5d47d56d"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-18gd23",
+    "question": "Why: Add UPI integrity and research workflow gates?",
+    "answer": "(Auto-drafted from commit c3a464b on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T11:14:20.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "c3a464b046dee69ee37ffd5806ec1c168122e5ed"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-ytuzoc",
+    "question": "Why: Add 360 transliteration structured record?",
+    "answer": "(Auto-drafted from commit 136735b on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T11:08:49.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "136735be43c7dfea9026b1b83773a3ae016e8b8e"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-5w0e1k",
+    "question": "Why: Add 360 transliteration UPI mapping?",
+    "answer": "(Auto-drafted from commit c31cc0c on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T11:08:46.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "c31cc0c95367dc7e1840590a8f553d228b0c6ec3"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-8csea2",
+    "question": "Why: Add Viking saga Odin's Eye UPI record?",
+    "answer": "(Auto-drafted from commit 6bd6b70 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T10:52:27.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "6bd6b70c0085f0122cb28c822064850cc4118c92"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-8zoltr",
+    "question": "Why: Add Odin's Eye Viking saga research method?",
+    "answer": "(Auto-drafted from commit 66a9e36 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T10:52:23.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "66a9e360ac596ac9fc025ce96cd3ecfd311da537"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-6ak9ub",
+    "question": "Why: Add UPI map for triskelion public source and frequency hypotheses?",
+    "answer": "(Auto-drafted from commit 63ebe72 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T10:19:54.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "63ebe7229eac4d6ce8ad681801049f98b7e4043a"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-ifdmdv",
+    "question": "Why: Add T€@X-TW realtime UPI working snapshot?",
+    "answer": "(Auto-drafted from commit b57a5f5 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T03:42:15.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "b57a5f510278ff3a78bb3c4c3dddb5d4338b8c02"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-ybllzf",
+    "question": "Why: Add canonical T€@X-TW verification loop?",
+    "answer": "(Auto-drafted from commit de75e38 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T03:36:32.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "de75e38b5a1a70fa87af7afaf878a36eaea2034c"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-34rhpg",
+    "question": "Why: Add W0 T€@X-TW workload map?",
+    "answer": "(Auto-drafted from commit f6020b7 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T03:35:46.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "f6020b7d1e8652cf780d98a3e81355161c740dfb"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-r7qq8q",
+    "question": "Why: Add canonical T€@X-TW UPI workload architecture?",
+    "answer": "(Auto-drafted from commit ee9ab8f on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T03:35:24.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "ee9ab8f07ee6ed95c9af01a158ccf0cfe4ef1483"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-bt7035",
+    "question": "Why: Add global research A to O and O to A workload?",
+    "answer": "(Auto-drafted from commit c1e72f9 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T03:21:35.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "c1e72f9522642616a4f28a61a074f412a05cc27a"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-azjqj4",
+    "question": "Why: Add Q Quantum DNA core verification workload?",
+    "answer": "(Auto-drafted from commit 5a98565 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T03:21:27.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "5a9856502136cc9d98fbe5270fa9307cdacb5e65"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-i1640a",
+    "question": "Why: Add UPI_MEMORY_ARCHITECTURE_V1.md?",
+    "answer": "(Auto-drafted from commit 43baecc on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T03:02:18.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "43baecca154558df74954d3b4d1db1b5bdb9d372"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-9lamba",
+    "question": "Why: Add T1D entropy-DNA duality research mapping as HYP/DER with established anchors and falsification tests?",
+    "answer": "(Auto-drafted from commit 7850ddc on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T02:45:04.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "7850ddc0d0ce722a510c5f2e65c3a00ed7c6a562"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-yfpl2y",
+    "question": "Why: Add UPI Internal DNA v1 reasoning reference layer?",
+    "answer": "(Auto-drafted from commit 4468a05 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T02:30:47.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "4468a05b58cbb32e96f6f4cda55bd9c19adca170"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-ifhl78",
+    "question": "Why: Add UPI Workload Loop v1 orchestration map?",
+    "answer": "(Auto-drafted from commit 3cee6a4 on 2026-09-16.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-16T02:29:38.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "3cee6a497c52e8d4b254185de63258d4c36b1c07"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-aodchs",
+    "question": "Why: Add PSI27D candidate bridge to fluid control?",
+    "answer": "(Auto-drafted from commit 1a91de1 on 2026-09-15.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-14T22:02:50.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "1a91de16cfe40d5e8e4ced232ce0bd8e471e1196"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-gbtqyi",
+    "question": "Why: Add PSI27D Navier-Stokes regularity hypothesis?",
+    "answer": "(Auto-drafted from commit 7803c51 on 2026-09-15.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-14T22:01:21.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "7803c51fb5b7f4b1acda0f7f48e63ff6d0d18e38"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-x7bug6",
+    "question": "Why: Add dynamic spiral-flow verification primitives?",
+    "answer": "(Auto-drafted from commit 2c383ba on 2026-09-14.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-14T08:10:05.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "2c383bae267647d7354b5377604e3d0317be91e5"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-nb2rn3",
+    "question": "Why: Add tf1766_frequency_resonance.json?",
+    "answer": "(Auto-drafted from commit ce8e9d7 on 2026-09-14.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-14T07:03:27.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "ce8e9d70cc40820bb85bbf05c820fc9a5f16c01a"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-2c2xiy",
+    "question": "Why: Add spiral_flow_tf1766_1_766hz.json?",
+    "answer": "(Auto-drafted from commit 028834b on 2026-09-14.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-14T07:03:25.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "028834b0856ecf91f20be1233116d7839c7751fc"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-2g6aqa",
+    "question": "Why: Add inverse-frequency Spiral Flow time transform?",
+    "answer": "(Auto-drafted from commit ec8fc15 on 2026-09-14.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-14T07:03:03.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "ec8fc15ef1aefd0f6ec9ec13f3f3ec27ac64dc0c"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479344-dv97y3",
+    "question": "Why: Add example open research session?",
+    "answer": "(Auto-drafted from commit af72e23 on 2026-09-14.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-14T01:33:41.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "af72e234d3762bb5db240466cb58989eb570b2db"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479345-619q64",
+    "question": "Why: Add research session schema?",
+    "answer": "(Auto-drafted from commit 8cfa287 on 2026-09-14.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-14T01:32:19.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "8cfa28749723e8a21163862999876690f41d4d4e"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479345-0jf6xq",
+    "question": "Why: Add non-blocking UPI research mode?",
+    "answer": "(Auto-drafted from commit 7861c9c on 2026-09-14.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-14T01:32:08.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "7861c9cc17fa23120350dbe9228c115b8bb04f05"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479345-13x5il",
+    "question": "Why: Add governed Millennium workload chamber spiral?",
+    "answer": "(Auto-drafted from commit 031dfa4 on 2026-09-13.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-13T15:55:33.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "031dfa462c7bbbaa0972646a3797859f9571028d"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479345-a9h50p",
+    "question": "Why: Add Millennium Prize Problems UPI research program?",
+    "answer": "(Auto-drafted from commit 30639de on 2026-09-13.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-13T15:41:51.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "30639de2f992a9dac1d3edd1bfbe1821c8717a43"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479345-02nntz",
+    "question": "Why: Add hyperbolic orbital mechanics node?",
+    "answer": "(Auto-drafted from commit 2aa811b on 2026-09-13.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-13T10:33:11.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "2aa811bf9594a8b4aae06287fa800e65c7f4aa57"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "1789945479345-crquhu",
+    "question": "Why: Add 3I/ATLAS UPI physics case?",
+    "answer": "(Auto-drafted from commit 91c460c on 2026-09-13.) Please review and expand with actual reasoning.",
+    "timestamp": "2026-09-13T10:32:22.000Z",
+    "tags": [
+      "auto-draft",
+      "needs-review"
+    ],
+    "files": [],
+    "status": "draft",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "commitHashes": [
+      "91c460c690ce626fa07c0a00a5ba2461f4e2df8c"
+    ],
+    "metadata": {
+      "status": "draft"
+    }
+  },
+  {
+    "id": "muafc383-zu1yos",
+    "question": "Why deploy with Docker Compose?",
+    "answer": "Detected Dockerfile and docker-compose.yml. Docker Compose orchestrates multi-container deployments for local and production environments.",
+    "timestamp": "2026-09-20T23:05:00.243Z",
+    "tags": [
+      "deployment",
+      "infrastructure",
+      "auto-scanned"
+    ],
+    "files": [
+      "docker-compose.yml"
+    ],
+    "status": "active",
+    "metadata": {
+      "status": "active",
+      "source": "initial-scan",
+      "autoLink": {
+        "checkedAt": "2026-09-20T23:05:00.256Z",
+        "result": "orphan"
+      }
+    }
+  },
+  {
+    "id": "muafhwjn-w1tzi4",
+    "question": "Why use Python with Python?",
+    "answer": "We chose Python for its readability, rich standard library, and ecosystem. Key dependencies: jsonschema.",
+    "timestamp": "2026-09-20T23:09:31.523Z",
+    "tags": [
+      "architecture",
+      "auto-scanned",
+      "tech-stack"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "status": "active",
+      "source": "initial-scan",
+      "autoLink": {
+        "checkedAt": "2026-09-20T23:09:31.546Z",
+        "result": "orphan"
+      }
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-09-20T23:09:31.547Z",
+        "action": "created"
+      }
+    ]
+  },
+  {
+    "id": "muafhwlf-hkdpjv",
+    "question": "Why use Docker for containerization?",
+    "answer": "Detected Dockerfile. Docker provides reproducible builds and consistent runtime environments.",
+    "timestamp": "2026-09-20T23:09:31.586Z",
+    "tags": [
+      "auto-scanned",
+      "configuration",
+      "tooling"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "status": "active",
+      "source": "initial-scan",
+      "autoLink": {
+        "checkedAt": "2026-09-20T23:09:31.602Z",
+        "result": "orphan"
+      }
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-09-20T23:09:31.602Z",
+        "action": "created"
+      }
+    ]
+  },
+  {
+    "id": "muafhwmz-r0n61n",
+    "question": "Why use GitHub Actions for CI/CD?",
+    "answer": "Detected .github/workflows/ directory. GitHub Actions automates testing, building, and deployment pipelines.",
+    "timestamp": "2026-09-20T23:09:31.643Z",
+    "tags": [
+      "auto-scanned",
+      "configuration",
+      "deployment",
+      "tooling"
+    ],
+    "files": [],
+    "status": "active",
+    "priority": "medium",
+    "relationships": {
+      "supersedes": [],
+      "supersededBy": [],
+      "relatedTo": [],
+      "causes": [],
+      "causedBy": []
+    },
+    "metadata": {
+      "status": "active",
+      "source": "initial-scan",
+      "autoLink": {
+        "checkedAt": "2026-09-20T23:09:31.654Z",
+        "result": "orphan"
+      }
+    },
+    "commitHashes": [],
+    "history": [
+      {
+        "timestamp": "2026-09-20T23:09:31.655Z",
+        "action": "created"
+      }
+    ]
+  }
+]

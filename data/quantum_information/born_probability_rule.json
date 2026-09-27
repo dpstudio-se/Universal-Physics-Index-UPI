@@ -1,0 +1,56 @@
+{
+  "tags": [
+    "born-rule",
+    "measurement",
+    "probability",
+    "projector",
+    "amplitude"
+  ],
+  "title": "Born probability rule for finite basis measurements",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "A software probability vector is an ideal model output. It is not a physical measurement and does not collapse a real quantum system.",
+  "definitions": [
+    "alpha_j = <j|psi> is the probability amplitude for basis outcome j.",
+    "p_j is the ideal probability assigned to outcome j.",
+    "For a projector Pi_j = |j><j|, the probability is <psi|Pi_j|psi>."
+  ],
+  "mechanism": "The inner product projects the state onto each measurement outcome. Squared amplitude magnitudes produce non-negative normalized probabilities.",
+  "predictions": [
+    "Every ideal basis probability is non-negative.",
+    "The probabilities sum to one for every normalized state and complete orthonormal basis.",
+    "Multiplying the entire state by a global phase leaves all probabilities unchanged."
+  ],
+  "verification_type": "mathematical_check",
+  "address": "UPI<quantum_information,1,measurement,born_probability_rule>",
+  "assumptions": [
+    "The input state is normalized.",
+    "The declared measurement basis is orthonormal and complete.",
+    "The node states ideal quantum probabilities and does not include detector errors."
+  ],
+  "falsification_conditions": [
+    "Reject a probability calculation if any p_j is negative beyond numerical tolerance.",
+    "Reject the calculation if sum_j p_j differs from one beyond tolerance for a normalized state.",
+    "Reject the implementation if a global phase changes the probability vector."
+  ],
+  "primary_sources": [
+    "Max Born, Zur Quantenmechanik der Stoßvorgänge, 1926"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "other",
+      "source": "Max Born, Zur Quantenmechanik der Stoßvorgänge, Zeitschrift für Physik 37 (1926)",
+      "notes": "Original probability interpretation of the quantum wave amplitude."
+    }
+  ],
+  "equations": [
+    "alpha_j = <j|psi>",
+    "p_j = |alpha_j|^2",
+    "p_j = <psi|Pi_j|psi>",
+    "Pi_j = |j><j|",
+    "sum_j p_j = 1"
+  ],
+  "status": "EST",
+  "description": "Established quantum-mechanical probability rule. For a normalized state expanded in an orthonormal measurement basis, the ideal probability of outcome j is the squared magnitude of its complex amplitude."
+}

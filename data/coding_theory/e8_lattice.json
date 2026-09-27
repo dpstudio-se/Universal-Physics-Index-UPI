@@ -1,0 +1,69 @@
+{
+  "tags": [
+    "e8",
+    "root-system",
+    "lattice",
+    "sphere-packing",
+    "lie-algebra"
+  ],
+  "title": "E8 root lattice",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "E8 is a lattice in R^8. Projecting it onto a plane does not place it in physical space, and it is not a hidden compactification of the vacuum.",
+  "definitions": [
+    "E8 is the unique even unimodular lattice in R^8 up to isometry.",
+    "One coordinate model: vectors in Z^8 union (Z+1/2)^8 whose coordinates sum to an even integer.",
+    "The 240 roots are the lattice vectors of norm 2: 112 of type ±e_i ± e_j and 128 of type (±1/2)^8 with an even number of minus signs."
+  ],
+  "mechanism": "The 240 roots form the E8 root system. A Coxeter-plane projection (eigenplane of the Coxeter element, angle 2π/30) yields the 240-point portrait drawn in this index.",
+  "predictions": [
+    "Any even unimodular lattice in dimension 8 is isometric to E8.",
+    "The Coxeter projection of the 240 roots has 240 distinct image points."
+  ],
+  "verification_type": "mathematical_check",
+  "address": "UPI<coding_theory,1,root_system,e8_lattice>",
+  "assumptions": [
+    "Euclidean inner product on R^8.",
+    "Even: all norms are even integers. Unimodular: dual lattice equals itself."
+  ],
+  "falsification_conditions": [
+    "A second, non-isometric even unimodular lattice in dimension 8.",
+    "A coordinate model whose norm-2 vectors are not 240 in number."
+  ],
+  "primary_sources": [
+    "Conway & Sloane, Sphere Packings, Lattices and Groups",
+    "Bourbaki, Lie Groups and Lie Algebras, Ch. VI"
+  ],
+  "quantities": [
+    {
+      "name": "dimension",
+      "value": 8,
+      "unit": "1"
+    },
+    {
+      "name": "root_count",
+      "value": 240,
+      "unit": "1"
+    },
+    {
+      "name": "kissing_number",
+      "value": 240,
+      "unit": "1"
+    }
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Classification of even unimodular lattices in dimension 8",
+      "confidence": 1.0
+    }
+  ],
+  "equations": [
+    "||v||^2 = 2 for every root v",
+    "kissing number = 240",
+    "det(E8) = 1"
+  ],
+  "status": "EST",
+  "description": "The unique even unimodular lattice in 8 dimensions. Its 240 roots are the vertices of the 4_21 polytope. This is a theorem in lattice theory, not a model of spacetime."
+}

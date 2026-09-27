@@ -1,0 +1,146 @@
+openapi: 3.0.3
+info:
+  title: UPI live index API
+  version: "1.0.0"
+  description: Public contribution and review API. software_test only.
+paths:
+  /api/promotion-review:
+    post:
+      summary: Run server-owned feedback checks before a human promotion decision
+      security:
+        - ReviewToken: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [address, human_intent]
+              properties:
+                address: {type: string}
+                human_intent: {type: string, minLength: 1}
+      responses:
+        "200":
+          description: Feedback report; review_id is null on STOP, otherwise valid for 900 seconds
+        "400":
+          description: Invalid intent or missing evidence
+        "403":
+          description: Review token missing, incorrect, or disabled
+        "404":
+          description: Record not found
+        "409":
+          description: Policy unavailable, review execution failed, or record is not a non-EST node
+        "429":
+          description: POST rate limit exceeded
+  /api/promote:
+    post:
+      summary: Approve a server-reviewed live node for EST promotion
+      description: Requires explicit approval of an unexpired server-issued review. Feedback checks rerun and candidate, evidence, and versioned policy must remain unchanged. Does not write canonical Git data.
+      security:
+        - ReviewToken: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [address, review_id, human_decision]
+              properties:
+                address:
+                  type: string
+                review_id:
+                  type: string
+                human_decision:
+                  type: string
+                  enum: [approve]
+      responses:
+        "200":
+          description: Promoted live record
+        "400":
+          description: Invalid request or missing evidence
+        "403":
+          description: Review token missing, incorrect, or disabled on the server
+        "404":
+          description: Record not found
+        "409":
+          description: Review absent, expired, changed, blocked, or explicit human approval missing
+        "429":
+          description: POST rate limit exceeded
+  /api/health:
+    get:
+      summary: Liveness
+      responses:
+        "200":
+          description: OK
+  /api/nodes:
+    get:
+      summary: List or search nodes
+      parameters:
+        - in: query
+          name: q
+          schema: {type: string}
+        - in: query
+          name: status
+          schema: {type: string}
+      responses:
+        "200":
+          description: Node list
+    post:
+      summary: Insert one public node (not EST)
+      responses:
+        "201":
+          description: Created
+        "400":
+          description: Validation failed
+  /api/ingest:
+    post:
+      summary: Check or insert a remote LLM batch
+      parameters:
+        - in: query
+          name: mode
+          schema: {type: string, enum: [check, insert]}
+      responses:
+        "200":
+          description: Report
+  /api/merge-check:
+    post:
+      summary: Build a canonical merge pack from live records
+      responses:
+        "200":
+          description: Merge pack
+  /api/graph:
+    get:
+      summary: Canonical graph export
+      responses:
+        "200":
+          description: Graph
+  /api/hypotheses:
+    get:
+      summary: Hypothesis registry
+      responses:
+        "200":
+          description: HYP list
+  /api/conflicts:
+    get:
+      summary: Inspector conflict view
+      responses:
+        "200":
+          description: Findings
+  /api/events:
+    get:
+      summary: Server-sent contribution events
+      responses:
+        "200":
+          description: SSE stream
+  /prompt:
+    get:
+      summary: Remote LLM system prompt
+      responses:
+        "200":
+          description: Markdown
+components:
+  securitySchemes:
+    ReviewToken:
+      type: apiKey
+      in: header
+      name: X-UPI-Review-Token

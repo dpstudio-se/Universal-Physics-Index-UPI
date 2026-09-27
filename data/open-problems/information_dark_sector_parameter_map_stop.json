@@ -1,0 +1,46 @@
+{
+  "tags": [
+    "open-problem",
+    "dark-sector",
+    "information-physics",
+    "P(X)",
+    "LOOP-201",
+    "STOP",
+    "audit"
+  ],
+  "title": "LOOP 201: unresolved information-to-P(X) parameter map",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "This STOP node records a missing derivation, not evidence against all information-based dark-sector models. It also does not promote symbolic architecture or dimensional coincidence to physical evidence.",
+  "definitions": [
+    "Target map: (S_A, l_P, H, ...) -> (rho_0, X_0, P_2).",
+    "A valid solution must add predictive restriction beyond treating rho_0, X_0, and P_2 as free phenomenological parameters."
+  ],
+  "mechanism": "Search for a non-circular relation that maps declared information/geometric quantities to the P(X) parameter set, then propagate the resulting fixed parameters through stability, BBN, CMB, and structure-growth tests.",
+  "predictions": [
+    "If a valid map exists, the resulting fixed parameter set should predict at least one cosmological observable not used to construct the map.",
+    "If every dimensionally valid map requires a free scale or the observed dark-energy density, the current bridge remains stopped."
+  ],
+  "verification_type": "none",
+  "address": "UPI<open-problems,201,dark_sector,parameter_map_stop>",
+  "assumptions": [
+    "The apparent-horizon Misner-Sharp energy is treated as the geometric representation of total bulk energy, not an additional dark-energy component.",
+    "No observed target density may be inserted and relabeled as a derived prediction.",
+    "Any proposed information map must remain dimensionally valid and independently testable."
+  ],
+  "falsification_conditions": [
+    "A proposed parameter map is algebraically circular.",
+    "A proposed map double-counts horizon and bulk energy.",
+    "The resulting fixed parameters fail stability or cosmological observational tests.",
+    "No independent discriminating observable follows from the proposed restriction."
+  ],
+  "stop_reason": "The current chain does not uniquely derive rho_0, X_0, and P_2 from S_A, l_P, H, or other declared established inputs without either an additional free physical scale, observational target leakage, or prohibited double counting of horizon energy. Smallest next observation: produce one explicit dimensionally closed candidate map with all constants declared, then run the preregistered stability and cosmology gates.",
+  "information_layer": "ACADEMIC",
+  "equations": [
+    "P(X) = -rho_0 + P_2*(X-X_0)^2",
+    "S_A = k_B*A/(4*l_P^2)",
+    "E_MS = c^4*R_A/(2*G) on the apparent horizon in the declared GR setting"
+  ],
+  "status": "STOP",
+  "description": "Audit STOP for the current dark-sector bridge: no non-circular derivation has yet fixed rho_0, X_0, and P_2 from information or horizon inputs while preserving correct bulk/horizon energy accounting."
+}

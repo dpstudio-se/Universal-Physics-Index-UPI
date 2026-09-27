@@ -1,0 +1,121 @@
+{
+  "id": "omega1766_social_entropy_evidence_map_2026-09",
+  "title": "Ω1766 Evidence Map: information disorder, financial-system claims, historical records and gravity-engineering claims",
+  "status": "OBSERVATION_AND_RESEARCH_MAP",
+  "method": "Separate visual observations, factual claims requiring source verification, established physics, derived mathematics, and hypotheses. Do not convert narrative or political claims into facts.",
+  "image_observations": [
+    {
+      "source_image": "7789.jpg",
+      "theme": "quantum voting / political transparency",
+      "observed_claims": [
+        "A future voting system is described as a quantum voting system.",
+        "The image associates it with transparency, safer voting, direct democracy and equal weighting of votes.",
+        "It claims existing politics is broadly characterized by lies and corruption."
+      ],
+      "classification": "CLAIMS_REQUIRING_EVIDENCE",
+      "upi_route": ["information_integrity", "governance_models", "uncertainty", "provenance"]
+    },
+    {
+      "source_image": "7788.jpg",
+      "theme": "geopolitical coordination / QFS narrative",
+      "observed_claims": [
+        "The image asks whether China, Russia and others are coordinating with the US president to eliminate a supposed NWO.",
+        "It presents this as a geopolitical hypothesis/question, not a demonstrated observation.",
+        "It references a quantum financial system narrative."
+      ],
+      "classification": "HYPOTHESIS_OR_RHETORICAL_CLAIM",
+      "upi_route": ["provenance", "hypothesis", "geopolitical_claim_verification"]
+    },
+    {
+      "source_image": "7787.jpg",
+      "theme": "Crypto Clarity Act / quantum financial system",
+      "observed_claims": [
+        "The image claims the Crypto Clarity Act is designed to legally integrate a quantum financial system into the US Treasury.",
+        "This requires direct primary-source verification against the actual legislation."
+      ],
+      "classification": "UNVERIFIED_CLAIM",
+      "upi_route": ["law_and_policy_sources", "provenance", "claim_verification"]
+    },
+    {
+      "source_image": "7786.jpg",
+      "theme": "media, politics and information flow",
+      "observed_claims": [
+        "The graphic presents a causal loop: politicians create problems, media sells answers, and the public consumes the resulting narrative.",
+        "It references Post- och Inrikes Tidningar and Axel Oxenstierna and uses a 380-year continuity framing."
+      ],
+      "classification": "MIXED_HISTORICAL_FACT_AND_INTERPRETATION",
+      "upi_route": ["history", "information_flow", "media_systems", "provenance"]
+    },
+    {
+      "source_image": "7785.jpg",
+      "theme": "chemtrail agreement claim",
+      "observed_claims": [
+        "The graphic displays a 14 March 2001 document labelled as an agreement between Sweden and the United States concerning atmospheric climate research.",
+        "It interprets this as proof of chemtrails."
+      ],
+      "classification": "DOCUMENT_EXISTS_AS_DISPLAYED_BUT_INTERPRETATION_REQUIRES_PRIMARY_SOURCE_AND_TECHNICAL_VERIFICATION",
+      "upi_route": ["primary_documents", "atmospheric_science", "claim_verification", "provenance"]
+    },
+    {
+      "source_image": "7781.jpg",
+      "theme": "Achaemenid foundation tablet",
+      "observed_claims": [
+        "A 2500-year-old gold foundation tablet is attributed to Darius the Great and the Apadana Palace at Persepolis.",
+        "The object is presented as deliberately deposited beneath the palace foundation."
+      ],
+      "classification": "HISTORICAL_CLAIM_TO_VERIFY",
+      "upi_route": ["archaeology", "ancient_writing", "material_culture", "provenance"]
+    },
+    {
+      "source_image": "7780.jpg",
+      "theme": "gravity engineering / superconductors",
+      "observed_claims": [
+        "The graphic discusses historical claims involving superconductors and gravity modification.",
+        "It emphasizes reproducibility, statistical significance, controls, parameter dependence and independent replication.",
+        "It explicitly distinguishes speculative crystal-prism ideas from established physics."
+      ],
+      "classification": "RESEARCH_FRAMEWORK_WITH_SPECULATIVE_COMPONENTS",
+      "upi_route": ["general_relativity", "superconductivity", "precision_measurement", "anomaly_testing"]
+    }
+  ],
+  "physics_bridge": {
+    "core_rule": "Narrative intensity is not physical energy. A claim enters the physics layer only after operational definition, units, mechanism, measurement and reproducibility.",
+    "entropy_gate": {
+      "symbol": "Omega_1766_G",
+      "state": "information uncertainty reduction subject to thermodynamic consistency",
+      "minimal_loop": "observation -> provenance -> model -> prediction -> measurement -> update",
+      "thermodynamic_constraint": "Delta S_total >= 0",
+      "information_measure": "I(X;M) > 0 when a measurement M provides information about system state X"
+    },
+    "frequency_rule": "Frequency is not entropy. Interference is not entropy production unless a dissipative/thermalization mechanism is specified.",
+    "previous_frequency_bridge": {
+      "f1_hz": 432.0,
+      "f2_hz": 440.0,
+      "difference_hz": 8.0,
+      "sum_hz": 872.0,
+      "carrier_hz": 436.0,
+      "amplitude_beat_hz": 4.0,
+      "intensity_modulation_hz": 8.0
+    }
+  },
+  "historical_entropy_gate_hypothesis": {
+    "definition": "A historical transition where uncertainty, identity or institutional information is compressed into durable records, rituals, laws or infrastructure.",
+    "candidate_mechanisms": [
+      "monuments preserve identity",
+      "written records preserve institutional state",
+      "public records reduce information asymmetry",
+      "rituals reinforce shared state",
+      "legal institutions stabilize expectations"
+    ],
+    "important_boundary": "This is a sociological/information-theoretic hypothesis, not evidence that historical societies physically altered thermodynamic entropy through a special frequency."
+  },
+  "research_queue": [
+    "Verify the actual 2001 Sweden-US atmospheric research document and its technical scope.",
+    "Verify the exact US legislation called Crypto Clarity Act and compare the text with the QFS claim.",
+    "Verify the Darius foundation-tablet provenance through museum or archaeological primary sources.",
+    "Audit historical gravity-modification claims against independent replication literature.",
+    "Build a measurable information-entropy model for historical institutions using observable proxies rather than subjective scores."
+  ],
+  "evidence_labels": ["EST", "OBS", "DER", "HYP", "REPORT", "UNVERIFIED", "ERR"],
+  "omega1766_policy": "Keep the chain auditable: source -> observation -> interpretation -> mathematical derivation -> test -> status."
+}

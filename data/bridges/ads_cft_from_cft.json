@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "The field-theory side is conformal, or a relevant deformation of a CFT."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "boundary = CFT_d"
+  ],
+  "target": "UPI<quantum_field,1,symmetry,conformal_field_theory>",
+  "version": "0.1.0",
+  "mechanism": "The isometry group of AdS_{d+1} is the conformal group of the boundary.",
+  "status": "HYP",
+  "confusion_guard": "CFT is EST as a class of QFTs. Which CFT is whose bulk is the conjecture.",
+  "source": "UPI<theories,1,holography,ads_cft>"
+}

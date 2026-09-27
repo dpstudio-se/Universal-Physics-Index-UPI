@@ -1,0 +1,28 @@
+{
+  "address": "UPI<symbolic,1,memory,dna_minne_7.834>",
+  "title": "DNA-minne 7.834 Hz",
+  "description": "Symbolic memory-organization coordinate at 7.834 Hz. DNA is Functional DNA, a collaboration architecture, not biology. Minne is inspectable memory of classified claims. 7.834 Hz is a configurable reference frequency alongside 8.000 and 8.200 Hz.",
+  "status": "SYM",
+  "quantities": [
+    {
+      "name": "reference_frequency",
+      "value": 7.834,
+      "unit": "Hz",
+      "reference": "Configurable alternative to 8.000 Hz and 8.200 Hz"
+    }
+  ],
+  "definitions": [
+    "dna_minne_7.834 is a named memory slot for symbolic collaboration state",
+    "nu_ref = 7.834 Hz in this declared normalization context"
+  ],
+  "assumptions": [
+    "The frequency is a declared coordinate, not a measured rest-mass frequency",
+    "Memory here means auditable record state, not neural or genomic memory"
+  ],
+  "information_layer": "PUBLIC",
+  "verification_type": "software_test",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Not biological DNA, not a medical frequency, not a universal physical constant. Numerical agreement with 7.834 Hz does not prove physical equivalence.",
+  "tags": ["dna_minne", "7.834", "memory", "SYM"],
+  "version": "0.1.0"
+}

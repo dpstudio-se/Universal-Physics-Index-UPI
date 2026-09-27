@@ -1,0 +1,34 @@
+{
+  "id": "awesome_math_books",
+  "title": "Awesome Math Books",
+  "source": "https://github.com/valeman/Awesome_Math_Books",
+  "source_type": "external_reference_catalog",
+  "status": "EST",
+  "upi_role": "mathematical_reference_discovery",
+  "physical_claim_evidence": false,
+  "mapped_domains": [
+    "analysis",
+    "linear_algebra",
+    "differential_equations",
+    "fourier_harmonic_analysis",
+    "probability",
+    "information_theory",
+    "optimization",
+    "mathematical_physics",
+    "machine_learning",
+    "geometry_topology",
+    "number_theory"
+  ],
+  "priority_for_current_work": [
+    "analysis",
+    "linear_algebra",
+    "fourier_harmonic_analysis",
+    "differential_equations",
+    "probability",
+    "optimization",
+    "information_theory"
+  ],
+  "evidence_rule": "Catalog membership supplies a reference lead only. A specific theorem, definition, derivation, or physical claim must be checked against the underlying source and classified independently.",
+  "omega1766_rule": "Mathematical machinery may be EST while an Ω1766 physical interpretation remains DER, TEST, HYP, STOP, or SYM according to the actual evidence.",
+  "last_mapped": "2026-09-23"
+}

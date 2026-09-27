@@ -1,0 +1,24 @@
+{
+  "format": "upi-contribution-batch",
+  "version": "0.1.0",
+  "verification_type": "software_test",
+  "claims_experimental_verification": false,
+  "producer": "remote-llm",
+  "source": "example template for any model",
+  "records": [
+    {
+      "record_type": "node",
+      "payload": {
+        "address": "UPI<symbolic,1,memory,dna_minne_slot_example>",
+        "title": "Example DNA-minne slot",
+        "description": "Template record showing how a remote LLM should classify a symbolic memory coordinate. Not biological DNA.",
+        "status": "SYM",
+        "information_layer": "PUBLIC",
+        "verification_type": "software_test",
+        "claims_experimental_verification": false,
+        "confusion_guard": "Example only. Not a physical constant and not experimental verification.",
+        "tags": ["example", "dna_minne"]
+      }
+    }
+  ]
+}

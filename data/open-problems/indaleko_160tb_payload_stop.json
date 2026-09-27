@@ -1,0 +1,38 @@
+{
+  "address": "UPI<open-problems,1,corpus,indaleko_160tb_payload>",
+  "title": "Indaleko abstract payload 160 TB is not the body used figure",
+  "description": "Audit STOP for arXiv:2602.20507. The abstract claims a 31-million file dataset spanning 160TB across eight storage platforms. Chapters 5–6 report 31.9 million files, 35.1 TB capacity, 16.2 TB used, and 78.6 GB of ArangoDB metadata. The two number sets are not identified as the same quantity.",
+  "status": "STOP",
+  "definitions": [
+    "Abstract payload: 160 TB, 31 million files, eight storage platforms.",
+    "Body used: 16.2 TB of 35.1 TB capacity, 31.9 million files and directories.",
+    "Index: 78.6 GB of metadata, not file blobs."
+  ],
+  "equations": [
+    "log10(160e12) - log10(16.2e12) ≈ 0.995",
+    "78.6e9 / 16.2e12 ≈ 0.00485"
+  ],
+  "assumptions": [
+    "TB means decimal 10^12 bytes as written in the dissertation.",
+    "The body figures refer to the machines actually indexed."
+  ],
+  "mechanism": "Leave the payload claim STOP until a counting rule names 160 TB as raw, replicated, provisioned, logical, or a leftover draft.",
+  "stop_reason": "Abstract 160 TB and body 16.2 TB used differ by about 10×. Until the author states what 160 TB counts (raw, replicated, provisioned, logical, or a leftover draft), the payload claim stays STOP.",
+  "falsification_conditions": [
+    "A corrigendum or v2 abstract equates 160 TB with a named body figure.",
+    "The author lists the eight platforms and the byte identity of 160 TB.",
+    "A measured inventory sums to 160 TB under a declared counting rule."
+  ],
+  "confusion_guard": "This STOP is a corpus-size identity in a personal-file dissertation, not a physics result. Indaleko's UPI is the Unified Personal Index, not this Universal Physics Index. Do not ingest the files.",
+  "primary_sources": [
+    "https://arxiv.org/abs/2602.20507",
+    "https://github.com/ubc-systopia/Indaleko"
+  ],
+  "predictions": [
+    "If 160 TB is provisioned or replicated capacity, the body 35.1 TB / 16.2 TB used remain the measured figures.",
+    "If 160 TB is a draft leftover, the abstract should be corrected to the body numbers."
+  ],
+  "tags": ["open-problem", "indaleko", "corpus", "STOP", "audit", "160TB"],
+  "verification_type": "software_test",
+  "version": "0.1.0"
+}

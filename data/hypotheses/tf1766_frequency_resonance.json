@@ -1,0 +1,57 @@
+{
+  "address": "UPI<information_physics,1,spiral_flow,tf1766_frequency_resonance>",
+  "title": "TF1766 ↔ 1.766 Hz physical resonance",
+  "description": "Testable hypothesis that the TF1766 reference used in the Spiral Flow framework corresponds to a physically observable 1.766 Hz resonance or dynamically privileged frequency.",
+  "status": "HYP",
+  "quantities": [
+    {
+      "name": "candidate_frequency",
+      "value": 1.766,
+      "unit": "Hz",
+      "reference": "Spiral Flow model"
+    }
+  ],
+  "definitions": [
+    "The candidate frequency is 1.766 Hz.",
+    "A physical resonance claim requires an identifiable system, observable, coupling mechanism and reproducible measurement."
+  ],
+  "equations": [
+    "f_candidate = 1.766 Hz",
+    "t_model(f) = 10.8 Gyr × 0.1 Hz / f"
+  ],
+  "assumptions": [
+    "1.766 Hz is a candidate frequency to test, not an established universal constant.",
+    "The inverse-frequency time relation is a model layer and does not itself establish a physical resonance."
+  ],
+  "mechanism": "Search measured spectra and dynamical systems for a reproducible, system-specific peak or invariant role at 1.766 Hz, while controlling for harmonics, aliases, sampling artifacts, environmental forcing and selection effects.",
+  "predictions": [
+    "Independent datasets selected before analysis should contain a reproducible feature at 1.766 Hz or a predeclared tolerance band when the proposed mechanism predicts it.",
+    "The feature should have a measurable relation to the relevant system dynamics rather than being a numerical coincidence."
+  ],
+  "falsification_conditions": [
+    "Predeclared independent datasets fail to reproduce the candidate feature after correction for resolution and known confounders.",
+    "The apparent feature is fully explained by an alias, harmonic, instrument artifact, environmental forcing or selection procedure."
+  ],
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "UPI model calculation from f = 1.766 Hz",
+      "confidence": 1,
+      "notes": "Verifies arithmetic for the declared model input; does not verify physical resonance."
+    }
+  ],
+  "information_layer": "ACADEMIC",
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false,
+  "causal_claim": false,
+  "confusion_guard": "Numerical relation to TF1766 is not evidence that nature contains a universal 1.766 Hz resonance.",
+  "tags": [
+    "TF1766",
+    "1.766Hz",
+    "hypothesis",
+    "resonance",
+    "spiral-flow"
+  ],
+  "version": "0.1.1",
+  "source_status": "personal_note"
+}

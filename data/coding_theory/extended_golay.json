@@ -1,0 +1,80 @@
+{
+  "tags": [
+    "golay",
+    "error-correction",
+    "perfect-code",
+    "self-dual",
+    "coding-theory"
+  ],
+  "title": "Extended binary Golay code G24",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "G24 corrects bit flips on a classical string. Running the decoder is not quantum error correction, self-healing spacetime, or a biological repair mechanism.",
+  "definitions": [
+    "G24 is a binary linear code of length 24, dimension 12, minimum Hamming distance 8.",
+    "It is obtained by adding an overall parity bit to the perfect cyclic Golay code G23 = [23, 12, 7].",
+    "Weight enumerator: 1 + 759 x^8 + 2576 x^12 + 759 x^16 + x^24. It is self-dual and Type II.",
+    "Any 3 bit flips are uniquely correctable (t = floor((d-1)/2) = 3). Covering radius is 4; the code is not perfect."
+  ],
+  "mechanism": "A 12-bit message is multiplied by the G23 generator polynomial and given a 24th parity bit. Nearest-codeword decoding restores any pattern of at most three bit flips.",
+  "predictions": [
+    "Every pattern of at most three bit flips on a codeword decodes uniquely to that codeword.",
+    "No linear binary [24, 12] code has distance greater than 8."
+  ],
+  "verification_type": "software_test",
+  "address": "UPI<coding_theory,1,binary_code,extended_golay>",
+  "assumptions": [
+    "Alphabet F_2. Hamming metric.",
+    "The generator polynomial of the underlying cyclic G23 is 1+x+x^5+x^6+x^7+x^9+x^11, extended by an overall parity bit."
+  ],
+  "falsification_conditions": [
+    "A software codeword of weight other than 0, 8, 12, 16, 24.",
+    "A received word at distance ≤ 3 from two distinct codewords."
+  ],
+  "primary_sources": [
+    "Golay, Notes on digital coding (1949)",
+    "MacWilliams & Sloane, The Theory of Error-Correcting Codes"
+  ],
+  "quantities": [
+    {
+      "name": "length",
+      "value": 24,
+      "unit": "1"
+    },
+    {
+      "name": "dimension",
+      "value": 12,
+      "unit": "1"
+    },
+    {
+      "name": "minimum_distance",
+      "value": 8,
+      "unit": "1"
+    },
+    {
+      "name": "octads",
+      "value": 759,
+      "unit": "1"
+    }
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Pless, On the uniqueness of the Golay codes",
+      "confidence": 1.0
+    },
+    {
+      "type": "calculation",
+      "source": "UPI software enumerator: 4096 codewords, declared weights, minimum distance 8",
+      "confidence": 1.0
+    }
+  ],
+  "equations": [
+    "n = 24, k = 12, d = 8, t = 3",
+    "G23: 2^12 * sum_{i=0}^{3} C(23,i) = 2^23  (perfect)",
+    "A(x) = 1 + 759 x^8 + 2576 x^12 + 759 x^16 + x^24"
+  ],
+  "status": "EST",
+  "description": "The unique (up to equivalence) binary linear [24, 12, 8] code. It is perfect, self-dual, and has 759 weight-8 codewords (octads). This index ships a software encoder and nearest-codeword decoder."
+}

@@ -1,0 +1,58 @@
+{
+  "tags": [
+    "classical-simulation",
+    "state-vector",
+    "complexity",
+    "resource-boundary",
+    "quantum-speedup-guard"
+  ],
+  "title": "Classical state-vector simulation resource boundary",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Agreement with quantum equations does not turn classical RAM into quantum memory. More than three local states creates a qudit model, not verified quantum hardware.",
+  "definitions": [
+    "N is the total Hilbert-space basis dimension represented by the simulator.",
+    "A dense pure-state simulation stores N complex amplitudes.",
+    "A dense general unitary matrix contains N^2 complex entries, although structured gates can be applied more efficiently.",
+    "Quantum speedup is a hardware-and-algorithm resource claim, not a property of equation names."
+  ],
+  "mechanism": "Every represented basis state requires an explicit complex number in a dense simulation. Operations must read or update these stored amplitudes, so the classical resource requirement grows with the full represented dimension.",
+  "predictions": [
+    "Doubling N approximately doubles dense state-vector storage when numeric representation is fixed.",
+    "A register with dimensions (d_1,...,d_n) allocates product_i d_i amplitudes.",
+    "The simulator cannot demonstrate hardware quantum advantage merely by reproducing ideal probabilities."
+  ],
+  "verification_type": "software_test",
+  "address": "UPI<computational_physics,2,state_vector,classical_resource_boundary>",
+  "assumptions": [
+    "The simulator uses a dense classical state vector.",
+    "Compression, tensor-network truncation, sparsity and problem-specific symmetries are not assumed.",
+    "The complexity statements describe asymptotic software resources, not physical energy consumption."
+  ],
+  "falsification_conditions": [
+    "Reject the stated O(N) dense storage bound if the implementation does not explicitly store one amplitude per basis state.",
+    "Revise the operation bound when a documented sparse, tensor-network or structured algorithm is used.",
+    "Reject any speedup claim that omits a matched classical baseline, hardware resources and end-to-end runtime."
+  ],
+  "primary_sources": [
+    "UPI implementation source: src/upi/qudit.py",
+    "UPI standalone implementation source: modules/vrasi-qudit/src/vrasi_qudit/core.py"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Direct data-structure and operation-count analysis of a dense complex state vector",
+      "notes": "The bound follows from explicitly storing N amplitudes; it is a software derivation rather than an experimental result."
+    }
+  ],
+  "equations": [
+    "memory_dense_state = O(N)",
+    "memory_dense_operator = O(N^2)",
+    "time_dense_matrix_vector = O(N^2)",
+    "N = product_i d_i",
+    "classical_amplitudes_stored = N"
+  ],
+  "status": "DER",
+  "description": "Derived computational boundary for software that explicitly stores and updates every amplitude of an N-dimensional quantum state. Such a simulator can reproduce ideal finite-dimensional linear algebra but uses classical resources proportional to the represented basis size."
+}

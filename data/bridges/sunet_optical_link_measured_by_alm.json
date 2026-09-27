@@ -1,0 +1,20 @@
+{
+  "source": "UPI<infrastructure_physics,1,optical_network,sunet_optical_transmission>",
+  "target": "UPI<infrastructure_physics,1,optical_measurement,sunet_alm_otdr_monitoring>",
+  "relation": "MEASURED_BY",
+  "status": "DER",
+  "equations": [
+    "distance = v_g delta_t / 2"
+  ],
+  "assumptions": [
+    "ALM uses calibrated optical time-domain measurements compatible with the OTDR principle described by SUNET."
+  ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "SUNET public ALM deployment description."
+    }
+  ],
+  "confusion_guard": "MEASURED_BY links a network layer to a monitoring method; it is not a claim that all fibre properties or fault causes are observed.",
+  "version": "0.1.0"
+}

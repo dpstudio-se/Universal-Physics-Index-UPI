@@ -1,0 +1,21 @@
+{
+  "source": "UPI<infrastructure_physics,1,optical_network,sunet_optical_transmission>",
+  "target": "UPI<ELECTROMAGNETISM,1,FIELD,MAXWELL_EQUATIONS>",
+  "relation": "DERIVED_FROM",
+  "status": "DER",
+  "equations": [
+    "c0 = lambda0 f",
+    "guided modes satisfy Maxwell equations with dielectric boundary conditions"
+  ],
+  "assumptions": [
+    "Classical electromagnetism and macroscopic constitutive relations apply to the fibre link."
+  ],
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Standard guided-wave optics mapping applied to SUNET's documented optical-fibre layer."
+    }
+  ],
+  "confusion_guard": "This relation classifies the physical mechanism; it does not imply that SUNET is a new fundamental theory or that its website independently verifies Maxwell theory.",
+  "version": "0.1.0"
+}

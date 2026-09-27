@@ -1,0 +1,23 @@
+{
+  "handoff_id": "handoff-index-triage-manager-to-schema-validator",
+  "task_id": "task-index-triage-baseline-1",
+  "from_owner": "manager",
+  "next_owner": "schema-validator",
+  "artifact": {
+    "kind": "schema",
+    "ref": "schemas/"
+  },
+  "evidence": [
+    {"kind": "test", "ref": "tests/test_governed_system.py"}
+  ],
+  "assumptions": [
+    "schema-validator does not run debug-index",
+    "example contracts are the merge input for this specialist"
+  ],
+  "risks": [
+    "passing schema checks while debug-index findings regress"
+  ],
+  "deadline_at": "2026-08-26T23:59:59Z",
+  "status": "SYM",
+  "confusion_guard": "Schema validation and index triage are separate artifacts with a defined merge rule: both must pass."
+}

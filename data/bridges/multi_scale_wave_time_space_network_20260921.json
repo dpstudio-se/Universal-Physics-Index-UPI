@@ -1,0 +1,97 @@
+{
+  "address": "UPI<multi_scale,wave_time_space,omega1766>",
+  "title": "Multi-scale wave, time, space and network mapping",
+  "version": "0.1.0",
+  "status": "SYM/DER/HYP",
+  "core": [
+    "DOMAIN",
+    "SCALE",
+    "WAVE",
+    "NETWORK",
+    "INFORMATION",
+    "MIRROR",
+    "VERIFICATION"
+  ],
+  "coordinates": {
+    "frequency": "f",
+    "local_time": "T=1/f",
+    "spatial_scale": "lambda=v/f",
+    "angular_frequency": "omega=2*pi*f",
+    "energy": "E=h*f"
+  },
+  "references": {
+    "f_8_hz": {
+      "f_Hz": 8,
+      "T_s": 0.125,
+      "omega_rad_s": 50.26548246,
+      "E_J": 5.30085612e-33,
+      "status": "SYM/DER"
+    },
+    "f_7_834125_hz": {
+      "f_Hz": 7.834125,
+      "T_s": 0.1276466740063504,
+      "status": "reference"
+    },
+    "beat": {
+      "delta_f_Hz": 0.165875,
+      "period_s": 6.0285852,
+      "status": "DER"
+    }
+  },
+  "chamber": {
+    "definition": "C_i=(D_i,L_i,T_i,f_i,v_i,M_i)",
+    "historical_time_separate": true
+  },
+  "network": {
+    "graph": "G=(V,E)",
+    "metadata": "G_D=(V,E,L,f,E_phys,I,t)"
+  },
+  "dns": {
+    "status": "EST",
+    "function": "name -> resolution -> address/resource record -> node -> response",
+    "dna_analogy_status": "SYM/DER"
+  },
+  "shadow": {
+    "definition": "time-ordered historical trace",
+    "update": "H_(t+1)=H_t union E_t",
+    "not_literal_rna": true
+  },
+  "layers": {
+    "DNA": "curated durable verified reference",
+    "RNA": "active workload/transformation",
+    "Shadow": "evolving historical trace",
+    "Research": "HYP/DER/SYM",
+    "Verification": "promotion gate"
+  },
+  "omega1766": {
+    "operator": "T o B o R",
+    "status": "SYM/DER",
+    "universal_constant": false
+  },
+  "fluid_control": {
+    "equations": [
+      "partial_t u +(u dot grad)u = -(1/rho)grad p + nu Laplacian(u)+f",
+      "div u=0"
+    ],
+    "rigid_rotation": [
+      "u=(-omega*y,omega*x,0)",
+      "dp/dr=rho*omega^2*r",
+      "p(r)=p(0)+0.5*rho*omega^2*r^2"
+    ],
+    "caveat": "special rigid-rotation solution/control field"
+  },
+  "mirror": {
+    "round_trip": "epsilon=d(X_A,X_hat_A)",
+    "invariant_residual": "Delta_Omega=d(Omega_A,Omega_B)",
+    "scale_residual": "epsilon_scale=d(Pi_A,Pi_B)"
+  },
+  "gates": {
+    "EST": "established",
+    "DER": "derivation",
+    "HYP": "hypothesis",
+    "SYM": "symbolic/architecture",
+    "STOP": "evidence/domain boundary",
+    "ERR": "invalid"
+  },
+  "rule": "LINKED != MERGED"
+}

@@ -1,0 +1,17 @@
+{
+  "gate": "PHI_1766",
+  "verdict": "PASS",
+  "status": "waiting",
+  "evidence_level": 4,
+  "completion_basis": "artifact+check",
+  "completion_basis_team_done": "CLAIM_REJECT",
+  "rejected_advances": ["done", "verified", "production-ready", "canvas-exists"],
+  "claim_table": [
+    {"id": "C1", "claim": "evaluate(record.json)=PASS exit 0", "pointer": "record.json + omega_1766.py", "level": 4, "verdict": "PASS"},
+    {"id": "C2", "claim": "missing artifact -> BLOCK exit 1", "pointer": "stdout demo", "level": 2, "verdict": "PASS"},
+    {"id": "C3", "claim": "defect taxonomy per evaluate()", "pointer": "source + live dump", "level": 4, "verdict": "PASS"},
+    {"id": "C4", "claim": "team/workflow done", "pointer": "none", "level": 0, "verdict": "CLAIM_REJECT"},
+    {"id": "C5", "claim": "canvas/finish line exists", "pointer": "none", "level": 0, "verdict": "CLAIM_REJECT"},
+    {"id": "C6", "claim": "status waiting due to missing finish line", "pointer": "record.json failure_reason", "level": 2, "verdict": "PASS"}
+  ]
+}

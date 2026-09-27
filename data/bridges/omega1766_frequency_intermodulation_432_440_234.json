@@ -1,0 +1,76 @@
+{
+  "id": "omega1766_frequency_intermodulation_432_440_234",
+  "title": "Ω1766 Frequency Intermodulation: 234/432/440 Hz",
+  "status": "DERIVED_WITH_HYPOTHESIS_BOUNDARIES",
+  "purpose": "Record reproducible signal mathematics while separating established signal physics from symbolic/esoteric interpretation.",
+  "inputs_hz": {
+    "f_234": 234.0,
+    "f_432": 432.0,
+    "f_440": 440.0
+  },
+  "derivations": {
+    "sum_234_432_hz": 666.0,
+    "mean_234_432_hz": 333.0,
+    "difference_432_234_hz": 198.0,
+    "half_difference_hz": 99.0,
+    "difference_440_432_hz": 8.0,
+    "sum_mean_relation": "333 = (234 + 432)/2",
+    "step_relation": "333 - 234 = 432 - 333 = 99",
+    "integer_relations": [
+      "3*37 = 111",
+      "6*37 = 222",
+      "9*37 = 333",
+      "18*37 = 666"
+    ]
+  },
+  "signal_models": {
+    "432_plus_440": {
+      "equation": "x(t)=A*cos(2*pi*432*t)+A*cos(2*pi*440*t)",
+      "identity_form": "x(t)=2A*cos(2*pi*436*t)*cos(2*pi*4*t)",
+      "carrier_hz": 436.0,
+      "amplitude_beat_hz": 4.0,
+      "intensity_modulation_hz": 8.0
+    },
+    "234_plus_432": {
+      "equation": "x(t)=A*cos(2*pi*234*t)+A*cos(2*pi*432*t)",
+      "identity_form": "x(t)=2A*cos(2*pi*333*t)*cos(2*pi*99*t)",
+      "carrier_hz": 333.0,
+      "amplitude_beat_hz": 99.0,
+      "intensity_squared_components_hz": [198.0, 666.0]
+    }
+  },
+  "units_control": {
+    "particulate_count_666": "dimensionless count",
+    "frequency_666_hz": "s^-1",
+    "warning": "A numerical equality between a count and a frequency is not a physical identity."
+  },
+  "claims_classification": {
+    "established_math": [
+      "432+234=666",
+      "(432+234)/2=333",
+      "432-234=198",
+      "(432-234)/2=99",
+      "440-432=8"
+    ],
+    "established_signal_physics": [
+      "linear superposition",
+      "sum/difference trigonometric identity",
+      "power/intensity depends on squared amplitude in standard detector models"
+    ],
+    "established_biology": [
+      "human mitochondrial genome contains 37 genes",
+      "neutral carbon-12 has 6 protons, 6 neutrons and 6 electrons"
+    ],
+    "hypothesis_or_symbolic": [
+      "432 Hz as universal/natural healing frequency",
+      "440 Hz as intrinsically energetically destructive",
+      "666 as a universal life constant",
+      "frequency tuning causing carbon to become diamond"
+    ],
+    "unverified": [
+      "attribution of the 3-6-9 universe quote to Nikola Tesla"
+    ]
+  },
+  "omega1766_rule": "Do not promote arithmetic coincidences or symbolic correspondences into physical laws without an independent mechanism and measurable prediction.",
+  "next_test": "Compare the derived spectral products against measured acoustic/electromagnetic/biological systems and quantify any excess correlation against null models."
+}

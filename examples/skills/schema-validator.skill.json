@@ -1,0 +1,41 @@
+{
+  "skill_id": "schema-validator",
+  "version": "0.1.0",
+  "status": "SYM",
+  "objective": "Validate public UPI schemas and example contracts without scanning index content for scientific errors.",
+  "activation": {
+    "when": [
+      "index triage routine",
+      "schema or example contract changes"
+    ],
+    "not_when": [
+      "scientific provenance repair",
+      "debug-index finding classification"
+    ]
+  },
+  "steps": [
+    "Load schemas from schemas/.",
+    "Check each schema with Draft7Validator.check_schema.",
+    "Validate example workflow, skill, routine, ledger and handoff documents.",
+    "Write a durable pass/fail artifact. Do not mutate sources."
+  ],
+  "examples": [
+    "pytest tests/test_governed_system.py tests/test_schema.py"
+  ],
+  "anti_patterns": [
+    "Manager running schema validation instead of routing it",
+    "Using schema validation as experimental evidence",
+    "Sharing debug-index capabilities with this role"
+  ],
+  "acceptance_tests": [
+    {
+      "id": "SV-1",
+      "criterion": "Example governed-system contracts validate against their schemas.",
+      "verification_type": "software_test"
+    }
+  ],
+  "changelog": [
+    {"version": "0.1.0", "change": "Added after three index-triage baselines; tools differ from debug-index."}
+  ],
+  "confusion_guard": "Schema validity is a software contract check, not scientific verification."
+}

@@ -1,0 +1,16 @@
+{
+  "assumptions": [
+    "The energy being identified is a mode quantum of frequency f."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "E = h f",
+    "m = E / c^2 = h f / c^2"
+  ],
+  "target": "UPI<QUANTUM_MECHANICS,1,QUANTA,PLANCK_EINSTEIN_RELATION>",
+  "version": "0.1.0",
+  "mechanism": "Einstein used Planck’s quantum of action as the energy of a light quantum. The same E is the energy that carries inertia.",
+  "status": "DER",
+  "confusion_guard": "Building on Planck is what Einstein did. Building on Einstein with the same E is composition, not a new emission law.",
+  "source": "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+}

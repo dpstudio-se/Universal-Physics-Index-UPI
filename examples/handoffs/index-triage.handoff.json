@@ -1,0 +1,24 @@
+{
+  "handoff_id": "handoff-index-triage-scan-to-verify",
+  "task_id": "task-index-triage-baseline-1",
+  "from_owner": "scanner",
+  "next_owner": "verifier",
+  "artifact": {
+    "kind": "report",
+    "ref": "index-triage-report.md"
+  },
+  "evidence": [
+    {"kind": "test", "ref": "upi debug-index data --inspect"}
+  ],
+  "assumptions": [
+    "data/ is the declared scan root",
+    "source records are untrusted input"
+  ],
+  "risks": [
+    "hidden-path records missed without --inspect",
+    "semantic mirrors remain HYP"
+  ],
+  "deadline_at": "2026-08-26T23:59:59Z",
+  "status": "SYM",
+  "confusion_guard": "A typed handoff is a contract. It does not replace independent verification."
+}

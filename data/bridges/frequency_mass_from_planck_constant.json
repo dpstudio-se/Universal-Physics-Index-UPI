@@ -1,0 +1,16 @@
+{
+  "assumptions": [
+    "SI 2019 exact h and c."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "h = 6.62607015e-34 J s (exact)",
+    "m = h f / c^2"
+  ],
+  "target": "UPI<physics,1,fundamental,planck_constant>",
+  "version": "0.1.0",
+  "mechanism": "The conversion factor from frequency to mass-equivalent is h/c², built from two SI-defined constants.",
+  "status": "EST",
+  "confusion_guard": "Exact constants make the arithmetic exact. They do not enlarge the physical referent of m.",
+  "source": "UPI<information_physics,1,inertia,frequency_mass_equivalent>"
+}

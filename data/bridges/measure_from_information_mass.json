@@ -1,0 +1,15 @@
+{
+  "assumptions": [
+    "The inertial station of the measure is information mass."
+  ],
+  "relation": "DERIVED_FROM",
+  "equations": [
+    "m = h f / c^2"
+  ],
+  "target": "UPI<information_physics,1,inertia,information_mass>",
+  "version": "0.1.0",
+  "mechanism": "The measure uses m = h f / c^2 as the number assigned to a frequency-encoded carrier, then proposes a dual description through entropy and a brane dictionary.",
+  "status": "HYP",
+  "confusion_guard": "Universality of the measure is a larger claim than information mass alone.",
+  "source": "UPI<information_physics,1,measure,universal_information_measure>"
+}

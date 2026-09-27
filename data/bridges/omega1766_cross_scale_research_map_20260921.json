@@ -1,0 +1,111 @@
+{
+  "id": "omega1766_cross_scale_research_map_20260921",
+  "date": "2026-09-21",
+  "status": "EST_DER_HYP_STOP_GOVERNED",
+  "operator": {
+    "name": "Omega1766",
+    "definition": "T o B o R",
+    "status": "SYM",
+    "note": "Project-defined audit/feedback operator; not an SI quantity."
+  },
+  "confirmed_math": {
+    "period": {"equation": "T=1/f", "guard": "f->0 implies T->infinity"},
+    "planck_einstein": "E=hf",
+    "mass_energy": "E=mc^2",
+    "mass_equivalent": "m_eq=hf/c^2",
+    "reference_8hz": {
+      "f_hz": 8.0,
+      "T_s": 0.125,
+      "T_ms": 125.0,
+      "omega_rad_s": 50.26548245743669
+    },
+    "reference_7_834125hz": {
+      "f_hz": 7.834125,
+      "T_s": 0.127646674,
+      "T_ms": 127.646674,
+      "period_difference_ms_vs_8hz": 2.646674
+    },
+    "beat": {
+      "delta_f_hz": 0.165875,
+      "beat_period_s": 6.028636
+    },
+    "octave_84": {
+      "f0_hz": 7.834125,
+      "factor": "2^84",
+      "factor_numeric": 1.9342813113834067e25,
+      "f84_hz": 1.515340158e26,
+      "energy_GeV": 626.694,
+      "status": "DER",
+      "guard": "Not Planck frequency."
+    },
+    "planck_frequency_order_hz": 1.85e43
+  },
+  "established_domains": [
+    "frequency-period conversion",
+    "Planck-Einstein relation",
+    "mass-energy equivalence",
+    "nonlinear wave/KdV mathematics",
+    "recurrence analysis",
+    "Schumann resonance as Earth-ionosphere cavity phenomenon",
+    "hydrogen 21-cm hyperfine physics",
+    "cosmological redshift relation",
+    "elastic recoil kinematics",
+    "holographic entanglement results within their stated theoretical domain",
+    "E8 mathematics"
+  ],
+  "hypotheses": [
+    {
+      "id": "H1",
+      "claim": "Different physical systems may share dimensionless dynamical signatures across scale.",
+      "status": "HYP"
+    },
+    {
+      "id": "H2",
+      "claim": "Recurrence plus historical trace may provide a useful generalized state description.",
+      "status": "HYP"
+    },
+    {
+      "id": "H3",
+      "claim": "Omega1766 may serve as a reusable transformation/audit architecture.",
+      "status": "HYP"
+    },
+    {
+      "id": "H4",
+      "claim": "7.834125 Hz and 8 Hz define a useful local phase/beat reference pair.",
+      "status": "DER+HYP",
+      "guard": "The beat mathematics is DER; any physical privileged role is HYP."
+    },
+    {
+      "id": "H5",
+      "claim": "The 84-octave 626.7 GeV result may have physical significance.",
+      "status": "HYP"
+    },
+    {
+      "id": "H6",
+      "claim": "Recurrence analysis may provide a common measurement language across Earth, laboratory, and astronomical time series.",
+      "status": "HYP"
+    }
+  ],
+  "stop_errors": [
+    "f->0,T->0",
+    "626.7 GeV treated as Planck scale",
+    "0 Hz treated as dark matter",
+    "dS<=0 treated as the universal second law",
+    "self-inversion treated as experimental validation",
+    "visual helix/vortex treated as a physical law without derivation",
+    "E8->27D->11D->4D treated as established physics"
+  ],
+  "graph_edges": [
+    "DERIVED_FROM",
+    "MEASURED_BY",
+    "SCALED_BY",
+    "RECURRENTS_TO",
+    "TRANSPORTS",
+    "BOUNDARY_CONSTRAINS",
+    "CONTRADICTS",
+    "FALSIFIED_BY",
+    "STOPS_AT",
+    "ANALOGY_ONLY"
+  ],
+  "principle": "LINKED != MERGED"
+}

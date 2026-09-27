@@ -1,0 +1,75 @@
+{
+  "tags": [
+    "leech",
+    "lattice",
+    "sphere-packing",
+    "golay",
+    "24-dimensions"
+  ],
+  "title": "Leech lattice Λ24",
+  "version": "0.1.0",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Λ24 is a packing lattice in R^24. Drawing it as a golden cloud does not compactify spacetime or encode a physical solid.",
+  "definitions": [
+    "Λ24 is the unique even unimodular lattice in R^24 with minimum norm 4.",
+    "Witt construction: from the extended binary Golay code G24 one builds Λ24 as a union of cosets of 2Z^24 and related 4Z^24 translates.",
+    "Minimal vectors number 196560; none have norm 2."
+  ],
+  "mechanism": "Golay codewords label which coordinates of a 24-vector are shifted. The resulting discrete subgroup is even, unimodular, and has minimum norm 4.",
+  "predictions": [
+    "No packing of equal spheres in R^24 exceeds the density of Λ24.",
+    "Every even unimodular 24-dimensional lattice with min-norm 4 is isometric to Λ24."
+  ],
+  "verification_type": "mathematical_check",
+  "address": "UPI<coding_theory,1,sphere_packing,leech_lattice>",
+  "assumptions": [
+    "Euclidean R^24.",
+    "The Golay code used in the Witt construction is the extended [24,12,8] code."
+  ],
+  "falsification_conditions": [
+    "A denser sphere packing in 24 dimensions.",
+    "A Witt-style construction from G24 that fails to be even or unimodular."
+  ],
+  "primary_sources": [
+    "Leech, Notes on sphere packings (1967)",
+    "Conway & Sloane, Sphere Packings, Lattices and Groups",
+    "Viazovska et al., universal optimality of the Leech lattice"
+  ],
+  "quantities": [
+    {
+      "name": "dimension",
+      "value": 24,
+      "unit": "1"
+    },
+    {
+      "name": "minimal_norm",
+      "value": 4,
+      "unit": "1"
+    },
+    {
+      "name": "kissing_number",
+      "value": 196560,
+      "unit": "1"
+    }
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "calculation",
+      "source": "Cohn–Kumar–Miller–Radchenko–Viazovska: optimality of Λ24 sphere packing (2016/2017)",
+      "confidence": 1.0
+    },
+    {
+      "type": "calculation",
+      "source": "Conway: uniqueness of the Leech lattice",
+      "confidence": 1.0
+    }
+  ],
+  "equations": [
+    "min { ||x||^2 : x in Λ24, x ≠ 0 } = 4",
+    "kissing number = 196560",
+    "det(Λ24) = 1"
+  ],
+  "status": "EST",
+  "description": "The unique even unimodular lattice in 24 dimensions with no vectors of norm 2. It realises the densest known sphere packing in 24 dimensions (proved optimal)."
+}

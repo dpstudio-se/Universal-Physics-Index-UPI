@@ -1,0 +1,503 @@
+{
+  "catalog_id": "index-triage-known-findings-v1",
+  "workflow_id": "index-triage-v1",
+  "status": "SYM",
+  "verification_type": "software_test",
+  "claims_experimental_verification": false,
+  "baseline_runs": 3,
+  "artifact_hash": "733aff76a4d707fff1d2d1f13b6a6fdd4a3e4dc7711c4fe0c4d135a18c33c271",
+  "findings": [
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:bd505c8fa07035f1",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/abjm_from_ads_cft.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:9c6cf5d4c3a3ab80",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/abjm_from_m_brane.json"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:2a47ccdaf254077f",
+      "record_type": "bridge",
+      "class": "hypothesis_boundary_gap",
+      "source_path": "bridges/ads_cft_dual_brane.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:2a47ccdaf254077f",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/ads_cft_dual_brane.json"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:3498dcfd18bae69e",
+      "record_type": "bridge",
+      "class": "hypothesis_boundary_gap",
+      "source_path": "bridges/ads_cft_from_ads.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:3498dcfd18bae69e",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/ads_cft_from_ads.json"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:0e84ad5243a82f03",
+      "record_type": "bridge",
+      "class": "hypothesis_boundary_gap",
+      "source_path": "bridges/ads_cft_from_cft.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:0e84ad5243a82f03",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/ads_cft_from_cft.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:c24477829b46b35b",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/frequency_mass_from_mass_energy.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:c042443184af8386",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/frequency_mass_from_planck_constant.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:24b7480ecdc71f4b",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/frequency_mass_from_planck_einstein.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:329776a42b8f5917",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/hilbert_state_measured_by_born_rule.json"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:dc93823c0adb05c5",
+      "record_type": "bridge",
+      "class": "hypothesis_boundary_gap",
+      "source_path": "bridges/information_mass_from_frequency_mass.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:dc93823c0adb05c5",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/information_mass_from_frequency_mass.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:6479038070bb3750",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/leech_from_golay.json"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:9a89799b0bf7bb2f",
+      "record_type": "bridge",
+      "class": "hypothesis_boundary_gap",
+      "source_path": "bridges/measure_dual_bekenstein.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:9a89799b0bf7bb2f",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/measure_dual_bekenstein.json"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:b133813bd7ca0d66",
+      "record_type": "bridge",
+      "class": "hypothesis_boundary_gap",
+      "source_path": "bridges/measure_from_information_mass.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:b133813bd7ca0d66",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/measure_from_information_mass.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:3bd5c188f9aa18fa",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/multi_qudit_register_from_hilbert_spaces.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:598598e0d9c1c907",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/qec_from_golay.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:586a5b090abca157",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/qec_from_hilbert.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:55aa77e30b39cd1e",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/qudit_fourier_dual_to_computational_basis.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:416b032fb9612bb8",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/qudit_gates_from_hilbert_space.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:d5b9a8c945e399ed",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/rt_dual_bekenstein.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:478949fa2de7780c",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/rt_from_ads_cft.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:574d2666a3d3785e",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/rt_from_bh.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:ee94c7d02daa9057",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/torus_search_from_amplitude_amplification.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:d352429f74102024",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/torus_search_from_fourier_duality.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:d426cc2827628c6e",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/torus_search_from_local_qudit_functions.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:bb3fcbbc671dae68",
+      "record_type": "bridge",
+      "class": "provenance_gap",
+      "source_path": "bridges/torus_search_from_tensor_register.json"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:bd5de5f47561ce33",
+      "record_type": "node",
+      "class": "negative_fixture",
+      "source_path": "examples/invalid_symbolic_as_established.json"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:bd5de5f47561ce33",
+      "record_type": "node",
+      "class": "negative_fixture",
+      "source_path": "examples/invalid_symbolic_as_established.json"
+    },
+    {
+      "code": "UPI-E005",
+      "status": "ERR",
+      "path": "path:bd5de5f47561ce33",
+      "record_type": "node",
+      "class": "negative_fixture",
+      "source_path": "examples/invalid_symbolic_as_established.json"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:bd5de5f47561ce33",
+      "record_type": "node",
+      "class": "negative_fixture",
+      "source_path": "examples/invalid_symbolic_as_established.json"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:3f70057c5352c8d1",
+      "record_type": null,
+      "class": "source_manifest",
+      "source_path": "sources/indaleko.json"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:0c42289fef07ec74",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:0c42289fef07ec74",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:0c42289fef07ec74",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:0c42289fef07ec74",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:e68a7782771303a0",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:7c4c0f4db6c28acb",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:27dd4377839949e8",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:27dd4377839949e8",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:27dd4377839949e8",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-E004",
+      "status": "ERR",
+      "path": "path:7d64e80b1eb346e4",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:7d64e80b1eb346e4",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:2dde68bef1692702",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:163e0b08660814a8",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:2e88973b805b9db9",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:2e88973b805b9db9",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:70799d3f9238434d",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:d7206f9fb6bcbf83",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:18a983a1a7e10deb",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:193e97e5ea144237",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:b453499634275c88",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:463630f666a62908",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:7e050247bb4fb747",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:65d33882ce4842af",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:ec679df0ffcaa6fb",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:48539ea240419382",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D003",
+      "status": "ERR",
+      "path": "path:48539ea240419382",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-E007",
+      "status": "ERR",
+      "path": "path:48539ea240419382",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:937f200f19f77de7",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    },
+    {
+      "code": "UPI-D002",
+      "status": "STOP",
+      "path": "path:0e319f6590b1d7eb",
+      "record_type": null,
+      "class": "baseline_refresh_2026-09-24"
+    }
+  ],
+  "confusion_guard": "Cataloged software-test findings remain unresolved until their source records are corrected; catalog membership is not scientific validation."
+}

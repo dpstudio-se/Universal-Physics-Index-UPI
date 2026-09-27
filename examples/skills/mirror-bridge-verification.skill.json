@@ -1,0 +1,59 @@
+{
+  "skill_id": "mirror-bridge-verification",
+  "version": "0.1.0",
+  "status": "SYM",
+  "objective": "Run a fail-closed primary/mirror comparison and route its result through a typed UPI bridge without promoting unsupported claims.",
+  "activation": {
+    "when": [
+      "a UPI node needs bidirectional verification",
+      "two linked nodes require an explicit bridge",
+      "a research result must be compared against an evidence-only reconstruction"
+    ],
+    "not_when": [
+      "experimental evidence is absent but a physical claim is being promoted",
+      "the source artifact or provenance cannot be resolved",
+      "the requested operation would mutate canonical data without approval"
+    ]
+  },
+  "steps": [
+    "Create a durable task with proposal hash, owner, idempotency key and declared tolerance.",
+    "Resolve and digest every evidence artifact; stop on missing, duplicate or mismatched provenance.",
+    "Run primary analysis A without exposing the expected answer to the mirror.",
+    "Run mirror derivation M from evidence only, then compare units, domain and quantity.",
+    "Create or validate a typed bridge with source, target, relation, status and evidence.",
+    "Classify AGREE, CONFLICT or UNKNOWN and preserve the delta plus next observation.",
+    "Write the durable report and next pointer; require human review before any canonical promotion."
+  ],
+  "examples": [
+    "src/upi/feedback.py:review_node(...)",
+    "pytest tests/test_feedback.py -q"
+  ],
+  "anti_patterns": [
+    "feeding the expected answer into the mirror derivation",
+    "treating visual or symbolic similarity as physical identity",
+    "using bridge existence as evidence of causality",
+    "turning a software PASS into experimental verification",
+    "mutating canonical data to make the mirror agree"
+  ],
+  "acceptance_tests": [
+    {
+      "id": "AT-1",
+      "criterion": "Matching evidence-derived quantities reach the scoped verification gate while remaining pending human review.",
+      "verification_type": "software_test"
+    },
+    {
+      "id": "AT-2",
+      "criterion": "Mirror conflicts, missing checks and provenance failures block the gate.",
+      "verification_type": "software_test"
+    },
+    {
+      "id": "AT-3",
+      "criterion": "The typed bridge remains explicit about relation and scientific status.",
+      "verification_type": "software_test"
+    }
+  ],
+  "changelog": [
+    {"version": "0.1.0", "change": "Initial mirror-to-bridge verification skill."}
+  ],
+  "confusion_guard": "This skill verifies scoped software and evidence consistency. It does not prove a physical theory."
+}

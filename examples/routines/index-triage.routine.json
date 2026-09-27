@@ -1,0 +1,15 @@
+{
+  "routine_id": "index-triage-weekly-v1",
+  "workflow_id": "index-triage-v1",
+  "skill_id": "index-triage",
+  "status": "SYM",
+  "trigger": {"kind": "cron", "value": "0 6 * * 1"},
+  "idempotency_key": "index-triage:{root}:{content_hash}",
+  "retry_policy": {"max_attempts": 2, "on_exhausted": "escalate"},
+  "approval": {
+    "required": true,
+    "boundary": "unexpected findings or missing catalog entries versus examples/ledger/baselines/known-findings.json"
+  },
+  "heartbeat_on_empty": true,
+  "confusion_guard": "A heartbeat with zero findings is an empty-input signal, not proof that the index is scientifically complete."
+}

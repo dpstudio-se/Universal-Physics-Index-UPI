@@ -1,0 +1,41 @@
+{
+  "id": "UPI<RESEARCH,1,MIRROR_LOOP,VALIDATION>",
+  "title": "Mirror Loop Validation",
+  "domain": "research_methodology",
+  "generation": "v1",
+  "status": "DER",
+  "evidence_level": "L2",
+  "claims": [
+    {
+      "id": "M1",
+      "status": "DER",
+      "claim": "Forward and inverse calculations can establish computational closure within declared equations and assumptions."
+    },
+    {
+      "id": "M2",
+      "status": "EST",
+      "claim": "Dimensional consistency is a necessary constraint but does not establish physical coupling."
+    },
+    {
+      "id": "M3",
+      "status": "HYP",
+      "claim": "A proposed bridge gains empirical support only when it survives independent observations and alternative explanations."
+    },
+    {
+      "id": "M4",
+      "status": "STOP",
+      "claim": "7.834/8 Hz coupling is not established by numerical proximity or mirror closure alone."
+    }
+  ],
+  "gates": [
+    "dimensions",
+    "inverse",
+    "software_reproduction",
+    "model_test",
+    "independent_data",
+    "replication",
+    "review"
+  ],
+  "method_ref": "docs/MIRROR_LOOP_VALIDATION.md",
+  "provenance": "UPI research-method record; evidence level deliberately limited to software-verifiable methodology."
+}

@@ -1,0 +1,94 @@
+{
+  "id": "UPI<MeasurementTool,MetaRadar,BLE,01>",
+  "type": "measurement_tool",
+  "name": "MetaRadar",
+  "repository": "BLE-Research-Group/MetaRadar",
+  "domain": "Bluetooth Low Energy radio observation",
+  "status": "EST",
+  "role": [
+    "measurement",
+    "data_acquisition",
+    "signal_observation",
+    "temporal_sampling",
+    "recurrence_analysis_input",
+    "FL_verification_input"
+  ],
+  "capabilities": [
+    "BLE scanning",
+    "BLE traffic analysis",
+    "device metadata",
+    "GATT inspection",
+    "device type metadata",
+    "approximate distance estimation"
+  ],
+  "primary_measurements": [
+    "RSSI",
+    "advertising metadata",
+    "observable device/service metadata",
+    "approximate distance",
+    "observation time",
+    "repeated observations"
+  ],
+  "evidence_policy": {
+    "instrument_observation": "EST",
+    "derived_quantity": "DER",
+    "independent_prediction_test": "TEST",
+    "omega1766_interpretation": "HYP",
+    "missing_calibration_or_mechanism": "STOP",
+    "architectural_mapping": "SYM"
+  },
+  "upi_pipeline": [
+    "observe",
+    "timestamp",
+    "fingerprint",
+    "build_time_series",
+    "recurrence_analysis",
+    "hypothesis_test",
+    "FL",
+    "FL-V"
+  ],
+  "notes": [
+    "Tool registration does not establish Ω1766.",
+    "Exact exported fields and calibration must be verified against the MetaRadar implementation/version used.",
+    "Raw identifiers should be minimized in canonical records."
+  ],
+  "upstream": {
+    "repository": "BLE-Research-Group/MetaRadar",
+    "license": "GPL-3.0"
+  },
+  "measurement_layers": [
+    "signal",
+    "time",
+    "sampling",
+    "geometry",
+    "instrument",
+    "environment",
+    "provenance"
+  ],
+  "variables": [
+    "RSSI",
+    "TxPower",
+    "estimated_distance",
+    "timestamps",
+    "scan_interval",
+    "scan_window",
+    "packet_detection",
+    "advertising_metadata",
+    "GATT_metadata",
+    "instrument_metadata"
+  ],
+  "uncertainty_model": "M = X + epsilon_instrument + epsilon_environment + epsilon_sampling",
+  "controls": [
+    "calibration",
+    "sampling_aliasing",
+    "packet_loss",
+    "environmental_confounders",
+    "independent_mirror"
+  ],
+  "verification": [
+    "FL",
+    "FL-M",
+    "FL-V"
+  ],
+  "provenance": "raw_observation -> normalized_record -> derived_data -> analysis -> result -> evidence_classification"
+}

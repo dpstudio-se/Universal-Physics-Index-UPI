@@ -1,0 +1,111 @@
+{
+  "address": "UPI<mechanics,1,navier_stokes,psi27d_regularity>",
+  "title": "Psi27D / Omega1766 geometric-control hypothesis for 3D Navier-Stokes regularity",
+  "description": "Falsifiable research hypothesis: an explicitly defined geometric/topological functional on a declared manifold Sigma_1766 embedded in R^27, coupled through the Omega1766 transport-boundary-response operator, may provide a reproducible quantitative bound controlling vorticity or velocity-gradient growth in 3D incompressible Navier-Stokes flow.",
+  "status": "HYP",
+  "information_layer": "ACADEMIC",
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false,
+  "causal_claim": false,
+  "operator": "Omega1766 = T o B o R",
+  "equations": [
+    "partial_t u + (u dot grad)u = -grad(p) + nu Delta u + F",
+    "div(u) = 0",
+    "omega = curl(u)",
+    "Psi27D = candidate functional of the declared flow and explicit map to Sigma_1766",
+    "candidate bound: ||grad u||_infinity <= F_bound(Psi27D, initial_data, nu, boundary_data)",
+    "candidate continuation relation: bounded Psi27D -> integral_0^T ||omega(t)||_infinity dt < infinity",
+    "candidate energy control: dE_Omega/dt + nu D_Omega + gamma G_xi + gamma G_lambda <= C E_Omega"
+  ],
+  "operator_roles": {
+    "T": "transport of the declared flow state",
+    "B": "explicit boundary/operator transformation",
+    "R": "derived or measured response returned to the flow state",
+    "loop": "state -> transport -> bridge -> response -> new state"
+  },
+  "assumptions": [
+    "Sigma_1766 must be explicitly defined rather than inferred from its label.",
+    "Any E8-to-R^27 relation must be an explicit mathematical construction.",
+    "Psi27D must be dimensionally well-defined and invariant under the transformations claimed.",
+    "Omega1766 is a research operator mapping, not an additional Navier-Stokes axiom.",
+    "A bounded numerical trajectory is not a proof of global regularity.",
+    "UPI reduced rigid rotation is a control model, not a general 3D Navier-Stokes solver.",
+    "9 Hz and 21.6 degrees remain declared model/reference parameters, not universal Navier-Stokes constants."
+  ],
+  "mirror_operator": {
+    "definition": "M_Omega = (-Delta)^(-1) + Q_log + Q_xi + Q_lambda + Q_triangle + A_(21.6deg,9Hz)",
+    "status": "HYP",
+    "boundary": "The proposed operator does not currently provide a proved global closure inequality.",
+    "verified_algebra": [
+      "For isotropic divergence-preserving Fourier multipliers Q, <Q u, grad p> = 0 under the declared assumptions.",
+      "The nonlinear Q-energy term has exact commutator form.",
+      "Q >= 0 gives nonnegative viscous dissipation.",
+      "Remaining cubic commutator residual scales as A^3 while quadratic energy and dissipation scale as A^2."
+    ]
+  },
+  "cross_model_review": {
+    "purpose": "Reduce correlated blind spots in symbolic derivation and verification.",
+    "loop": "SOURCE -> EXTRACT -> CLASSIFY -> DERIVE -> MIRROR -> COMPARE -> DELTA -> VERIFY -> LOOP",
+    "rule": "Independent agreement is not proof; disagreements and hidden assumptions must be surfaced and tested.",
+    "relevance_to_hypothesis": "Use an independent verifier to audit operator definitions, dimensions, invariance, estimates, and counterexamples."
+  },
+  "null_model": "Standard 3D incompressible Navier-Stokes evolution without the proposed Psi27D constraint or invariant.",
+  "control_condition": "Compare null model, analytic smooth controls, manufactured solutions where available, resolution/time-step refinement, perturbations, Psi27D ablation, and independently generated trajectories.",
+  "confounders": [
+    "Numerical discretization error",
+    "Time-step dependence",
+    "Resolution dependence",
+    "Coordinate dependence of the proposed invariant",
+    "Overfitting of a candidate invariant to the control dataset",
+    "Correlated observability between verification models"
+  ],
+  "statistical_method": "Predeclare metrics and compare Psi27D against ||omega||_infinity, ||grad u||_infinity and integral_0^T ||omega(t)||_infinity dt across independent trajectories.",
+  "replication_rule": "Require independent reproduction on held-out trajectories before any status promotion.",
+  "test_method": "Define Sigma_1766 and the E8-to-manifold map; verify dimensions and invariance; define T, B and R explicitly; compute Psi27D on independent Navier-Stokes trajectories; test quantitative bounds; run convergence, perturbation, null-model, ablation and adversarial counterexample tests.",
+  "predictions": [
+    "If useful, Psi27D should exhibit reproducible bounded/invariant behavior across declared regular-flow controls.",
+    "A nontrivial quantitative relation between Psi27D and vorticity or gradient growth should survive resolution and time-step refinement.",
+    "The candidate control should add predictive information beyond standard diagnostics.",
+    "Any claimed Omega1766 closure should remain valid under independent re-derivation and should not depend on the verifier agreeing with the originating derivation."
+  ],
+  "falsification_conditions": [
+    "No well-defined invariant can be constructed.",
+    "Dimensional consistency or claimed invariance fails.",
+    "The proposed global energy/gradient bound fails for an admissible flow.",
+    "Correlations disappear under controls or refinement.",
+    "A counterexample breaks the proposed bound.",
+    "The candidate reduces to an existing diagnostic without adding a new bound.",
+    "The result depends on a specific verifier or disappears under independent derivation."
+  ],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "UPI research-design and mirror-operator records",
+      "confidence": 1,
+      "notes": "Research design only. No proof or experimental verification is claimed."
+    }
+  ],
+  "primary_sources": [
+    "UPI:data/mechanics/reduced_rigid_rotation.json",
+    "UPI:src/upi/spiral_flow.py",
+    "UPI:data/open-problems/navier_stokes_mirror_operator_workload_2026_09_18.md",
+    "UPI:docs/research/NAVIER_STOKES_SYNC_2026_09_20.md"
+  ],
+  "causal_test_method": "Not applicable to the current non-causal hypothesis; the required test is mathematical/numerical falsification.",
+  "confusion_guard": "Do not interpret the visual spiral, E8 analogy, frequency references, cross-model agreement or numerical PASS as evidence of a Navier-Stokes regularity theorem.",
+  "tags": [
+    "PSI27D",
+    "Omega1766",
+    "Navier-Stokes",
+    "regularity",
+    "vorticity",
+    "topological-invariant",
+    "Sigma1766",
+    "E8",
+    "cross-verification",
+    "research",
+    "HYP"
+  ],
+  "version": "0.2.0",
+  "source_status": "UPI_research_hypothesis"
+}

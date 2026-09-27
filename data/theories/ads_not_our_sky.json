@@ -1,0 +1,45 @@
+{
+  "tags": [
+    "stop",
+    "de-sitter",
+    "cosmology",
+    "holography"
+  ],
+  "title": "Our universe is not asymptotically AdS",
+  "version": "0.1.0",
+  "claims_experimental_verification": true,
+  "confusion_guard": "Holography as a word is not a license. AdS/CFT can be EST-level evidence *inside AdS*. It is STOP as a dual of the sky.",
+  "definitions": [
+    "Λ_obs > 0 at late times.",
+    "AdS requires Λ < 0.",
+    "dS/CFT is a different, much weaker set of proposals."
+  ],
+  "mechanism": "The conformal boundary of AdS is timelike; the conformal boundary of dS is spacelike. The GKP–Witten dictionary does not carry over unchanged.",
+  "verification_type": "experimental_observation",
+  "address": "UPI<theories,1,holography,not_our_sky>",
+  "assumptions": [
+    "Λ CDM (or any accelerating FLRW with positive effective Λ) describes the late universe."
+  ],
+  "falsification_conditions": [
+    "A demonstration that the bulk dual of the observed cosmos is asymptotically AdS after all — presently it is not."
+  ],
+  "stop_reason": "Observed Λ has the wrong sign for AdS. Smallest next observation: a controlled dS dictionary with one preregistered observable, or restrict holographic claims to AdS laboratories (heavy-ion, condensed matter duals, numerical GR in a box).",
+  "primary_sources": [
+    "Perlmutter, Schmidt, Riess (1998–1999)",
+    "Planck cosmological parameters"
+  ],
+  "information_layer": "ACADEMIC",
+  "evidence": [
+    {
+      "type": "experiment",
+      "source": "Type Ia supernovae, CMB, BAO — accelerated expansion",
+      "confidence": 0.99
+    }
+  ],
+  "equations": [
+    "Λ_AdS < 0",
+    "Λ_obs > 0"
+  ],
+  "status": "STOP",
+  "description": "Observed cosmology is accelerating, consistent with Λ > 0 (de Sitter-like). AdS/CFT requires a negative cosmological constant in the bulk. Applying the Maldacena dictionary to the sky STOPS until a controlled dS/CFT or other dictionary exists."
+}

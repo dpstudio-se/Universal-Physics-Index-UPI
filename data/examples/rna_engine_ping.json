@@ -1,0 +1,13 @@
+{
+  "address": "UPI<examples,1,rna,engine_ping>",
+  "title": "RNA engine ping",
+  "description": "Software ping from the RNA engine. Not a physical claim. verification_type: software_test.",
+  "status": "SYM",
+  "confusion_guard": "A write-path check. Not DNA, not biology, not a new law.",
+  "tags": [
+    "rna",
+    "software_test"
+  ],
+  "information_layer": "ACADEMIC",
+  "version": "0.1.0"
+}

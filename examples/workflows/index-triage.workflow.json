@@ -1,0 +1,41 @@
+{
+  "workflow_id": "index-triage-v1",
+  "version": "0.1.0",
+  "status": "SYM",
+  "roles": [
+    {"role_id": "manager", "agent_class": "manager", "default_deny": true, "capabilities": ["task:lease", "task:assign", "ledger:write", "decision:advance-retry-escalate"]},
+    {"role_id": "scanner", "agent_class": "specialist", "default_deny": true, "capabilities": ["filesystem:read:data", "cli:debug-index"]},
+    {"role_id": "schema-validator", "agent_class": "specialist", "default_deny": true, "capabilities": ["filesystem:read:schemas", "filesystem:read:examples", "schema:validate"]},
+    {"role_id": "verifier", "agent_class": "verifier", "default_deny": true, "capabilities": ["filesystem:read:data", "task:read", "finding:write"]}
+  ],
+  "states": ["QUEUED", "LEASED", "RUNNING", "SUCCEEDED", "FAILED", "TIMED_OUT", "QUARANTINED", "CANCELLED"],
+  "transitions": [
+    {"from": "QUEUED", "to": "LEASED", "condition": "manager assigns scanner under default-deny"},
+    {"from": "LEASED", "to": "RUNNING", "condition": "scanner acknowledges immutable payload hash"},
+    {"from": "RUNNING", "to": "SUCCEEDED", "condition": "independent verifier accepts evidence", "independent_review": true},
+    {"from": "RUNNING", "to": "FAILED", "condition": "scanner or verifier reports bounded failure"},
+    {"from": "FAILED", "to": "QUEUED", "condition": "attempt remains below max_attempts"},
+    {"from": "RUNNING", "to": "QUARANTINED", "condition": "untrusted content or policy trip wire", "independent_review": true},
+    {"from": "LEASED", "to": "TIMED_OUT", "condition": "lease expires without heartbeat"}
+  ],
+  "invariants": [
+    "manager does not perform specialist scan or schema-validation work",
+    "scanner and schema-validator have disjoint capabilities",
+    "verifier is independent of scanner",
+    "source records are never mutated",
+    "reports redact source values and raw paths",
+    "software tests are not experimental verification"
+  ],
+  "governance": {
+    "owner": "manager",
+    "state_model": "ledger-backed QUEUED-LEASED-RUNNING-terminal",
+    "durable_artifact": "index-triage-report.md",
+    "evidence_required": true,
+    "retry_policy": {"max_attempts": 2, "on_exhausted": "escalate"},
+    "approval_boundary": {
+      "requires_approval_when": "any finding with status EST or ERR remains after verification",
+      "approver": "human-maintainer"
+    }
+  },
+  "confusion_guard": "Index triage validates repository records. A green software test does not establish physical truth."
+}

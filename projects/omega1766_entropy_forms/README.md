@@ -1,0 +1,96 @@
+# Ω1766 — Entropy / Frequency / Form Atlas
+
+Status: DER/HYP research artifact.
+
+This folder stores the visual companion to the Ω1766 Earth time–space–wave–entropy model.
+
+## Scope
+
+The supplied horror-film imagery is treated as a visual morphology dataset, not as evidence for a physical mechanism. The analysis asks whether recurring visual forms can be described by an abstract state variable combining:
+
+- frequency / oscillation
+- geometry and boundary conditions
+- energy transport and dissipation
+- entropy production
+- temporal persistence
+- scale
+
+The working causal chain is:
+
+geometry → wave modes → energy distribution → transport/dissipation → entropy production → observed form
+
+## Important separation
+
+EST: standard thermodynamic and wave equations within their domains.
+
+DER: numerical transformations derived from EST relations.
+
+SYM: Ω1766 / DNA–RNA notation.
+
+HYP: proposed coupling between visual morphology, entropy-state bands, and the 7.834 Hz / 8 Hz comparison.
+
+The 8 Hz reference is NOT treated as a demonstrated universal physical carrier. Schumann resonance is not modeled as a free-space 7.834 Hz electromagnetic wave.
+
+## Frequency comparison
+
+- fS = 7.834125 Hz
+- f8 = 8.000000 Hz
+- Δf = 0.165875 Hz
+- Δf/f8 = 2.0734375%
+- Beat period = 6.028636 s
+
+## Thermodynamic control
+
+dS_system/dt = Sdot_in - Sdot_out + Sdot_gen
+
+with Sdot_gen >= 0.
+
+Local structure can emerge in an open subsystem while total entropy production remains non-negative.
+
+## Visual entropy bands
+
+The atlas uses qualitative morphology bands:
+
+1. low structural complexity: symmetry / simple geometry
+2. intermediate complexity: spirals, masks, faces, repeated motifs
+3. high complexity: branching, turbulence, layered texture
+4. dynamic instability: fragmented or rapidly varying forms
+
+These are analysis labels, not measured entropy values.
+
+## Mirror loop
+
+x → F(x) → G(F(x)) = x'
+
+Residual:
+
+Δ = x' - x
+
+Relative residual:
+
+ε = |Δ| / max(|x|, scale)
+
+Computational closure is not physical validation.
+
+## Companion
+
+omega1766_entropy_form.svg is a lightweight vector visualization of the model for version control and future automated rendering.
+
+## Extension
+
+See `ECHO_SWARM_EXTENSION.md` for the ECHO temporal-correlation layer and SWARM distributed-coupling layer, including equations, residual controls, entropy bookkeeping, and a test plan.
+
+## Regional frequency / flow map
+
+See `OVIK_UMEA_ROTATING_FLOW_FREQUENCY_MAP.md` for the Örnsköldsvik → Högakustenbron → Umeå multiscale model covering hydrodynamics, geological/geophysical properties, mechanical length scales, electromagnetic wavelengths/antenna scales, SWARM synchronization and falsification controls.
+
+## Full regional layer map
+
+`REGIONAL_SWARM_DATA_LAYERS.md` defines the complete 29-layer ingestion/analysis stack for the Örnsköldsvik–Högakustenbron–Umeå corridor, including terrain, hydrology, geology, sediment, magnetics, gravity, conductivity, radioactivity, minerals, infrastructure, radio/antenna, fiber, grid, vibration, meteorology, marine, historical imagery, cultural heritage, wavelength, SWARM/ECHO, null models, source discrimination, 7.834125 Hz testing, drift and provenance.
+
+
+## Core selector / mirror-loop lock
+
+The Ω1766 research layer follows the canonical T€@X™ core selector and session guard defined in `docs/TEAX_TW_CANONICAL_LOOP.md`. Core routing is kept separate from physical claims: session timing is a software control, while frequency hypotheses remain subject to measurement, dimensional checks, null models, reproducible geometry, phase/coherence and independent repetition.
+
+**Mirror loop:** `SELECT CORE → SESSION GUARD → TAG VERIFY → OBSERVE → DERIVE → MIRROR → COMPARE → Δ → VERIFY → GUARD → LOOP/LOCK`.

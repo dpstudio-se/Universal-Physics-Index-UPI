@@ -1,0 +1,53 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UPI Recurring Routine",
+  "type": "object",
+  "required": [
+    "routine_id",
+    "workflow_id",
+    "skill_id",
+    "status",
+    "trigger",
+    "idempotency_key",
+    "retry_policy",
+    "approval",
+    "heartbeat_on_empty"
+  ],
+  "properties": {
+    "routine_id": {"type": "string", "minLength": 1},
+    "workflow_id": {"type": "string", "minLength": 1},
+    "skill_id": {"type": "string", "minLength": 1},
+    "status": {"const": "SYM"},
+    "trigger": {
+      "type": "object",
+      "required": ["kind", "value"],
+      "properties": {
+        "kind": {"type": "string", "enum": ["manual", "cron", "event", "message"]},
+        "value": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "idempotency_key": {"type": "string", "minLength": 1},
+    "retry_policy": {
+      "type": "object",
+      "required": ["max_attempts", "on_exhausted"],
+      "properties": {
+        "max_attempts": {"type": "integer", "minimum": 1, "maximum": 5},
+        "on_exhausted": {"type": "string", "enum": ["escalate", "quarantine", "cancel"]}
+      },
+      "additionalProperties": false
+    },
+    "approval": {
+      "type": "object",
+      "required": ["required", "boundary"],
+      "properties": {
+        "required": {"type": "boolean"},
+        "boundary": {"type": "string", "minLength": 1}
+      },
+      "additionalProperties": false
+    },
+    "heartbeat_on_empty": {"type": "boolean"},
+    "confusion_guard": {"type": "string", "minLength": 1}
+  },
+  "additionalProperties": false
+}

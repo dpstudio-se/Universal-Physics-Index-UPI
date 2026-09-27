@@ -1,0 +1,22 @@
+{
+  "timestamp": "%%aT%%b",
+  "agent_id": "%1",
+  "domain": "%2",
+  "change_type": "%3",
+  "proposed_change": "%4",
+  "proof": "%5",
+  "roundtrip_verification": "%6",
+  "status": "accepted_for_review",
+  "human_review_required": true
+}
+{
+  "timestamp": "2026-09-16T21:55:36,72",
+  "agent_id": "agent123",
+  "domain": "tf1766",
+  "change_type": "add",
+  "proposed_change": ""ny modell"",
+  "proof": ""bevis"",
+  "roundtrip_verification": ""roundtrip ok"",
+  "status": "accepted_for_review",
+  "human_review_required": true
+}

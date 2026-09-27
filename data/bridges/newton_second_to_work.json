@@ -1,0 +1,15 @@
+{
+  "source": "UPI<CLASSICAL_MECHANICS,1,FORCE_MOTION,NEWTON_SECOND_LAW>",
+  "target": "UPI<physics,1,classical,newtonian_mechanics>",
+  "relation": "REPRESENTS",
+  "status": "EST",
+  "equations": ["F_net = m a"],
+  "assumptions": ["Nonrelativistic constant-mass regime"],
+  "evidence": [
+    {
+      "type": "other",
+      "source": "Newton's second law is a constitutive relation of Newtonian mechanics"
+    }
+  ],
+  "confusion_guard": "The theory node groups laws; this edge does not add a new force law."
+}
