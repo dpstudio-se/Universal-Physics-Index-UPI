@@ -86,6 +86,39 @@ def test_invalid_content_length_returns_json_error() -> None:
         service.store.close()
 
 
+@pytest.mark.parametrize(
+    ("path", "filename", "expected_title"),
+    [
+        ("/prompt", "upi-remote-indexer.system.md", "# UPI remote indexer"),
+        (
+            "/research-prompt",
+            "omega1766-vr-asi-co.system.md",
+            "# Ω1766 / VR-ASI-CO — UPI exploratory system prompt",
+        ),
+    ],
+)
+def test_system_prompt_downloads(path, filename, expected_title) -> None:
+    service = make_service()
+    server = ThreadingHTTPServer(("127.0.0.1", 0), make_handler(ContributionApp(service)))
+    thread = threading.Thread(target=server.serve_forever, daemon=True)
+    thread.start()
+    try:
+        host, port = server.server_address
+        with urlopen(f"http://{host}:{port}{path}", timeout=2) as response:
+            content = response.read().decode("utf-8")
+            assert response.status == 200
+            assert f'filename="{filename}"' in response.headers["Content-Disposition"]
+            assert expected_title in content
+            if path == "/research-prompt":
+                canonical = ROOT / "prompts" / "omega1766-vr-asi-co.system.md"
+                assert content == canonical.read_text(encoding="utf-8")
+    finally:
+        server.shutdown()
+        thread.join(timeout=2)
+        server.server_close()
+        service.store.close()
+
+
 def make_service() -> ContributionService:
     store = ContributionStore("sqlite:///:memory:")
     return ContributionService(store)
