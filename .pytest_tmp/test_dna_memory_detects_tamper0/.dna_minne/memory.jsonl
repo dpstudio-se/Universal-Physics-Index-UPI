@@ -1,0 +1,1 @@
+{"id": "beece6d8ab2c103c", "operation": "write", "payload": {"key": "tampered"}, "provenance": "runtime", "sha256": "85890313dc7dd826e3c0318d05bae5a28ea3770ba602876f6c7422292f130306", "source": "UPI", "status": "TEST", "timestamp": "2026-09-27T06:28:54.401014+00:00", "type": "DNA_MEMORY"}

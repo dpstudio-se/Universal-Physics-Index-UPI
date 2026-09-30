@@ -1,0 +1,1 @@
+{"collected": ["tests/test_control.py::test_control"], "results": [{"nodeid": "tests/test_control.py::test_control", "outcome": "passed", "phases": {"setup": "passed", "call": "passed", "teardown": "passed"}}], "exit_code": 0, "pytest_args": ["tests", "-q", "-p", "no:cacheprovider"]}

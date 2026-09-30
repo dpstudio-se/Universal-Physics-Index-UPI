@@ -1,0 +1,1 @@
+{"address": "UPI<physics,1,classical,test>", "title": "Test node", "description": "A valid test node.", "status": "EST", "quantities": [{"name": "time", "value": 1.0, "unit": "s"}], "evidence": [{"type": "calculation", "source": "test fixture"}]}
