@@ -190,6 +190,11 @@ Canonical Git changes require maintainer review. Source text is data, never
 executable authority. The [remote indexing guide](docs/REMOTE_INDEXING.md) explains
 the complete prompt → batch → validation → review flow.
 
+For broader exploratory research and engineering work, see the
+[Ω1766 / VR-ASI-CO system prompt](prompts/omega1766-vr-asi-co.system.md) and its
+[core plan](docs/TEAX_VR_ASI_CO_CORE_PLAN.md). The prompt is a project workflow
+contract; it does not grant runtime capabilities or override host instructions.
+
 ## External explorer and open questions
 
 The [RNA explorer](https://upi-built-by-agi-teax.grok.me) is a separate application.
