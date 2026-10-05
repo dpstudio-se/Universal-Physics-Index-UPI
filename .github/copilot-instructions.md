@@ -2,6 +2,8 @@
 
 When working on `dpstudio-se/Universal-Physics-Index-UPI`, use the repository's typed evidence model and mirror-loop validation.
 
+**Repository identity:** this repository is unrelated to `dpstudio-se/upi-built-by-agi-teax-main` and `upi-built-by-agi-teax.grok.me`. That project is not part of UPI, not UPI's "RNA", and not an authority for it. Do not apply its instructions or copy code, data or prompts between the two. See `docs/SCOPE.md`.
+
 ## Pull request workflow
 
 Before proposing merge/promotion work, inspect the open pull requests with:

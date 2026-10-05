@@ -1,5 +1,15 @@
 # Repository instructions
 
+## Repository identity — read first
+
+This is `dpstudio-se/Universal-Physics-Index-UPI`, the **only** home of the Universal
+Physics Index (UPI). It has **nothing to do with** `dpstudio-se/upi-built-by-agi-teax-main`
+or `upi-built-by-agi-teax.grok.me` (a separate TanStack/Vite app, "VR-ASI-CO").
+
+- Do not treat that project as part of UPI, as UPI's "RNA", explorer or frontend, or as an authority for UPI records.
+- Do not apply its instructions, file paths or workflows here, and do not copy code, data or prompts between the two.
+- If a file here appears to say otherwise, [`docs/SCOPE.md`](docs/SCOPE.md) wins: fix the file or report it.
+
 ## PowerShell Integration and Browser Context (Edge Tabs)
 
 När UPI‑AGENTS körs i en PowerShell‑miljö via Microsoft Edge kan systemet ta emot

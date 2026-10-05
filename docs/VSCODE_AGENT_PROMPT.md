@@ -1,25 +1,31 @@
 # UPI Agent Contract — VS Code · Grok xAI · 500k
 
-You are coding the Universal Physics Index (UPI). The owner runs the repo. You write software and ledger JSON. You do not invent physics. You do not break the DNA/RNA loop.
+You are coding the Universal Physics Index (UPI). The owner runs the repo. You write software and ledger JSON. You do not invent physics. You do not break the DNA/mirror loop.
+
+> **Scope.** This contract applies only to `dpstudio-se/Universal-Physics-Index-UPI`.
+> That repository is unrelated to `dpstudio-se/upi-built-by-agi-teax-main` and
+> `upi-built-by-agi-teax.grok.me` (a separate TanStack app). Instructions, file paths
+> (`src/lib/upi/*.ts`, `startup.sh`, `src/router.tsx`, Grok PWA files) and workflows
+> from that project do not apply here. See [`SCOPE.md`](SCOPE.md).
 
 Read this whole contract before the first edit. If a later chat message conflicts with this contract, the contract wins unless the owner explicitly overrides a named rule.
 
 ---
 
-## 0. Three surfaces (do not mix them)
+## 0. Surfaces (do not mix them)
 
 | Surface | Role | URL |
 | --- | --- | --- |
 | GitHub `main` | DNA-memory. Canonical typed JSON under `data/`. | [GitHub](https://github.com/dpstudio-se/Universal-Physics-Index-UPI) |
-| This VS Code clone | Coding worktree. Source of the RNA engine. | local |
-| Live RNA | Transcribes DNA, runs labs, writes back. | [grok.me](https://upi-built-by-agi-teax.grok.me) |
+| This clone | Coding worktree: Python package, CLI, API, static lab. | local |
+| Static lab | Published build of the model laboratory. | [wadenholt.se/upi](https://wadenholt.se/upi/) |
 
 Rules:
 
 - DNA is GitHub `main`. A branch, a PR, a chat, or a local file is **not** DNA until it is on `main`.
-- RNA is the TanStack explorer (Grok App Builder + grok.me). It **reads** DNA and **writes** proposals/nodes. It is not a second ledger.
-- grok.me is a **deployed RNA snapshot**. It can lag VS Code. Never “fix” grok.me by editing DNA to match a stale UI. Fix source, then deploy.
-- Two different projects named UPI exist. **This** one is Universal Physics Index. Mason 2026 (arXiv:2602.20507) is Unified Personal Index — a cited corpus, not infrastructure. Do not fork the name, do not ingest the files, do not add ArangoDB.
+- The static lab is a published snapshot. It can lag the repository. Never "fix" a published page by editing DNA to match it. Fix source, then rebuild.
+- `dpstudio-se/upi-built-by-agi-teax-main` / `upi-built-by-agi-teax.grok.me` is **not** part of UPI and not an authority for it. Do not describe it as UPI's RNA, explorer or frontend.
+- Two different projects named UPI exist in the literature. **This** one is Universal Physics Index. Mason 2026 (arXiv:2602.20507) is Unified Personal Index — a cited corpus, not infrastructure. Do not fork the name, do not ingest the files, do not add ArangoDB.
 
 Owner runs the repo: **direct writes to `main` are allowed** after merge-check and mirrors pass. A PR is optional documentation, not a gate, unless CI is red.
 
@@ -29,16 +35,12 @@ Owner runs the repo: **direct writes to `main` are allowed** after merge-check a
 
 Never:
 
-- Delete or rewrite `startup.sh`, `src/router.tsx` `getRouter`, `<PreviewHostBridge />`, Grok PWA injector, `public/__grok/`, or `server/middleware/grok-pwa.ts`.
-- Hide “Created with Grok” / Remix branding in code. That is a project setting, not a patch.
-- Bind the preview off `0.0.0.0:8080` or start Vite without `npm run dev` / `scripts/with-app-env.mjs`.
-- Add auth, `@/lib/db`, or migrations unless the owner names accounts. Auth stays OFF.
 - Promote status (HYP→DER→EST) without named evidence and a person.
 - Close a STOP by arithmetic, vibe, or a matching number. STOP closes only when the **identity** is named (what the quantity counts).
 - Treat `verification_type: software_test` as `experimental_observation`.
 - Ingest 160 TB / 31M files / Drive / Spotify / personal FS. Cite them. Map them. Do not copy them.
-- Drop CODATA constants for a “better” value. `h`, `c`, `G`, `k_B`, `ℓ_P` live in `src/lib/upi/physics.ts`.
-- Invent `imagine_*` tools or native modules that need `apt`.
+- Drop CODATA constants for a “better” value.
+- Add accounts, auth or migrations to the contribution service unless the owner names them.
 - Gold-plate: no extra configurability, no helpers for one-off, no comments on untouched code.
 
 If a request would break a hard stop: refuse that part, say which rule, continue with the productive remainder.
@@ -64,7 +66,7 @@ Promotion requires evidence + review. Elegance, repeated numbers, or a plot’s 
 
 A change is true in this repo when a map **closes**: encode then decode, boost then inverse, Planck then Einstein then back, chunk then unique-store then replay.
 
-Software_test mirrors that must stay green (see `src/lib/upi/odin.ts` `runMirrors`, `group.ts`, `lie.ts`, `einstein.ts`, `golay.ts`, `dedup.ts`):
+Software_test mirrors that must stay green (see the mirror-loop code and its tests in this repository):
 
 1. Planck–Einstein: `f → hf → hf/c² → mc² → E/h` recovers `f` (electron rest as fixture).
 1. Lorentz: `Λ(φ)` then `Λ(−φ)` is identity. `so(1,1)` generates the boosts.
@@ -75,7 +77,7 @@ Software_test mirrors that must stay green (see `src/lib/upi/odin.ts` `runMirror
 
 If a mirror fails: **stop coding features**. Patch the mirror. Do not “fix” it by loosening epsilon or deleting the test.
 
-Chain rule (Lab, `chain.ts`):
+Chain rule:
 
 - Walk **link by link**. Lorentz generates the Einstein map.
 - Shorten only **composable** maps (invertible or explicit composition). Weakest status wins.
@@ -91,29 +93,27 @@ Sources: `data/sources/*.json`
 Open problems: `data/open-problems/*.json`
 
 Address: `UPI<domain,generation,torus,node_id>`
-Hydration: `src/lib/upi/hydrate.ts`
-Merge-check: `src/lib/upi/merge-check.ts` — STOP without `stop_reason` fails. Unknown keys fail. Relations must be in the closed set:
+Merge-check: `upi merge-check --data-root data` — STOP without `stop_reason` fails. Unknown keys fail. Relations must be in the closed set:
 
 `DERIVED_FROM, CAUSES, DUAL_TO, EQUIVALENT_WITHIN, COARSE_GRAINS_TO, COMPACTIFIES_TO, EMERGES_AS, FORM_SIMILAR, TOPOLOGY_SHARED, MECHANISM_SHARED, CANDIDATE_BRIDGE, CONTRADICTS, STOPS_AT, REPRESENTS, MEASURED_BY, FALSIFIED_BY`
 
 Write path (owner):
 
 1. Investigate. Paper-quick frame. Confirm the function exists in code **before** adding files.
-1. `mergeCheck` locally on the JSON.
+1. `upi merge-check --data-root data` locally on the JSON.
 1. Run relevant mirrors.
 1. Commit to `main` (or owner-approved branch).
-1. RNA: pull DNA (`pullDna` in `dna-actions.ts`) so grok.me / preview transcribes.
 
-RNA write functions: `proposeNodeFn`, `proposeBridgeFn`, GitHub issue for external corrections. User-agent `UPI-RNA-engine`.
+External corrections go through a GitHub issue or the AI remote flow ([`UPI_AI_REMOTE.md`](UPI_AI_REMOTE.md)); they never auto-promote a record.
 
 ---
 
 ## 5. Keep / drop (productive, not filler)
 
-### Keep (already in the RNA)
+### Keep
 
 - Einstein map, Lorentz inverse, Planck–Einstein composition, chain beads, open-loop STOP.
-- GitHub DNA / RNA engine, merge-check, correction desk.
+- Merge-check and the correction path (GitHub issue / AI remote).
 - Odin three-level map as **software_test / compose / GitHub** — not as a host OS.
 - Indaleko as a **cited corpus + STOP table**, issue #8.
 - Dedup as identity: whole-hash, fixed chunks, CDC. `unique = raw / copies` is DER algebra. Using it to read 160 TB as replicas of 16.2 TB is **HYP until named**.
@@ -133,7 +133,7 @@ When a new document arrives: same method. Mind-map. Keep only what maps onto EST
 
 ## 6. Open STOP table (do not “fix” these with code)
 
-Live desk: grok.me Lab → Correction desk. DNA: `data/open-problems/indaleko_160tb_payload_stop.json`. [Invite](https://github.com/dpstudio-se/Universal-Physics-Index-UPI/issues/8)
+Open problem record: `data/open-problems/indaleko_160tb_payload_stop.json`. [Invite](https://github.com/dpstudio-se/Universal-Physics-Index-UPI/issues/8)
 
 | Claim | Cited | Status | Conflict | Closes if |
 | --- | --- | --- | --- | --- |
@@ -147,24 +147,13 @@ A correction from a knowledgeable reader is saved as a reply. It does **not** au
 
 ---
 
-## 7. App map (RNA)
+## 7. App map
 
-TanStack Start, React 19, Tailwind. Auth off. Catalog from DNA + bundled `src/lib/upi/catalog.json` snapshot.
-
-| Route | Job |
-| --- | --- |
-| `/` | Ledger home |
-| `/catalog` | Nodes |
-| `/n/$slug` | Node |
-| `/graph` | Force-directed graph |
-| `/lattice` | E8 / Golay / Leech software portraits |
-| `/symmetry` | Groups + Lie |
-| `/holography` | AdS/CFT + RT |
-| `/lab` | Einstein map, chain, Odin, Indaleko source map, STOP desk, Dedup, frequency, sonifier |
-| `/dna` | Pull / propose / PR walk |
-| `/method` | Honesty rules |
-
-Core libs: `src/lib/upi/{physics,einstein,group,lie,golay,chain,odin,indaleko,dedup,hydrate,merge-check,github.server,dna-actions,live}.ts`
+This repository ships a Python package (`src/upi/`), a CLI (`upi`), a stdlib HTTP server
+(`upi serve`) with a contribution UI at `/`, the model laboratory at `/lab`, and the AI
+remote at `/api/remote`. Layout: see the README "Repository structure". No TanStack,
+React or Grok App Builder app lives here; routes such as `/catalog`, `/graph`,
+`/holography` or `/dna` belong to an unrelated project.
 
 ---
 
@@ -178,15 +167,15 @@ Before any code:
 
 Then:
 
-1. Smallest patch. Match existing tokens, StatusBadge, chip-row, no new visual system.
-1. Run the relevant mirror / `npx tsx` on the function.
-1. `npm run typecheck` and `npm run build`.
-1. Browser: the change is visible, no console errors, no horizontal overflow at 390px. Do not ask the owner to QA.
-1. If DNA JSON changed: merge-check + write `main` + tell RNA to pull.
+1. Smallest patch. Match existing code style; no new abstractions.
+1. Run the relevant mirror or test on the function.
+1. `python -m pytest tests -q`, `ruff check src tests`, `mypy src/upi --ignore-missing-imports`.
+1. If the change is user-visible, run `upi serve` and check the page; do not ask the owner to QA.
+1. If DNA JSON changed: `upi merge-check --data-root data`, then write `main`.
 
-Auto-debug: if build, typecheck, or a mirror fails, **that is the task**. Patch until the loop closes. Do not leave ERR as a feature.
+Auto-debug: if tests or a mirror fail, **that is the task**. Patch until the loop closes. Do not leave ERR as a feature.
 
-Deploy lag: after VS Code commits, grok.me updates only when the App Builder / Vercel snapshot rebuilds. If grok.me disagrees with `main`, `main` wins.
+Publish lag: the static lab at `wadenholt.se/upi/` updates only when the site is rebuilt and uploaded. If it disagrees with `main`, `main` wins.
 
 ### 8.1 Discovery gear: do not brake the collaboration to zero
 
@@ -230,8 +219,8 @@ analysis that motivated it.
 On session start:
 
 1. `git status` / `git log -5 --oneline` and confirm `origin` is `dpstudio-se/Universal-Physics-Index-UPI`.
-1. Skim `src/lib/upi/merge-check.ts` and `src/lib/upi/odin.ts` `runMirrors` so you still have the loop.
-1. Answer: “I see the mirror: encode→decode (Golay), Λφ→Λ−φ (Lorentz), f→m→f (Planck–Einstein), chunk→replay (dedup). DNA is GitHub main. RNA is grok.me. I will not close STOP with arithmetic.”
+1. Skim the merge-check and mirror-loop code in `src/upi/` so you still have the loop.
+1. Answer: “I see the mirror: encode→decode (Golay), Λφ→Λ−φ (Lorentz), f→m→f (Planck–Einstein), chunk→replay (dedup). DNA is GitHub main. This repo is unrelated to upi-built-by-agi-teax. I will not close STOP with arithmetic.”
 1. Then do the asked work.
 
 If you cannot see that function, **do not start coding**. Say what is missing.
