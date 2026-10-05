@@ -105,6 +105,16 @@ and uploads it over SFTP:
 ./Update-UPI.ps1
 ```
 
+On Linux/macOS use the shell counterpart (or `pwsh ./Update-UPI.ps1`):
+
+```sh
+sh ./update-upi.sh            # build and publish
+sh ./update-upi.sh --build-only
+```
+
+Without `uv`, the shell script falls back to `python3` (publishing then needs
+`pip install paramiko`). Set `UPI_SFTP_PASSWORD` to skip the prompt.
+
 It prompts for the password, verifies uploaded bytes, preserves the previous
 entry point and switches the new page into place last. It does not pull or merge
 Git changes. Use `./Update-UPI.ps1 -BuildOnly` to refresh the local package only.
