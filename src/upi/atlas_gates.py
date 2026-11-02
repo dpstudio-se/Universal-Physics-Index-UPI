@@ -42,7 +42,6 @@ def leaves(value: Any, pointer: str = "") -> dict[str, Any]:
     return {pointer: value}
 
 
-
 def _git_hash(kind: str, payload: bytes) -> bytes:
     header = f"{kind} {len(payload)}".encode() + b"\0"
     return hashlib.sha1(header + payload).digest()
@@ -78,9 +77,7 @@ def _snapshot_tree_hash(observed: dict[str, str]) -> str:
         payload = bytearray()
         names = sorted(
             node,
-            key=lambda name: (
-                name + ("/" if isinstance(node[name], dict) else "")
-            ).encode(),
+            key=lambda name: (name + ("/" if isinstance(node[name], dict) else "")).encode(),
         )
         for name in names:
             value = node[name]
