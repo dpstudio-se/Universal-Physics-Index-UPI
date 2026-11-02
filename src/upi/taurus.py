@@ -111,7 +111,18 @@ def advance_taurus(
     can_continue = verified_delta.has_verified_change or bool(workload)
     if not can_continue:
         reasons.append("no verified change and no new workload frontier")
-        return TaurusReport(state, state, "STOP", tuple(reasons), pruned)
+        next_state = TaurusState(
+            generation=state.generation,
+            dna_revision=state.dna_revision,
+            workload=state.workload,
+            shadow=shadow,
+            history=history,
+            checkpoints=state.checkpoints,
+            last_delta=verified_delta,
+            next_observations=observations,
+            status="STOP",
+        )
+        return TaurusReport(state, next_state, "STOP", tuple(reasons), pruned)
 
     revision = dna_revision if dna_revision is not None else state.dna_revision
     next_checkpoints = state.checkpoints
