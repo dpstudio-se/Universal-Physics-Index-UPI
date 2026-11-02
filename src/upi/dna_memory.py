@@ -54,7 +54,7 @@ class DNAWriter:
         self.root.mkdir(parents=True, exist_ok=True)
         with self._lock:
             stamp = datetime.now(timezone.utc).isoformat()
-            event = {
+            event: dict[str, Any] = {
                 "id": hashlib.sha256(f"{stamp}|{source}|{json.dumps(payload, sort_keys=True)}".encode()).hexdigest()[:16],
                 "timestamp": stamp,
                 "type": "DNA_MEMORY",
