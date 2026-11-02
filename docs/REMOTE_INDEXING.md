@@ -10,12 +10,18 @@ VS Code / Grok 500k: paste [`docs/VSCODE_AGENT_PROMPT.md`](VSCODE_AGENT_PROMPT.m
 
 Copy all of [`prompts/upi-remote-indexer.system.md`](../prompts/upi-remote-indexer.system.md)
 into the system prompt (ChatGPT, Claude, Gemini, Grok, local models, agents).
-
 While `upi serve` runs you can also download it:
 
 ```text
 GET /prompt
 ```
+
+For broader exploratory research, the separate
+[`Ω1766 / VR-ASI-CO prompt`](../prompts/omega1766-vr-asi-co.system.md) is available
+at `GET /research-prompt`. The contribution UI exposes both downloads. Choose the
+prompt appropriate to the task and paste it into the remote model's system-prompt
+configuration; downloading a prompt does not configure the model. Use the indexer
+prompt when generating a `upi-batch.json` for this UI.
 
 ### 2. Point the model at this repo
 

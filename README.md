@@ -283,7 +283,27 @@ follow the [AI remote](#ai--agi--asi--llm-remote) flow above.
 unrelated, separately owned project. Nothing here builds, deploys, tests or depends
 on it, and it cannot change `data/`. See [Scope and boundaries](docs/SCOPE.md).
 
+<<<<<<< HEAD
+For broader exploratory research and engineering work, see the
+[Ω1766 / VR-ASI-CO system prompt](prompts/omega1766-vr-asi-co.system.md) and its
+[core plan](docs/TEAX_VR_ASI_CO_CORE_PLAN.md). The prompt is a project workflow
+contract; it does not grant runtime capabilities or override host instructions.
+
+## External explorer and open questions
+
+The [RNA explorer](https://upi-built-by-agi-teax.grok.me) is a separate application.
+Building or publishing this repository's `/lab` UI does not deploy that explorer.
+
+<details>
+<summary>View the external explorer screenshots</summary>
+
+![RNA explorer catalog](docs/ui/catalog.jpg)
+![RNA graph of nodes and bridges](docs/ui/graph.jpg)
+
+</details>
+=======
 ## Open questions
+>>>>>>> origin/main
 
 The [Indaleko payload record](data/open-problems/indaleko_160tb_payload_stop.json)
 is an example of a named `STOP`: the meaning of the cited 160 TB payload remains

@@ -18,6 +18,7 @@ from .store import ContributionStore
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 PROMPT_FILE = STATIC_DIR / "upi-remote-indexer.system.md"
+RESEARCH_PROMPT_FILE = STATIC_DIR / "omega1766-vr-asi-co.system.md"
 MAX_READ = 256_000
 MAX_BATCH_READ = 1_000_000
 STREAM_OVERFLOW = "_upi_stream_overflow"
@@ -182,6 +183,10 @@ def make_handler(app: ContributionApp):
             if path in {"/prompt", "/api/system-prompt"}:
                 self._prompt()
                 return
+<<<<<<< HEAD
+            if path == "/research-prompt":
+                self._prompt(RESEARCH_PROMPT_FILE, "omega1766-vr-asi-co.system.md")
+=======
             if path in {"/api/remote", "/.well-known/upi-remote.json"}:
                 from upi.remote import remote_manifest
 
@@ -196,6 +201,7 @@ def make_handler(app: ContributionApp):
                 self.send_header("Content-Length", str(len(data)))
                 self.end_headers()
                 self.wfile.write(data)
+>>>>>>> origin/main
                 return
             self._json(404, {"errors": ["unknown path"]})
 
@@ -318,16 +324,20 @@ def make_handler(app: ContributionApp):
                 }
             )
 
-        def _prompt(self) -> None:
-            if not PROMPT_FILE.is_file():
+        def _prompt(
+            self,
+            prompt_file: Path = PROMPT_FILE,
+            download_name: str = "upi-remote-indexer.system.md",
+        ) -> None:
+            if not prompt_file.is_file():
                 self._json(404, {"errors": ["system prompt missing"]})
                 return
-            data = PROMPT_FILE.read_bytes()
+            data = prompt_file.read_bytes()
             self.send_response(200)
             self.send_header("Content-Type", "text/markdown; charset=utf-8")
             self.send_header(
                 "Content-Disposition",
-                'attachment; filename="upi-remote-indexer.system.md"',
+                f'attachment; filename="{download_name}"',
             )
             self.send_header("Content-Length", str(len(data)))
             self.end_headers()
