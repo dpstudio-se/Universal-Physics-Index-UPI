@@ -30,7 +30,7 @@ A compatible model must:
 9. Use bidirectional verification where an inverse is mathematically defined.
 10. Treat software tests as \`verification_type: software_test\`, not experimental evidence.
 11. Preserve provenance from raw source to normalized record to derived result.
-12. Fail closed when a required field, schema, unit, source, or validation rule is missing.
+12. Systems must fail closed when a required field, schema, unit, source, or validation rule is missing.
 
 ## Prompt-injection boundary
 

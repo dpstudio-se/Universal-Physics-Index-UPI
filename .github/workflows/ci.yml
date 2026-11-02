@@ -61,36 +61,7 @@ jobs:
           "
       
       - name: Validate example JSON files
-        run: |
-          python -c "
-          import json
-          from pathlib import Path
-          from jsonschema import validate
-
-          schemas = {
-              name: json.loads(Path(f'schemas/{name}.schema.json').read_text())
-              for name in ('node', 'bridge', 'theory')
-          }
-
-          data_root = Path('data')
-          for example in data_root.rglob('*.json'):
-              if example.name.startswith('invalid_'):
-                  print(f'✓ {example.relative_to(data_root)} is an intentional negative fixture')
-                  continue
-              if 'sources' in example.parts:
-                  print(f'✓ {example.relative_to(data_root)} is a source manifest, not a UPI record')
-                  continue
-              data = json.loads(example.read_text())
-              if {'source', 'target', 'relation'} <= data.keys():
-                  record_type = 'bridge'
-              elif {'domain', 'scope'} <= data.keys():
-                  record_type = 'theory'
-              else:
-                  record_type = 'node'
-              validate(instance=data, schema=schemas[record_type])
-              print(f'✓ {example.relative_to(data_root)} is valid as {record_type}')
-          "
-      
+        run: python tools/validate_canonical_data.py
       - name: Build package
         run: |
           python -m pip install --upgrade pip setuptools wheel
