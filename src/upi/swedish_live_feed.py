@@ -13,9 +13,10 @@ import socket
 import struct
 import sys
 import time
+from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from typing import Any, Callable, Protocol
+from typing import Any, Protocol
 from urllib.request import Request, urlopen
 
 NTP_EPOCH_OFFSET = 2_208_988_800

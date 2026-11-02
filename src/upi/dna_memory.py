@@ -1,16 +1,17 @@
 """Live .dna_minne reader/writer for UPI DNA events.
 
 Memory is append-only data, never scientific authority.
-""" 
+"""
 from __future__ import annotations
 
-from dataclasses import dataclass
-from datetime import datetime, timezone
 import hashlib
 import json
+from collections.abc import Iterator
+from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from threading import Lock
-from typing import Any, Iterator
+from typing import Any
 
 
 @dataclass(frozen=True)
@@ -117,7 +118,7 @@ class DNAReader:
         seen = 0
         while True:
             rows = self.read()
-            for row in rows[seen:]:
+            for row in rows[seen:]:  # noqa: UP028
                 yield row
             seen = len(rows)
             time.sleep(poll_seconds)

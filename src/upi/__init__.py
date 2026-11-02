@@ -85,6 +85,17 @@ from .spiral_flow import (
     rigid_vortex_velocity,
     select_mode,
 )
+from .taurus import (
+    TaurusCheckpoint,
+    TaurusDelta,
+    TaurusMirror,
+    TaurusObservation,
+    TaurusReport,
+    TaurusState,
+    advance_taurus,
+    rollback_taurus,
+    verify_mirror,
+)
 from .teax_session import (
     TEAX_SESSION_SECONDS,
     UNSIGNED_SESSION_SECONDS,
@@ -97,7 +108,6 @@ from .teax_session import (
     TeaxTagVerifier,
 )
 from .triage import compare_report, finding_key
-from .taurus import TaurusDelta, TaurusObservation, TaurusMirror, TaurusCheckpoint, TaurusState, TaurusReport, advance_taurus, rollback_taurus, verify_mirror
 from .validation import (
     validate_bridge_consistency,
     validate_bridge_json,
