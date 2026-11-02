@@ -13,9 +13,10 @@ import socket
 import struct
 import sys
 import time
+from collections.abc import Callable
 from dataclasses import dataclass
 from datetime import datetime, timezone
-from typing import Any, Callable, Protocol
+from typing import Any, Protocol
 from urllib.request import Request, urlopen
 
 NTP_EPOCH_OFFSET = 2_208_988_800
@@ -91,7 +92,7 @@ def _ntp_to_unix(raw: bytes, reference_unix: float) -> float:
     reference_ntp = reference_unix + NTP_EPOCH_OFFSET
     era = round((reference_ntp - seconds) / NTP_FRACTION_SCALE)
     full_seconds = seconds + era * NTP_FRACTION_SCALE - NTP_EPOCH_OFFSET
-    return full_seconds + fraction / NTP_FRACTION_SCALE
+    return float(full_seconds + fraction / NTP_FRACTION_SCALE)
 
 
 def _ntp_request_packet(transmit_timestamp: bytes) -> bytes:

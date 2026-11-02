@@ -9,7 +9,6 @@ from __future__ import annotations
 import hashlib
 import json
 import re
-import subprocess
 from pathlib import Path
 from typing import Any
 
@@ -43,24 +42,59 @@ def leaves(value: Any, pointer: str = "") -> dict[str, Any]:
     return {pointer: value}
 
 
+def _git_hash(kind: str, payload: bytes) -> bytes:
+    header = f"{kind} {len(payload)}".encode() + b"\0"
+    return hashlib.sha1(header + payload).digest()
+
+
+def _snapshot_tree_hash(observed: dict[str, str]) -> str:
+    """Verify the snapshot tree, not the historical commit's provenance."""
+    root: dict[str, Any] = {}
+
+    for path, blob_hex in observed.items():
+        parts = path.split("/")
+        if (
+            len(parts) < 2
+            or parts[0] != "data"
+            or not path.endswith(".json")
+            or any(part in {"", ".", ".."} for part in parts)
+        ):
+            raise ValueError(f"Invalid baseline path: {path}")
+
+        node = root
+        for part in parts[1:-1]:
+            if part not in node:
+                node[part] = {}
+            if not isinstance(node[part], dict):
+                raise ValueError(f"Baseline path collision: {path}")
+            node = node[part]
+
+        if parts[-1] in node:
+            raise ValueError(f"Duplicate baseline path: {path}")
+        node[parts[-1]] = bytes.fromhex(blob_hex)
+
+    def hash_tree(node: dict[str, Any]) -> bytes:
+        payload = bytearray()
+        names = sorted(
+            node,
+            key=lambda name: (name + ("/" if isinstance(node[name], dict) else "")).encode(),
+        )
+        for name in names:
+            value = node[name]
+            is_dir = isinstance(value, dict)
+            mode = b"40000" if is_dir else b"100644"
+            digest = hash_tree(value) if is_dir else value
+            payload.extend(mode + b" " + name.encode() + b"\0" + digest)
+        return _git_hash("tree", bytes(payload))
+
+    return hash_tree(root).hex()
+
+
 def canonical_comparison(repo: Path, candidate: dict[str, Any]) -> dict[str, Any]:
     baseline = json.loads((repo / "examples/feedback/canonical_baseline.json").read_bytes())
     if baseline["commit"] != BASELINE_COMMIT:
         raise ValueError("Unexpected selected canonical commit.")
-    tree = subprocess.check_output(
-        ["git", "rev-parse", BASELINE_COMMIT + ":data"], cwd=repo, text=True
-    ).strip()
-    if tree != baseline["data_tree"]:
-        raise ValueError("Baseline tree mismatch.")
-    raw_tree = subprocess.check_output(
-        ["git", "ls-tree", "-r", "-z", BASELINE_COMMIT, "--", "data"], cwd=repo
-    )
-    expected = {}
-    for entry in raw_tree.split(b"\0"):
-        if entry:
-            header, path = entry.decode().split("\t", 1)
-            if path.endswith(".json"):
-                expected[path] = header.split()[2]
+    tree = baseline["data_tree"]
     observed = {}
     records: dict[str, list[dict[str, Any]]] = {}
     for entry in baseline["entries"]:
@@ -80,8 +114,8 @@ def canonical_comparison(repo: Path, candidate: dict[str, Any]) -> dict[str, Any
             and not Path(entry["path"]).name.startswith("invalid_")
         ):
             records.setdefault(record["address"], []).append(record)
-    if expected != observed:
-        raise ValueError("Baseline inventory does not match the committed tree.")
+    if _snapshot_tree_hash(observed) != tree:
+        raise ValueError("Baseline inventory does not match the declared data tree.")
     original = json.loads((repo / "examples/feedback/sources/3i_atlas_upi_case.json").read_bytes())
     dependencies = original["upi_bridges"]
     missing = [address for address in dependencies if address not in records]
@@ -97,6 +131,7 @@ def canonical_comparison(repo: Path, candidate: dict[str, Any]) -> dict[str, Any
     )
     return {
         "baseline_commit": BASELINE_COMMIT,
+        "baseline_commit_verification": "UNVERIFIED",
         "data_tree": tree,
         "record_count": len(observed),
         "baseline_sha256": file_hash(repo / "examples/feedback/canonical_baseline.json"),

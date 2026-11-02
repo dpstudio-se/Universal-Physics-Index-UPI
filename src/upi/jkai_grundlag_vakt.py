@@ -9,10 +9,10 @@ from __future__ import annotations
 import hashlib
 import json
 import re
+from collections.abc import Mapping
 from dataclasses import dataclass
 from datetime import date
 from enum import Enum
-from typing import Mapping
 from urllib.parse import urlsplit
 
 ROOT_OWNER_ID = "Ω7834"

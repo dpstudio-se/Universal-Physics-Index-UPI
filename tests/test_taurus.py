@@ -1,5 +1,6 @@
 from upi.taurus import TaurusDelta, TaurusState, advance_taurus
 
+
 def test_taurus_continues_on_verified_delta():
     report = advance_taurus(TaurusState(generation=3, dna_revision="r3"), verified_delta=TaurusDelta(added=("node:new",)))
     assert report.decision == "CONTINUE"

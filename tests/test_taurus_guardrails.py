@@ -1,6 +1,10 @@
 from upi.taurus import (
-    TaurusDelta, TaurusMirror, TaurusObservation, TaurusState,
-    advance_taurus, rollback_taurus,
+    TaurusDelta,
+    TaurusMirror,
+    TaurusObservation,
+    TaurusState,
+    advance_taurus,
+    rollback_taurus,
 )
 
 

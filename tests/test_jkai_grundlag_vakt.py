@@ -2,10 +2,10 @@ import hashlib
 from datetime import date
 
 from upi.jkai_grundlag_vakt import (
-    ROOT_OWNER_ID,
-    ROOT_REVIEWER_ID,
     HISTORICAL_ROOT_REFERENCE,
     ROOT_LEGAL_REFERENCES,
+    ROOT_OWNER_ID,
+    ROOT_REVIEWER_ID,
     GuardStatus,
     HumanReviewReceipt,
     JKAIGrundlagVakt,

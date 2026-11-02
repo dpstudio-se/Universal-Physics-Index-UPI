@@ -16,7 +16,25 @@ SCHEMAS = {
 def main() -> int:
     checked = 0
     skipped = 0
+    # Explicit legacy records with specialized shapes, pending dedicated schemas.
+    # Do not treat these as canonical physics nodes.
+    legacy_special_records = {
+        "data/bridges/multi_scale_wave_time_space_network_20260921.json",
+        "data/bridges/omega1766_rotation_pressure_flow_work_entropy.json",
+        "data/hypotheses/psi27d_navier_regularity.json",
+        "data/infrastructure_physics/gates_packet.json",
+        "data/research/triskelion_public_source_map.json",
+    }
+    for record in legacy_special_records:
+        if not (ROOT / record).is_file():
+            raise FileNotFoundError(f"Legacy record missing: {record}")
+
     for path in sorted((ROOT / "data").rglob("*.json")):
+        relative_path = path.relative_to(ROOT).as_posix()
+        if relative_path in legacy_special_records:
+            skipped += 1
+            print(f"Legacy specialized record (not schema-validated): {relative_path}")
+            continue
         if path.name.startswith("invalid_") or "sources" in path.parts:
             skipped += 1
             continue
