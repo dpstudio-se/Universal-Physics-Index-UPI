@@ -1,0 +1,169 @@
+{
+  "title": "3I/ATLAS orbital and cometary physics case",
+  "version": "0.1.0",
+  "status": "EST",
+  "information_layer": "ACADEMIC",
+  "address": "UPI<physics,2,celestial_mechanics,3i_atlas_case>",
+  "tags": [
+    "3I/ATLAS",
+    "interstellar object",
+    "interstellar comet",
+    "celestial mechanics",
+    "orbital mechanics",
+    "hyperbolic orbit",
+    "specific orbital energy",
+    "cometary physics",
+    "observational astronomy",
+    "Odin's Eye"
+  ],
+  "purpose": "Versioned UPI test case separating observations, mathematical derivations, physical models, open questions, and unsupported interpretations for interstellar comet 3I/ATLAS.",
+  "status_model": {
+    "EST": "Observed or established within the declared scientific domain and supported by provenance.",
+    "DER": "Mathematically derived from explicit assumptions or measured orbital parameters.",
+    "HYP": "Falsifiable but currently unverified interpretation.",
+    "STOP": "Unresolved boundary, missing mechanism, or claim requiring future evidence.",
+    "ERR": "Invalid, dimensionally inconsistent, rejected, or unsupported promotion.",
+    "SYM": "Conceptual or symbolic mapping only."
+  },
+  "observations": [
+    {
+      "id": "obs-interstellar",
+      "claim": "3I/ATLAS follows an unbound hyperbolic trajectory through the Solar System.",
+      "status": "EST",
+      "basis": "Observed astrometry and orbital determination."
+    },
+    {
+      "id": "obs-coma",
+      "claim": "3I/ATLAS exhibits a coma and dust/gas activity consistent with cometary behavior.",
+      "status": "EST",
+      "basis": "Multi-instrument observations."
+    },
+    {
+      "id": "obs-hubble",
+      "claim": "Hubble observations resolve the object as an active cometary body with a coma rather than directly resolving an artificial spacecraft structure.",
+      "status": "EST",
+      "basis": "Hubble observations and published analysis."
+    }
+  ],
+  "orbital_parameters": {
+    "eccentricity": {
+      "value_approx": 6.14,
+      "status": "EST",
+      "interpretation": "Strongly hyperbolic."
+    },
+    "perihelion_distance_AU": {
+      "value_approx": 1.3565,
+      "status": "EST"
+    },
+    "inclination_deg": {
+      "value_approx": 175.11,
+      "status": "EST",
+      "interpretation": "Retrograde geometry, approximately 4.89 degrees from 180 degrees."
+    },
+    "semimajor_axis_AU": {
+      "value_approx": -0.264,
+      "status": "DER",
+      "equation": "a = q/(1-e)"
+    },
+    "specific_orbital_energy": {
+      "sign": "positive",
+      "status": "DER",
+      "equation": "epsilon = v^2/2 - mu/r"
+    },
+    "asymptotic_speed_km_s": {
+      "value_approx": "58-60",
+      "status": "EST/DER",
+      "note": "Value depends on the adopted orbital solution and epoch."
+    }
+  },
+  "derivations": [
+    {
+      "id": "der-hyperbolic-energy",
+      "status": "DER",
+      "equation": "e > 1 => epsilon > 0",
+      "meaning": "The Solar System cannot gravitationally bind the object in the two-body approximation."
+    },
+    {
+      "id": "der-negative-semimajor-axis",
+      "status": "DER",
+      "equation": "a = q/(1-e)",
+      "meaning": "A negative semimajor axis is the standard conic-section parameter for a hyperbolic orbit."
+    }
+  ],
+  "cometary_physics": {
+    "status": "EST",
+    "mechanism_chain": [
+      "solar radiation",
+      "surface heating",
+      "volatile sublimation",
+      "gas outflow",
+      "dust transport",
+      "solar-radiation interaction",
+      "coma/tail morphology"
+    ],
+    "object_specific_quantitative_models": {
+      "status": "DER",
+      "note": "Mass-loss rates, volatile ratios, and detailed morphology require explicit model assumptions and observation provenance."
+    }
+  },
+  "observation_visualization_guard": {
+    "real_observation": {
+      "status": "EST",
+      "evidence_type": "instrumental observation"
+    },
+    "artist_rendering": {
+      "status": "SYM",
+      "evidence_weight": 0,
+      "rule": "Artist renderings must not be indexed as observational evidence."
+    }
+  },
+  "odin_eye": {
+    "status": "SYM",
+    "function": "A provenance and reasoning filter that separates observation, derivation, hypothesis, unresolved boundary, and unsupported interpretation.",
+    "pipeline": [
+      "raw signal",
+      "observation",
+      "measurement",
+      "derivation",
+      "hypothesis",
+      "review/promotion"
+    ],
+    "guard": "Visual similarity, repeated numbers, simulation shape, or narrative appeal cannot promote a claim."
+  },
+  "hypotheses_and_stopping_points": [
+    {
+      "claim": "Exact stellar source system of 3I/ATLAS.",
+      "status": "STOP"
+    },
+    {
+      "claim": "Artificial spacecraft interpretation.",
+      "status": "STOP",
+      "note": "No current observation in this case requires promotion from natural cometary physics to an artificial-object explanation."
+    },
+    {
+      "claim": "Detailed formation age and galactic origin.",
+      "status": "HYP/STOP",
+      "note": "Requires explicit population-model assumptions and provenance."
+    }
+  ],
+  "upi_bridges": [
+    "UPI<physics,2,classical_mechanics,helical_linear_rotational_coupling>",
+    "UPI<physics,2,celestial_mechanics,hyperbolic_orbit>",
+    "UPI<physics,2,cometary_physics,solar_driven_activity>",
+    "UPI<astronomy,2,observational_astronomy,3i_atlas>"
+  ],
+  "compatibility_note": "The existing UPI helical_linear_rotational_coupling node explicitly guards against treating phase, topology, or rotation as an energy source. This case therefore uses orbital mechanics and cometary physics as independent established domains and only bridges them where measurable quantities and declared mechanisms exist.",
+  "falsification_and_review": [
+    "Replace approximate orbital parameters with the latest versioned ephemeris solution when imported.",
+    "Bind every numerical orbital parameter to an explicit observation/orbit-solution source.",
+    "Keep natural-comet and artificial-object interpretations as separate hypotheses.",
+    "Do not promote an anomaly solely from morphology or an artist rendering.",
+    "Record non-gravitational acceleration separately if a validated orbit solution establishes it and provide the fitted model and uncertainty."
+  ],
+  "primary_sources": [
+    "https://science.nasa.gov/solar-system/comets/3i-atlas/",
+    "https://science.nasa.gov/asset/hubble/comet-3i-atlas/",
+    "https://doi.org/10.48377/mpec/2026-d56"
+  ]
+}
+

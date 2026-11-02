@@ -1,5 +1,6 @@
 from upi.tf1766_governance import TF1766Governance
 
+
 def test_tf1766_profile_keeps_historical_and_current_law_distinct():
     p = TF1766Governance().policy_record()
     assert p["historical_reference"] == "1766 års tryckfrihetsförordning"

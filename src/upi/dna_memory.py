@@ -1,16 +1,17 @@
 """Live .dna_minne reader/writer for UPI DNA events.
 
 Memory is append-only data, never scientific authority.
-""" 
+"""
 from __future__ import annotations
 
-from dataclasses import dataclass
-from datetime import datetime, timezone
 import hashlib
 import json
+from collections.abc import Iterator
+from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from threading import Lock
-from typing import Any, Iterator
+from typing import Any
 
 
 @dataclass(frozen=True)
@@ -53,7 +54,7 @@ class DNAWriter:
         self.root.mkdir(parents=True, exist_ok=True)
         with self._lock:
             stamp = datetime.now(timezone.utc).isoformat()
-            event = {
+            event: dict[str, Any] = {
                 "id": hashlib.sha256(f"{stamp}|{source}|{json.dumps(payload, sort_keys=True)}".encode()).hexdigest()[:16],
                 "timestamp": stamp,
                 "type": "DNA_MEMORY",
@@ -117,7 +118,7 @@ class DNAReader:
         seen = 0
         while True:
             rows = self.read()
-            for row in rows[seen:]:
+            for row in rows[seen:]:  # noqa: UP028
                 yield row
             seen = len(rows)
             time.sleep(poll_seconds)

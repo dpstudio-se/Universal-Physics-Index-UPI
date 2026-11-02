@@ -169,3 +169,6 @@ SESSION_HANDOFF.md
 
 # Local MCP server config (contains machine paths and API keys)
 .mcp.json
+
+# Google Drive upload temp files
+.tmp.driveupload/

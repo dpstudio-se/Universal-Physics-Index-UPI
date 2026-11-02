@@ -138,6 +138,18 @@ paths:
       responses:
         "200":
           description: Markdown
+  /api/remote:
+    get:
+      summary: Discovery manifest for any AI/AGI/ASI/LLM (also at /.well-known/upi-remote.json)
+      responses:
+        "200":
+          description: Endpoints, batch format, research-mode loop and guardrails
+  /llms.txt:
+    get:
+      summary: llms.txt discovery file generated from the manifest
+      responses:
+        "200":
+          description: Plain text
 components:
   securitySchemes:
     ReviewToken:

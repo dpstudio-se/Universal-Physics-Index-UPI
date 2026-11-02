@@ -21,7 +21,10 @@ not a biology claim.
 | Schemas | Shape + closed relation set | `schemas/`, `src/upi/validation.py` |
 | Package | Load, validate, CLI, gather API | `src/upi/` |
 | Live DB | Untrusted gathering only | SQLite/Postgres via `upi serve` / ingest |
-| RNA | Explorer transcription + proposals | Deployed TanStack app (grok.me); not DNA |
+
+No external application is a layer of UPI. In particular,
+`dpstudio-se/upi-built-by-agi-teax-main` (grok.me) is unrelated; see
+[`SCOPE.md`](SCOPE.md).
 
 Success in one layer does not prove another. A green `software_test` proves
 software behavior only within its declared scope.
@@ -52,5 +55,5 @@ separately labeled EST/DER/HYP/STOP.
 ## Governed work
 
 The workflow is the design unit; see [`GOVERNED_SYSTEM.md`](GOVERNED_SYSTEM.md).
-Agent hard stops and DNA/RNA rules:
+Agent hard stops and DNA rules:
 [`VSCODE_AGENT_PROMPT.md`](VSCODE_AGENT_PROMPT.md).

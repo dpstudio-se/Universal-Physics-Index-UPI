@@ -1,0 +1,1 @@
+{"address": "UPI<physics,1,test,bad>", "title": "Bad node", "description": "Claims too much.", "status": "HYP", "normalization_method": "Z = z / z_ref", "causal_claim": true, "verification_type": "software_test", "claims_experimental_verification": true}

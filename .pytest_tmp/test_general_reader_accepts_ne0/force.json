@@ -1,0 +1,1 @@
+{"address": "UPI<mechanics,1,test,force>", "title": "Force", "description": "Test input relation", "status": "DER", "version": "1.0.0", "equations": ["F = m*v*t"], "assumptions": ["Inertial SI model"], "primary_sources": ["Newton second law"]}

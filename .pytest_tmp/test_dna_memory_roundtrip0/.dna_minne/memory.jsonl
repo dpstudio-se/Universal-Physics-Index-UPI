@@ -1,0 +1,1 @@
+{"id": "794470608866a493", "operation": "write", "payload": {"key": "test", "value": 7.834125}, "provenance": "runtime", "sha256": "23a6c8db315625c0952e2ceb9b2c20da5384818f885bfa8f3cfb68dcaa4c3c68", "source": "UPI", "status": "TEST", "timestamp": "2026-09-27T06:28:54.393290+00:00", "type": "DNA_MEMORY"}

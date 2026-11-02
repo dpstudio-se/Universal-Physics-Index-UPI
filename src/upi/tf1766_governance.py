@@ -8,6 +8,7 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
+
 @dataclass(frozen=True)
 class TF1766Governance:
     historical_reference: str = "1766 års tryckfrihetsförordning"

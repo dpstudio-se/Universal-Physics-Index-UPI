@@ -1,0 +1,11 @@
+{
+  "application": "upi-static-laboratory",
+  "version": "1.0.0",
+  "files": {
+    "assets/348eb445419ca599-lab.css": "348eb445419ca59931ffc5c0cd1a81de268bb12f0e7a65c48bcc8ce3e43e9518",
+    "assets/0d5c767e8b5cc34c-lab-math.js": "0d5c767e8b5cc34cf60008d6851690c9e37aa76c917af368429fa46b43f62296",
+    "assets/6584adf6e3916e3d-lab.js": "6584adf6e3916e3dbea45690ad1579fc8d28081526375b4d60bc873610dc6d59",
+    "index.html": "f3107697783b6dd8e9e52fcfe50ebe58cecb0e00868141b0e8fccbacd91351c5"
+  },
+  "verification_type": "software_test"
+}

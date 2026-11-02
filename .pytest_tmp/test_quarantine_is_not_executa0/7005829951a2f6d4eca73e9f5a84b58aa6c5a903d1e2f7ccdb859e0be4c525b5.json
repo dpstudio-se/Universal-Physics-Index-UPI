@@ -1,0 +1,10 @@
+{
+  "quarantine": true,
+  "reason": "invalid batch",
+  "content_hash": "7005829951a2f6d4eca73e9f5a84b58aa6c5a903d1e2f7ccdb859e0be4c525b5",
+  "payload": {
+    "hostile": true
+  },
+  "verification_type": "software_test",
+  "executable": false
+}
