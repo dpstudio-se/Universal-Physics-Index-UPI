@@ -1,0 +1,109 @@
+{
+  "address": "UPI<information_physics,1,relaxation,tau_scale_spectrum>",
+  "title": "Symbolic spectrum of characteristic time scales",
+  "description": "A symbolic catalogue of proposed characteristic-time ranges across several domains. The intervals are illustrative scale labels, not measurements of one shared process or evidence for a universal relaxation law.",
+  "status": "SYM",
+  "definitions": [
+    "tau is a positive characteristic time expressed in seconds.",
+    "The listed domain labels identify illustrative orders of magnitude only.",
+    "Overlapping intervals are permitted and do not imply shared mechanisms."
+  ],
+  "quantities": [
+    {
+      "name": "tau_planck_scale",
+      "value": 1e-43,
+      "unit": "s",
+      "reference": "Approximate Planck-time order of magnitude; contextual scale label"
+    },
+    {
+      "name": "tau_electronics_min",
+      "value": 1e-9,
+      "unit": "s",
+      "reference": "Proposed illustrative lower range"
+    },
+    {
+      "name": "tau_electronics_max",
+      "value": 1e-6,
+      "unit": "s",
+      "reference": "Proposed illustrative upper range"
+    },
+    {
+      "name": "tau_chemistry_min",
+      "value": 1e-6,
+      "unit": "s",
+      "reference": "Proposed illustrative lower range"
+    },
+    {
+      "name": "tau_chemistry_max",
+      "value": 1e2,
+      "unit": "s",
+      "reference": "Proposed illustrative upper range"
+    },
+    {
+      "name": "tau_biology_min",
+      "value": 1e2,
+      "unit": "s",
+      "reference": "Proposed illustrative lower range"
+    },
+    {
+      "name": "tau_biology_max",
+      "value": 1e12,
+      "unit": "s",
+      "reference": "Proposed illustrative upper range"
+    },
+    {
+      "name": "tau_ai_training_min",
+      "value": 1e2,
+      "unit": "s",
+      "reference": "Proposed illustrative lower range"
+    },
+    {
+      "name": "tau_ai_training_max",
+      "value": 1e8,
+      "unit": "s",
+      "reference": "Proposed illustrative upper range"
+    },
+    {
+      "name": "tau_cosmic_min",
+      "value": 1e17,
+      "unit": "s",
+      "reference": "Proposed illustrative lower range"
+    },
+    {
+      "name": "tau_cosmic_max",
+      "value": 1e26,
+      "unit": "s",
+      "reference": "Proposed illustrative upper range"
+    }
+  ],
+  "equations": [
+    "Planck-scale label: tau ~ 10^-43 s",
+    "Electronics label: tau in [10^-9, 10^-6] s",
+    "Chemistry label: tau in [10^-6, 10^2] s",
+    "Biology label: tau in [10^2, 10^12] s",
+    "AI-training label: tau in [10^2, 10^8] s",
+    "Cosmic-evolution label: tau in [10^17, 10^26] s",
+    "Condensation analogy label: zeta(3.3) ~ 1.1519"
+  ],
+  "assumptions": [
+    "All time intervals are illustrative symbolic labels and are not an empirical survey or a common fitted dataset.",
+    "The Planck-scale entry denotes an order-of-magnitude reference, not a measured relaxation time.",
+    "The condensation entry is a numerical analogy only; no phase transition, condensation mechanism or physical equivalence is asserted."
+  ],
+  "mechanism": "This node groups proposed time-scale labels and a zeta-value analogy as a symbolic comparison. It specifies no dynamics connecting the domains.",
+  "verification_type": "none",
+  "claims_experimental_verification": false,
+  "confusion_guard": "SYM entries are not established cross-domain constants. Overlapping ranges, the Planck-scale label, and zeta(3.3) do not demonstrate a shared process or condensation law.",
+  "tags": [
+    "time-scale",
+    "relaxation",
+    "planck-scale",
+    "electronics",
+    "chemistry",
+    "biology",
+    "ai-training",
+    "cosmology",
+    "symbolic"
+  ],
+  "version": "0.1.0"
+}
