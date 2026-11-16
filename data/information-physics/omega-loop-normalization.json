@@ -1,0 +1,43 @@
+{
+  "address": "UPI<information_physics,1,normalization,omega_loop_frequency_integral>",
+  "title": "Dimensionless frequency-loop integral",
+  "description": "For ordinary frequency f measured in hertz and elapsed time t measured in seconds, the integral of f dt is a dimensionless cycle count. Its dimensionlessness does not by itself establish invariance under arbitrary changes of path or parameterization.",
+  "status": "DER",
+  "definitions": [
+    "f is ordinary frequency in hertz (s^-1), not angular frequency.",
+    "t is physical time measured in seconds.",
+    "Omega is the number of cycles accumulated over the explicitly specified integration domain."
+  ],
+  "equations": [
+    "Omega = ∮_C f(t) dt",
+    "[Omega] = s^-1 s = 1",
+    "k = h / c^2",
+    "m_E = E / c^2 = h f / c^2 = k f"
+  ],
+  "assumptions": [
+    "The closed integration domain C and its physical-time parameterization are specified.",
+    "The frequency-mass relation applies to the mass equivalent of energy E = h f; it does not assign rest mass to a photon or an arbitrary oscillator.",
+    "With h in J s and c in m s^-1, k has units kg s and k f has units kg."
+  ],
+  "mechanism": "The dimensionless result follows from multiplying ordinary frequency (s^-1) by physical time (s) and integrating over a specified domain. The relation m_E = k f is the algebraic composition of E = h f and E = m_E c^2.",
+  "primary_sources": [
+    "SI Brochure, ninth edition: hertz and second",
+    "2019 SI definition of the Planck constant h",
+    "Einstein (1905), inertia of energy, E = m c^2"
+  ],
+  "falsification_conditions": [
+    "Dimensional analysis of the declared f and t units does not yield a dimensionless cycle count.",
+    "The stated mass-equivalent composition fails when E = h f and m_E = E/c^2 are applied within their declared domain."
+  ],
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false,
+  "confusion_guard": "A dimensionless integral is not automatically an invariant. The closed-loop notation requires a specified domain, and integer quantization is a separate symbolic postulate recorded independently.",
+  "tags": [
+    "frequency",
+    "normalization",
+    "dimensionless",
+    "mass-energy",
+    "derived"
+  ],
+  "version": "0.1.0"
+}

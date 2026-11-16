@@ -1,0 +1,32 @@
+{
+  "address": "UPI<information_physics,1,normalization,omega_loop_integer_quantization>",
+  "title": "Integer quantization postulate for a frequency-loop integral",
+  "description": "The assignment of an integer value to a dimensionless frequency-loop integral is recorded as a symbolic model postulate. It does not follow from dimensional analysis alone and is not presented as experimentally established.",
+  "status": "SYM",
+  "definitions": [
+    "Omega is the dimensionless cycle count for a specified integration domain.",
+    "n is an integer-valued model label."
+  ],
+  "equations": [
+    "Omega = ∮_C f(t) dt",
+    "Omega = n, n ∈ Z"
+  ],
+  "assumptions": [
+    "Integer-valued Omega is imposed as an additional symbolic model rule.",
+    "The frequency f is ordinary frequency in hertz and t is physical time in seconds."
+  ],
+  "mechanism": "Symbolic integer-quantization postulate applied to a dimensionless cycle count; no quantization mechanism or empirical evidence is asserted.",
+  "falsification_conditions": [
+    "A declared model domain admits a valid Omega value outside the integers while claiming the integer postulate applies throughout that domain."
+  ],
+  "verification_type": "none",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Omega = n is a SYM postulate, not a consequence of Omega being dimensionless and not an experimentally established law.",
+  "tags": [
+    "frequency",
+    "normalization",
+    "integer-quantization",
+    "symbolic"
+  ],
+  "version": "0.1.0"
+}
