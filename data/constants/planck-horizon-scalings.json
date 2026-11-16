@@ -1,0 +1,46 @@
+{
+  "address": "UPI<physics,1,dimensional_scalings,planck_horizon_combinations>",
+  "title": "Planck and horizon dimensional scalings",
+  "description": "Algebraic combinations of the reduced Planck constant, the speed of light, Newton's gravitational constant and a positive horizon radius. Their dimensions follow from SI units; the expressions alone do not establish corresponding physical observables or laws.",
+  "status": "DER",
+  "definitions": [
+    "hbar = h/(2 pi) is the reduced Planck constant.",
+    "c is the speed of light in vacuum.",
+    "G is Newton's gravitational constant.",
+    "r_s is a positive length; identifying it as a Schwarzschild radius requires the Schwarzschild spacetime assumptions."
+  ],
+  "equations": [
+    "D = hbar * c",
+    "[D] = J m",
+    "K_skeleton = c^7 / (hbar * G^2)",
+    "[K_skeleton] = kg m^-1 s^-2 = Pa",
+    "sigma = c^4 / (16 * pi * G * r_s)",
+    "[sigma] = kg s^-2 = N m^-1"
+  ],
+  "assumptions": [
+    "SI dimensions are used: [hbar] = kg m^2 s^-1, [c] = m s^-1, [G] = m^3 kg^-1 s^-2 and [r_s] = m.",
+    "K_skeleton and sigma are names assigned to the stated algebraic combinations, not independently established material properties.",
+    "The factor 16 pi is part of the specified definition of sigma; no horizon stress law is inferred from dimensional consistency alone."
+  ],
+  "mechanism": "Substitution of the SI dimensions of hbar, c, G and r_s gives the displayed dimensions. The expressions are algebraic scalings; a separate physical derivation is required to interpret them as observables.",
+  "primary_sources": [
+    "2019 SI definitions of h and c",
+    "CODATA recommended value and unit for Newton's gravitational constant G",
+    "Standard definition of reduced Planck constant hbar = h/(2 pi)"
+  ],
+  "falsification_conditions": [
+    "Recalculation from the stated SI dimensions fails to produce the displayed units.",
+    "An interpretation as a physical observable is asserted without an explicit physical definition and derivation."
+  ],
+  "verification_type": "mathematical_check",
+  "claims_experimental_verification": false,
+  "confusion_guard": "Dimensional consistency is necessary but does not establish a physical law. In particular, sigma is not asserted here to be a measured horizon surface tension.",
+  "tags": [
+    "planck",
+    "horizon",
+    "dimensional-analysis",
+    "scaling",
+    "derived"
+  ],
+  "version": "0.1.0"
+}

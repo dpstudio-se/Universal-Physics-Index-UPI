@@ -1,0 +1,47 @@
+{
+  "address": "UPI<mechanics,1,relaxation,inertia_startup_relaxation>",
+  "title": "Symbolic inertia startup relaxation curve",
+  "description": "A symbolic family of exponential startup-relaxation curves applied to an unspecified quantity X. The proposed time constants are alternative illustrative regimes, not measured values or an established universal relaxation law.",
+  "status": "SYM",
+  "definitions": [
+    "X(t) is a quantity with the same units as its asymptotic value X_max.",
+    "X_max is the long-time limit of X(t).",
+    "t is elapsed time with t >= 0.",
+    "tau is a positive characteristic relaxation time."
+  ],
+  "equations": [
+    "X(t) = X_max * (1 - exp(-t / tau))",
+    "X(0) = 0 and lim(t -> infinity) X(t) = X_max",
+    "Proposed alternative tau regimes: approximately 10 s, 180-300 s (3-5 min), or 600-1200 s (10-20 min)",
+    "8 Hz = 8 s^-1; multiplying a mass in kg by 8 Hz gives kg s^-1, not kg",
+    "f/f_0 = (8 Hz)/(1 Hz) = 8 is dimensionless and preserves the units of X when used as a scale factor"
+  ],
+  "assumptions": [
+    "The exponential curve is a symbolic phenomenological model; no physical mechanism or measured system is specified.",
+    "Each listed tau range is a separate candidate regime for the same curve form, not evidence that one system exhibits all three.",
+    "The reference frequency f_0 is defined as 1 Hz when forming the dimensionless ratio f/f_0.",
+    "If X has units of kg, multiplying X by f/f_0 is dimensionally mass-preserving, while multiplying by f in Hz is not."
+  ],
+  "mechanism": "No established mechanism is asserted. The exponential form and candidate time constants are symbolic proposals pending a defined system, measurement procedure and independent evidence.",
+  "predictions": [
+    "For fixed X_max and tau, the normalized curve X(t)/X_max equals 1 - exp(-t/tau) for t >= 0.",
+    "A candidate tau regime can be tested only after X, X_max, the system boundary, sampling procedure and acceptance tolerance are specified."
+  ],
+  "falsification_conditions": [
+    "For a specified system and predeclared X_max, tau, domain and tolerance, reproducible measurements fall outside the predicted curve by more than that tolerance.",
+    "Dimensional analysis of the declared variables shows that X(t) and X_max do not have matching units.",
+    "A mass-valued X is claimed to retain units of kg after multiplication by a dimensional frequency without a normalization or compensating unit."
+  ],
+  "verification_type": "none",
+  "claims_experimental_verification": false,
+  "confusion_guard": "SYM is a symbolic model status, not empirical confirmation. The listed relaxation times are proposals, and the ratio f/f_0 is dimensionless; 8 Hz itself is not.",
+  "tags": [
+    "inertia",
+    "startup",
+    "relaxation",
+    "exponential",
+    "dimensional-analysis",
+    "symbolic"
+  ],
+  "version": "0.1.0"
+}

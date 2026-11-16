@@ -111,7 +111,7 @@ def test_system_prompt_downloads(path, filename, expected_title) -> None:
             assert expected_title in content
             if path == "/research-prompt":
                 canonical = ROOT / "prompts" / "omega1766-vr-asi-co.system.md"
-                assert content == canonical.read_text(encoding="utf-8")
+                assert content == canonical.read_bytes().decode("utf-8")
     finally:
         server.shutdown()
         thread.join(timeout=2)
